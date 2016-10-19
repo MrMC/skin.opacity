@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">11</defaultcontrol>
+	<controls>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
+			<control type="group">
+				<include>OpenClose_Left</include>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>990</width>
+					<height>1080</height>
+					<texture colordiffuse="CCFFFFFF">lists/panel.png</texture>
+				</control>
+				<control type="fixedlist" id="11">
+					<left>0</left>
+					<top>0</top>
+					<width>875</width>
+					<height>1080</height>
+					<onleft>PreviousChannelGroup</onleft>
+					<onright>60</onright>
+					<onup>11</onup>
+					<ondown>11</ondown>
+					<pagecontrol>60</pagecontrol>
+					<movement>4</movement>
+					<focusposition>5</focusposition>
+					<scrolltime>200</scrolltime>
+					<focusedlayout height="90" width="1000">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>1000</width>
+							<height>90</height>
+							<texture colordiffuse="color_main">lists/focus.png</texture>
+							<visible>Control.hasFocus(11)</visible>
+						</control>
+						<control type="image">
+							<left>770</left>
+							<top>10</top>
+							<width>90</width>
+							<height>70</height>
+							<aspectratio align="right">keep</aspectratio>
+							<texture>$INFO[listitem.icon]</texture>
+						</control>
+						<control type="progress">
+							<left>105</left>
+							<top>55</top>
+							<width>50</width>
+							<height>12</height>
+							<midtexture border="3">progress/texturebg_white.png</midtexture>
+							<visible>ListItem.HasEpg + !ListItem.IsRecording</visible>
+							<info>ListItem.Progress</info>
+						</control>
+						<control type="image">
+							<left>945</left>
+							<top>9</top>
+							<width>40</width>
+							<height>40</height>
+							<texture>$VAR[PVRStatusImageVar]</texture>
+						</control>
+						<control type="label">
+							<left>105</left>
+							<top>5</top>
+							<height>90</height>
+							<width>600</width>
+							<aligny>top</aligny>
+							<animation effect="slide" start="0,0" end="0,18" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
+							<label>$INFO[ListItem.Label]</label>
+							<font>font14</font>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+						<control type="label">
+							<left>165</left>
+							<top>45</top>
+							<height>90</height>
+							<width>580</width>
+							<aligny>top</aligny>
+							<align>left</align>
+							<font>font12</font>
+							<label>$INFO[ListItem.Title]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+						<control type="label">
+							<left>12</left>
+							<top>0</top>
+							<height>90</height>
+							<width>70</width>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>font32_title</font>
+							<label>$INFO[ListItem.ChannelNumberLabel]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+					</focusedlayout>
+					<itemlayout height="90">
+						<control type="image">
+							<left>770</left>
+							<top>10</top>
+							<width>90</width>
+							<height>70</height>
+							<aspectratio align="right">keep</aspectratio>
+							<texture>$INFO[listitem.icon]</texture>
+						</control>
+						<control type="progress">
+							<left>105</left>
+							<top>55</top>
+							<width>50</width>
+							<height>12</height>
+							<colordiffuse>88FFFFFF</colordiffuse>
+							<visible>ListItem.HasEpg + !ListItem.IsRecording</visible>
+							<info>ListItem.Progress</info>
+						</control>
+						<control type="image">
+							<left>945</left>
+							<top>9</top>
+							<width>40</width>
+							<height>40</height>
+							<texture>$VAR[PVRStatusImageVar]</texture>
+						</control>
+						<control type="label">
+							<left>105</left>
+							<top>5</top>
+							<height>90</height>
+							<width>640</width>
+							<aligny>top</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<font>font14</font>
+							<animation effect="slide" start="0,0" end="0,18" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+						<control type="label">
+							<left>165</left>
+							<top>45</top>
+							<height>90</height>
+							<width>580</width>
+							<aligny>top</aligny>
+							<align>left</align>
+							<font>font12</font>
+							<label>$INFO[ListItem.Title]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+							<textcolor>color_main</textcolor>
+						</control>
+						<control type="label">
+							<left>12</left>
+							<top>0</top>
+							<height>90</height>
+							<width>70</width>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>font32_title</font>
+							<label>$INFO[ListItem.ChannelNumberLabel]</label>
+							<textcolor>grey</textcolor>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+					</itemlayout>
+				</control>
+				<control type="scrollbar" id="60">
+					<left>876</left>
+					<top>0</top>
+					<width>12</width>
+					<height>1080</height>
+					<onleft>11</onleft>
+					<onright>NextChannelGroup</onright>
+					<ondown>61</ondown>
+					<onup>61</onup>
+					<orientation>vertical</orientation>
+				</control>
+			</control>
+			<control type="label">
+				<description>Page Count Label</description>
+				<left>310</left>
+				<top>960</top>
+				<width>450</width>
+				<height>20</height>
+				<font>font13</font>
+				<textcolor>grey</textcolor>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>[COLOR=color_main]$INFO[Container(11).NumItems][/COLOR] $LOCALIZE[19019] - $LOCALIZE[31035] [COLOR=color_main]$INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages][/COLOR]</label>
+			</control>
+		</control>
+		<include>TopBar</include>
+		<include>BottomBar</include>
+		<control type="label" id="2">
+			<description>header label</description>
+			<textoffsetx>40</textoffsetx>
+			<top>0</top>
+			<width>830</width>
+			<height>70</height>
+			<font>font45_title</font>
+			<aligny>center</aligny>
+			<label>&lt; $INFO[VideoPlayer.ChannelGroup] &gt;</label>
+			<shadowcolor>black</shadowcolor>
+		</control>
+	</controls>
+</window>
