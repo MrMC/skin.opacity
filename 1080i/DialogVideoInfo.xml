@@ -79,7 +79,7 @@
 					<top>468</top>
 					<control type="button" id="138">
 						<width>754</width>
-						<height>410</height>
+						<height>418</height>
 						<textoffsetx>40</textoffsetx>
 						<textoffsety>20</textoffsety>
 						<aligny>bottom</aligny>
@@ -91,19 +91,20 @@
 						<onleft>138</onleft>
 						<onright>138</onright>
 						<ondown>5000</ondown>
+						<texturenofocus border="21">dialogs/dialog-bg.png</texturenofocus>
 						<visible>Integer.IsGreater(Container(4000).NumItems,0)</visible>
 					</control>
 					<control type="image">
 						<left>735</left>
-						<width>513</width>
-						<height>410</height>
+						<width>512</width>
+						<height>418</height>
 						<aligny>bottom</aligny>
-						<texture border="40">buttons/button-nofo.png</texture>
+						<texture border="21">dialogs/dialog-bg.png</texture>
 						<visible>Integer.IsGreater(Container(4000).NumItems,0)</visible>
 					</control>
 					<control type="button" id="139">
 						<width>1245</width>
-						<height>410</height>
+						<height>418</height>
 						<textoffsetx>40</textoffsetx>
 						<textoffsety>20</textoffsety>
 						<aligny>bottom</aligny>
@@ -115,13 +116,14 @@
 						<onleft>139</onleft>
 						<onright>139</onright>
 						<ondown>5000</ondown>
+						<texturenofocus border="40">dialogs/dialog-bg.png</texturenofocus>
 						<visible>!Integer.IsGreater(Container(4000).NumItems,0)</visible>
 					</control>
 					<control type="textbox">
 						<left>40</left>
 						<top>25</top>
 						<width>670</width>
-						<height>343</height>
+						<height>363</height>
 						<font>font13</font>
 						<label fallback="19055">$INFO[ListItem.Plot]</label>
 						<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
@@ -131,7 +133,7 @@
 						<left>40</left>
 						<top>25</top>
 						<width>1165</width>
-						<height>343</height>
+						<height>363</height>
 						<font>font13</font>
 						<label fallback="19055">$INFO[ListItem.Plot]</label>
 						<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
@@ -210,12 +212,12 @@
 					</include>
 				</control>
 				<control type="image">
-					<left>17</left>
-					<top>185</top>
-					<width>1210</width>
-					<height>283</height>
-					<aspectratio>scale</aspectratio>
-					<texture colordiffuse="A0FFFFFF">colors/black.png</texture>
+					<left>0</left>
+					<top>164</top>
+					<width>1245</width>
+					<height>328</height>
+					<texture border="21">dialogs/dialog-bg.png</texture>
+					<visible>Integer.IsEqual(Container(50).NumItems,0) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(ListItem.Art(banner))</visible>
 				</control>
 				<control type="textbox">
 					<left>17</left>
@@ -353,10 +355,10 @@
 								<label>$INFO[ListItem.Label2]</label>
 							</control>
 							<control type="image">
-								<left>18</left>
-								<top>20</top>
-								<width>230</width>
-								<height>280</height>
+								<left>16</left>
+								<top>16</top>
+								<width>232</width>
+								<height>285</height>
 								<texture border="8" colordiffuse="color_main">buttons/thumbnail_focused.png</texture>
 								<visible>Control.HasFocus(50)</visible>
 							</control>
@@ -389,20 +391,20 @@
 						<param name="visible" value="!String.IsEmpty(ListItem.Trailer) + ![String.StartsWith(Container.FolderPath,plugin://) + String.Contains(Container.FolderPath,trailer)]" />
 					</include>
 					<include content="InfoDialogButton">
+						<param name="id" value="440" />
+						<param name="icon" value="icons/infodialogs/trailer_search.png" />
+						<param name="label" value="$LOCALIZE[31090]" />
+						<param name="onclick_1" value="Action(close)" />
+						<param name="onclick_2" value="RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Title] $INFO[ListItem.Year])" />
+						<param name="visible" value="System.hasAddon(script.extendedinfo) + String.IsEqual(ListItem.DBType,movie) + !Control.IsVisible(11)" />
+					</include>
+					<include content="InfoDialogButton">
 						<param name="id" value="441" />
 						<param name="icon" value="icons/infodialogs/cinema.png" />
 						<param name="onclick_1" value="Dialog.Close(MovieInformation)" />
 						<param name="onclick_2" value="RunScript(script.cinemavision,experience)" />
 						<param name="label" value="$LOCALIZE[31003]" />
 						<param name="visible" value="System.HasAddon(script.cinemavision) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]" />
-					</include>
-					<include content="InfoDialogButton">
-						<param name="id" value="440" />
-						<param name="icon" value="icons/infodialogs/trailer.png" />
-						<param name="label" value="$LOCALIZE[31090]" />
-						<param name="onclick_1" value="Action(close)" />
-						<param name="onclick_2" value="RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Title] $INFO[ListItem.Year])" />
-						<param name="visible" value="System.hasAddon(script.extendedinfo) + String.IsEqual(ListItem.DBType,movie) + !Control.IsVisible(11)" />
 					</include>
 					<control type="group" id="400">
 						<width>262</width>
@@ -426,14 +428,14 @@
 							<label>$INFO[ListItem.UserRating]</label>
 							<font>font45_title</font>
 							<left>0</left>
-							<top>18</top>
+							<top>24</top>
 							<width>262</width>
 							<align>center</align>
 						</control>
 						<control type="image">
 							<texture>icons/infodialogs/rating.png</texture>
 							<left>107</left>
-							<top>24</top>
+							<top>30</top>
 							<width>48</width>
 							<height>48</height>
 							<align>center</align>
@@ -515,10 +517,10 @@
 					<top>10</top>
 					<left>0</left>
 					<control type="image">
-						<left>17</left>
-						<width>44</width>
-						<height>44</height>
-						<animation effect="rotate" end="-90" center="40,23" time="0" condition="true">Conditional</animation>
+						<left>21</left>
+						<width>36</width>
+						<height>36</height>
+						<animation effect="rotate" end="-90" center="36,19" time="0" condition="true">Conditional</animation>
 						<texture colordiffuse="grey">frame/menu-nofo.png</texture>
 					</control>
 					<control type="label">
@@ -535,10 +537,11 @@
 					<top>10</top>
 					<left>0</left>
 					<control type="image">
+						<top>4</top>
 						<left>17</left>
-						<width>44</width>
-						<height>44</height>
-						<texture colordiffuse="grey">frame/menu-fo.png</texture>
+						<width>36</width>
+						<height>36</height>
+						<texture colordiffuse="grey">lists/played-total.png</texture>
 					</control>
 					<control type="label">
 						<left>74</left>

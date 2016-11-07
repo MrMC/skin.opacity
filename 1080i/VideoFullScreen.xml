@@ -10,52 +10,72 @@
 				<height>100</height>
 				<label></label>
 				<font>font12</font>
+				<shadowcolor>black</shadowcolor>
 			</control>
+			<control type="label" id="11">
+				<left>45</left>
+				<top>45</top>
+				<width>1770</width>
+				<height>100</height>
+				<label></label>
+				<font>font12</font>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label" id="12">
+				<left>45</left>
+				<top>75</top>
+				<width>1770</width>
+				<height>100</height>
+				<label></label>
+				<font>font12</font>
+				<shadowcolor>black</shadowcolor>
+			</control>
+		</control>
+		<control type="label" id="1">
+			<left>45</left>
+			<top>15</top>
+			<width>1770</width>
+			<height>100</height>
+			<label>$INFO[Player.SeekNumeric(hh:mm:ss)]</label>
+			<font>font12</font>
+			<shadowcolor>black</shadowcolor>
 		</control>
 		<control type="group" id="1">
 			<visible>Player.Caching</visible>
 			<animation delay="300" effect="fade" time="200">Visible</animation>
 			<animation effect="fade" delay="200" time="150">Hidden</animation>
 			<control type="image" id="1">
-				<left>860</left>
-				<top>440</top>
-				<width>200</width>
-				<height>200</height>
-				<texture>dialogs/volume/progress/p100.png</texture>
-				<animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
+				<left>906</left>
+				<top>485</top>
+				<width>110</width>
+				<height>110</height>
+				<texture colordiffuse="BFFFFFFF">osd/buffer-bg.png</texture>
+			</control>
+			<control type="image" id="1">
+				<left>915</left>
+				<top>494</top>
+				<width>92</width>
+				<height>92</height>
+				<texture colordiffuse="1AFFFFFF">dialogs/extendedprogress/loading-placeholder.png</texture>
 			</control>
  			<control type="image" id="1">
-				<left>860</left>
-				<top>440</top>
-				<width>200</width>
-				<height>200</height>
+				<left>880</left>
+				<top>460</top>
+				<width>160</width>
+				<height>160</height>
 				<texture colordiffuse="color_main">dialogs/volume/progress/p$INFO[Player.CacheLevel].png</texture>
 			</control>
 			<control type="label" id="1">
 				<description>buffering value</description>
-				<label>$INFO[Player.CacheLevel]%</label>
+				<label>$INFO[Player.CacheLevel]</label>
 				<left>860</left>
 				<top>440</top>
 				<width>200</width>
 				<height>200</height>
 				<aligny>center</aligny>
 				<align>center</align>
-				<font>font25_title</font>
-				<textcolor>color_main</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
-			<control type="label" id="2">
-				<description>buffering label</description>
-				<label>$LOCALIZE[15107]</label>
-				<left>860</left>
-				<top>620</top>
-				<width>200</width>
-				<height>20</height>
-				<aligny>center</aligny>
-				<align>center</align>
-				<font>font25_title</font>
-				<textcolor>color_main</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<font>font11</font>
+				<textcolor>white</textcolor>
 			</control>
 		</control>
 	</controls>

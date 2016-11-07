@@ -3,13 +3,13 @@
 	<defaultcontrol always="true">450</defaultcontrol>
 	<coordinates>
 		<left>160</left>
-		<top>150</top>
+		<top>130</top>
 	</coordinates>
 	<include>Animation_DialogPopupOpenClose</include>
 	<controls>
 		<include content="DialogBackgroundCommons">
 			<param name="DialogBackgroundWidth" value="1600" />
-			<param name="DialogBackgroundHeight" value="800" />
+			<param name="DialogBackgroundHeight" value="820" />
 			<param name="DialogHeaderLabel" value="$LOCALIZE[1036]" />
 			<param name="DialogHeaderId" value="2" />
 		</include>
@@ -32,7 +32,7 @@
 			<left>35</left>
 			<top>100</top>
 			<width>1600</width>
-			<height>700</height>
+			<height>706</height>
 			<onleft>60</onleft>
 			<onright>60</onright>
 			<onup>450</onup>
@@ -47,15 +47,18 @@
 				</include>
 			</itemlayout>
 			<focusedlayout width="300" height="350">
-				<include content="InfoWallMusicLayout">
-					<param name="fallback_image" value="DefaultFavourites.png" />
-				</include>
-				<control type="image">
-					<left>15</left>
-					<top>5</top>
-					<width>288</width>
-					<height>348</height>
-					<texture border="8" colordiffuse="color_main">buttons/thumbnail_focused.png</texture>
+				<control type="group">
+					<include content="InfoWallMusicLayout">
+						<param name="fallback_image" value="DefaultFavourites.png" />
+					</include>
+					<control type="image">
+						<left>15</left>
+						<top>6</top>
+						<width>284</width>
+						<height>348</height>
+						<texture border="8" colordiffuse="color_main">buttons/thumbnail_focused.png</texture>
+						<animation effect="fade" start="100" end="0" time="200">Unfocus</animation>
+					</control>
 				</control>
 			</focusedlayout>
 		</control>

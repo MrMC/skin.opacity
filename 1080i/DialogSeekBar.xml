@@ -1,112 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<visible>Player.Seeking | Player.DisplayAfterSeek | [Player.Paused + !Player.Caching] | Player.Forwarding | Player.Rewinding</visible>
-	<visible>!Window.IsActive(videoosd) + Window.IsActive(fullscreenvideo)</visible>
-	<animation effect="fade" start="0" end="100" time="150">WindowOpen</animation>
-	<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+	<visible>[[Player.Seeking | Player.DisplayAfterSeek | [Player.Paused + !Player.Caching] | Player.Forwarding | Player.Rewinding | Window.IsActive(fullscreeninfo) | Window.IsActive(videoosd) | Window.IsActive(playerprocessinfo)] + Window.IsActive(fullscreenvideo)] | Window.IsActive(visualisation)</visible>
+	<include>Animation_BottomSlide</include>
 	<depth>DepthOSD</depth>
+	<zorder>0</zorder>
 	<controls>
-		<control type="image">
-			<left>0</left>
-			<top>-30</top>
-			<width>110%</width>
-			<height>210</height>
-			<texture flipy="true">frame/InfoBar.png</texture>
-		</control>
-		<control type="image">
-			<left>0</left>
-			<top>0</top>
-			<width>110%</width>
-			<height>180</height>
-			<texture flipy="true">frame/InfoBar.png</texture>
-		</control>
 		<control type="group">
 			<top>890</top>
-			<control type="label">
-				<top>5</top>
-				<right>51</right>
-				<width>400</width>
-				<height>20</height>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font25</font>
-				<label>[COLOR color_main]$LOCALIZE[21396]:  [/COLOR]$INFO[player.chapter]$INFO[player.chaptercount, / ]</label>
-				<visible>player.chaptercount + Window.IsVisible(FullScreenVideo)</visible>
+			<control type="image">
+				<left>0</left>
+				<width>110%</width>
+				<height>200</height>
+				<texture flipy="true">frame/InfoBar.png</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>110%</width>
+				<height>200</height>
+				<texture flipy="true">frame/InfoBar.png</texture>
+			</control>
+			<control type="group">
+				<visible>!Window.IsVisible(videoosd) + !Window.IsVisible(musicosd)</visible>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<control type="image">
+					<left>30</left>
+					<top>90</top>
+					<width>120</width>
+					<height>99</height>
+					<texture>$INFO[MusicPlayer.Codec,flags/audiocodec/,.png]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>!Player.ChannelPreviewActive</visible>
+				</control>
+				<control type="image">
+					<left>200</left>
+					<top>120</top>
+					<width>264</width>
+					<height>40</height>
+					<texture>$INFO[MusicPlayer.UserRating,flags/starrating/,.png]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<top>110</top>
+					<left>20</left>
+					<width>400</width>
+					<height>50</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font30</font>
+					<wrapmultiline>true</wrapmultiline>
+					<label>[COLOR color_main]$LOCALIZE[21396]:[CR][/COLOR]$INFO[player.chapter]$INFO[player.chaptercount, / ]</label>
+					<visible>player.chaptercount</visible>
+				</control>
+				<control type="label">
+					<top>110</top>
+					<right>20</right>
+					<width>400</width>
+					<height>50</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font30</font>
+					<wrapmultiline>true</wrapmultiline>
+					<visible>!Window.IsActive(fullscreeninfo)</visible>
+					<animation effect="fade" time="200">VisibleChange</animation>
+					<label>$INFO[Player.TimeRemaining,[COLOR color_main]$LOCALIZE[31134]:[CR][/COLOR]]</label>
+				</control>
 			</control>
 			<control type="label">
-				<left>40</left>
-				<top>7</top>
-				<width>240</width>
-				<height>20</height>
-				<aligny>center</aligny>
-				<font>font25</font>
-				<textcolor>color_main</textcolor>
-				<label>$VAR[SeekLabel]</label>
-			</control>
-			<control type="label">
-				<left>850</left>
-				<top>7</top>
-				<width>240</width>
-				<height>20</height>
-				<aligny>center</aligny>
+				<left>30</left>
+				<top>110</top>
+				<width>1858</width>
+				<height>75</height>
 				<align>center</align>
-				<font>font25</font>
-				<textcolor>color_main</textcolor>
-				<label>$LOCALIZE[31080]</label>
-			</control>
-			<control type="label">
-				<left>850</left>
-				<top>40</top>
-				<width>240</width>
-				<height>20</height>
-				<aligny>center</aligny>
-				<align>center</align>
-				<font>font30</font>
-				<label>$INFO[Player.FinishTime]</label>
-			</control>
-			<control type="label">
-				<top>40</top>
-				<right>51</right>
-				<width>400</width>
-				<height>20</height>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font30</font>
-				<label>[COLOR color_main]$LOCALIZE[31134]:  [/COLOR]$INFO[Player.TimeRemaining]</label>
-			</control>
-			<control type="label">
-				<left>40</left>
-				<top>40</top>
-				<width>350</width>
-				<height>20</height>
-				<font>font30</font>
-				<aligny>center</aligny>
+				<aligny>bottom</aligny>
+				<animation delay="0" effect="slide" time="120" start="0,0" end="0,-20" tween="sine" easing="inout" condition="!String.IsEmpty(Control.GetLabel(40000))">Conditional</animation>
 				<label>$VAR[SeekTimeLabelVar]</label>
+				<font>font45</font>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label" id="40000">
+				<left>30</left>
+				<top>134</top>
+				<width>1858</width>
+				<height>60</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$VAR[SeekLabel]</label>
+				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="progress">
-				<animation effect="fade" end="0" time="200">WindowClose</animation>
 				<left>0</left>
-				<top>80</top>
-				<width>1920</width>
+				<top>70</top>
+				<width>100%</width>
 				<height>15</height>
 				<info>Player.ProgressCache</info>
 				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
-				<midtexture colordiffuse="color_main">colors/white50.png</midtexture>
+				<midtexture>colors/white50.png</midtexture>
 			</control>
 			<control type="progress">
-				<animation effect="fade" end="0" time="200">WindowClose</animation>
 				<left>0</left>
-				<top>80</top>
-				<width>1920</width>
+				<top>70</top>
+				<width>100%</width>
 				<height>15</height>
 				<info>Player.Progress</info>
 				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
-				<midtexture colordiffuse="color_main">colors/white50.png</midtexture>
+				<midtexture colordiffuse="color_main">colors/white.png</midtexture>
 			</control>
 			<control type="slider" id="401">
-				<left>0</left>
-				<top>75</top>
-				<width>1920</width>
+				<left>5</left>
+				<top>65</top>
+				<width>100%</width>
 				<height>25</height>
 				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
 				<textureslidernib colordiffuse="color_main">osd/progress/nub_bar.png</textureslidernib>
