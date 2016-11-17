@@ -82,8 +82,7 @@
 			<width>320</width>
 			<align>center</align>
 			<aligny>center</aligny>
-			<font>font25_title</font>
-			<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
+			<font>font12_title</font>
 		</control>
 		<control type="button" id="3">
 			<description>Default Button</description>
@@ -105,7 +104,7 @@
 			<label></label>
 			<textoffsetx>40</textoffsetx>
 			<textoffsety>20</textoffsety>
-			<textcolor>color_main</textcolor>
+			<textcolor>button_focus</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<aligny>bottom</aligny>
 		</control>

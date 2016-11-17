@@ -69,17 +69,16 @@
 					<control type="label">
 						<left>135</left>
 						<top>0</top>
-						<width>730</width>
+						<width>700</width>
 						<height>60</height>
-						<font>font14</font>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
 					</control>
 					<control type="textbox">
 						<left>135</left>
 						<top>52</top>
-						<width>730</width>
-						<height>65</height>
+						<width>700</width>
+						<height>60</height>
 						<font>font12</font>
 						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
@@ -99,7 +98,7 @@
 						<top>0</top>
 						<width>880</width>
 						<height>125</height>
-						<texture colordiffuse="color_main">lists/focus.png</texture>
+						<texture colordiffuse="button_focus">lists/focus.png</texture>
 						<visible>Control.HasFocus(6)</visible>
 					</control>
 					<control type="image">
@@ -113,18 +112,17 @@
 					<control type="label">
 						<left>135</left>
 						<top>0</top>
-						<width>730</width>
+						<width>700</width>
 						<height>60</height>
 						<aligny>center</aligny>
 						<scroll>true</scroll>
-						<font>font14</font>
-						<label>$INFO[ListItem.Label]</label>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
 					</control>
 					<control type="textbox">
 						<left>135</left>
 						<top>52</top>
-						<width>730</width>
-						<height>65</height>
+						<width>700</width>
+						<height>60</height>
 						<font>font12</font>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
@@ -147,7 +145,7 @@
 					<top>695</top>
 					<width>275</width>
 					<height>35</height>
-					<font>font12</font>
+					<font>font10</font>
 					<align>right</align>
 					<aligny>center</aligny>
 					<textcolor>grey</textcolor>

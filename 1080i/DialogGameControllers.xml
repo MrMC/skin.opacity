@@ -49,8 +49,8 @@
 				<width>330</width>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>font25_title</font>
-				<texturefocus colordiffuse="color_main">lists/focus.png</texturefocus>
+				<font>font12_title</font>
+				<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
 				<texturenofocus>lists/separator.png</texturenofocus>
 			</control>
 			<control type="gamecontroller" id="31">
@@ -106,18 +106,18 @@
 				<width>330</width>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>font27</font>
-				<texturefocus colordiffuse="color_main">lists/focus.png</texturefocus>
+				<font>font12_title</font>
+				<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
 				<texturenofocus>lists/separator.png</texturenofocus>
 			</control>
 			<control type="label" id="8">
 				<description>Feature group title</description>
+				<height>60</height>
 				<width>330</width>
+				<label></label>
 				<align>center</align>
-				<top>0</top>
-				<height>40</height>
 				<aligny>center</aligny>
-				<font>font20_title</font>
+				<font>font12_title</font>
 				<textcolor>grey</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
@@ -134,8 +134,8 @@
 				<itemgap>-20</itemgap>
 				<include content="DefaultDialogButton">
 					<param name="width" value="350" />
-					<param name="id" value="18" />
-					<param name="label" value="$LOCALIZE[186]" />
+					<param name="id" value="20" />
+					<param name="label" value="$LOCALIZE[21452]" />
 				</include>
 				<include content="DefaultDialogButton">
 					<param name="width" value="350" />
@@ -144,13 +144,18 @@
 				</include>
 				<include content="DefaultDialogButton">
 					<param name="width" value="350" />
-					<param name="id" value="20" />
-					<param name="label" value="$LOCALIZE[21452]" />
+					<param name="id" value="18" />
+					<param name="label" value="$LOCALIZE[186]" />
 				</include>
 				<include content="DefaultDialogButton">
 					<param name="width" value="350" />
 					<param name="id" value="17" />
 					<param name="label" value="$LOCALIZE[10043]" />
+				</include>
+				<include content="DefaultDialogButton">
+					<param name="width" value="350" />
+					<param name="id" value="21" />
+					<param name="label" value="$LOCALIZE[35013]" />
 				</include>
 			</control>
 		</control>

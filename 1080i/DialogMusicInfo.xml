@@ -9,12 +9,10 @@
 			<top>158</top>
 			<left>40</left>
 			<control type="image">
-				<left>4</left>
-				<top>4</top>
-				<width>607</width>
-				<height>607</height>
+				<width>615</width>
+				<height>615</height>
 				<aspectratio>scale</aspectratio>
-				<texture>dialogs/dialog-bg-nobo.png</texture>
+				<texture colordiffuse="border_alpha">colors/black.png</texture>
 				<bordertexture border="20">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 			</control>
@@ -25,7 +23,7 @@
 				<height>567</height>
 				<aspectratio aligny="top">scale</aspectratio>
 				<fadetime>300</fadetime>
-				<texture background="true" fallback="DefaultAudio.png">$INFO[ListItem.Art(thumb)]</texture>
+				<texture background="true" fallback="DefaultFolderSquare.png">$INFO[ListItem.Art(thumb)]</texture>
 			</control>
 		</control>
 		<control type="group">
@@ -70,7 +68,7 @@
 						<height>550</height>
 						<align>center</align>
 						<aligny>center</aligny>
-						<font>font45_title</font>
+						<font>font30_title</font>
 						<label>$LOCALIZE[19055]</label>
 					</control>
 				</control>
@@ -95,7 +93,6 @@
 					<width>1190</width>
 					<height>320</height>
 					<label></label>
-					<texturenofocus border="21">dialogs/dialog-bg.png</texturenofocus>
 					<onclick>SetProperty(TextViewer_Header,$LOCALIZE[21821],home)</onclick>
 					<onclick>SetProperty(TextViewer_Text,$ESCVAR[MusicInfoTextboxVar],home)</onclick>
 					<onclick>ActivateWindow(1102)</onclick>
@@ -128,21 +125,21 @@
 							<height>260</height>
 							<align>center</align>
 							<aligny>center</aligny>
-							<font>font45_title</font>
+							<font>font30_title</font>
 							<label>$LOCALIZE[19055]</label>
 						</control>
 					</control>
 				</control>
 			</control>
 			<control type="label" id="400">
-				<left>630</left>
-				<top>490</top>
+				<left>620</left>
+				<top>480</top>
 				<width>1100</width>
 				<height>240</height>
 				<wrapmultiline>true</wrapmultiline>
-				<font>font13</font>
+				<font>font_textbox</font>
 				<label>$VAR[MusicInfoTextboxVar]</label>
-				<textcolor>color_main</textcolor>
+				<textcolor>button_focus</textcolor>
 			</control>
 			<control type="panel" id="50">
 				<left>585</left>
@@ -166,7 +163,7 @@
 						<height>60</height>
 						<font>font12</font>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.TrackNumber,[COLOR color_main], - [/COLOR]]$INFO[ListItem.Label]</label>
+						<label>$INFO[ListItem.TrackNumber,[COLOR button_focus], - [/COLOR]]$INFO[ListItem.Label]</label>
 					</control>
 					<control type="group">
 						<left>230</left>
@@ -180,7 +177,7 @@
 							<top>-10</top>
 							<width>595</width>
 							<height>100</height>
-							<texture border="40" colordiffuse="color_main">buttons/button-fo.png</texture>
+							<texture border="40" colordiffuse="button_focus">buttons/button-fo.png</texture>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -189,7 +186,7 @@
 							<height>60</height>
 							<font>font12</font>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.TrackNumber,[COLOR color_main], - [/COLOR]]$INFO[ListItem.Label]</label>
+							<label>$INFO[ListItem.TrackNumber,[COLOR button_focus], - [/COLOR]]$INFO[ListItem.Label]</label>
 						</control>
 						<control type="group">
 							<left>230</left>
@@ -210,20 +207,20 @@
 						<top>21</top>
 						<width>190</width>
 						<height>190</height>
-						<texture border="2" fallback="DefaultAudio.png" background="true">$INFO[ListItem.Thumb]</texture>
+						<texture border="2" fallback="DefaultFolderSquare.png" background="true">$INFO[ListItem.Thumb]</texture>
 						<aspectratio>keep</aspectratio>
 						<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 						<bordersize>4</bordersize>
 					</control>
 					<control type="textbox">
 						<left>28</left>
-						<top>212</top>
+						<top>207</top>
 						<width>196</width>
-						<height>62</height>
-						<font>font27_narrow</font>
+						<height>65</height>
+						<font>font10</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label2,[COLOR color_main], - [/COLOR]]$INFO[ListItem.Label]</label>
+						<label>$INFO[ListItem.Label2,[COLOR button_focus], - [/COLOR]]$INFO[ListItem.Label]</label>
 					</control>
 					<control type="group">
 						<left>230</left>
@@ -246,21 +243,20 @@
 							<top>21</top>
 							<width>190</width>
 							<height>190</height>
-							<texture border="2" fallback="DefaultAudio.png" background="true">$INFO[ListItem.Thumb]</texture>
+							<texture border="2" fallback="DefaultFolderSquare.png" background="true">$INFO[ListItem.Thumb]</texture>
 							<aspectratio>keep</aspectratio>
 							<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 							<bordersize>4</bordersize>
 						</control>
 						<control type="textbox">
 							<left>28</left>
-							<top>212</top>
+							<top>207</top>
 							<width>196</width>
-							<height>62</height>
-							<font>font27_narrow</font>
+							<height>65</height>
+							<font>font10</font>
 							<align>center</align>
 							<aligny>center</aligny>
-							<autoscroll delay="1000" time="1000" repeat="1000">true</autoscroll>
-							<label>$INFO[ListItem.Label2,[COLOR color_main], - [/COLOR]]$INFO[ListItem.Label]</label>
+							<label>$INFO[ListItem.Label2,[COLOR button_focus], - [/COLOR]]$INFO[ListItem.Label]</label>
 						</control>
 						<control type="group">
 							<left>230</left>
@@ -268,11 +264,11 @@
 							<include>UserRatingCircle</include>
 						</control>
 						<control type="image">
-							<left>16</left>
-							<top>6</top>
-							<width>218</width>
-							<height>280</height>
-							<texture border="8" colordiffuse="color_main">buttons/thumbnail_focused.png</texture>
+							<left>15</left>
+							<top>5</top>
+							<width>220</width>
+							<height>278</height>
+							<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
 							<animation effect="fade" start="100" end="0" time="200">Unfocus</animation>
 						</control>
 					</control>
@@ -306,16 +302,16 @@
 					</control>
 					<control type="label">
 						<label>$INFO[ListItem.UserRating]</label>
-						<font>font45_title</font>
+						<font>font30_title</font>
 						<left>0</left>
-						<top>24</top>
+						<top>18</top>
 						<width>262</width>
 						<align>center</align>
 					</control>
 					<control type="image">
 						<texture>icons/infodialogs/rating.png</texture>
 						<left>107</left>
-						<top>30</top>
+						<top>24</top>
 						<width>48</width>
 						<height>48</height>
 						<align>center</align>
@@ -335,7 +331,7 @@
 				<control type="radiobutton" id="440">
 					<label>$LOCALIZE[31114]</label>
 					<include content="VideoInfoButtonsCommon">
-						<param name="icon" value="icons/infodialogs/youtube.png" />
+						<param name="icon" value="icons/infodialogs/trailer.png" />
 					</include>
 					<onclick>Action(close)</onclick>
 					<visible>System.hasAddon(script.extendedinfo)</visible>
@@ -354,13 +350,13 @@
 				</include>
 				<include content="InfoDialogButton">
 					<param name="id" value="12" />
-					<param name="icon" value="icons/infodialogs/info.png" />
+					<param name="icon" value="icons/infodialogs/choose_image.png" />
 					<param name="label" value="$LOCALIZE[20413]" />
 				</include>
 			</control>
 			<include content="LeftRightArrows">
 				<param name="list_id" value="50" />
-				<param name="left_posx" value="562" />
+				<param name="left_posx" value="574" />
 				<param name="right_posx" value="1780" />
 				<param name="posy" value="300" />
 				<param name="visible" value="true" />
@@ -385,7 +381,7 @@
 		<control type="group">
 			<visible>String.IsEqual(ListItem.DBType,song) + !Window.IsActive(musicinformation)</visible>
 			<include content="InfoDialogTopBarInfo">
-				<param name="main_label" value="[COLOR color_main]$INFO[ListItem.TrackNumber]. [/COLOR]$INFO[ListItem.Title]" />
+				<param name="main_label" value="[COLOR button_focus]$INFO[ListItem.TrackNumber]. [/COLOR]$INFO[ListItem.Title]" />
 				<param name="sub_label" value="$INFO[ListItem.Artist,, - ]$INFO[ListItem.Album]$INFO[ListItem.Year, ([COLOR grey],[/COLOR])]" />
 				<param name="id" value="33335" />
 			</include>
