@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">8</defaultcontrol>
-	<onload>SetProperty(infobackground,$INFO[ListItem.Art(fanart)],home)</onload>
+	<onload>SetProperty(infobackground,$ESCINFO[ListItem.Art(fanart)],home)</onload>
 	<onunload>ClearProperty(infobackground,home)</onunload>
 	<controls>
 		<control type="group">
+			<centertop>50%</centertop>
+			<height>1080</height>
+			<centerleft>50%</centerleft>
+			<width>1920</width>
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">Conditional</animation>
 			<control type="group">
 				<top>150</top>
@@ -20,6 +24,7 @@
 					<bordersize>20</bordersize>
 				</control>
 				<control type="image">
+					<depth>DepthContentPopout</depth>
 					<left>4</left>
 					<top>4</top>
 					<width>526</width>
@@ -79,7 +84,7 @@
 					<top>468</top>
 					<control type="button" id="138">
 						<width>754</width>
-						<height>410</height>
+						<height>418</height>
 						<textoffsetx>40</textoffsetx>
 						<textoffsety>20</textoffsety>
 						<aligny>bottom</aligny>
@@ -91,19 +96,20 @@
 						<onleft>138</onleft>
 						<onright>138</onright>
 						<ondown>5000</ondown>
+						<texturenofocus border="21">dialogs/dialog-bg.png</texturenofocus>
 						<visible>Integer.IsGreater(Container(4000).NumItems,0)</visible>
 					</control>
 					<control type="image">
 						<left>735</left>
-						<width>513</width>
-						<height>410</height>
+						<width>512</width>
+						<height>418</height>
 						<aligny>bottom</aligny>
-						<texture border="40">buttons/button-nofo.png</texture>
+						<texture border="21">dialogs/dialog-bg.png</texture>
 						<visible>Integer.IsGreater(Container(4000).NumItems,0)</visible>
 					</control>
 					<control type="button" id="139">
 						<width>1245</width>
-						<height>410</height>
+						<height>418</height>
 						<textoffsetx>40</textoffsetx>
 						<textoffsety>20</textoffsety>
 						<aligny>bottom</aligny>
@@ -115,14 +121,14 @@
 						<onleft>139</onleft>
 						<onright>139</onright>
 						<ondown>5000</ondown>
+						<texturenofocus border="40">dialogs/dialog-bg.png</texturenofocus>
 						<visible>!Integer.IsGreater(Container(4000).NumItems,0)</visible>
 					</control>
 					<control type="textbox">
 						<left>40</left>
 						<top>25</top>
 						<width>670</width>
-						<height>343</height>
-						<font>font_textbox</font>
+						<height>363</height>
 						<label fallback="19055">$INFO[ListItem.Plot]</label>
 						<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 						<visible>Integer.IsGreater(Container(4000).NumItems,0)</visible>
@@ -131,8 +137,7 @@
 						<left>40</left>
 						<top>25</top>
 						<width>1165</width>
-						<height>343</height>
-						<font>font_textbox</font>
+						<height>363</height>
 						<label fallback="19055">$INFO[ListItem.Plot]</label>
 						<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 						<visible>!Integer.IsGreater(Container(4000).NumItems,0)</visible>
@@ -167,11 +172,6 @@
 						<param name="control_id" value="150" />
 						<param name="label" value="[COLOR button_focus]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre]" />
 						<param name="visible" value="!String.IsEmpty(ListItem.Genre) + Stringcompare(ListItem.DBType,movie)" />
-					</include>
-					<include content="InfoDialogMetadata">
-						<param name="control_id" value="151" />
-						<param name="label" value="[COLOR button_focus]$LOCALIZE[180]: [/COLOR]$INFO[ListItem.Duration] $LOCALIZE[31060]" />
-						<param name="visible" value="!String.IsEmpty(ListItem.Duration)" />
 					</include>
 					<include content="InfoDialogMetadata">
 						<param name="control_id" value="152" />
@@ -215,12 +215,12 @@
 					</include>
 				</control>
 				<control type="image">
-					<left>17</left>
-					<top>185</top>
-					<width>1210</width>
-					<height>283</height>
-					<aspectratio>scale</aspectratio>
-					<texture colordiffuse="A0FFFFFF">colors/black.png</texture>
+					<left>0</left>
+					<top>164</top>
+					<width>1245</width>
+					<height>328</height>
+					<texture border="21">dialogs/dialog-bg.png</texture>
+					<visible>Integer.IsEqual(Container(50).NumItems,0) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(ListItem.Art(banner))</visible>
 				</control>
 				<control type="textbox">
 					<left>17</left>
@@ -229,7 +229,7 @@
 					<height>283</height>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font36_title</font>
 					<label>$LOCALIZE[31079]</label>
 					<visible>Integer.IsEqual(Container(50).NumItems,0) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(ListItem.Art(banner))</visible>
 				</control>
@@ -254,7 +254,7 @@
 					<ondown>140</ondown>
 					<scrolltime>200</scrolltime>
 					<orientation>horizontal</orientation>
-					<itemlayout height="370" width="245">
+					<itemlayout height="317" width="245">
 						<control type="group">
 							<top>10</top>
 							<control type="image">
@@ -277,9 +277,9 @@
 							<control type="image">
 								<left>20</left>
 								<width>224</width>
-								<height>62</height>
-								<top>235</top>
-								<texture>colors/black.png</texture>
+								<height>80</height>
+								<bottom>10</bottom>
+								<texture>overlays/overlayfade.png</texture>
 								<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
 							</control>
 							<control type="label">
@@ -289,7 +289,7 @@
 								<top>218</top>
 								<align>center</align>
 								<aligny>center</aligny>
-								<font>font10</font>
+								<font>font12</font>
 								<label>$INFO[ListItem.Label]</label>
 							</control>
 							<control type="label">
@@ -299,13 +299,13 @@
 								<top>245</top>
 								<align>center</align>
 								<aligny>center</aligny>
-								<font>font10</font>
+								<font>font12</font>
 								<textcolor>grey</textcolor>
 								<label>$INFO[ListItem.Label2]</label>
 							</control>
 						</control>
 					</itemlayout>
-					<focusedlayout height="370" width="245">
+					<focusedlayout height="317" width="245">
 						<control type="group">
 							<left>0</left>
 							<top>10</top>
@@ -329,9 +329,9 @@
 							<control type="image">
 								<left>20</left>
 								<width>224</width>
-								<height>62</height>
-								<top>235</top>
-								<texture>colors/black.png</texture>
+								<height>80</height>
+								<bottom>10</bottom>
+								<texture>overlays/overlayfade.png</texture>
 								<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
 							</control>
 							<control type="label">
@@ -341,7 +341,7 @@
 								<top>218</top>
 								<align>center</align>
 								<aligny>center</aligny>
-								<font>font10</font>
+								<font>font12</font>
 								<scroll>true</scroll>
 								<label>$INFO[ListItem.Label]</label>
 							</control>
@@ -352,16 +352,16 @@
 								<top>245</top>
 								<align>center</align>
 								<aligny>center</aligny>
-								<font>font10</font>
+								<font>font12</font>
 								<textcolor>grey</textcolor>
 								<scroll>true</scroll>
 								<label>$INFO[ListItem.Label2]</label>
 							</control>
 							<control type="image">
-								<left>18</left>
-								<top>20</top>
-								<width>230</width>
-								<height>280</height>
+								<left>16</left>
+								<top>16</top>
+								<width>232</width>
+								<height>285</height>
 								<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
 								<visible>Control.HasFocus(50)</visible>
 							</control>
@@ -394,20 +394,20 @@
 						<param name="visible" value="!String.IsEmpty(ListItem.Trailer) + ![String.StartsWith(Container.FolderPath,plugin://) + String.Contains(Container.FolderPath,trailer)]" />
 					</include>
 					<include content="InfoDialogButton">
+						<param name="id" value="440" />
+						<param name="icon" value="icons/infodialogs/trailer_search.png" />
+						<param name="label" value="$LOCALIZE[31090]" />
+						<param name="onclick_1" value="Action(close)" />
+						<param name="onclick_2" value="RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Title] $INFO[ListItem.Year])" />
+						<param name="visible" value="System.hasAddon(script.extendedinfo) + String.IsEqual(ListItem.DBType,movie) + !Control.IsVisible(11)" />
+					</include>
+					<include content="InfoDialogButton">
 						<param name="id" value="441" />
 						<param name="icon" value="icons/infodialogs/cinema.png" />
 						<param name="onclick_1" value="Dialog.Close(MovieInformation)" />
 						<param name="onclick_2" value="RunScript(script.cinemavision,experience)" />
 						<param name="label" value="$LOCALIZE[31003]" />
 						<param name="visible" value="System.HasAddon(script.cinemavision) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]" />
-					</include>
-					<include content="InfoDialogButton">
-						<param name="id" value="440" />
-						<param name="icon" value="icons/infodialogs/trailer.png" />
-						<param name="label" value="$LOCALIZE[31090]" />
-						<param name="onclick_1" value="Action(close)" />
-						<param name="onclick_2" value="RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Title] $INFO[ListItem.Year])" />
-						<param name="visible" value="System.hasAddon(script.extendedinfo) + String.IsEqual(ListItem.DBType,movie) + !Control.IsVisible(11)" />
 					</include>
 					<control type="group" id="400">
 						<width>262</width>
@@ -417,7 +417,7 @@
 								<param name="icon" value="" />
 							</include>
 							<label>$LOCALIZE[31033]</label>
-							<onleft>440</onleft>
+							<onleft>441</onleft>
 							<onright>101</onright>
 							<onup>140</onup>
 							<enable>String.IsEmpty(Container.PluginName)</enable>
@@ -429,16 +429,16 @@
 						</control>
 						<control type="label">
 							<label>$INFO[ListItem.UserRating]</label>
-							<font>font30_title</font>
+							<font>font45_title</font>
 							<left>0</left>
-							<top>18</top>
+							<top>24</top>
 							<width>262</width>
 							<align>center</align>
 						</control>
 						<control type="image">
 							<texture>icons/infodialogs/rating.png</texture>
 							<left>107</left>
-							<top>24</top>
+							<top>30</top>
 							<width>48</width>
 							<height>48</height>
 							<align>center</align>
@@ -450,7 +450,7 @@
 						<param name="icon" value="icons/infodialogs/info.png" />
 						<param name="label" value="$LOCALIZE[31034]" />
 						<param name="onclick_1" value="RunScript(script.extendedinfo,info=openinfodialog)" />
-						<param name="visible" value="System.hasAddon(script.extendedinfo)" />
+						<param name="visible" value="System.hasAddon(script.extendedinfo) + [Stringcompare(ListItem.DbType,movie) | Stringcompare(ListItem.DbType,tvshow) | Stringcompare(ListItem.DbType,season) | Stringcompare(ListItem.DbType,episode)]" />
 					</include>
 					<include content="InfoDialogButton">
 						<param name="id" value="102" />
@@ -493,69 +493,76 @@
 					<param name="visible" value="true" />
 				</include>
 			</control>
-			<control type="group">
+			<control type="label">
+				<right>100</right>
+				<top>970</top>
+				<align>right</align>
+				<width>1400</width>
+				<height>44</height>
+				<font>font20_title</font>
+				<textcolor>77FFFFFF</textcolor>
+				<shadowcolor>text_shadow</shadowcolor>
+				<label>$INFO[ListItem.FileNameANdPath]</label>
+				<visible>Control.HasFocus(6)</visible>
 				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-				<top>980</top>
-				<include>MediaFlags</include>
-				<control type="label">
-					<right>100</right>
-					<top>60</top>
-					<align>right</align>
-					<width>1400</width>
-					<height>44</height>
-					<font>font10_title</font>
-					<textcolor>77FFFFFF</textcolor>
-					<shadowcolor>text_shadow</shadowcolor>
-					<label>$INFO[ListItem.FileNameANdPath]</label>
-					<visible>Control.HasFocus(6)</visible>
-					<animation effect="fade" start="0" end="100" time="300">Visible</animation>
-					<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-				</control>
-				<control type="group">
-					<visible>Control.HasFocus(50)</visible>
-					<animation effect="fade" time="200">VisibleChange</animation>
-					<top>19</top>
-					<left>700</left>
-					<control type="image">
-						<left>17</left>
-						<width>44</width>
-						<height>44</height>
-						<animation effect="rotate" end="-90" center="40,23" time="0" condition="true">Conditional</animation>
-						<texture colordiffuse="button_focus">frame/menu-nofo.png</texture>
-					</control>
-					<control type="label">
-						<left>74</left>
-						<width>500</width>
-						<height>44</height>
-						<shadowcolor>text_shadow</shadowcolor>
-						<label>$LOCALIZE[31125]</label>
-					</control>
-				</control>
-				<control type="group">
-					<visible>Control.HasFocus(138)</visible>
-					<animation effect="fade" time="200">VisibleChange</animation>
-					<top>19</top>
-					<left>700</left>
-					<control type="image">
-						<left>17</left>
-						<width>44</width>
-						<height>44</height>
-						<texture colordiffuse="button_focus">frame/menu-fo.png</texture>
-					</control>
-					<control type="label">
-						<left>74</left>
-						<width>500</width>
-						<height>44</height>
-						<shadowcolor>text_shadow</shadowcolor>
-						<label>$LOCALIZE[31126]</label>
-					</control>
-				</control>
+				<animation effect="fade" start="0" end="100" time="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 			</control>
 			<include content="InfoDialogTopBarInfo">
 				<param name="main_label" value="$VAR[VideoInfoMainLabelVar]" />
 				<param name="sub_label" value="$VAR[VideoInfoSubLabelVar]" />
 			</include>
+		</control>
+		<control type="group">
+			<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+			<centerleft>50%</centerleft>
+			<width>1920</width>
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">Conditional</animation>
+			<bottom>0</bottom>
+			<height>70</height>
+			<include>MediaFlags</include>
+			<control type="group">
+				<visible>Control.HasFocus(50)</visible>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<top>10</top>
+				<left>0</left>
+				<control type="image">
+					<left>21</left>
+					<width>36</width>
+					<height>36</height>
+					<animation effect="rotate" end="-90" center="36,19" time="0" condition="true">Conditional</animation>
+					<texture colordiffuse="grey">frame/menu-nofo.png</texture>
+				</control>
+				<control type="label">
+					<left>74</left>
+					<width>500</width>
+					<height>44</height>
+					<shadowcolor>text_shadow</shadowcolor>
+					<label>$LOCALIZE[31125]</label>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Control.HasFocus(138)</visible>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<top>10</top>
+				<left>0</left>
+				<control type="image">
+					<top>4</top>
+					<left>17</left>
+					<width>36</width>
+					<height>36</height>
+					<texture colordiffuse="grey">lists/played-total.png</texture>
+				</control>
+				<control type="label">
+					<left>74</left>
+					<width>500</width>
+					<height>44</height>
+					<shadowcolor>text_shadow</shadowcolor>
+					<label>$LOCALIZE[31126]</label>
+				</control>
+			</control>
 		</control>
 	</controls>
 </window>

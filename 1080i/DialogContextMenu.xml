@@ -17,7 +17,7 @@
 			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 			<texture colordiffuse="B0FFFFFF">colors/black.png</texture>
 		</control>
-		<control type="button" id="22001">
+		<control type="button">
 			<left>-1920</left>
 			<top>-1080</top>
 			<width>5760</width>
@@ -31,33 +31,32 @@
 			<left>0</left>
 			<top>0</top>
 			<width>450</width>
-			<height>830</height>
-			<texture border="2">dialogs/dialog-bg-solid.png</texture>
+			<height>780</height>
+			<texture colordiffuse="dialog_tint">colors/white.png</texture>
 		</control>
 		<control type="grouplist" id="996">
 			<description>grouplist for context buttons</description>
 			<left>0</left>
-			<top>30</top>
+			<top>0</top>
 			<width>450</width>
 			<height max="780">auto</height>
 			<usecontrolcoords>true</usecontrolcoords>
 		</control>
 		<control type="button" id="1000">
 			<description>button template</description>
-			<left>2</left>
+			<left>0</left>
 			<top></top>
-			<width>446</width>
-			<height>60</height>
-			<font>fontContextMenu</font>
+			<width>450</width>
+			<height>65</height>
 			<align>center</align>
 			<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-			<texturenofocus>lists/separator.png</texturenofocus>
+			<texturenofocus></texturenofocus>
 		</control>
 		<include content="UpDownArrows">
 			<param name="container_id" value="996" />
 			<param name="posx" value="201" />
 			<param name="up_posy" value="-40" />
-			<param name="down_posy" value="840" />
+			<param name="down_posy" value="798" />
 		</include>
 	</controls>
 </window>

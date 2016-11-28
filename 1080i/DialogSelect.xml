@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">3</defaultcontrol>
-	<coordinates>
-		<left>350</left>
-		<top>120</top>
-	</coordinates>
 	<include>Animation_DialogPopupOpenClose</include>
 	<depth>DepthOSD</depth>
 	<controls>
 		<control type="group">
+			<centertop>50%</centertop>
+			<centerleft>50%</centerleft>
+			<height>742</height>
+			<width>1220</width>
 			<include content="DialogBackgroundCommons">
-				<param name="DialogBackgroundWidth" value="1220" />
-				<param name="DialogBackgroundHeight" value="742" />
-				<param name="DialogHeaderLabel" value="" />
-				<param name="DialogHeaderId" value="1" />
+				<param name="width" value="1220" />
+				<param name="height" value="742" />
+				<param name="header_label" value="" />
+				<param name="header_id" value="1" />
 			</include>
 			<control type="image">
 				<left>0</left>
@@ -52,13 +52,6 @@
 				<scrolltime>200</scrolltime>
 				<itemlayout height="125" width="880">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>880</width>
-						<height>125</height>
-						<texture border="40">lists/separator.png</texture>
-					</control>
-					<control type="image">
 						<left>12</left>
 						<top>7</top>
 						<width>110</width>
@@ -69,30 +62,23 @@
 					<control type="label">
 						<left>135</left>
 						<top>0</top>
-						<width>700</width>
+						<width>730</width>
 						<height>60</height>
+						<font>font14</font>
 						<aligny>center</aligny>
-						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="textbox">
 						<left>135</left>
 						<top>52</top>
-						<width>700</width>
-						<height>60</height>
+						<width>730</width>
+						<height>65</height>
 						<font>font12</font>
 						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</itemlayout>
 				<focusedlayout height="125" width="880">
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>880</width>
-						<height>125</height>
-						<texture border="40">lists/separator.png</texture>
-						<visible>!Control.HasFocus(6)</visible>
-					</control>
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
@@ -112,17 +98,18 @@
 					<control type="label">
 						<left>135</left>
 						<top>0</top>
-						<width>700</width>
+						<width>730</width>
 						<height>60</height>
 						<aligny>center</aligny>
 						<scroll>true</scroll>
-						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<font>font14</font>
+						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="textbox">
 						<left>135</left>
 						<top>52</top>
-						<width>700</width>
-						<height>60</height>
+						<width>730</width>
+						<height>65</height>
 						<font>font12</font>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
@@ -138,34 +125,31 @@
 				<onright>9001</onright>
 				<orientation>vertical</orientation>
 			</control>
-			<control type="group">
-				<control type="label">
-					<description>number of files/pages in list text label</description>
-					<left>925</left>
-					<top>695</top>
-					<width>275</width>
-					<height>35</height>
-					<font>font10</font>
-					<align>right</align>
-					<aligny>center</aligny>
-					<textcolor>grey</textcolor>
-					<label>$VAR[SelectLabel]</label>
-				</control>
-				<control type="grouplist" id="9001">
-					<left>920</left>
-					<top>80</top>
-					<onleft>61</onleft>
-					<itemgap>-20</itemgap>
-					<onright>3</onright>
-					<include content="DefaultDialogButton">
-						<param name="id" value="5" />
-						<param name="label" value="" />
-					</include>
-					<include content="DefaultDialogButton">
-						<param name="id" value="7" />
-						<param name="label" value="$LOCALIZE[222]" />
-					</include>
-				</control>
+			<control type="label">
+				<left>925</left>
+				<top>695</top>
+				<width>275</width>
+				<height>35</height>
+				<font>font12</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<textcolor>grey</textcolor>
+				<label>$VAR[SelectLabel]</label>
+			</control>
+			<control type="grouplist" id="9001">
+				<left>920</left>
+				<top>80</top>
+				<onleft>61</onleft>
+				<itemgap>dialogbuttons_itemgap</itemgap>
+				<onright>3</onright>
+				<include content="DefaultDialogButton">
+					<param name="id" value="5" />
+					<param name="label" value="" />
+				</include>
+				<include content="DefaultDialogButton">
+					<param name="id" value="7" />
+					<param name="label" value="$LOCALIZE[222]" />
+				</include>
 			</control>
 		</control>
 	</controls>

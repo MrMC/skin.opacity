@@ -31,45 +31,41 @@
 				<shadowcolor>black</shadowcolor>
 			</control>
 		</control>
-		<control type="label" id="1">
-			<left>45</left>
-			<top>15</top>
-			<width>1770</width>
-			<height>100</height>
-			<label>$INFO[Player.SeekNumeric(hh:mm:ss)]</label>
-			<font>font12</font>
-			<shadowcolor>black</shadowcolor>
-		</control>
 		<control type="group" id="1">
+			<depth>DepthOSD+</depth>
 			<visible>Player.Caching</visible>
 			<animation delay="300" effect="fade" time="200">Visible</animation>
 			<animation effect="fade" delay="200" time="150">Hidden</animation>
+			<centerleft>50%</centerleft>
+			<width>110</width>
+			<centertop>50%</centertop>
+			<height>110</height>
 			<control type="image" id="1">
-				<left>906</left>
-				<top>485</top>
+				<centerleft>50%</centerleft>
+				<centertop>50%</centertop>
 				<width>110</width>
 				<height>110</height>
 				<texture colordiffuse="BFFFFFFF">osd/buffer-bg.png</texture>
 			</control>
 			<control type="image" id="1">
-				<left>915</left>
-				<top>494</top>
+				<centerleft>50%</centerleft>
+				<centertop>50%</centertop>
 				<width>92</width>
 				<height>92</height>
 				<texture colordiffuse="1AFFFFFF">dialogs/extendedprogress/loading-placeholder.png</texture>
 			</control>
- 			<control type="image" id="1">
-				<left>880</left>
-				<top>460</top>
+			<control type="image" id="1">
+				<centerleft>50%</centerleft>
+				<centertop>50%</centertop>
 				<width>160</width>
 				<height>160</height>
-				<texture colordiffuse="color_main">dialogs/volume/progress/p$INFO[Player.CacheLevel].png</texture>
+				<texture colordiffuse="button_focus">$INFO[Player.CacheLevel,dialogs/volume/progress/p,.png]</texture>
 			</control>
 			<control type="label" id="1">
 				<description>buffering value</description>
 				<label>$INFO[Player.CacheLevel]</label>
-				<left>860</left>
-				<top>440</top>
+				<centerleft>50%</centerleft>
+				<centertop>50%</centertop>
 				<width>200</width>
 				<height>200</height>
 				<aligny>center</aligny>
