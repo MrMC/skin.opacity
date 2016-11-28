@@ -42,7 +42,7 @@
 							<top>0</top>
 							<width>462</width>
 							<height>95</height>
-							<texture colordiffuse="button_focus">lists/focus.png</texture>
+							<texture colordiffuse="color_main">lists/focus.png</texture>
 							<animation effect="fade" start="100" end="0" time="0" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] | System.HasModalDialog">Conditional</animation>
 							<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
 						</control>
