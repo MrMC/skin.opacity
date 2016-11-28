@@ -98,7 +98,7 @@
 						<width>940</width>
 						<height>71</height>
 						<visible>Control.HasFocus(450)</visible>
-						<texture colordiffuse="button_focus">lists/focus.png</texture>
+						<texture colordiffuse="color_main">lists/focus.png</texture>
 					</control>
 					<control type="image">
 						<left>10</left>
@@ -156,7 +156,7 @@
 						<width>940</width>
 						<height>71</height>
 						<visible>Control.HasFocus(451)</visible>
-						<texture colordiffuse="button_focus">lists/focus.png</texture>
+						<texture colordiffuse="color_main">lists/focus.png</texture>
 					</control>
 					<control type="image">
 						<left>10</left>

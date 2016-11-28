@@ -147,7 +147,7 @@
 					<height>240</height>
 					<wrapmultiline>true</wrapmultiline>
 					<label>$VAR[MusicInfoTextboxVar]</label>
-					<textcolor>button_focus</textcolor>
+					<textcolor>color_main</textcolor>
 				</control>
 				<control type="panel" id="50">
 					<left>585</left>
@@ -185,7 +185,7 @@
 								<top>-10</top>
 								<width>595</width>
 								<height>100</height>
-								<texture border="40" colordiffuse="button_focus">buttons/button-fo.png</texture>
+								<texture border="40" colordiffuse="color_main">buttons/button-fo.png</texture>
 							</control>
 							<control type="label">
 								<left>40</left>
@@ -228,7 +228,7 @@
 							<font>font27_narrow</font>
 							<align>center</align>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label2,[COLOR button_focus], - [/COLOR]]$INFO[ListItem.Label]</label>
+							<label>$INFO[ListItem.Label2,[COLOR color_main], - [/COLOR]]$INFO[ListItem.Label]</label>
 						</control>
 						<control type="group">
 							<left>230</left>
@@ -265,7 +265,7 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<autoscroll delay="1000" time="1000" repeat="1000">true</autoscroll>
-								<label>$INFO[ListItem.Label2,[COLOR button_focus], - [/COLOR]]$INFO[ListItem.Label]</label>
+								<label>$INFO[ListItem.Label2,[COLOR color_main], - [/COLOR]]$INFO[ListItem.Label]</label>
 							</control>
 							<control type="group">
 								<left>230</left>
@@ -277,7 +277,7 @@
 								<top>6</top>
 								<width>218</width>
 								<height>280</height>
-								<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+								<texture border="8" colordiffuse="color_main">buttons/thumbnail_focused.png</texture>
 								<animation effect="fade" start="100" end="0" time="200">Unfocus</animation>
 							</control>
 						</control>
@@ -390,7 +390,7 @@
 			<control type="group">
 				<visible>String.IsEqual(ListItem.DBType,song) + !Window.IsActive(musicinformation)</visible>
 				<include content="InfoDialogTopBarInfo">
-					<param name="main_label" value="[COLOR button_focus]$INFO[ListItem.TrackNumber]. [/COLOR]$INFO[ListItem.Title]" />
+					<param name="main_label" value="[COLOR color_main]$INFO[ListItem.TrackNumber]. [/COLOR]$INFO[ListItem.Title]" />
 					<param name="sub_label" value="$INFO[ListItem.Artist,, - ]$INFO[ListItem.Album]$INFO[ListItem.Year, ([COLOR grey],[/COLOR])]" />
 					<param name="id" value="33335" />
 				</include>

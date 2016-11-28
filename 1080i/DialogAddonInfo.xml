@@ -117,7 +117,7 @@
 							<top>16</top>
 							<width>393</width>
 							<height>228</height>
-							<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+							<texture border="8" colordiffuse="color_main">buttons/thumbnail_focused.png</texture>
 						</control>
 					</focusedlayout>
 				</control>
@@ -242,14 +242,14 @@
 					<control type="label">
 						<width>470</width>
 						<height>40</height>
-						<label>$INFO[ListItem.AddonSize,[COLOR button_focus]$LOCALIZE[22031]:[/COLOR] ,[CR]]</label>
+						<label>$INFO[ListItem.AddonSize,[COLOR color_main]$LOCALIZE[22031]:[/COLOR] ,[CR]]</label>
 						<textcolor>white</textcolor>
 						<visible>!String.IsEmpty(ListItem.AddonSize)</visible>
 					</control>
 					<control type="label">
 						<width>470</width>
 						<height>40</height>
-						<label>$INFO[ListItem.AddonOrigin,[COLOR button_focus]$LOCALIZE[31150]:[/COLOR] ]</label>
+						<label>$INFO[ListItem.AddonOrigin,[COLOR color_main]$LOCALIZE[31150]:[/COLOR] ]</label>
 						<textcolor>white</textcolor>
 						<visible>!String.IsEmpty(ListItem.AddonOrigin)</visible>
 					</control>

@@ -27,7 +27,7 @@
 							<left>0</left>
 							<width>1000</width>
 							<height>90</height>
-							<texture colordiffuse="button_focus">lists/focus.png</texture>
+							<texture colordiffuse="color_main">lists/focus.png</texture>
 							<visible>Control.hasFocus(11)</visible>
 						</control>
 						<control type="image">
