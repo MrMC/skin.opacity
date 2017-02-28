@@ -8,8 +8,6 @@
 	<include file="Includes_PVR.xml" />
 	<include file="View_50_WideList.xml" />
 	<include file="Variables.xml" />
-	<include file="Constants_1920.xml" condition="!String.IsEqual(Skin.AspectRatio,21:9)"/>
-	<include file="Constants_2560.xml" condition="String.IsEqual(Skin.AspectRatio,21:9)"/>
 	<constant name="DepthDialog">0.50</constant>
 	<constant name="DepthDialog+">0.52</constant>
 	<constant name="DepthDialog-">0.48</constant>

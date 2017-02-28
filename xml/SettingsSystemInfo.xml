@@ -144,7 +144,7 @@
 						<font>font25_title</font>
 					</control>
 					<control type="grouplist">
-						<description>MrMc build version</description>
+						<description>Kodi build version</description>
 						<itemgap>10</itemgap>
 						<top>80</top>
 						<left>1210</left>
@@ -162,7 +162,7 @@
 							<shadowcolor>black</shadowcolor>
 						</control>
 						<control type="label" id="52">
-							<description>MrMc Build Version</description>
+							<description>Kodi Build Version</description>
 							<height>50</height>
 							<aligny>bottom</aligny>
 							<textoffsety>10</textoffsety>
@@ -180,7 +180,7 @@
 						<width>800</width>
 						<orientation>horizontal</orientation>
 						<control type="label">
-							<description>MrMc Compiled Text</description>
+							<description>kodi Compiled Text</description>
 							<width>auto</width>
 							<height>25</height>
 							<label>$LOCALIZE[174]</label>
@@ -188,7 +188,7 @@
 							<shadowcolor>black</shadowcolor>
 						</control>
 						<control type="label" id="53">
-							<description>MrMc Build Date</description>
+							<description>Kodi Build Date</description>
 							<width>auto</width>
 							<font>font12</font>
 							<textcolor>primary_color</textcolor>
