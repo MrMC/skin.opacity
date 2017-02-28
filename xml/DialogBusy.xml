@@ -4,7 +4,6 @@
 	<animation effect="fade" start="100" end="0" time="240">WindowClose</animation>
 	<controls>
 		<control type="group">
-			<visible>String.IsEmpty(Window(Home).Property(script.cinemavision.running))</visible>
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<visible>!Window.IsActive(startup)</visible>
 			<control type="image">
