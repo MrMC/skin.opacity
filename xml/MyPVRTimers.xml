@@ -28,11 +28,11 @@
 							<height>100</height>
 							<font>font36_title</font>
 							<aligny>center</aligny>
-							<visible>String.IsEmpty(ListItem.Date)</visible>
+							<visible>IsEmpty(ListItem.Date)</visible>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="group">
-							<visible>!String.IsEmpty(ListItem.Date)</visible>
+							<visible>!IsEmpty(ListItem.Date)</visible>
 							<control type="label">
 								<left>30</left>
 								<top>10</top>
@@ -89,10 +89,10 @@
 							<font>font36_title</font>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>String.IsEmpty(ListItem.Date)</visible>
+							<visible>IsEmpty(ListItem.Date)</visible>
 						</control>
 						<control type="group">
-							<visible>!String.IsEmpty(ListItem.Date)</visible>
+							<visible>!IsEmpty(ListItem.Date)</visible>
 							<control type="label">
 								<left>30</left>
 								<top>10</top>

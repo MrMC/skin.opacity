@@ -19,7 +19,7 @@
 		<control type="group">
 			<bottom>0</bottom>
 			<height>180</height>
-			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(fullscreeninfo) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(osdvideosettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(playerprocessinfo) | Window.IsVisible(osdcmssettings) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
+			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(fullscreeninfo) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(osdvideosettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(osdcmssettings) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<control type="label">
 				<right>30</right>
@@ -82,7 +82,7 @@
 							<param name="texture" value="osd/fullscreen/buttons/next.png"/>
 						</include>
 						<onclick>PlayerControl(Next)</onclick>
-						<visible>!VideoPlayer.Content(livetv) + [Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1)]</visible>
+						<visible>!VideoPlayer.Content(livetv) + [Player.ChapterCount | isGreaterThan(Playlist.Length(video),1)]</visible>
 					</control>
 					<control type="radiobutton" id="804">
 						<include content="OSDButton">

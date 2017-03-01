@@ -28,12 +28,11 @@
 						<top>0</top>
 						<right>20</right>
 						<bottom>340</bottom>
-						<pagecontrol>60</pagecontrol>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<timeblocks>34</timeblocks>
 						<rulerunit>6</rulerunit>
 						<onleft>9000</onleft>
-						<onright>60</onright>
+						<onright>9000</onright>
 						<onup>10</onup>
 						<ondown>10</ondown>
 						<viewtype label="19032">list</viewtype>
@@ -155,17 +154,6 @@
 								<texture>$VAR[PVRTimerIcon]</texture>
 							</control>
 						</focusedlayout>
-					</control>
-					<control type="scrollbar" id="60">
-						<right>0</right>
-						<top>47</top>
-						<width>12</width>
-						<bottom>340</bottom>
-						<onleft>10</onleft>
-						<onright>10</onright>
-						<orientation>vertical</orientation>
-						<texturesliderbackground colordiffuse="22FFFFFF">colors/white.png</texturesliderbackground>
-						<animation effect="fade" start="100" end="40" time="0" condition="!system.getbool(input.enablemouse)">Conditional</animation>
 					</control>
 				</control>
 				<control type="group">

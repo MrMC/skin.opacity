@@ -360,7 +360,7 @@
 					<font>font27</font>
 					<textcolor>80FFFFFF</textcolor>
 					<label>$LOCALIZE[19055]</label>
-					<visible>String.IsEmpty(Listitem.Plot)</visible>
+					<visible>IsEmpty(Listitem.Plot)</visible>
 				</control>
 			</control>
 			<include content="TopBar">
@@ -375,7 +375,7 @@
 				<right>40</right>
 				<height>80</height>
 				<align>right</align>
-				<visible>!String.isempty(ListItem.NextTitle)</visible>
+				<visible>!IsEmpty(ListItem.NextTitle)</visible>
 				<label>$INFO[ListItem.NextTitle,[COLOR grey]$LOCALIZE[19031]:[CR][/COLOR]] $INFO[ListItem.NextStartTime]</label>
 				<include>OpenClose_Right</include>
 			</control>

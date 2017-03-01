@@ -135,13 +135,9 @@
 				</control>
 			</control>
 		</control>
-		<include content="TopBar" condition="Window.IsActive(videoplaylist)">
+		<include content="TopBar">
 			<param name="breadcrumbs_label" value="$LOCALIZE[31065]" />
 			<param name="sublabel">$INFO[Container.TotalTime,, - ] $INFO[Playlist.Position(video),, / ]$INFO[Playlist.Length(video)]</param>
-		</include>
-		<include content="TopBar" condition="Window.IsActive(musicplaylist)">
-			<param name="breadcrumbs_label" value="$LOCALIZE[31066]" />
-			<param name="sublabel">$INFO[Container.TotalTime,, - ] $INFO[Playlist.Position(music),, / ]$INFO[Playlist.Length(music)]</param>
 		</include>
 		<include>BottomBar</include>
 		<control type="group">

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<visible>[[Player.Seeking | Player.DisplayAfterSeek | [Player.Paused + !Player.Caching] | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(fullscreeninfo) | Window.IsActive(videoosd) | Window.IsActive(playerprocessinfo)] + Window.IsActive(fullscreenvideo)] | Window.IsActive(visualisation) | !String.IsEmpty(Player.SeekNumeric)</visible>
+	<visible>[[Player.Seeking | Player.DisplayAfterSeek | [Player.Paused + !Player.Caching] | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(fullscreeninfo) | Window.IsActive(videoosd)] + Window.IsActive(fullscreenvideo)] | Window.IsActive(visualisation) | !IsEmpty(Player.SeekNumeric)</visible>
 	<visible>!Window.IsActive(sliderdialog)</visible>
 	<include>Animation_BottomSlide</include>
 	<depth>DepthOSD</depth>
@@ -86,7 +86,7 @@
 				<height>75</height>
 				<align>center</align>
 				<aligny>bottom</aligny>
-				<animation delay="0" effect="slide" time="120" start="0,0" end="0,-20" tween="sine" easing="inout" condition="!String.IsEmpty(Control.GetLabel(40000))">Conditional</animation>
+				<animation delay="0" effect="slide" time="120" start="0,0" end="0,-20" tween="sine" easing="inout" condition="!IsEmpty(Control.GetLabel(40000))">Conditional</animation>
 				<label>$VAR[SeekTimeLabelVar]</label>
 				<font>font45</font>
 				<shadowcolor>black</shadowcolor>
@@ -203,19 +203,19 @@
 				<animation effect="fade" start="0" end="100" time="200" delay="1000">Visible</animation>
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[VideoPlayer.AudioChannels,flags/audiochannel/,.png]" />
-					<param name="visible" value="!String.IsEmpty(VideoPlayer.AudioChannels)" />
+					<param name="visible" value="!IsEmpty(VideoPlayer.AudioChannels)" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[VideoPlayer.AudioCodec,flags/audiocodec/,.png]" />
-					<param name="visible" value="!String.IsEmpty(VideoPlayer.AudioCodec)" />
+					<param name="visible" value="!IsEmpty(VideoPlayer.AudioCodec)" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]" />
-					<param name="visible" value="!String.IsEmpty(VideoPlayer.VideoAspect)" />
+					<param name="visible" value="!IsEmpty(VideoPlayer.VideoAspect)" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[VideoPlayer.VideoCodec,flags/videocodec/,.png]" />
-					<param name="visible" value="!String.IsEmpty(VideoPlayer.VideoCodec)" />
+					<param name="visible" value="!IsEmpty(VideoPlayer.VideoCodec)" />
 				</include>
 			</control>
 		</control>

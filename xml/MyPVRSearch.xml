@@ -25,7 +25,7 @@
 					<scrolltime>200</scrolltime>
 					<itemlayout height="100">
 						<control type="label">
-							<visible>String.IsEmpty(ListItem.Date)</visible>
+							<visible>IsEmpty(ListItem.Date)</visible>
 							<left>120</left>
 							<top>0</top>
 							<right>30</right>
@@ -35,7 +35,7 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="group">
-							<visible>!String.IsEmpty(ListItem.Date)</visible>
+							<visible>!IsEmpty(ListItem.Date)</visible>
 							<control type="image">
 								<left>25</left>
 								<top>10</top>
@@ -43,7 +43,7 @@
 								<height>80</height>
 								<texture fallback="DefaultTVShows.png">$INFO[Listitem.ActualIcon]</texture>
 								<aspectratio>keep</aspectratio>
-								<visible>!String.IsEmpty(ListItem.ActualIcon)</visible>
+								<visible>!IsEmpty(ListItem.ActualIcon)</visible>
 							</control>
 							<control type="label">
 								<left>120</left>
@@ -74,7 +74,7 @@
 							<visible>Control.HasFocus(50)</visible>
 						</control>
 						<control type="label">
-							<visible>String.IsEmpty(ListItem.Date)</visible>
+							<visible>IsEmpty(ListItem.Date)</visible>
 							<left>120</left>
 							<top>0</top>
 							<right>30</right>
@@ -84,7 +84,7 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="group">
-							<visible>!String.IsEmpty(ListItem.Date)</visible>
+							<visible>!IsEmpty(ListItem.Date)</visible>
 							<control type="image">
 								<left>25</left>
 								<top>10</top>
@@ -92,7 +92,7 @@
 								<height>80</height>
 								<texture fallback="DefaultTVShows.png">$INFO[Listitem.ActualIcon]</texture>
 								<aspectratio>keep</aspectratio>
-								<visible>!String.IsEmpty(ListItem.ActualIcon)</visible>
+								<visible>!IsEmpty(ListItem.ActualIcon)</visible>
 							</control>
 							<control type="label">
 								<left>120</left>

@@ -140,7 +140,7 @@
 			<font>font27</font>
 			<textcolor>80FFFFFF</textcolor>
 			<label>$LOCALIZE[19055]</label>
-			<visible>String.IsEmpty(Listitem.Plot) + String.IsEmpty(Listitem.Genre)</visible>
+			<visible>IsEmpty(Listitem.Plot) + IsEmpty(Listitem.Genre)</visible>
 		</control>
 	</include>
 </includes>

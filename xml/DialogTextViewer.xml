@@ -43,7 +43,7 @@
 			<texturenofocus colordiffuse="primary_color" flipy="true">overlays/arrowdown.png</texturenofocus>
 			<onclick>SetFocus(3000)</onclick>
 			<onclick>Up</onclick>
-			<visible>Control.IsVisible(3000) + Integer.IsGreater(Container(5).CurrentPage,1)</visible>
+			<visible>Control.IsVisible(3000) + isGreaterThan(Container(5).CurrentPage,1)</visible>
 			<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 		</control>
 		<control type="button">
@@ -69,7 +69,7 @@
 			<aligny>center</aligny>
 			<label>$LOCALIZE[31035] [COLOR=primary_color]$INFO[Container(5).CurrentPage]/$INFO[Container(5).NumPages][/COLOR]</label>
 			<wrapmultiline>true</wrapmultiline>
-			<visible>Integer.IsGreater(Container(5).NumPages,1)</visible>
+			<visible>isGreaterThan(Container(5).NumPages,1)</visible>
 		</control>
 	</controls>
 </window>

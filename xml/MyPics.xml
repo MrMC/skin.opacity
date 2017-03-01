@@ -13,7 +13,6 @@
 			<control type="group">
 				<include>OpenClose_Left</include>
 				<include>Visible_Left</include>
-				<visible>Container.Content(images)</visible>
 				<include content="ContentPanel">
 					<param name="width" value="656" />
 				</include>

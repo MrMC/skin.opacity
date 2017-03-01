@@ -209,7 +209,7 @@
 	</include>
 	<include name="PicsInfoLine">
 		<control type="grouplist">
-			<visible>!String.IsEmpty($PARAM[value])</visible>
+			<visible>!IsEmpty($PARAM[value])</visible>
 			<height>45</height>
 			<orientation>horizontal</orientation>
 			<width>570</width>
@@ -329,14 +329,14 @@
 				<top>10</top>
 				<width>200</width>
 				<include content="InfoFlag">
-					<param name="visible" value="[String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Premiered)" />
+					<param name="visible" value="[String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,episode)] + !IsEmpty(ListItem.Premiered)" />
 					<param name="icon" value="lists/year.png" />
 					<param name="label" value="$INFO[ListItem.Premiered]" />
 				</include>
 			</control>
 			<control type="group">
 				<width>115</width>
-				<visible>!String.IsEmpty(ListItem.Duration)</visible>
+				<visible>!IsEmpty(ListItem.Duration)</visible>
 				<control type="label">
 					<width>115</width>
 					<height>60</height>
@@ -351,38 +351,17 @@
 			</control>
 			<include content="MediaFlag">
 				<param name="texture" value="$INFO[ListItem.AudioChannels,flags/audiochannel/,.png]" />
-				<param name="visible" value="!String.IsEmpty(ListItem.AudioChannels)" />
+				<param name="visible" value="!IsEmpty(ListItem.AudioChannels)" />
 			</include>
 			<include content="MediaFlag">
 				<param name="texture" value="$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]" />
-				<param name="visible" value="!String.IsEmpty(ListItem.AudioCodec)" />
+				<param name="visible" value="!IsEmpty(ListItem.AudioCodec)" />
 			</include>
 			<include content="MediaFlag">
 				<param name="texture" value="$VAR[ResolutionFlagVar]" />
-				<param name="visible" value="!String.IsEmpty(ListItem.VideoResolution)" />
+				<param name="visible" value="!IsEmpty(ListItem.VideoResolution)" />
 			</include>
 		</control> -->
-	</include>
-	<include name="WeatherIcon">
-		<control type="group">
-			<width>268</width>
-			<visible>!String.IsEmpty($PARAM[label])</visible>
-			<control type="image">
-				<left>50</left>
-				<width>60</width>
-				<height>60</height>
-				<texture colordiffuse="D0FFFFFF">$PARAM[texture]</texture>
-			</control>
-			<control type="textbox">
-				<top>68</top>
-				<width>160</width>
-				<height>63</height>
-				<font>font27_narrow</font>
-				<align>center</align>
-				<aligny>center</aligny>
-				<label>$INFO[$PARAM[label]]</label>
-			</control>
-		</control>
 	</include>
 	<include name="FileManagerPanel">
 		<definition>
@@ -475,7 +454,7 @@
 					<shadowcolor>text_shadow</shadowcolor>
 					<height>35</height>
 					<scroll>true</scroll>
-					<animation effect="slide" start="0,0" end="0,15" time="0" condition="String.IsEmpty(Control.GetLabel($PARAM[id]))">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,15" time="0" condition="IsEmpty(Control.GetLabel($PARAM[id]))">Conditional</animation>
 				</control>
 				<control type="label" id="$PARAM[id]">
 					<label>$PARAM[sub_label]</label>
@@ -509,7 +488,7 @@
 					<height>65</height>
 					<align>center</align>
 					<scroll>true</scroll>
-					<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(Control.GetLabel($PARAM[id]))">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,25" time="0" condition="IsEmpty(Control.GetLabel($PARAM[id]))">Conditional</animation>
 				</control>
 				<control type="label" id="$PARAM[id]">
 					<label>$PARAM[sub_label]</label>
@@ -677,20 +656,10 @@
 						<include>BreadcrumbsLabel</include>
 					</control>
 					<control type="label">
-						<label>$INFO[Container.ShowTitle, / ]</label>
-						<include>BreadcrumbsLabel</include>
-						<visible>!String.IsEmpty(Container.ShowTitle) + !String.IsEqual(Container.ShowTitle,Container.FolderName)</visible>
-					</control>
-					<control type="label">
 						<label>$INFO[Container.FolderName, / ]</label>
 						<include>BreadcrumbsLabel</include>
 						<visible>![Container.Content() + Window.IsActive(videos)]</visible>
 						<visible>![Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRRecordings.xml) | Window.IsActive(MyPVRSearch.xml)]</visible>
-					</control>
-					<control type="label">
-						<label>$INFO[Container.PluginCategory, / ]</label>
-						<include>BreadcrumbsLabel</include>
-						<visible>!String.isempty(Container.PluginCategory)</visible>
 					</control>
 					<control type="label">
 						<label>$INFO[Control.GetLabel(10),: ]</label>
@@ -746,23 +715,6 @@
 						<aspectratio aligny="center" align="left">keep</aspectratio>
 						<texture>icons/power.png</texture>
 						<visible>System.HasAlarm(shutdowntimer)</visible>
-					</control>
-					<control type="label">
-						<font>font37</font>
-						<height>50</height>
-						<width>auto</width>
-						<aligny>center</aligny>
-						<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
-						<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
-					</control>
-					<control type="image">
-						<top>1</top>
-						<width>60</width>
-						<height>60</height>
-						<fadetime>300</fadetime>
-						<aspectratio aligny="center" align="left">keep</aspectratio>
-						<texture>$INFO[Weather.FanartCode,weather/small/,.png]</texture>
-						<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
 					</control>
 					<control type="image">
 						<top>8</top>
@@ -837,14 +789,14 @@
 			</control>
 			<control type="group">
 				<include>FullScreenDimensions</include>
-				<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
+				<animation effect="zoom" center="auto" end="102,102" time="0" condition="isGreaterThan(System.StereoscopicMode,0)">conditional</animation>
 				<control type="group">
 					<animation effect="fade" start="100" end="bg_alpha" time="0" condition="!Control.IsVisible(31111)">Conditional</animation>
 					<animation effect="fade" start="0" end="100" time="300" condition="Window.Previous(fullscreenvideo) | Window.Previous(startup)">WindowOpen</animation>
 					<include>ColoredBackgroundImages</include>
 				</control>
 				<control type="group" id="31111">
-					<visible>![Player.HasVideo | [Player.HasAudio + Visualisation.Enabled + !String.IsEmpty(Visualisation.Name)]]</visible>
+					<visible>![Player.HasVideo | [Player.HasAudio + Visualisation.Enabled + !IsEmpty(Visualisation.Name)]]</visible>
 					<depth>DepthBackground</depth>
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
@@ -1055,7 +1007,7 @@
 					<bottom>117</bottom>
 					<autoscroll time="3000" delay="7000" repeat="5000">!System.HasVisibleModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 					<label>$VAR[ListBoxInfoVar]</label>
-					<visible>!Container.Content() | !String.isempty(ListItem.Plot)</visible>
+					<visible>!Container.Content() | !IsEmpty(ListItem.Plot)</visible>
 				</control>
 				<control type="group">
 					<left>20</left>
@@ -1070,7 +1022,7 @@
 					</include>
 				</control>
 				<control type="group">
-					<visible>String.IsEmpty(Control.GetLabel(15500)) + !ListItem.IsCollection</visible>
+					<visible>IsEmpty(Control.GetLabel(15500)) + !ListItem.IsCollection</visible>
 					<control type="textbox">
 						<left>30</left>
 						<top>460</top>
@@ -1082,13 +1034,13 @@
 						<textcolor>80FFFFFF</textcolor>
 						<label>$LOCALIZE[19055]</label>
 						<visible>!ListItem.IsParentFolder</visible>
-						<visible>!Integer.IsGreater(Container(42000).NumItems,0) + !Integer.IsGreater(Container(43000).NumItems,0)</visible>
-						<visible>!Container.Content() | !String.isempty(ListItem.Plot)</visible>
+						<visible>!isGreaterThan(Container(42000).NumItems,0) + !isGreaterThan(Container(43000).NumItems,0)</visible>
+						<visible>!Container.Content() | !IsEmpty(ListItem.Plot)</visible>
 					</control>
 					<control type="group">
 						<left>20</left>
 						<top>640</top>
-						<visible>!String.IsEmpty(ListItem.DBID)</visible>
+						<visible>!IsEmpty(ListItem.DBID)</visible>
 						<include content="InfoList">
 							<param name="list_id" value="42000" />
 							<param name="bottom" value="100" />

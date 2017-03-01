@@ -33,8 +33,8 @@
 				<textureradioofffocus>$PARAM[icon]</textureradioofffocus>
 				<textureradiooffnofocus>$PARAM[icon]</textureradiooffnofocus>
 				<textureradiooffdisabled colordiffuse="primary_color">$PARAM[icon]</textureradiooffdisabled>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TV$PARAM[area])</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(Radio$PARAM[area])</onclick>
+				<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TV$PARAM[area])</onclick>
+				<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(Radio$PARAM[area])</onclick>
 				<enable>!Window.IsActive(TV$PARAM[area]) + !Window.IsActive(Radio$PARAM[area])</enable>
 			</control>
 		</definition>
@@ -200,7 +200,7 @@
 						<onleft>14100</onleft>
 						<onup>8</onup>
 						<ondown>6056</ondown>
-						<visible>Player.HasMedia + [$EXP[sidebar_focused]]</visible>
+						<visible>Player.HasMedia + [ControlGroup(9000).HasFocus | Control.HasFocus(6130)]</visible>
 						<visible>!System.HasVisibleModalDialog</visible>
 						<include content="BottomMainMenuToggleItem">
 							<param name="control_id" value="14101" />
@@ -244,7 +244,7 @@
 		<include>OpenClose_Left</include>
 		<depth>DepthSideBlade</depth>
 		<left>-520</left>
-		<animation type="Conditional" condition="$EXP[sidebar_focused]" reversible="true">
+		<animation type="Conditional" condition="ControlGroup(9000).HasFocus | Control.HasFocus(6130)" reversible="true">
 			<effect type="slide" start="0" end="520" time="400" tween="cubic" easing="out" />
 		</animation>
 		<control type="image">
@@ -252,7 +252,7 @@
 			<height>100%</height>
 			<aspectratio>scale</aspectratio>
 			<texture colordiffuse="80FFFFFF">colors/black.png</texture>
-			<visible>$EXP[sidebar_focused] + !System.HasVisibleModalDialog</visible>
+			<visible>[ControlGroup(9000).HasFocus | Control.HasFocus(6130)] + !System.HasVisibleModalDialog</visible>
 			<animation effect="fade" time="200">VisibleChange</animation>
 		</control>
 		<control type="image">
@@ -281,7 +281,7 @@
 			<left>5</left>
 			<onleft>14100</onleft>
 			<width>450</width>
-			<visible>Player.HasMedia + [$EXP[sidebar_focused]]</visible>
+			<visible>Player.HasMedia + [ControlGroup(9000).HasFocus | Control.HasFocus(6130)]</visible>
 			<visible>!System.HasVisibleModalDialog</visible>
 			<include content="BottomMainMenuToggleItem">
 				<param name="control_id" value="14101" />
@@ -327,7 +327,7 @@
 				<include>MediaMenuItemsCommon</include>
 				<label>$LOCALIZE[31023]</label>
 				<label2>$INFO[Container.Viewmode]</label2>
-				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
+				<visible>isGreaterThan(Container.ViewCount,1)</visible>
 				<onclick>Container.NextViewMode</onclick>
 			</control>
 			<control type="button" id="6053">

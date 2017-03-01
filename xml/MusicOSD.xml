@@ -16,7 +16,7 @@
 		<control type="group" id="200">
 			<bottom>0</bottom>
 			<height>120</height>
-			<visible>!Window.IsActive(osdaudiosettings) + !Window.IsActive(osdvideosettings) + !Window.IsActive(playerprocessinfo)</visible>
+			<visible>!Window.IsActive(osdaudiosettings) + !Window.IsActive(osdvideosettings)</visible>
 			<include>Animation_BottomSlide</include>
 			<animation type="Visible" reversible="false">
 				<effect type="fade" start="0" end="100" time="300"/>
@@ -37,7 +37,7 @@
 				<onup>87</onup>
 				<ondown>noop</ondown>
 				<onleft>5000</onleft>
-				<onright>620</onright>
+				<onright>699</onright>
 				<control type="radiobutton" id="600">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/previous.png"/>
@@ -89,12 +89,6 @@
 				<ondown>noop</ondown>
 				<onleft>605</onleft>
 				<onright>600</onright>
-				<control type="radiobutton" id="620">
-					<include content="OSDButton">
-						<param name="texture" value="osd/fullscreen/buttons/rating.png"/>
-					</include>
-					<onclick>SetRating</onclick>
-				</control>
 				<control type="group" id="699">
 					<width>76</width>
 					<height>76</height>
@@ -108,7 +102,7 @@
 						<font></font>
 						<texturefocus colordiffuse="primary_color">osd/fullscreen/buttons/button-fo.png</texturefocus>
 						<texturenofocus />
-						<onleft>620</onleft>
+						<onleft>605</onleft>
 						<onright>607</onright>
 						<onup>87</onup>
 						<ondown>noop</ondown>

@@ -241,7 +241,7 @@
 						<aligny>center</aligny>
 						<label>$LOCALIZE[19024]</label>
 						<altlabel>$LOCALIZE[19023]</altlabel>
-						<usealttexture>!String.IsEmpty(Window.Property(IsRadio))</usealttexture>
+						<usealttexture>!IsEmpty(Window.Property(IsRadio))</usealttexture>
 					</control>
 				</control>
 			</control>

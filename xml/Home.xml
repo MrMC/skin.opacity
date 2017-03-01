@@ -23,7 +23,7 @@
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
-			<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
+			<animation effect="zoom" center="auto" end="102,102" time="0" condition="isGreaterThan(System.StereoscopicMode,0)">conditional</animation>
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<animation effect="fade" time="400">VisibleChange</animation>
@@ -185,15 +185,6 @@
 							<thumb>icons/sidemenu/favourites.png</thumb>
 							<property name="id">favorites</property>
 							<visible>!Skin.HasSetting(HomeMenuNoFavButton)</visible>
-						</item>
-						<item>
-							<label>$LOCALIZE[8]</label>
-							<onclick condition="!String.IsEmpty(Weather.Plugin)">ActivateWindow(Weather)</onclick>
-							<onclick condition="String.IsEmpty(Weather.Plugin)">ReplaceWindow(servicesettings,weather)</onclick>
-							<property name="menu_id">$NUMBER[15000]</property>
-							<thumb>icons/sidemenu/weather.png</thumb>
-							<property name="id">weather</property>
-							<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
 						</item>
 					</content>
 				</control>
