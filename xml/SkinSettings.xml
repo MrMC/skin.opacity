@@ -6,7 +6,7 @@
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="System.HasModalDialog">Conditional</animation>
 			<control type="group" id="10000">
 				<left>470</left>
 				<include>OpenClose_Right</include>

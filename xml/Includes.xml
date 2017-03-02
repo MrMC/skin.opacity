@@ -24,8 +24,6 @@
 	<constant name="list_top_offset">85</constant>
 	<constant name="list_bottom_offset">88</constant>
 	<constant name="list_item_height">82</constant>
-	<expression name="infodialog_active">System.HasActiveModalDialog</expression>
-	<expression name="sidebar_focused">ControlGroup(9000).HasFocus | Control.HasFocus(6130)</expression>
 	<include name="CommonScrollbars">
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
@@ -630,7 +628,7 @@
 		<param name="sublabel">$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</param>
 		<definition>
 			<control type="group">
-				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="System.HasModalDialog">conditional</animation>
 				<depth>DepthBars</depth>
 				<animation effect="fade" start="0" end="100" time="300" condition="[Window.Previous(fullscreenvideo) | Window.Previous(startup)] + !Window.IsVisible(1109)">WindowOpen</animation>
 				<control type="image">
@@ -807,7 +805,7 @@
 						<fadetime>400</fadetime>
 						<animation effect="fade" time="400">VisibleChange</animation>
 						<texture background="true" colordiffuse="37FFFFFF">$VAR[MediaFanartVar]</texture>
-						<visible>!Control.IsVisible(502) | $EXP[infodialog_active]</visible>
+						<visible>!Control.IsVisible(502) | System.HasModalDialog</visible>
 					</control>
 					<control type="image">
 						<left>-3</left>
@@ -829,7 +827,7 @@
 		<param name="info_visible">False</param>
 		<definition>
 			<control type="group">
-				<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+				<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="System.HasModalDialog">conditional</animation>
 				<depth>DepthBars</depth>
 				<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(visualisation) | Window.Next(screencalibration)">WindowClose</animation>
 				<animation effect="fade" start="0" end="100" time="300" condition="Window.Previous(fullscreenvideo) | Window.Previous(startup) | Window.Previous(visualisation)">WindowOpen</animation>

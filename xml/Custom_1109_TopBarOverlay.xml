@@ -7,7 +7,7 @@
 	<zorder>0</zorder>
 	<controls>
 		<control type="group">
-			<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+			<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="System.HasModalDialog">conditional</animation>
 			<depth>DepthBars</depth>
 			<control type="image">
 				<left>0</left>
