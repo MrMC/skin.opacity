@@ -36,9 +36,7 @@
 				<depth>DepthContentPanel</depth>
 				<include>OpenClose_Left</include>
 				<include content="ContentPanel">
-					<param name="width" value="660" />
-					<param name="top" value="0" />
-					<param name="bottom" value="0" />
+					<param name="width" value="654" />
 				</include>
 				<control type="fixedlist" id="9000">
 					<top>100</top>
@@ -51,29 +49,29 @@
 					<onright>700</onright>
 					<orientation>vertical</orientation>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
-					<itemlayout height="200" width="294">
+					<itemlayout height="150" width="294">
 						<control type="group">
 						<control type="image">
 							<left>50</left>
 							<top>20</top>
 							<width>160</width>
-							<height>160</height>
+							<height>110</height>
 							<texture>$INFO[ListItem.Icon]</texture>
 							<align>center</align>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="label">
 							<left>240</left>
-							<top>80</top>
 							<width>370</width>
-							<height>200</height>
+							<height>150</height>
 							<font>font30_title</font>
 							<label>$INFO[ListItem.Label]</label>
 							<align>left</align>
+							<aligny>center</aligny>
 						</control>
 						</control>
 					</itemlayout>
-					<focusedlayout height="200" width="800">
+					<focusedlayout height="150" width="800">
 						<control type="group">
 							<control type="image">
 								<width>100%</width>
@@ -94,17 +92,17 @@
 							<left>50</left>
 							<top>20</top>
 							<width>160</width>
-							<height>160</height>
+							<height>110</height>
 							<texture>$INFO[ListItem.Icon]</texture>
 							<align>center</align>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="label">
 							<left>240</left>
-							<top>80</top>
 							<width>370</width>
-							<height>200</height>
+							<height>150</height>
 							<font>font30_title</font>
+							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 							<align>left</align>
 						</control>
@@ -192,9 +190,9 @@
 					<orientation>vertical</orientation>
 					<itemgap>0</itemgap>
 					<right>0</right>
-					<width>130</width>
+					<width>110</width>
 					<height>700</height>
-					<bottom>50</bottom>
+					<bottom>80</bottom>
 					<onright>9000</onright>
 					<onleft>9000</onleft>
 					<align>right</align>
@@ -232,11 +230,11 @@
 			<control type="image">
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-				<top>60</top>
+				<top>80</top>
 				<right>20</right>
 				<aspectratio>keep</aspectratio>
-				<width>500</width>
-				<height>300</height>
+				<width>400</width>
+				<height>200</height>
 				<texture>icons/logo.png</texture>
 			</control>
 			<control type="group">
@@ -245,9 +243,9 @@
 				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 				<control type="rss">
 					<left>0</left>
-					<bottom>0</bottom>
+					<top>10</top>
+					<right>200</right>
 					<height>39</height>
-					<width>100%</width>
 					<font>font12</font>
 					<urlset>1</urlset>
 					<hitrect x="-100" y="0" w="1" h="1" />

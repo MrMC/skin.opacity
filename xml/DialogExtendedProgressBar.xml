@@ -8,7 +8,8 @@
 			<depth>DepthBars</depth>
 			<right>20</right>
 			<width>80</width>
-			<top>0</top>
+			<bottom>0</bottom>
+			<height>75</height>
 			<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="System.HasModalDialog">conditional</animation>
 			<animation effect="slide" end="0,-80" time="150" condition="Window.IsVisible(FullscreenVideo)">conditional</animation>
 			<control type="image">

@@ -33,7 +33,7 @@
 				<aligny>center</aligny>
 				<font>font45_title</font>
 				<label>$LOCALIZE[31155]</label>
-				<visible>Integer.IsEqual(Container(11).NumItems,0)</visible>
+				<visible>Stringcompare(Container(11).NumItems,0)</visible>
 			</control>
 			<control type="grouplist" id="9001">
 				<orientation>horizontal</orientation>

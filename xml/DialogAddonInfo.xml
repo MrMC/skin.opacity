@@ -17,13 +17,13 @@
 					<top>435</top>
 					<width>1050</width>
 					<height>365</height>
-					<label>$INFO[ListItem.AddonSummary,[B],[/B][CR]]$INFO[ListItem.AddonDescription][CR]$VAR[AddonNewsVar,[I][CR][CR],[/I]]</label>
+					<label>$INFO[ListItem.Property(Addon.Summary),[B],[/B][CR]]$INFO[ListItem.Property(Addon.Description)][CR]$VAR[AddonNewsVar,[I][CR][CR],[/I]]</label>
 					<autoscroll delay="5000" repeat="7500" time="5000">true</autoscroll>
 				</control>
 				<control type="group">
 					<left>606</left>
 					<top>160</top>
-					<visible>Integer.IsEqual(Container(50).NumItems,0)</visible>
+					<visible>Stringcompare(Container(50).NumItems,0)</visible>
 					<control type="image">
 						<width>425</width>
 						<height>260</height>
@@ -194,7 +194,7 @@
 					<texture fallback="DefaultAddon.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 				</control>
 				<control type="group">
-					<visible>!IsEmpty(ListItem.AddonBroken)</visible>
+					<visible>!IsEmpty(ListItem.Property(Addon.Broken))</visible>
 					<control type="image">
 						<left>14</left>
 						<top>24</top>
@@ -232,13 +232,13 @@
 				<aligny>center</aligny>
 				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-				<label>[I]$INFO[ListItem.AddonDisclaimer][/I]</label>
+				<label>[I]$INFO[ListItem.Property(Addon.Disclaimer)][/I]</label>
 				<textcolor>88FFFFFF</textcolor>
 				<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
 			</control>
 			<include content="InfoDialogTopBarInfo">
-				<param name="main_label" value="$INFO[ListItem.AddonName]" />
-				<param name="sub_label" value="$INFO[ListItem.AddonVersion,[COLOR grey],[/COLOR]]$INFO[ListItem.AddonCreator, $LOCALIZE[31071] ]" />
+				<param name="main_label" value="$INFO[ListItem.Property(Addon.Name)]" />
+				<param name="sub_label" value="$INFO[ListItem.Property(Addon.Version),[COLOR grey],[/COLOR]]$INFO[ListItem.Property(Addon.Creator), $LOCALIZE[31071] ]" />
 			</include>
 		</control>
 	</controls>

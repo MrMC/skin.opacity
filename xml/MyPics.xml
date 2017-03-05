@@ -26,7 +26,7 @@
 					<font>font27</font>
 					<textcolor>80FFFFFF</textcolor>
 					<label>$LOCALIZE[19055]</label>
-					<visible>!ListItem.IsParentFolder + ListItem.IsFolder</visible>
+					<visible>!ListItem.Stringcompare(ListItem.Label,..) + ListItem.IsFolder</visible>
 				</control>
 				<control type="grouplist">
 					<left>20</left>

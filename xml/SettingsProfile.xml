@@ -56,7 +56,7 @@
 							<align>center</align>
 							<aligny>top</aligny>
 							<label>$LOCALIZE[31029]:</label>
-							<visible>!String.IsEqual(Listitem.Label,$LOCALIZE[20058])</visible>
+							<visible>!Stringcompare(Listitem.Label,$LOCALIZE[20058])</visible>
 						</control>
 						<control type="label">
 							<left>10</left>

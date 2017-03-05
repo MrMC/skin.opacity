@@ -5,8 +5,8 @@
 		<value condition="ListItem.HasTimer | ListItem.HasTimerSchedule">windows/pvr/timer.png</value>
 	</variable>
 	<variable name="PlaylistLabelVar">
-		<value condition="String.IsEqual(ListItem.DbType,episode)">$INFO[ListItem.TVShowtitle,,: ]$INFO[ListItem.Season,,x]$INFO[ListItem.Episode,,. ]$INFO[ListItem.Title]</value>
-		<value condition="String.IsEqual(ListItem.DbType,musicvideo)">$INFO[ListItem.Artist,, - ]$INFO[ListItem.Title]</value>
+		<value condition="Stringcompare(ListItem.DbType,episode)">$INFO[ListItem.TVShowtitle,,: ]$INFO[ListItem.Season,,x]$INFO[ListItem.Episode,,. ]$INFO[ListItem.Title]</value>
+		<value condition="Stringcompare(ListItem.DbType,musicvideo)">$INFO[ListItem.Artist,, - ]$INFO[ListItem.Title]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 	<variable name="PlaylistLabel2Var">
@@ -17,10 +17,10 @@
 		<value>$INFO[ListItem.FolderPath]</value>
 	</variable>
 	<variable name="MusicInfoTextboxVar">
-		<value condition="String.IsEqual(ListItem.DbType,song) + !IsEmpty(ListItem.ContributorAndRole)">$INFO[ListItem.ContributorAndRole,[B]$LOCALIZE[31128][/B][CR][COLOR=white],[/COLOR]]</value>
-		<value condition="String.IsEqual(ListItem.DbType,song)">$INFO[ListItem.Comment,[B]$LOCALIZE[569][/B][CR][COLOR=white],[/COLOR]]</value>
-		<value condition="String.IsEqual(ListItem.DbType,album)">$INFO[ListItem.Property(Album_Description),[COLOR=white],[/COLOR]]</value>
-		<value condition="String.IsEqual(ListItem.DbType,artist)">$INFO[ListItem.Property(Artist_Description),[COLOR=white],[/COLOR]]</value>
+		<value condition="Stringcompare(ListItem.DbType,song) + !IsEmpty(ListItem.ContributorAndRole)">$INFO[ListItem.ContributorAndRole,[B]$LOCALIZE[31128][/B][CR][COLOR=white],[/COLOR]]</value>
+		<value condition="Stringcompare(ListItem.DbType,song)">$INFO[ListItem.Comment,[B]$LOCALIZE[569][/B][CR][COLOR=white],[/COLOR]]</value>
+		<value condition="Stringcompare(ListItem.DbType,album)">$INFO[ListItem.Property(Album_Description),[COLOR=white],[/COLOR]]</value>
+		<value condition="Stringcompare(ListItem.DbType,artist)">$INFO[ListItem.Property(Artist_Description),[COLOR=white],[/COLOR]]</value>
 	</variable>
 	<variable name="NowPlayingSublabelVar">
 		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TvShowTitle]</value>
@@ -48,13 +48,13 @@
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="IconWallThumbVar">
-		<value condition="String.IsEqual(listitem.dbtype,studio)">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</value>
+		<value condition="Stringcompare(listitem.dbtype,studio)">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</value>
 		<value condition="!IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="ListLabel2Var">
-		<value condition="IsEmpty(Container.PluginName) + Container.Content(tvshows) + String.IsEqual(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</value>
-		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Year]</value>
+		<value condition="IsEmpty(Container.PluginName) + Container.Content(tvshows) + Stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</value>
+		<value condition="Stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Year]</value>
 		<value>$INFO[ListItem.Label2]</value>
 	</variable>
 	<variable name="FileBrowserSelectLabel">
@@ -62,32 +62,31 @@
 		<value>[COLOR=primary_color]$INFO[Container(451).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR=primary_color]$INFO[Container(451).CurrentPage]/$INFO[Container(451).NumPages][/COLOR]</value>
 	</variable>
 	<variable name="FanartImageVar">
-		<value condition="ListItem.IsParentFolder">special://skin/extras/home-images/movie.jpg</value>
+		<value condition="ListItem.Stringcompare(ListItem.Label,..)">special://skin/extras/home-images/movie.jpg</value>
 		<value>$INFO[ListItem.Art(fanart)]</value>
 	</variable>
 	<variable name="ListBoxInfoVar">
-		<value condition="String.IsEqual(Container.FolderPath,addons://outdated/) + !IsEmpty(ListItem.Addonnews)">$INFO[ListItem.Addonnews]</value>
-		<value condition="Container.Content(addons)">$INFO[ListItem.AddonDescription]</value>
-		<value condition="String.IsEqual(listitem.dbtype,album)">$INFO[ListItem.Property(album_description)]</value>
-		<value condition="String.IsEqual(listitem.dbtype,musicvideo) | String.IsEqual(listitem.dbtype,video)">$INFO[ListItem.Genre,[COLOR primary_color]$LOCALIZE[515]: [/COLOR],[CR]]$INFO[ListItem.Plot]</value>
-		<value condition="String.IsEqual(listitem.dbtype,artist)">$INFO[ListItem.Property(artist_description)]</value>
+		<value condition="Stringcompare(Container.FolderPath,addons://outdated/) + !IsEmpty(ListItem.Addonnews)">$INFO[ListItem.Addonnews]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Description)]</value>
+		<value condition="Stringcompare(listitem.dbtype,album)">$INFO[ListItem.Property(album_description)]</value>
+		<value condition="Stringcompare(listitem.dbtype,musicvideo) | Stringcompare(listitem.dbtype,video)">$INFO[ListItem.Genre,[COLOR primary_color]$LOCALIZE[515]: [/COLOR],[CR]]$INFO[ListItem.Plot]</value>
+		<value condition="Stringcompare(listitem.dbtype,artist)">$INFO[ListItem.Property(artist_description)]</value>
 		<value condition="!IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
-		<value condition="String.IsEqual(listitem.dbtype,song)">$INFO[ListItem.Genre,[COLOR primary_color]$LOCALIZE[515]: [/COLOR],[CR]]$INFO[ListItem.Duration,[COLOR primary_color]$LOCALIZE[180]: [/COLOR],[CR]]$INFO[ListItem.Playcount,[COLOR primary_color]$LOCALIZE[567]: [/COLOR],[CR]]</value>
+		<value condition="Stringcompare(listitem.dbtype,song)">$INFO[ListItem.Genre,[COLOR primary_color]$LOCALIZE[515]: [/COLOR],[CR]]$INFO[ListItem.Duration,[COLOR primary_color]$LOCALIZE[180]: [/COLOR],[CR]]$INFO[ListItem.Playcount,[COLOR primary_color]$LOCALIZE[567]: [/COLOR],[CR]]</value>
 		<value>$INFO[ListItem.Genre,[COLOR primary_color]$LOCALIZE[515]: [/COLOR],[CR]]</value>
 	</variable>
 	<variable name="AddonsLabel2Var">
 		<value condition="ListItem.Property(addon.downloading)">$INFO[ListItem.Property(addon.status)]</value>
-		<value condition="!String.IsEqual(Container.SortMethod,$LOCALIZE[551])">$INFO[ListItem.Label2]</value>
-		<value>$INFO[ListItem.AddonCreator,, - ]$INFO[ListItem.AddonVersion]</value>
+		<value condition="!Stringcompare(Container.SortMethod,$LOCALIZE[551])">$INFO[ListItem.Label2]</value>
+		<value>$INFO[ListItem.Property(Addon.Creator),, - ]$INFO[ListItem.Property(Addon.Version)]</value>
 	</variable>
 	<variable name="AddonsListIconVar">
-		<value condition="!IsEmpty(ListItem.AddonBroken)">icons/addonstatus/disable.png</value>
-		<value condition="ListItem.Property(addon.orphaned)">icons/addonstatus/orphan.png</value>
+		<value condition="!IsEmpty(ListItem.Property(Addon.Broken))">icons/addonstatus/disable.png</value>
 		<value condition="ListItem.Property(addon.downloading)">icons/addonstatus/install.png</value>
 		<value condition="ListItem.Property(addon.isinstalled) + !ListItem.Property(addon.isenabled) + Window.IsActive(addonbrowser)">icons/addonstatus/disable.png</value>
 		<value condition="ListItem.Property(addon.hasupdate)">icons/addonstatus/update.png</value>
 		<value condition="ListItem.Property(addon.isinstalled)">OverlayWatched.png</value>
-		<value condition="!ListItem.IsParentFolder">OverlayUnwatched.png</value>
+		<value condition="!ListItem.Stringcompare(ListItem.Label,..)">OverlayUnwatched.png</value>
 	</variable>
 	<variable name="ResolutionFlagVar">
 		<value condition="ListItem.IsStereoscopic">flags/videoresolution/3D.png</value>
@@ -99,12 +98,12 @@
 		<value>$INFO[ListItem.Art(tvshow.banner)]</value>
 	</variable>
 	<variable name="PosterVar">
-		<value condition="ListItem.IsParentFolder">DefaultFolderBackPoster.png</value>
+		<value condition="ListItem.Stringcompare(ListItem.Label,..)">DefaultFolderBackPoster.png</value>
 		<value condition="!IsEmpty(Container.Art(season.poster)) + Container.Content(episodes)">$INFO[Container.Art(season.poster)]</value>
 		<value condition="!IsEmpty(Container.Art(tvshow.poster)) + Container.Content(episodes)">$INFO[Container.Art(tvshow.poster)]</value>
 		<value condition="!IsEmpty(Container.Art(tvshow.poster)) + Container.Content(seasons) + Window.IsActive(movieinformation)">$INFO[Container.Art(tvshow.poster)]</value>
 		<value condition="Container.Content(actors) | Container.Content(directors)">$INFO[Container.ListItem.Art(thumb)]</value>
-		<value condition="!IsEmpty(ListItem.Art(tvshow.poster)) + !String.IsEqual(listitem.dbtype,season)">$INFO[ListItem.Art(tvshow.poster)]</value>
+		<value condition="!IsEmpty(ListItem.Art(tvshow.poster)) + !Stringcompare(listitem.dbtype,season)">$INFO[ListItem.Art(tvshow.poster)]</value>
 		<value>$INFO[ListItem.Art(poster)]</value>
 	</variable>
 	<variable name="InfoDialogPosterVar">
@@ -113,7 +112,7 @@
 		<value condition="!IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
 	</variable>
 	<variable name="ListPosterVar">
-		<value condition="ListItem.IsParentFolder">DefaultFolderBackPoster.png</value>
+		<value condition="ListItem.Stringcompare(ListItem.Label,..)">DefaultFolderBackPoster.png</value>
 		<value>$INFO[ListItem.Art(poster)]</value>
 	</variable>
 	<variable name="VideoPlayerForwardRewindVar">
@@ -183,8 +182,8 @@
 		<value>$INFO[ListItem.Label]$INFO[ListItem.Year, ([COLOR grey],[/COLOR])]</value>
 	</variable>
 	<variable name="VideoInfoSubLabelVar">
-		<value condition="String.IsEqual(ListItem.DBType,episode)">$INFO[ListItem.Season]$INFO[ListItem.Episode,[COLOR grey]x[/COLOR],: ]$INFO[ListItem.TVShowTitle]</value>
-		<value condition="String.IsEqual(ListItem.DBType,movie)">$INFO[ListItem.Tagline,[I],[/I]]</value>
+		<value condition="Stringcompare(ListItem.DBType,episode)">$INFO[ListItem.Season]$INFO[ListItem.Episode,[COLOR grey]x[/COLOR],: ]$INFO[ListItem.TVShowTitle]</value>
+		<value condition="Stringcompare(ListItem.DBType,movie)">$INFO[ListItem.Tagline,[I],[/I]]</value>
 		<value>$INFO[ListItem.Genre]</value>
 	</variable>
 	<variable name="NowPlayingBreadcrumbsVar">
@@ -226,7 +225,7 @@
 		<value condition="ListItem.IsResumable">overlays/watched/resume.png</value>
 		<value condition="ListItem.IsCollection">overlays/set.png</value>
 		<value condition="!IsEmpty(ListItem.Overlay)">$INFO[ListItem.Overlay]</value>
-		<value condition="!ListItem.IsParentFolder">OverlayUnwatched.png</value>
+		<value condition="!ListItem.Stringcompare(ListItem.Label,..)">OverlayUnwatched.png</value>
 	</variable>
 	<variable name="WallWatchedIconVar">
 		<value condition="ListItem.IsRecording">windows/pvr/record.png</value>
@@ -326,7 +325,7 @@
 		<value>$INFO[ListItem.EpisodeName]</value>
 	</variable>
 	<variable name="BackgroundOverlayTypeVar">
-		<value condition="String.IsEqual(Skin.String(background_overlay),7)">$LOCALIZE[231]</value>
+		<value condition="Stringcompare(Skin.String(background_overlay),7)">$LOCALIZE[231]</value>
 		<value>$INFO[Skin.String(background_overlay),$LOCALIZE[467] ]</value>
 	</variable>
 </includes>

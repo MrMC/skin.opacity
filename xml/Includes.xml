@@ -318,7 +318,7 @@
 			<control type="group">
 				<width>150</width>
 				<top>-5</top>
-				<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
+				<visible>Stringcompare(ListItem.DBtype,tvshow)</visible>
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[ListItem.Studio,resource://resource.images.studios.white/,.png]" />
 				</include>
@@ -327,7 +327,7 @@
 				<top>10</top>
 				<width>200</width>
 				<include content="InfoFlag">
-					<param name="visible" value="[String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,episode)] + !IsEmpty(ListItem.Premiered)" />
+					<param name="visible" value="[Stringcompare(ListItem.DBtype,tvshow) | Stringcompare(ListItem.DBtype,episode)] + !IsEmpty(ListItem.Premiered)" />
 					<param name="icon" value="lists/year.png" />
 					<param name="label" value="$INFO[ListItem.Premiered]" />
 				</include>
@@ -631,14 +631,14 @@
 				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="System.HasModalDialog">conditional</animation>
 				<depth>DepthBars</depth>
 				<animation effect="fade" start="0" end="100" time="300" condition="[Window.Previous(fullscreenvideo) | Window.Previous(startup)] + !Window.IsVisible(1109)">WindowOpen</animation>
-				<control type="image">
+<!-- 				<control type="image">
 					<left>0</left>
 					<top>0</top>
 					<width>110%</width>
 					<height>60</height>
 					<texture>frame/InfoBar.png</texture>
 					<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
-				</control>
+				</control> -->
 				<control type="grouplist">
 					<left>35</left>
 					<description>Left side of top bar</description>
@@ -662,19 +662,13 @@
 					<control type="label">
 						<label>$INFO[Control.GetLabel(10),: ]</label>
 						<include>BreadcrumbsLabel</include>
-						<visible>!String.IsEqual(Control.GetLabel(10),$LOCALIZE[16100]) + Window.IsActive(videos)</visible>
+						<visible>!Stringcompare(Control.GetLabel(10),$LOCALIZE[16100]) + Window.IsActive(videos)</visible>
 					</control>
 					<control type="label">
 						<left>10</left>
 						<label>($LOCALIZE[31052])</label>
 						<include>BreadcrumbsLabel</include>
 						<visible>Container.Filtered</visible>
-					</control>
-					<control type="label">
-						<label> •  $PARAM[sublabel]</label>
-						<left>10</left>
-						<textcolor>grey</textcolor>
-						<include>BreadcrumbsLabel</include>
 					</control>
 				</control>
 				<control type="button">
@@ -689,31 +683,12 @@
 				<control type="grouplist">
 					<top>0</top>
 					<align>right</align>
-					<right>20</right>
+					<right>40</right>
 					<height>200</height>
 					<orientation>horizontal</orientation>
 					<width>900</width>
 					<itemgap>10</itemgap>
-					<visible>!Window.IsVisible(extendedprogressdialog)</visible>
 					<animation effect="fade" time="150">VisibleChange</animation>
-					<control type="label">
-						<font>font37</font>
-						<height>50</height>
-						<width>auto</width>
-						<aligny>center</aligny>
-						<textoffsetx>-8</textoffsetx>
-						<label>$INFO[System.AlarmPos]</label>
-						<visible>System.HasAlarm(shutdowntimer)</visible>
-					</control>
-					<control type="image">
-						<top>16</top>
-						<width>40</width>
-						<height>22</height>
-						<fadetime>300</fadetime>
-						<aspectratio aligny="center" align="left">keep</aspectratio>
-						<texture>icons/power.png</texture>
-						<visible>System.HasAlarm(shutdowntimer)</visible>
-					</control>
 					<control type="image">
 						<top>8</top>
 						<left>-20</left>
@@ -725,7 +700,7 @@
 						<visible>Player.Muted</visible>
 					</control>
 					<control type="label">
-						<font>font37</font>
+						<font>font45</font>
 						<shadowcolor>text_shadow</shadowcolor>
 						<height>200</height>
 						<width>auto</width>
@@ -744,7 +719,7 @@
 					<visible>!System.HasVisibleModalDialog</visible>
 					<visible>Container.Scrolling</visible>
 					<visible>!Container.Content(seasons)</visible>
-					<visible>String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[563])</visible>
+					<visible>Stringcompare(Container.SortMethod,$LOCALIZE[551]) | Stringcompare(Container.SortMethod,$LOCALIZE[561]) | Stringcompare(Container.SortMethod,$LOCALIZE[558]) | Stringcompare(Container.SortMethod,$LOCALIZE[557]) | Stringcompare(Container.SortMethod,$LOCALIZE[556]) | Stringcompare(Container.SortMethod,$LOCALIZE[563])</visible>
 					<animation effect="fade" start="0" end="100" time="200" reversible="true">VisibleChange</animation>
 					<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				</control>
@@ -832,12 +807,12 @@
 				<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(visualisation) | Window.Next(screencalibration)">WindowClose</animation>
 				<animation effect="fade" start="0" end="100" time="300" condition="Window.Previous(fullscreenvideo) | Window.Previous(startup) | Window.Previous(visualisation)">WindowOpen</animation>
 				<bottom>0</bottom>
-				<control type="image">
-					<left>0</left>
-					<bottom>0</bottom>
-					<width>110%</width>
-					<height>60</height>
-					<texture flipy="true">frame/InfoBar.png</texture>
+				<height>100</height>
+				<control type="label">
+					<label>$PARAM[sublabel]</label>
+					<left>10</left>
+					<textcolor>grey</textcolor>
+					<include>BreadcrumbsLabel</include>
 				</control>
 			</control>
 		</definition>
@@ -1031,7 +1006,7 @@
 						<font>font27</font>
 						<textcolor>80FFFFFF</textcolor>
 						<label>$LOCALIZE[19055]</label>
-						<visible>!ListItem.IsParentFolder</visible>
+						<visible>!ListItem.Stringcompare(ListItem.Label,..)</visible>
 						<visible>!isGreaterThan(Container(42000).NumItems,0) + !isGreaterThan(Container(43000).NumItems,0)</visible>
 						<visible>!Container.Content() | !IsEmpty(ListItem.Plot)</visible>
 					</control>
@@ -1046,7 +1021,7 @@
 							<param name="sortby" value="year" />
 							<param name="sortorder" value="descending" />
 							<param name="item_label" value="$INFO[ListItem.Year,[COLOR primary_color],[/COLOR]  -  ]$INFO[ListItem.Label]" />
-							<param name="visible" value="String.IsEqual(ListItem.DBType,artist)" />
+							<param name="visible" value="Stringcompare(ListItem.DBType,artist)" />
 						</include>
 						<include content="InfoList">
 							<param name="list_id" value="43000" />
@@ -1055,7 +1030,7 @@
 							<param name="sortby" value="track" />
 							<param name="sortorder" value="ascending" />
 							<param name="item_label" value="$INFO[ListItem.Duration,[COLOR primary_color],[/COLOR]  -  ]$INFO[ListItem.Label]" />
-							<param name="visible" value="String.IsEqual(ListItem.DBType,album)" />
+							<param name="visible" value="Stringcompare(ListItem.DBType,album)" />
 						</include>
 					</control>
 				</control>
