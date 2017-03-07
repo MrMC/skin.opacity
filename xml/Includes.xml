@@ -908,10 +908,10 @@
 				<onclick condition="Player.Forwarding | Player.Rewinding">PlayerControl(Play)</onclick>
 			</control>
 			<control type="slider">
-				<top>-5</top>
+				<top>-8</top>
 				<left>0</left>
 				<width>$PARAM[width]</width>
-				<height>25</height>
+				<height>30</height>
 				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
 				<textureslidernib>osd/progress/nub_leftright.png</textureslidernib>
 				<textureslidernibfocus colordiffuse="primary_color">osd/progress/nub_leftright.png</textureslidernibfocus>
@@ -920,10 +920,10 @@
 				<visible>!Control.HasFocus(87) + Player.SeekEnabled</visible>
 			</control>
 			<control type="slider">
-				<top>-5</top>
+				<top>-8</top>
 				<left>0</left>
 				<width>$PARAM[width]</width>
-				<height>25</height>
+				<height>30</height>
 				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
 				<textureslidernib colordiffuse="primary_color">osd/progress/nub_leftright.png</textureslidernib>
 				<textureslidernibfocus colordiffuse="primary_color">osd/progress/nub_leftright.png</textureslidernibfocus>

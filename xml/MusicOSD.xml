@@ -179,13 +179,13 @@
 			</control>
 			<control type="slider">
 				<left>0</left>
-				<top>-5</top>
+				<top>-9</top>
 				<width>100%</width>
-				<height>25</height>
+				<height>34</height>
 				<onup>8010</onup>
 				<ondown>650</ondown>
 				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
-				<textureslidernib>osd/progress/nub_leftright.png</textureslidernib>
+				<textureslidernib colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</textureslidernib>
 				<textureslidernibfocus colordiffuse="primary_color">osd/progress/nub_leftright.png</textureslidernibfocus>
 				<info>Player.Progress</info>
 				<visible>Player.SeekEnabled</visible>
@@ -194,9 +194,9 @@
 			</control>
 			<control type="slider">
 				<left>0</left>
-				<top>-5</top>
+				<top>-9</top>
 				<width>100%</width>
-				<height>25</height>
+				<height>34</height>
 				<onup>8010</onup>
 				<ondown>650</ondown>
 				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>

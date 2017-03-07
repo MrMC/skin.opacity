@@ -105,29 +105,29 @@
 			</control>
 			<control type="progress">
 				<left>0</left>
-				<top>70</top>
+				<top>73</top>
 				<width>100%</width>
-				<height>15</height>
+				<height>10</height>
 				<info>Player.ProgressCache</info>
-				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
-				<midtexture>colors/white50.png</midtexture>
+				<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+				<midtexture colordiffuse="33FFFFFF">colors/white.png</midtexture>
 			</control>
 			<control type="progress">
 				<left>0</left>
-				<top>70</top>
+				<top>73</top>
 				<width>100%</width>
-				<height>15</height>
+				<height>10</height>
 				<info>Player.Progress</info>
-				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
-				<midtexture colordiffuse="primary_color">colors/white.png</midtexture>
+				<texturebg border="3" colordiffuse="40FFFFFF">colors/white50.png</texturebg>
+				<midtexture colordiffuse="primary_color">colors/grey.png</midtexture>
 			</control>
 			<control type="slider" id="401">
-				<left>5</left>
-				<top>65</top>
+				<left>0</left>
+				<top>66</top>
 				<width>100%</width>
-				<height>25</height>
+				<height>24</height>
 				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
-				<textureslidernib colordiffuse="primary_color">osd/progress/nub_bar.png</textureslidernib>
+				<textureslidernib>osd/progress/nub_bar.png</textureslidernib>
 				<textureslidernibfocus colordiffuse="primary_color">colors/white.png</textureslidernibfocus>
 				<visible>!VideoPlayer.Content(livetv)</visible>
 			</control>

@@ -206,22 +206,22 @@
 					<onclick condition="Player.Forwarding | Player.Rewinding">PlayerControl(Play)</onclick>
 				</control>
 				<control type="slider">
-					<top>-5</top>
+					<top>-9</top>
 					<left>0</left>
 					<width>100%</width>
-					<height>25</height>
+					<height>34</height>
 					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
-					<textureslidernib>osd/progress/nub_leftright.png</textureslidernib>
+					<textureslidernib colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</textureslidernib>
 					<textureslidernibfocus colordiffuse="primary_color">osd/progress/nub_leftright.png</textureslidernibfocus>
 					<info>Player.Progress</info>
 					<action>seek</action>
 					<visible>!Control.HasFocus(87)</visible>
 				</control>
 				<control type="slider">
-					<top>-5</top>
+					<top>-9</top>
 					<left>0</left>
 					<width>100%</width>
-					<height>25</height>
+					<height>34</height>
 					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
 					<textureslidernib colordiffuse="primary_color">osd/progress/nub_leftright.png</textureslidernib>
 					<textureslidernibfocus colordiffuse="primary_color">osd/progress/nub_leftright.png</textureslidernibfocus>
