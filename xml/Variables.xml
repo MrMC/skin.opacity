@@ -61,10 +61,6 @@
 		<value condition="Control.IsVisible(450)">[COLOR=primary_color]$INFO[Container(450).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR=primary_color]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR]</value>
 		<value>[COLOR=primary_color]$INFO[Container(451).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR=primary_color]$INFO[Container(451).CurrentPage]/$INFO[Container(451).NumPages][/COLOR]</value>
 	</variable>
-	<variable name="FanartImageVar">
-		<value condition="ListItem.Stringcompare(ListItem.Label,..)">special://skin/extras/home-images/movie.jpg</value>
-		<value>$INFO[ListItem.Art(fanart)]</value>
-	</variable>
 	<variable name="ListBoxInfoVar">
 		<value condition="Stringcompare(Container.FolderPath,addons://outdated/) + !IsEmpty(ListItem.Addonnews)">$INFO[ListItem.Addonnews]</value>
 		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Description)]</value>
@@ -160,11 +156,6 @@
 	<variable name="SkinSettingsHelpTextVar">
 		<value condition="Container(9000).HasFocus(1)">$LOCALIZE[31129]</value>
 		<value condition="Container(9000).HasFocus(2)">$LOCALIZE[31130]</value>
-	</variable>
-	<variable name="DSPManagerHelpTextVar">
-		<value condition="Control.HasFocus(20)">$INFO[Container(20).ListItem.Property(Description)]</value>
-		<value condition="Control.HasFocus(21)">$INFO[Container(21).ListItem.Property(Description)]</value>
-		<value>$INFO[Container(9000).ListItem.Label2]</value>
 	</variable>
 	<variable name="VolumeIconVar">
 		<value condition="Player.Muted">dialogs/volume/mute.png</value>
@@ -312,13 +303,6 @@
 		<value condition="ListItem.HasTimer + !ListItem.TimerIsActive">icons/pvr/PVR-HasTimerDisabled.png</value>
 		<value condition="ListItem.HasTimerSchedule">icons/pvr/PVR-HasTimerSchedule.png</value>
 		<value condition="ListItem.HasTimer">icons/pvr/PVR-HasTimer.png</value>
-	</variable>
-	<variable name="VideoHWDecoder">
-		<value condition="Player.Process(videohwdecoder)">HW</value>
-		<value>SW</value>
-	</variable>
-	<variable name="AddonNewsVar">
-		<value condition="!IsEmpty(ListItem.AddonNews)">$LOCALIZE[31136]</value>
 	</variable>
 	<variable name="TimersSubLabel">
 		<value condition="[Window.IsActive(tvtimerrules) | Window.IsActive(radiotimerrules)] + !ListItem.HasTimerSchedule">$INFO[ListItem.Timertype]</value>
