@@ -83,9 +83,9 @@
 	<variable name="AddonsListIconVar">
 		<value condition="!IsEmpty(ListItem.Property(Addon.Broken))">icons/addonstatus/disable.png</value>
 		<value condition="ListItem.Property(addon.downloading)">icons/addonstatus/install.png</value>
-		<value condition="ListItem.Property(addon.isinstalled) + !ListItem.Property(addon.isenabled) + Window.IsActive(addonbrowser)">icons/addonstatus/disable.png</value>
-		<value condition="ListItem.Property(addon.hasupdate)">icons/addonstatus/update.png</value>
-		<value condition="ListItem.Property(addon.isinstalled)">OverlayWatched.png</value>
+		<value condition="ListItem.Property(Addon.Installed) + !ListItem.Property(Addon.Enabled) + Window.IsActive(addonbrowser)">icons/addonstatus/disable.png</value>
+		<value condition="ListItem.Property(addon.UpdateAvail)">icons/addonstatus/update.png</value>
+		<value condition="ListItem.Property(Addon.Installed)">OverlayWatched.png</value>
 		<value condition="!ListItem.Stringcompare(ListItem.Label,..)">OverlayUnwatched.png</value>
 	</variable>
 	<variable name="ResolutionFlagVar">

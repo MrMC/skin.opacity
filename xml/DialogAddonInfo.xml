@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<onload condition="!ListItem.Property(addon.isinstalled) + Window.IsActive(addonbrowser)">SetFocus(6)</onload>
+	<onload condition="!ListItem.Property(Addon.Installed) + Window.IsActive(addonbrowser)">SetFocus(6)</onload>
 	<onload>SetProperty(infobackground,$ESCINFO[ListItem.Art(fanart)],home)</onload>
 	<onunload>ClearProperty(infobackground,home)</onunload>
 	<controls>
@@ -165,7 +165,7 @@
 						<param name="id" value="6" />
 						<param name="icon_on" value="icons/infodialogs/uninstall.png" />
 						<param name="icon_off" value="icons/infodialogs/install.png" />
-						<param name="selected" value="ListItem.Property(addon.isinstalled) | !Window.IsActive(addonbrowser)" />
+						<param name="selected" value="ListItem.Property(Addon.Installed) | !Window.IsActive(addonbrowser)" />
 						<param name="label" value="" />
 					</include>
 				</control>
