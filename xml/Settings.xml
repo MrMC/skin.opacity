@@ -10,40 +10,42 @@
 				<centerleft>50%</centerleft>
 				<width>1720</width>
 				<centertop>50%</centertop>
-				<height>870</height>
+				<height>875</height>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<include>OpenClose_Right</include>
-				<itemlayout height="200" width="860">
+				<itemlayout height="175" width="860">
 					<control type="image">
-						<width>860</width>
-						<height>200</height>
+						<left>0</left>
+						<right>0</right>
+						<bottom>0</bottom>
 						<texture>dialogs/dialog-bg-nobo.png</texture>
 						<bordertexture border="21">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
 					</control>
 					<control type="image">
-						<left>50</left>
+						<left>20</left>
 						<top>20</top>
 						<width>240</width>
-						<height>160</height>
+						<bottom>20</bottom>
 						<texture>$INFO[ListItem.Icon]</texture>
 						<align>center</align>
-						<aspectratio>scale</aspectratio>
+						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">
-						<left>280</left>
-						<top>80</top>
-						<width>370</width>
-						<height>200</height>
-						<font>font30_title</font>
+						<left>240</left>
+						<top>0</top>
+						<right>40</right>
+						<aligny>center</aligny>
+						<bottom>0</bottom>
+						<font>font45</font>
 						<label>$INFO[ListItem.Label]</label>
 						<align>left</align>
 					</control>
 				</itemlayout>
-				<focusedlayout height="200" width="860">
+				<focusedlayout height="175" width="860">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<animation type="Focus" reversible="false">
@@ -53,34 +55,36 @@
 							<effect type="zoom" center="430,145" start="106" end="100" time="250" tween="sine" />
 						</animation>
 						<control type="image">
-							<width>860</width>
-							<height>200</height>
+							<left>0</left>
+							<right>0</right>
+							<bottom>0</bottom>
 							<texture>dialogs/dialog-bg-nobo.png</texture>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
 						<control type="image">
 							<width>860</width>
-							<height>200</height>
+							<bottom>0</bottom>
 							<texture colordiffuse="primary_color">colors/grey.png</texture>
 							<bordersize>20</bordersize>
 							<include>Animation_FocusTextureFade</include>
 						</control>
 						<control type="image">
-							<left>50</left>
+							<left>20</left>
 							<top>20</top>
 							<width>240</width>
-							<height>160</height>
+							<bottom>20</bottom>
 							<texture>$INFO[ListItem.Icon]</texture>
 							<align>center</align>
-							<aspectratio>scale</aspectratio>
+							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="label">
-							<left>280</left>
-							<top>80</top>
-							<width>370</width>
-							<height>200</height>
-							<font>font30_title</font>
+							<left>240</left>
+							<top>0</top>
+							<right>40</right>
+							<aligny>center</aligny>
+							<bottom>0</bottom>
+							<font>font45</font>
 							<label>$INFO[ListItem.Label]</label>
 							<align>left</align>
 						</control>
@@ -137,11 +141,11 @@
 						<onclick>ActivateWindow(systeminfo)</onclick>
 						<icon>icons/settings/sysinfo.png</icon>
 					</item>
-					<item>
+<!-- 					<item>
 						<label>$LOCALIZE[20077]</label>
 						<onclick>ActivateWindow(SkinSettings)</onclick>
 						<icon>icons/settings/skin.png</icon>
-					</item>
+					</item> -->
 				</content>
 			</control>
 		</control>

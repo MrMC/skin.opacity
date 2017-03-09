@@ -35,14 +35,17 @@
 			<control type="group">
 				<depth>DepthContentPanel</depth>
 				<include>OpenClose_Left</include>
+				<left>100</left>
+				<top>30</top>
 				<include content="ContentPanel">
-					<param name="width" value="654" />
+					<param name="width" value="634" />
 				</include>
 				<control type="fixedlist" id="9000">
-					<top>100</top>
+					<top>85</top>
+					<left>-25</left>
 					<bottom>100</bottom>
-					<width>600</width>
-					<movement>3</movement>
+					<width>630</width>
+					<movement>2</movement>
 					<focusposition>2</focusposition>
 					<onfocus>ClearProperty(listposition,home)</onfocus>
 					<ondown>9000</ondown>
@@ -50,64 +53,57 @@
 					<onright>700</onright>
 					<orientation>vertical</orientation>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
-					<itemlayout height="150" width="294">
-						<control type="group">
-						<control type="image">
-							<left>50</left>
-							<top>20</top>
-							<width>160</width>
-							<height>110</height>
-							<texture>$INFO[ListItem.Icon]</texture>
-							<align>center</align>
-							<aspectratio>keep</aspectratio>
-						</control>
-						<control type="label">
-							<left>240</left>
-							<width>370</width>
-							<height>150</height>
-							<font>font30_title</font>
-							<label>$INFO[ListItem.Label]</label>
-							<align>left</align>
-							<aligny>center</aligny>
-						</control>
-						</control>
-					</itemlayout>
-					<focusedlayout height="150" width="800">
+					<itemlayout height="150">
 						<control type="group">
 							<control type="image">
-								<width>100%</width>
+								<left>10</left>
+								<top>0</top>
+								<width>160</width>
+								<height>150</height>
+								<texture>$INFO[ListItem.Icon]</texture>
+								<align>center</align>
+								<aspectratio>keep</aspectratio>
+							</control>
+							<control type="label">
+								<left>200</left>
+								<right>20</right>
+								<height>150</height>
+								<font>font45</font>
+								<label>$INFO[ListItem.Label]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout height="150">
+						<control type="group">
+							<left>0</left>
+							<right>0</right>
+							<control type="image">
+								<left>0</left>
+								<right>25</right>
 								<height>100%</height>
-								<texture colordiffuse="primary_color" border="30">buttons/dialogbutton-fo.png</texture>
-								<animation effect="fade" start="100" end="0" time="0">Focus</animation>
-								<animation effect="fade" start="0" end="30" time="0">UnFocus</animation>
+								<visible>Control.HasFocus(9000)</visible>
+								<texture colordiffuse="primary_color" border="50">buttons/dialogbutton-fo.png</texture>
 							</control>
-							<control type="group">
-								<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
-								<control type="image">
-									<width>100%</width>
-									<height>100%</height>
-									<texture colordiffuse="primary_color" border="30">buttons/dialogbutton-fo.png</texture>
-								</control>
+							<control type="image">
+								<left>10</left>
+								<top>0</top>
+								<width>160</width>
+								<height>150</height>
+								<texture>$INFO[ListItem.Icon]</texture>
+								<align>center</align>
+								<aspectratio>keep</aspectratio>
 							</control>
-						<control type="image">
-							<left>50</left>
-							<top>20</top>
-							<width>160</width>
-							<height>110</height>
-							<texture>$INFO[ListItem.Icon]</texture>
-							<align>center</align>
-							<aspectratio>keep</aspectratio>
-						</control>
-						<control type="label">
-							<left>240</left>
-							<width>370</width>
-							<height>150</height>
-							<font>font30_title</font>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
-							<align>left</align>
-						</control>
-
+							<control type="label">
+								<left>200</left>
+								<right>20</right>
+								<height>150</height>
+								<font>font45</font>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Label]</label>
+								<align>left</align>
+							</control>
 						</control>
 					</focusedlayout>
 					<content>
