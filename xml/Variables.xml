@@ -57,10 +57,6 @@
 		<value condition="Stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Year]</value>
 		<value>$INFO[ListItem.Label2]</value>
 	</variable>
-	<variable name="FileBrowserSelectLabel">
-		<value condition="Control.IsVisible(450)">[COLOR=primary_color]$INFO[Container(450).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR=primary_color]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR]</value>
-		<value>[COLOR=primary_color]$INFO[Container(451).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR=primary_color]$INFO[Container(451).CurrentPage]/$INFO[Container(451).NumPages][/COLOR]</value>
-	</variable>
 	<variable name="ListBoxInfoVar">
 		<value condition="Stringcompare(Container.FolderPath,addons://outdated/) + !IsEmpty(ListItem.Addonnews)">$INFO[ListItem.Addonnews]</value>
 		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Description)]</value>

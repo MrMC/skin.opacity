@@ -8,6 +8,8 @@
 		<height>750</height>
 		<centerleft>50%</centerleft>
 		<width>1200</width>
+		<visible>Window.IsTopMost(mediasource)</visible>
+		<include>Visible_Fade</include>
 		<include content="DialogBackgroundCommons">
 			<param name="width" value="1200" />
 			<param name="height" value="750" />

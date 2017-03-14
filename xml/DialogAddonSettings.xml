@@ -27,12 +27,6 @@
 				<onup>9</onup>
 				<ondown>9</ondown>
 			</control>
-			<include content="UpDownArrows">
-				<param name="container_id" value="2" />
-				<param name="posx" value="830" />
-				<param name="up_posy" value="-42" />
-				<param name="down_posy" value="814" />
-			</include>
 			<control type="image">
 				<left>400</left>
 				<top>70</top>

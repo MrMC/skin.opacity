@@ -9,6 +9,8 @@
 			<centerleft>50%</centerleft>
 			<height>742</height>
 			<width>1220</width>
+			<visible>Window.IsTopMost(selectdialog)</visible>
+			<include>Visible_Fade</include>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="1220" />
 				<param name="height" value="742" />

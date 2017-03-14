@@ -53,11 +53,5 @@
 			<texturefocus colordiffuse="primary_color" border="5">buttons/focus.png</texturefocus>
 			<texturenofocus />
 		</control>
-		<include content="UpDownArrows">
-			<param name="container_id" value="996" />
-			<param name="posx" value="201" />
-			<param name="up_posy" value="-40" />
-			<param name="down_posy" value="798" />
-		</include>
 	</controls>
 </window>

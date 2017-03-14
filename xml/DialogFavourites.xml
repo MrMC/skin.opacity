@@ -14,12 +14,6 @@
 				<param name="header_label" value="$LOCALIZE[1036]" />
 				<param name="header_id" value="2" />
 			</include>
-			<include content="UpDownArrows">
-				<param name="container_id" value="450" />
-				<param name="posx" value="746" />
-				<param name="up_posy" value="-40" />
-				<param name="down_posy" value="876" />
-			</include>
 			<control type="scrollbar" id="60">
 				<right>0</right>
 				<top>70</top>
