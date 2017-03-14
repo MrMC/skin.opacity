@@ -110,12 +110,6 @@
 							<shadowcolor>black</shadowcolor>
 							<font>font27</font>
 						</control>
-						<control type="progress">
-							<description>CPU BAR</description>
-							<width>730</width>
-							<height>16</height>
-							<info>System.CPUUsage</info>
-						</control>
 						<control type="label">
 							<description>Memory Text</description>
 							<width>730</width>
@@ -124,12 +118,6 @@
 							<aligny>center</aligny>
 							<shadowcolor>black</shadowcolor>
 							<font>font27</font>
-						</control>
-						<control type="progress">
-							<description>Memory BAR</description>
-							<width>730</width>
-							<height>16</height>
-							<info>system.memory(used)</info>
 						</control>
 					</control>
 					<control type="label">
@@ -159,6 +147,7 @@
 							<font>font12</font>
 							<textoffsety>10</textoffsety>
 							<label>$LOCALIZE[144]</label>
+							<textcolor>grey</textcolor>
 							<shadowcolor>black</shadowcolor>
 						</control>
 						<control type="label" id="52">
@@ -168,7 +157,6 @@
 							<textoffsety>10</textoffsety>
 							<font>font12</font>
 							<width>auto</width>
-							<textcolor>primary_color</textcolor>
 							<shadowcolor>black</shadowcolor>
 						</control>
 					</control>
@@ -185,13 +173,13 @@
 							<height>25</height>
 							<label>$LOCALIZE[174]</label>
 							<font>font12</font>
+							<textcolor>grey</textcolor>
 							<shadowcolor>black</shadowcolor>
 						</control>
 						<control type="label" id="53">
 							<description>Kodi Build Date</description>
 							<width>auto</width>
 							<font>font12</font>
-							<textcolor>primary_color</textcolor>
 							<shadowcolor>black</shadowcolor>
 						</control>
 					</control>

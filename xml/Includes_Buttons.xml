@@ -87,7 +87,7 @@
 		<textcolor>primary_color</textcolor>
 	</include>
 	<include name="DefaultDialogButton">
-		<param name="width">300</param>
+		<param name="width">330</param>
 		<param name="height">120</param>
 		<param name="wrapmultiline">false</param>
 		<param name="font">font25_title</param>
