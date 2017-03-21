@@ -124,7 +124,7 @@
 						<description>Default Button</description>
 						<include>SettingsItemCommon</include>
 						<width>1050</width>
-						<label>$LOCALIZE[31087]</label>
+						<label>$LOCALIZE[5]</label>
 					</control>
 				</control>
 				<control type="label">

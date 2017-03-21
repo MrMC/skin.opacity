@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">300</defaultcontrol>
-	<include>Keyboard_Slide_Up</include>
+	<include>Animation_DialogPopupOpenClose</include>
 	<depth>DepthDialog+</depth>
 	<controls>
 		<control type="group">
@@ -11,22 +11,6 @@
 			<visible>!Window.IsVisible(numericinput)</visible>
 			<visible>Window.IsTopMost(virtualkeyboard)</visible>
 			<include>Animation_DialogPopupVisible</include>
-			<control type="image">
-				<description>background image</description>
-				<left>0</left>
-				<bottom>0</bottom>
-				<width>100%</width>
-				<height>300%</height>
-				<texture flipy="true">frame/osdfade.png</texture>
-			</control>
-			<control type="image">
-				<description>background image</description>
-				<left>0</left>
-				<bottom>0</bottom>
-				<width>100%</width>
-				<height>470</height>
-				<texture colordiffuse="dialog_tint">colors/white.png</texture>
-			</control>
 			<control type="label" id="311">
 				<centerleft>50%</centerleft>
 				<top>50</top>
