@@ -92,9 +92,9 @@
 				</focusedlayout>
 				<content>
 					<item>
-						<label>$LOCALIZE[20094]</label>
-						<onclick>ActivateWindow(1103)</onclick>
-						<icon>icons/settings/filemanager.png</icon>
+						<label>$LOCALIZE[20077]</label>
+						<onclick>ActivateWindow(skinsettings)</onclick>
+						<icon>icons/settings/skin.png</icon>
 					</item>
 					<item>
 						<label>$LOCALIZE[480]</label>
@@ -117,6 +117,11 @@
 						<icon>icons/settings/pictures.png</icon>
 					</item>
 					<item>
+						<label>$LOCALIZE[19020]</label>
+						<onclick>ActivateWindow(PVRSettings)</onclick>
+						<icon>icons/settings/livetv.png</icon>
+					</item>
+					<item>
 						<label>$LOCALIZE[14036]</label>
 						<onclick>ActivateWindow(ServiceSettings)</onclick>
 						<icon>icons/settings/network.png</icon>
@@ -125,11 +130,6 @@
 						<label>$LOCALIZE[13000]</label>
 						<onclick>ActivateWindow(SystemSettings)</onclick>
 						<icon>icons/settings/system.png</icon>
-					</item>
-					<item>
-						<label>$LOCALIZE[19020]</label>
-						<onclick>ActivateWindow(PVRSettings)</onclick>
-						<icon>icons/settings/livetv.png</icon>
 					</item>
 					<item>
 						<label>$LOCALIZE[13200]</label>
@@ -141,11 +141,6 @@
 						<onclick>ActivateWindow(systeminfo)</onclick>
 						<icon>icons/settings/sysinfo.png</icon>
 					</item>
-<!-- 					<item>
-						<label>$LOCALIZE[20077]</label>
-						<onclick>ActivateWindow(SkinSettings)</onclick>
-						<icon>icons/settings/skin.png</icon>
-					</item> -->
 				</content>
 			</control>
 		</control>

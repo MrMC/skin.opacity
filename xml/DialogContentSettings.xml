@@ -9,80 +9,175 @@
 			<width>1520</width>
 			<include>Animation_DialogPopupVisible</include>
 			<visible>!Window.IsVisible(sliderdialog)</visible>
+			<visible>Window.IsTopMost(contentsettings)</visible>
 			<include content="DialogBackgroundCommons">
-				<param name="width" value="1520" />
-				<param name="height" value="870" />
-				<param name="header_label" value="" />
-				<param name="header_id" value="2" />
+				<param name="width" value="1420" />
+				<param name="height" value="725" />
+				<param name="header_label" value="$LOCALIZE[20333]" />
+				<param name="header_id" value="1" />
 			</include>
-			<control type="image">
-				<left>10</left>
-				<top>80</top>
-				<width>1200</width>
-				<height>790</height>
-				<texture border="40">buttons/dialogbutton-nofo.png</texture>
+			<control type="label">
+				<description>Content Picker Header</description>
+				<left>60</left>
+				<top>60</top>
+				<width>320</width>
+				<height>100</height>
+				<font>font12</font>
+				<label>$LOCALIZE[20344]</label>
+				<aligny>center</aligny>
+				<textcolor>primary_color</textcolor>
+				<shadowcolor>black</shadowcolor>
 			</control>
-			<control type="grouplist" id="5">
-				<description>control area</description>
-				<left>29</left>
+			<control type="list" id="21">
+				<left>400</left>
 				<top>100</top>
-				<width>1160</width>
-				<height>750</height>
-				<onleft>9000</onleft>
-				<onright>9000</onright>
-				<onup>5</onup>
-				<ondown>5</ondown>
+				<width>360</width>
+				<height>241</height>
+				<onup>21</onup>
+				<onleft>20</onleft>
+				<onright>60</onright>
+				<ondown>21</ondown>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="45">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>360</width>
+						<height>40</height>
+						<texture border="5">button-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<left>5</left>
+						<top>5</top>
+						<width>35</width>
+						<height>30</height>
+						<texture>$INFO[Listitem.Icon]</texture>
+					</control>
+					<control type="label">
+						<left>50</left>
+						<top>0</top>
+						<width>290</width>
+						<height>40</height>
+						<font>font13</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="45">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>360</width>
+						<height>40</height>
+						<visible>!Control.HasFocus(21)</visible>
+						<texture border="5">button-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>360</width>
+						<height>40</height>
+						<visible>Control.HasFocus(21)</visible>
+						<texture border="5">button-focus2.png</texture>
+					</control>
+					<control type="image">
+						<left>5</left>
+						<top>5</top>
+						<width>35</width>
+						<height>30</height>
+						<texture>$INFO[Listitem.Icon]</texture>
+					</control>
+					<control type="label">
+						<left>50</left>
+						<top>0</top>
+						<width>290</width>
+						<height>40</height>
+						<font>font13</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="group" id="7000">
+				<control type="grouplist" id="8000">
+					<left>30</left>
+					<top>120</top>
+					<orientation>vertical</orientation>
+					<onup>5</onup>
+					<ondown>5</ondown>
+					<onright>9001</onright>
+					<onleft>9001</onleft>
+					<itemgap>-25</itemgap>
+					<control type="spincontrolex" id="20">
+						<description>Content type button</description>
+						<include>SettingsItemCommon</include>
+						<width>1050</width>
+					</control>
+					<control type="button" id="22">
+						<description>Default Button</description>
+						<include>SettingsItemCommon</include>
+						<width>1050</width>
+						<label>$LOCALIZE[31087]</label>
+					</control>
+				</control>
+				<control type="label">
+					<left>60</left>
+					<top>335</top>
+					<width>320</width>
+					<height>100</height>
+					<font>font12</font>
+					<label>$LOCALIZE[31088]</label>
+					<aligny>center</aligny>
+					<textcolor>primary_color</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="grouplist" id="5">
+					<description>control area</description>
+					<left>30</left>
+					<top>395</top>
+					<width>1050</width>
+					<height>400</height>
+					<itemgap>-25</itemgap>
+					<onup>22</onup>
+					<ondown>20</ondown>
+					<onright>9001</onright>
+					<onleft>9001</onleft>
+				</control>
 			</control>
 			<control type="button" id="7">
 				<description>Default Button</description>
-				<include>DefaultSettingButton</include>
+				<include>SettingsItemCommon</include>
 			</control>
 			<control type="radiobutton" id="8">
 				<description>Default RadioButton</description>
-				<include>DefaultSettingButton</include>
+				<include>SettingsItemCommon</include>
 			</control>
-			<control type="spincontrolex" id="9">
-				<description>Default SpinControlex</description>
-				<include>DefaultSettingButton</include>
-			</control>
-			<control type="image" id="11">
-				<description>separator image</description>
-				<height>3</height>
-				<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
-			</control>
-			<control type="edit" id="12">
-				<include>DefaultSettingButton</include>
-			</control>
-			<control type="sliderex" id="13">
-				<description>Default Slider</description>
-				<include>DefaultSettingButton</include>
-			</control>
-			<control type="label" id="14">
-				<description>Default Label</description>
-				<include>DefaultSettingLabel</include>
-			</control>
-			<control type="grouplist" id="9000">
-				<left>1210</left>
-				<top>92</top>
+			<control type="grouplist" id="9001">
 				<orientation>vertical</orientation>
-				<width>300</width>
-				<height>250</height>
-				<itemgap>-10</itemgap>
-				<onleft>5</onleft>
-				<onright>5</onright>
+				<top>120</top>
+				<left>1090</left>
+				<width>1200</width>
+				<itemgap>-20</itemgap>
+				<align>left</align>
+				<onleft>7000</onleft>
+				<onright>7000</onright>
 				<include content="DefaultDialogButton">
 					<param name="id" value="28" />
-					<param name="label" value="" />
+					<param name="label" value="$LOCALIZE[186]" />
 				</include>
 				<include content="DefaultDialogButton">
 					<param name="id" value="29" />
-					<param name="label" value="" />
-				</include>
-				<include content="DefaultDialogButton">
-					<param name="id" value="30" />
-					<param name="label" value="" />
+					<param name="label" value="$LOCALIZE[222]" />
 				</include>
 			</control>
+
 		</control>
 	</controls>
 </window>

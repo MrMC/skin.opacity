@@ -92,7 +92,7 @@
 					<bottom>180</bottom>
 					<height>90</height>
 					<include>MediaMenuLabelCommon</include>
-					<label>Settings level</label>
+					<label>$LOCALIZE[31008]</label>
 			</control>
 
 				<control type="button" id="20">

@@ -8,6 +8,7 @@
 			<centerleft>50%</centerleft>
 			<width>1520</width>
 			<include>Animation_DialogPopupVisible</include>
+			<visible>Window.IsTopMost(mediafilter)</visible>
 			<visible>!Window.IsVisible(sliderdialog)</visible>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="1520" />
