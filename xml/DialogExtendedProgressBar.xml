@@ -10,8 +10,8 @@
 			<width>80</width>
 			<bottom>0</bottom>
 			<height>75</height>
-			<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="System.HasModalDialog">conditional</animation>
-			<animation effect="slide" end="0,-80" time="150" condition="Window.IsVisible(FullscreenVideo)">conditional</animation>
+			<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="System.HasModalDialog">conditional</animation>
+			<animation effect="slide" end="0,80" time="150" condition="Window.IsVisible(FullscreenVideo)">conditional</animation>
 			<control type="group">
 				<visible>!Window.IsActive(volumebar)</visible>
 				<animation effect="fade" time="200">VisibleChange</animation>
