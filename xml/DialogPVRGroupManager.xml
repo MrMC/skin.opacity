@@ -8,6 +8,7 @@
 			<height>880</height>
 			<centerleft>50%</centerleft>
 			<width>1720</width>
+			<visible>Window.Window.IsTopMost(pvrgroupmanager)</visible>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="1720" />
 				<param name="height" value="880" />
