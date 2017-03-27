@@ -35,36 +35,28 @@
 			<control type="group">
 				<depth>DepthContentPanel</depth>
 				<include>OpenClose_Left</include>
-				<left>120</left>
+				<left>140</left>
 				<include content="ContentPanel">
-					<param name="width" value="634" />
+					<param name="width" value="505" />
 				</include>
 				<control type="fixedlist" id="9000">
 					<top>85</top>
 					<left>-25</left>
 					<bottom>100</bottom>
-					<width>630</width>
+					<width>500</width>
 					<movement>2</movement>
 					<focusposition>2</focusposition>
 					<onfocus>ClearProperty(listposition,home)</onfocus>
 					<ondown>9000</ondown>
 					<onup>9000</onup>
-					<onright>700</onright>
+					<onleft>700</onleft>
+					<onright>2000</onright>
 					<orientation>vertical</orientation>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<itemlayout height="150">
 						<control type="group">
-							<control type="image">
-								<left>10</left>
-								<top>0</top>
-								<width>160</width>
-								<height>150</height>
-								<texture>$INFO[ListItem.Icon]</texture>
-								<align>center</align>
-								<aspectratio>keep</aspectratio>
-							</control>
 							<control type="label">
-								<left>200</left>
+								<left>50</left>
 								<right>20</right>
 								<height>150</height>
 								<font>font45</font>
@@ -85,17 +77,8 @@
 								<visible>Control.HasFocus(9000)</visible>
 								<texture colordiffuse="primary_color" border="50">buttons/dialogbutton-fo.png</texture>
 							</control>
-							<control type="image">
-								<left>10</left>
-								<top>0</top>
-								<width>160</width>
-								<height>150</height>
-								<texture>$INFO[ListItem.Icon]</texture>
-								<align>center</align>
-								<aspectratio>keep</aspectratio>
-							</control>
 							<control type="label">
-								<left>200</left>
+								<left>50</left>
 								<right>20</right>
 								<height>150</height>
 								<font>font45</font>
@@ -194,7 +177,7 @@
 				<control type="grouplist" id="700">
 					<orientation>vertical</orientation>
 					<itemgap>0</itemgap>
-					<left>-130</left>
+					<left>-140</left>
 					<width>110</width>
 					<height>700</height>
 					<top>80</top>
@@ -237,7 +220,7 @@
 				<texture>icons/logo-text.png</texture>
 			</control>
 			<control type="group">
-				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="System.HasModalDialog">conditional</animation>
+				<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="System.HasModalDialog">conditional</animation>
 				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 				<control type="rss">
@@ -256,152 +239,154 @@
 					<visible>!Window.IsVisible(extendedprogressdialog)</visible>
 				</control>
 			</control>
-
-			<control type="list" id="53">
-				<left>770</left>
-				<top>170</top>
-				<width>1700</width>
-				<height>600</height>
-				<scrolltime tween="cubic" easing="out">500</scrolltime>
-				<orientation>horizontal</orientation>
-				<onleft>53</onleft>
-				<onup>9000</onup>
-				<ondown>5199</ondown>
-				<onright>53</onright>
-				<preloaditems>1</preloaditems>
-				<viewtype label="31100">icon</viewtype>
-				<itemlayout width="260">
-					<control type="group">
-						<depth>DepthContentPopout</depth>
-						<top>2</top>
-						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>216</width>
-							<height>306</height>
-							<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(poster)]</texture>
-							<bordertexture border="20">overlays/shadow.png</bordertexture>
-							<bordersize>20</bordersize>
+			<control type="group" id="2000">
+				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+				<left>650</left>
+				<control type="list" id="53">
+					<top>170</top>
+					<width>1700</width>
+					<height>600</height>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<orientation>horizontal</orientation>
+					<onleft>9000</onleft>
+					<onup>54</onup>
+					<ondown>54</ondown>
+					<onright>53</onright>
+					<preloaditems>1</preloaditems>
+					<viewtype label="31100">icon</viewtype>
+					<itemlayout width="260">
+						<control type="group">
+							<depth>DepthContentPopout</depth>
+							<top>2</top>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>216</width>
+								<height>306</height>
+								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+								<bordertexture border="20">overlays/shadow.png</bordertexture>
+								<bordersize>20</bordersize>
+							</control>
+							<control type="textbox">
+								<left>8</left>
+								<top>270</top>
+								<width>200</width>
+								<height>100</height>
+								<label>$INFO[ListItem.Label]</label>
+								<font>font12</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+								<aligny>center</aligny>
+							</control>
 						</control>
-						<control type="textbox">
-							<left>8</left>
-							<top>270</top>
-							<width>200</width>
-							<height>100</height>
-							<label>$INFO[ListItem.Label]</label>
-							<font>font12</font>
-							<shadowcolor>text_shadow</shadowcolor>
-							<align>center</align>
-							<aligny>center</aligny>
+					</itemlayout>
+					<focusedlayout width="260">
+						<control type="group">
+							<depth>DepthContentPopout</depth>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" center="auto" start="100" end="108" time="250" tween="sine" />
+							</animation>
+							<animation type="UnFocus" reversible="false">
+								<effect type="zoom" center="auto" start="108" end="100" time="150" tween="sine" />
+							</animation>
+							<top>2</top>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>216</width>
+								<height>306</height>
+								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+								<bordertexture border="20">overlays/shadow.png</bordertexture>
+								<bordersize>20</bordersize>
+							</control>
+							<control type="textbox">
+								<left>8</left>
+								<top>270</top>
+								<width>200</width>
+								<height>100</height>
+								<label>$INFO[ListItem.Label]</label>
+								<font>font12</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+								<aligny>center</aligny>
+							</control>
 						</control>
-					</control>
-				</itemlayout>
-				<focusedlayout width="260">
-					<control type="group">
-						<depth>DepthContentPopout</depth>
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="auto" start="100" end="108" time="250" tween="sine" />
-						</animation>
-						<animation type="UnFocus" reversible="false">
-							<effect type="zoom" center="auto" start="108" end="100" time="150" tween="sine" />
-						</animation>
-						<top>2</top>
-						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>216</width>
-							<height>306</height>
-							<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(poster)]</texture>
-							<bordertexture border="20">overlays/shadow.png</bordertexture>
-							<bordersize>20</bordersize>
+					</focusedlayout>
+					<content>videodb://movies/titles/</content>
+				</control>
+				<control type="list" id="54">
+					<top>590</top>
+					<width>1700</width>
+					<height>600</height>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<orientation>horizontal</orientation>
+					<onleft>9000</onleft>
+					<onup>53</onup>
+					<ondown>9000</ondown>
+					<onright>54</onright>
+					<preloaditems>1</preloaditems>
+					<viewtype label="31100">icon</viewtype>
+					<itemlayout width="260">
+						<control type="group">
+							<depth>DepthContentPopout</depth>
+							<top>2</top>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>240</width>
+								<height>340</height>
+								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+								<bordertexture border="20">overlays/shadow.png</bordertexture>
+								<bordersize>20</bordersize>
+							</control>
+							<control type="textbox">
+								<left>20</left>
+								<top>300</top>
+								<width>200</width>
+								<height>100</height>
+								<label>$INFO[ListItem.Label]</label>
+								<font>font12</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+								<aligny>center</aligny>
+							</control>
 						</control>
-						<control type="textbox">
-							<left>8</left>
-							<top>270</top>
-							<width>200</width>
-							<height>100</height>
-							<label>$INFO[ListItem.Label]</label>
-							<font>font12</font>
-							<shadowcolor>text_shadow</shadowcolor>
-							<align>center</align>
-							<aligny>center</aligny>
+					</itemlayout>
+					<focusedlayout width="260">
+						<control type="group">
+							<depth>DepthContentPopout</depth>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" center="auto" start="100" end="108" time="250" tween="sine" />
+							</animation>
+							<animation type="UnFocus" reversible="false">
+								<effect type="zoom" center="auto" start="108" end="100" time="150" tween="sine" />
+							</animation>
+							<top>2</top>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>240</width>
+								<height>340</height>
+								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+								<bordertexture border="20">overlays/shadow.png</bordertexture>
+								<bordersize>20</bordersize>
+							</control>
+							<control type="textbox">
+								<left>20</left>
+								<top>300</top>
+								<width>200</width>
+								<height>100</height>
+								<label>$INFO[ListItem.Label]</label>
+								<font>font12</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+								<aligny>center</aligny>
+							</control>
 						</control>
-					</control>
-				</focusedlayout>
-				<content>videodb://movies/titles/</content>
-			</control>
-			<control type="list" id="54">
-				<left>770</left>
-				<top>590</top>
-				<width>1700</width>
-				<height>600</height>
-				<scrolltime tween="cubic" easing="out">500</scrolltime>
-				<orientation>horizontal</orientation>
-				<onleft>53</onleft>
-				<onup>9000</onup>
-				<ondown>5199</ondown>
-				<onright>53</onright>
-				<preloaditems>1</preloaditems>
-				<viewtype label="31100">icon</viewtype>
-				<itemlayout width="260">
-					<control type="group">
-						<depth>DepthContentPopout</depth>
-						<top>2</top>
-						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>240</width>
-							<height>340</height>
-							<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(poster)]</texture>
-							<bordertexture border="20">overlays/shadow.png</bordertexture>
-							<bordersize>20</bordersize>
-						</control>
-						<control type="textbox">
-							<left>20</left>
-							<top>300</top>
-							<width>200</width>
-							<height>100</height>
-							<label>$INFO[ListItem.Label]</label>
-							<font>font12</font>
-							<shadowcolor>text_shadow</shadowcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-						</control>
-					</control>
-				</itemlayout>
-				<focusedlayout width="260">
-					<control type="group">
-						<depth>DepthContentPopout</depth>
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="auto" start="100" end="108" time="250" tween="sine" />
-						</animation>
-						<animation type="UnFocus" reversible="false">
-							<effect type="zoom" center="auto" start="108" end="100" time="150" tween="sine" />
-						</animation>
-						<top>2</top>
-						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>240</width>
-							<height>340</height>
-							<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(poster)]</texture>
-							<bordertexture border="20">overlays/shadow.png</bordertexture>
-							<bordersize>20</bordersize>
-						</control>
-						<control type="textbox">
-							<left>20</left>
-							<top>300</top>
-							<width>200</width>
-							<height>100</height>
-							<label>$INFO[ListItem.Label]</label>
-							<font>font12</font>
-							<shadowcolor>text_shadow</shadowcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-						</control>
-					</control>
-				</focusedlayout>
-				<content>videodb://movies/titles/</content>
+					</focusedlayout>
+					<content>videodb://movies/titles/</content>
+				</control>
 			</control>
 		</control>
 	</controls>
