@@ -35,8 +35,7 @@
 			<control type="group">
 				<depth>DepthContentPanel</depth>
 				<include>OpenClose_Left</include>
-				<left>100</left>
-				<top>30</top>
+				<left>120</left>
 				<include content="ContentPanel">
 					<param name="width" value="634" />
 				</include>
@@ -183,18 +182,25 @@
 							<property name="id">favorites</property>
 							<visible>!Skin.HasSetting(HomeMenuNoFavButton)</visible>
 						</item>
+						<item>
+							<label>$LOCALIZE[13000]</label>
+							<onclick>ActivateWindow(settings)</onclick>
+							<property name="menu_id">$NUMBER[14000]</property>
+							<thumb>icons/sidemenu/settings.png</thumb>
+							<property name="id">settings</property>
+						</item>
 					</content>
 				</control>
 				<control type="grouplist" id="700">
 					<orientation>vertical</orientation>
 					<itemgap>0</itemgap>
-					<right>0</right>
+					<left>-130</left>
 					<width>110</width>
 					<height>700</height>
-					<bottom>80</bottom>
+					<top>80</top>
 					<onright>9000</onright>
 					<onleft>9000</onleft>
-					<align>right</align>
+					<align>left</align>
 					<include content="IconButton">
 						<param name="control_id" value="804" />
 						<param name="onclick" value="ActivateWindow(shutdownmenu)" />
@@ -206,12 +212,6 @@
 						<param name="onclick" value="ActivateWindow(settings)" />
 						<param name="icon" value="icons/settings.png" />
 						<param name="label" value="$LOCALIZE[21417]" />
-					</include>
-					<include content="IconButton">
-						<param name="control_id" value="801" />
-						<param name="onclick" value="ActivateWindow(1107)" />
-						<param name="icon" value="icons/search.png" />
-						<param name="label" value="$LOCALIZE[137]" />
 					</include>
 					<include content="IconButton">
 						<param name="control_id" value="803" />
@@ -229,12 +229,12 @@
 			<control type="image">
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-				<top>80</top>
-				<right>20</right>
-				<aspectratio>keep</aspectratio>
+				<top>0</top>
+				<left>90</left>
+				<aspectratio align="left">keep</aspectratio>
 				<width>400</width>
-				<height>200</height>
-				<texture>icons/logo.png</texture>
+				<height>80</height>
+				<texture>icons/logo-text.png</texture>
 			</control>
 			<control type="group">
 				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="System.HasModalDialog">conditional</animation>
@@ -242,17 +242,164 @@
 				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 				<control type="rss">
 					<left>0</left>
-					<top>10</top>
-					<right>200</right>
+					<bottom>20</bottom>
+					<right>0</right>
 					<height>39</height>
-					<font>font12</font>
+					<font>font13</font>
 					<urlset>1</urlset>
 					<hitrect x="-100" y="0" w="1" h="1" />
-					<titlecolor>primary_color</titlecolor>
+					<titlecolor>grey</titlecolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<headlinecolor>FFC0C0C0</headlinecolor>
 					<visible>!Player.hasMedia</visible>
 				</control>
+			</control>
+
+			<control type="list" id="53">
+				<left>770</left>
+				<top>170</top>
+				<width>1700</width>
+				<height>600</height>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<orientation>horizontal</orientation>
+				<onleft>53</onleft>
+				<onup>9000</onup>
+				<ondown>5199</ondown>
+				<onright>53</onright>
+				<preloaditems>1</preloaditems>
+				<viewtype label="31100">icon</viewtype>
+				<itemlayout width="260">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<top>2</top>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>216</width>
+							<height>306</height>
+							<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+							<bordertexture border="20">overlays/shadow.png</bordertexture>
+							<bordersize>20</bordersize>
+						</control>
+						<control type="textbox">
+							<left>8</left>
+							<top>270</top>
+							<width>200</width>
+							<height>100</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>font12</font>
+							<shadowcolor>text_shadow</shadowcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout width="260">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="auto" start="100" end="108" time="250" tween="sine" />
+						</animation>
+						<animation type="UnFocus" reversible="false">
+							<effect type="zoom" center="auto" start="108" end="100" time="150" tween="sine" />
+						</animation>
+						<top>2</top>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>216</width>
+							<height>306</height>
+							<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+							<bordertexture border="20">overlays/shadow.png</bordertexture>
+							<bordersize>20</bordersize>
+						</control>
+						<control type="textbox">
+							<left>8</left>
+							<top>270</top>
+							<width>200</width>
+							<height>100</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>font12</font>
+							<shadowcolor>text_shadow</shadowcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+						</control>
+					</control>
+				</focusedlayout>
+				<content>videodb://movies/titles/</content>
+			</control>
+			<control type="list" id="54">
+				<left>770</left>
+				<top>590</top>
+				<width>1700</width>
+				<height>600</height>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<orientation>horizontal</orientation>
+				<onleft>53</onleft>
+				<onup>9000</onup>
+				<ondown>5199</ondown>
+				<onright>53</onright>
+				<preloaditems>1</preloaditems>
+				<viewtype label="31100">icon</viewtype>
+				<itemlayout width="260">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<top>2</top>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>240</width>
+							<height>340</height>
+							<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+							<bordertexture border="20">overlays/shadow.png</bordertexture>
+							<bordersize>20</bordersize>
+						</control>
+						<control type="textbox">
+							<left>20</left>
+							<top>300</top>
+							<width>200</width>
+							<height>100</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>font12</font>
+							<shadowcolor>text_shadow</shadowcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout width="260">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="auto" start="100" end="108" time="250" tween="sine" />
+						</animation>
+						<animation type="UnFocus" reversible="false">
+							<effect type="zoom" center="auto" start="108" end="100" time="150" tween="sine" />
+						</animation>
+						<top>2</top>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>240</width>
+							<height>340</height>
+							<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+							<bordertexture border="20">overlays/shadow.png</bordertexture>
+							<bordersize>20</bordersize>
+						</control>
+						<control type="textbox">
+							<left>20</left>
+							<top>300</top>
+							<width>200</width>
+							<height>100</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>font12</font>
+							<shadowcolor>text_shadow</shadowcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+						</control>
+					</control>
+				</focusedlayout>
+				<content>videodb://movies/titles/</content>
 			</control>
 		</control>
 	</controls>

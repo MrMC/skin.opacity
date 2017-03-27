@@ -7,9 +7,8 @@
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<visible>!Window.IsActive(startup)</visible>
 			<control type="image">
-				<texture>colors/black.png</texture>
+				<texture colordiffuse="77FFFFFF">colors/black.png</texture>
 				<include>FullScreenDimensions</include>
-				<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
 				<animation effect="fade" start="100" end="0" time="240" condition="Window.IsVisible(fullscreenvideo)">Conditional</animation>
 			</control>
 			<control type="group">
