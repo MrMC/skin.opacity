@@ -165,13 +165,6 @@
 							<property name="id">favorites</property>
 							<visible>!Skin.HasSetting(HomeMenuNoFavButton)</visible>
 						</item>
-						<item>
-							<label>$LOCALIZE[13000]</label>
-							<onclick>ActivateWindow(settings)</onclick>
-							<property name="menu_id">$NUMBER[14000]</property>
-							<thumb>icons/sidemenu/settings.png</thumb>
-							<property name="id">settings</property>
-						</item>
 					</content>
 				</control>
 				<control type="grouplist" id="700">

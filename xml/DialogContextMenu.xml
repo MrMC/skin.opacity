@@ -9,7 +9,7 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<left>-225</left>
+			<left>-300</left>
 			<include>Animation_DialogPopupVisible</include>
 			<visible>Window.IsTopMost(contextmenu)</visible>
 			<control type="image">
@@ -31,9 +31,9 @@
 				<onclick>Action(close)</onclick>
 			</control>
 			<control type="label">
-				<left>0</left>
+				<left>-200</left>
 				<top>-100</top>
-				<width>450</width>
+				<width>1000</width>
 				<height>70</height>
 				<font>font45_title</font>
 				<label>$INFO[ListItem.Label]</label>
@@ -45,7 +45,7 @@
 				<description>background image</description>
 				<left>0</left>
 				<top>0</top>
-				<width>450</width>
+				<width>600</width>
 				<height>780</height>
 				<texture colordiffuse="dialog_tint">colors/white.png</texture>
 			</control>
@@ -53,7 +53,7 @@
 				<description>grouplist for context buttons</description>
 				<left>0</left>
 				<top>0</top>
-				<width>450</width>
+				<width>600</width>
 				<height max="780">auto</height>
 				<usecontrolcoords>true</usecontrolcoords>
 			</control>
@@ -61,7 +61,7 @@
 				<description>button template</description>
 				<left>0</left>
 				<top></top>
-				<width>450</width>
+				<width>600</width>
 				<height>65</height>
 				<align>center</align>
 				<texturefocus colordiffuse="primary_color" border="5">buttons/focus.png</texturefocus>
