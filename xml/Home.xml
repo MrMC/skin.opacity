@@ -35,13 +35,13 @@
 			<control type="group">
 				<depth>DepthContentPanel</depth>
 				<include>OpenClose_Left</include>
-				<left>140</left>
+				<left>0</left>
 				<include content="ContentPanel">
-					<param name="width" value="505" />
+					<param name="width" value="645" />
 				</include>
 				<control type="fixedlist" id="9000">
 					<top>85</top>
-					<left>-25</left>
+					<left>120</left>
 					<bottom>100</bottom>
 					<width>500</width>
 					<movement>2</movement>
@@ -177,7 +177,7 @@
 				<control type="grouplist" id="700">
 					<orientation>vertical</orientation>
 					<itemgap>0</itemgap>
-					<left>-140</left>
+					<left>0</left>
 					<width>110</width>
 					<height>700</height>
 					<top>80</top>
@@ -213,7 +213,7 @@
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<top>0</top>
-				<left>90</left>
+				<left>30</left>
 				<aspectratio align="left">keep</aspectratio>
 				<width>400</width>
 				<height>80</height>
