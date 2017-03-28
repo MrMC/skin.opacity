@@ -143,10 +143,10 @@
 					</item>
 				</content>
 			</control>
+			<include content="TopBar">
+				<param name="breadcrumbs_label" value="$LOCALIZE[13000]" />
+			</include>
+			<include>BottomBar</include>
 		</control>
-		<include content="TopBar">
-			<param name="breadcrumbs_label" value="$LOCALIZE[13000]" />
-		</include>
-		<include>BottomBar</include>
 	</controls>
 </window>

@@ -217,10 +217,10 @@
 				<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 				<label>$VAR[SkinSettingsHelpTextVar]</label>
 			</control>
+			<include content="TopBar">
+				<param name="breadcrumbs_label" value="$LOCALIZE[5] / $LOCALIZE[20077]" />
+			</include>
+			<include>BottomBar</include>
 		</control>
-		<include content="TopBar">
-			<param name="breadcrumbs_label" value="$LOCALIZE[5] / $LOCALIZE[20077]" />
-		</include>
-		<include>BottomBar</include>
 	</controls>
 </window>
