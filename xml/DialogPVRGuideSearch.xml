@@ -8,6 +8,8 @@
 			<height>820</height>
 			<centerleft>50%</centerleft>
 			<width>1780</width>
+			<visible>Window.IsTopMost(DialogPVRGuideSearch.xml)</visible>
+			<include>Visible_Fade</include>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="1780" />
 				<param name="height" value="820" />

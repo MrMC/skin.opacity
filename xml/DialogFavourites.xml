@@ -9,6 +9,7 @@
 			<width>1540</width>
 			<height>858</height>
 			<visible>Window.IsTopMost(favourites)</visible>
+			<include>Visible_Fade</include>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="1540" />
 				<param name="height" value="858" />

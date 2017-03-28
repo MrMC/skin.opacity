@@ -9,6 +9,7 @@
 			<centerleft>50%</centerleft>
 			<width>1820</width>
 			<visible>Window.IsTopMost(pvrchannelmanager)</visible>
+			<include>Visible_Fade</include>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="1820" />
 				<param name="height" value="830" />

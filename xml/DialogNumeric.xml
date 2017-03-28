@@ -10,6 +10,7 @@
 			<centerleft>50%</centerleft>
 			<width>545</width>
 			<visible>Window.IsTopMost(numericinput)</visible>
+			<include>Visible_Fade</include>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="545" />
 				<param name="height" value="660" />
