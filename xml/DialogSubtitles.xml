@@ -2,6 +2,10 @@
 <window>
 	<include>Animation_DialogPopupOpenClose</include>
 	<controls>
+		<control type="group">
+			<animation effect="fade" start="100" end="bg_alpha" time="0" condition="true">Conditional</animation>
+			<include>ColoredBackgroundImages</include>
+		</control>
 		<control type="image">
 			<left>-1920</left>
 			<top>-1080</top>
@@ -88,7 +92,7 @@
 					<width>920</width>
 					<height>30</height>
 					<font>font30_title</font>
-					<label>$INFO[Player.Filename]</label>
+					<label>$INFO[Player.Title]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>grey</textcolor>

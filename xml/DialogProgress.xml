@@ -38,15 +38,7 @@
 				<width>915</width>
 				<align>center</align>
 				<include content="DefaultDialogButton">
-					<param name="id" value="11" />
-					<param name="label" value="" />
-				</include>
-				<include content="DefaultDialogButton">
 					<param name="id" value="10" />
-					<param name="label" value="" />
-				</include>
-				<include content="DefaultDialogButton">
-					<param name="id" value="12" />
 					<param name="label" value="" />
 				</include>
 			</control>

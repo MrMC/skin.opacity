@@ -237,9 +237,20 @@
 				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 				<left>650</left>
+				<control type="label">
+					<top>120</top>
+					<width>470</width>
+					<textoffsetx>20</textoffsetx>
+					<textoffsety>15</textoffsety>
+					<height>50</height>
+					<font>font25_title</font>
+					<aligny>top</aligny>
+					<textcolor>grey</textcolor>
+					<label>Header 1</label>
+				</control>
 				<control type="list" id="53">
 					<top>170</top>
-					<width>1700</width>
+					<width>1270</width>
 					<height>600</height>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<orientation>horizontal</orientation>
@@ -249,7 +260,7 @@
 					<onright>53</onright>
 					<preloaditems>1</preloaditems>
 					<viewtype label="31100">icon</viewtype>
-					<itemlayout width="260">
+					<itemlayout width="260" height="400">
 						<control type="group">
 							<depth>DepthContentPopout</depth>
 							<top>2</top>
@@ -275,7 +286,7 @@
 							</control>
 						</control>
 					</itemlayout>
-					<focusedlayout width="260">
+					<focusedlayout width="260" height="400">
 						<control type="group">
 							<depth>DepthContentPopout</depth>
 							<animation type="Focus" reversible="false">
@@ -309,9 +320,20 @@
 					</focusedlayout>
 					<content>videodb://movies/titles/</content>
 				</control>
+				<control type="label">
+					<top>545</top>
+					<width>470</width>
+					<textoffsetx>20</textoffsetx>
+					<textoffsety>15</textoffsety>
+					<height>50</height>
+					<font>font25_title</font>
+					<aligny>top</aligny>
+					<textcolor>grey</textcolor>
+					<label>Header 2</label>
+				</control>
 				<control type="list" id="54">
 					<top>590</top>
-					<width>1700</width>
+					<width>1270</width>
 					<height>600</height>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<orientation>horizontal</orientation>
@@ -321,7 +343,7 @@
 					<onright>54</onright>
 					<preloaditems>1</preloaditems>
 					<viewtype label="31100">icon</viewtype>
-					<itemlayout width="260">
+					<itemlayout width="260" height="400">
 						<control type="group">
 							<depth>DepthContentPopout</depth>
 							<top>2</top>
@@ -336,9 +358,9 @@
 							</control>
 							<control type="textbox">
 								<left>20</left>
-								<top>300</top>
+								<top>320</top>
 								<width>200</width>
-								<height>100</height>
+								<height>70</height>
 								<label>$INFO[ListItem.Label]</label>
 								<font>font12</font>
 								<shadowcolor>text_shadow</shadowcolor>
@@ -347,7 +369,7 @@
 							</control>
 						</control>
 					</itemlayout>
-					<focusedlayout width="260">
+					<focusedlayout width="260" height="400">
 						<control type="group">
 							<depth>DepthContentPopout</depth>
 							<animation type="Focus" reversible="false">
@@ -368,9 +390,9 @@
 							</control>
 							<control type="textbox">
 								<left>20</left>
-								<top>300</top>
+								<top>320</top>
 								<width>200</width>
-								<height>100</height>
+								<height>70</height>
 								<label>$INFO[ListItem.Label]</label>
 								<font>font12</font>
 								<shadowcolor>text_shadow</shadowcolor>

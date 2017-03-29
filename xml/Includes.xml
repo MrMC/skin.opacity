@@ -21,7 +21,7 @@
 	<constant name="DepthSideBlade">0.10</constant>
 	<constant name="bg_alpha">79</constant>
 	<constant name="dialogbuttons_itemgap">-20</constant>
-	<constant name="list_top_offset">85</constant>
+	<constant name="list_top_offset">88</constant>
 	<constant name="list_bottom_offset">88</constant>
 	<constant name="list_item_height">82</constant>
 	<include name="CommonScrollbars">
@@ -306,60 +306,60 @@
 		</definition>
 	</include>
 	<include name="MediaFlags">
-	<!-- 	<control type="grouplist">
-			<orientation>horizontal</orientation>
-			<right>20</right>
-			<top>0</top>
-			<height>70</height>
-			<align>right</align>
-			<itemgap>28</itemgap>
-			<width>1900</width>
-			<usecontrolcoords>true</usecontrolcoords>
-			<control type="group">
-				<width>150</width>
-				<top>-5</top>
-				<visible>Stringcompare(ListItem.DBtype,tvshow)</visible>
-				<include content="MediaFlag">
-					<param name="texture" value="$INFO[ListItem.Studio,resource://resource.images.studios.white/,.png]" />
-				</include>
-			</control>
-			<control type="group">
-				<top>10</top>
-				<width>200</width>
-				<include content="InfoFlag">
-					<param name="visible" value="[Stringcompare(ListItem.DBtype,tvshow) | Stringcompare(ListItem.DBtype,episode)] + !IsEmpty(ListItem.Premiered)" />
-					<param name="icon" value="lists/year.png" />
-					<param name="label" value="$INFO[ListItem.Premiered]" />
-				</include>
-			</control>
-			<control type="group">
-				<width>115</width>
-				<visible>!IsEmpty(ListItem.Duration)</visible>
-				<control type="label">
-					<width>115</width>
-					<height>60</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Duration,, $LOCALIZE[31132]]</label>
-					<font>font_flag</font>
-				</control>
-				<include content="MediaFlag">
-					<param name="texture" value="flags/flag.png" />
-				</include>
-			</control>
-			<include content="MediaFlag">
-				<param name="texture" value="$INFO[ListItem.AudioChannels,flags/audiochannel/,.png]" />
-				<param name="visible" value="!IsEmpty(ListItem.AudioChannels)" />
-			</include>
-			<include content="MediaFlag">
-				<param name="texture" value="$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]" />
-				<param name="visible" value="!IsEmpty(ListItem.AudioCodec)" />
-			</include>
-			<include content="MediaFlag">
-				<param name="texture" value="$VAR[ResolutionFlagVar]" />
-				<param name="visible" value="!IsEmpty(ListItem.VideoResolution)" />
-			</include>
-		</control> -->
+		<!-- 	<control type="grouplist">
+					<orientation>horizontal</orientation>
+					<right>20</right>
+					<top>0</top>
+					<height>70</height>
+					<align>right</align>
+					<itemgap>28</itemgap>
+					<width>1900</width>
+					<usecontrolcoords>true</usecontrolcoords>
+					<control type="group">
+						<width>150</width>
+						<top>-5</top>
+						<visible>Stringcompare(ListItem.DBtype,tvshow)</visible>
+						<include content="MediaFlag">
+							<param name="texture" value="$INFO[ListItem.Studio,resource://resource.images.studios.white/,.png]" />
+						</include>
+					</control>
+					<control type="group">
+						<top>10</top>
+						<width>200</width>
+						<include content="InfoFlag">
+							<param name="visible" value="[Stringcompare(ListItem.DBtype,tvshow) | Stringcompare(ListItem.DBtype,episode)] + !IsEmpty(ListItem.Premiered)" />
+							<param name="icon" value="lists/year.png" />
+							<param name="label" value="$INFO[ListItem.Premiered]" />
+						</include>
+					</control>
+					<control type="group">
+						<width>115</width>
+						<visible>!IsEmpty(ListItem.Duration)</visible>
+						<control type="label">
+							<width>115</width>
+							<height>60</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Duration,, $LOCALIZE[31132]]</label>
+							<font>font_flag</font>
+						</control>
+						<include content="MediaFlag">
+							<param name="texture" value="flags/flag.png" />
+						</include>
+					</control>
+					<include content="MediaFlag">
+						<param name="texture" value="$INFO[ListItem.AudioChannels,flags/audiochannel/,.png]" />
+						<param name="visible" value="!IsEmpty(ListItem.AudioChannels)" />
+					</include>
+					<include content="MediaFlag">
+						<param name="texture" value="$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]" />
+						<param name="visible" value="!IsEmpty(ListItem.AudioCodec)" />
+					</include>
+					<include content="MediaFlag">
+						<param name="texture" value="$VAR[ResolutionFlagVar]" />
+						<param name="visible" value="!IsEmpty(ListItem.VideoResolution)" />
+					</include>
+				</control> -->
 	</include>
 	<include name="FileManagerPanel">
 		<definition>
@@ -595,19 +595,18 @@
 				<height>4</height>
 				<texture colordiffuse="primary_color" border="3">dialogs/separator-grey.png</texture>
 			</control>
-
 			<control type="group">
 				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="System.HasModalDialog">conditional</animation>
 				<depth>DepthBars</depth>
 				<animation effect="fade" start="0" end="100" time="300" condition="[Window.Previous(fullscreenvideo) | Window.Previous(startup)]">WindowOpen</animation>
-<!-- 				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>110%</width>
-					<height>60</height>
-					<texture>frame/InfoBar.png</texture>
-					<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
-				</control> -->
+				<!-- 				<control type="image">
+									<left>0</left>
+									<top>0</top>
+									<width>110%</width>
+									<height>60</height>
+									<texture>frame/InfoBar.png</texture>
+									<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
+								</control> -->
 				<control type="grouplist">
 					<left>35</left>
 					<description>Left side of top bar</description>
@@ -939,14 +938,59 @@
 					<param name="width" value="654" />
 					<param name="flipx" value="$PARAM[flip_bg]" />
 				</include>
-				<control type="image">
-					<left>30</left>
-					<top>140</top>
-					<width>530</width>
-					<height>470</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<fadetime>300</fadetime>
-					<texture background="true">$VAR[IconWallThumbVar]</texture>
+				<control type="group">
+					<visible>Container.Content(episodes)</visible>
+					<control type="label">
+						<top>150</top>
+						<left>30</left>
+						<width>470</width>
+						<height>50</height>
+						<font>font25_title</font>
+						<aligny>top</aligny>
+						<textcolor>grey</textcolor>
+						<label>$INFO[ListItem.TVShowTitle][CR]$INFO[ListItem.Title]</label>
+					</control>
+					<control type="image">
+						<left>30</left>
+						<top>240</top>
+						<width>530</width>
+						<height>370</height>
+						<aspectratio aligny="center">scale</aspectratio>
+						<fadetime>300</fadetime>
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+					</control>
+					<control type="progress">
+						<left>30</left>
+						<top>610</top>
+						<width>530</width>
+						<height>6</height>
+						<texturebg>-</texturebg>
+						<midtexture colordiffuse="primary_color">colors\white.png</midtexture>
+						<info>ListItem.PercentPlayed</info>
+						<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
+					</control>
+				</control>
+				<control type="group">
+					<visible>!Container.Content(episodes)</visible>
+					<control type="image">
+						<left>30</left>
+						<top>140</top>
+						<width>530</width>
+						<height>470</height>
+						<aspectratio aligny="bottom">keep</aspectratio>
+						<fadetime>300</fadetime>
+						<texture background="true">$VAR[IconWallThumbVar]</texture>
+					</control>
+					<control type="progress">
+						<left>140</left>
+						<top>610</top>
+						<width>310</width>
+						<height>6</height>
+						<texturebg>-</texturebg>
+						<midtexture colordiffuse="primary_color">colors\white.png</midtexture>
+						<info>ListItem.PercentPlayed</info>
+						<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
+					</control>
 				</control>
 				<control type="textbox" id="15500">
 					<left>30</left>
