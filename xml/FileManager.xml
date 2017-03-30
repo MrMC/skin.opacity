@@ -5,16 +5,6 @@
 		<include>DefaultBackground</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="System.HasModalDialog">Conditional</animation>
-			<control type="image">
-				<description>Dialog Header image</description>
-				<centerleft>50%</centerleft>
-				<centertop>50%</centertop>
-				<width>68</width>
-				<height>68</height>
-				<texture colordiffuse="primary_color" border="2">icons/file-manager/left-right.png</texture>
-				<animation effect="fade" start="0" end="100" time="300" delay="100">WindowOpen</animation>
-				<animation effect="fade" start="100" end="0" time="160">WindowClose</animation>
-			</control>
 			<control type="group">
 				<left>0</left>
 				<include>OpenClose_Left</include>

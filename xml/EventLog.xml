@@ -176,13 +176,12 @@
 			</control>
 			<control type="scrollbar" id="60">
 				<right>0</right>
-				<top>80</top>
+				<top>list_top_offset</top>
 				<width>12</width>
-				<bottom>80</bottom>
+				<bottom>list_bottom_offset</bottom>
 				<onleft>50</onleft>
 				<onright>9000</onright>
 				<orientation>vertical</orientation>
-				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
 				<visible>Control.IsVisible(50)</visible>
 			</control>
 		</control>

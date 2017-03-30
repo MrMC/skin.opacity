@@ -85,7 +85,6 @@
 					<bottom>312</bottom>
 					<orientation>vertical</orientation>
 					<texturesliderbackground />
-					<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
 					<visible>Control.IsVisible(30)</visible>

@@ -118,12 +118,11 @@
 			</control>
 			<control type="scrollbar" id="60">
 				<right>0</right>
-				<top>163</top>
+				<top>list_top_offset</top>
 				<width>12</width>
-				<bottom>137</bottom>
+				<bottom>list_bottom_offset</bottom>
 				<orientation>vertical</orientation>
 				<texturesliderbackground />
-				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
 				<onleft>5</onleft>
 				<onright>5</onright>
 				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
