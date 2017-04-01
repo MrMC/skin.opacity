@@ -5,7 +5,7 @@
 		<textoffsetx>20</textoffsetx>
 		<top>0</top>
 		<height>100</height>
-		<radioposx>370</radioposx>
+		<radioposx>360</radioposx>
 		<aligny>center</aligny>
 		<invalidcolor>invalid</invalidcolor>
 		<texturefocus colordiffuse="primary_color" border="5">buttons/focus.png</texturefocus>
@@ -244,17 +244,6 @@
 		<include>OpenClose_Left</include>
 		<depth>DepthSideBlade</depth>
 		<left>-520</left>
-		<animation type="Conditional" condition="ControlGroup(9000).HasFocus | Control.HasFocus(6130)" reversible="true">
-			<effect type="slide" start="0" end="520" time="400" tween="cubic" easing="out" />
-		</animation>
-		<control type="image">
-			<width>4000</width>
-			<height>100%</height>
-			<aspectratio>scale</aspectratio>
-			<texture colordiffuse="80FFFFFF">colors/black.png</texture>
-			<visible>[ControlGroup(9000).HasFocus | Control.HasFocus(6130)] + !System.HasModalDialog</visible>
-			<animation effect="fade" time="200">VisibleChange</animation>
-		</control>
 		<control type="image">
 			<left>0</left>
 			<top>0</top>
@@ -323,13 +312,6 @@
 				<include>MediaMenuLabelCommon</include>
 				<label>$LOCALIZE[14018]</label>
 			</control>
-			<control type="button" id="6051">
-				<include>MediaMenuItemsCommon</include>
-				<label>$LOCALIZE[31023]</label>
-				<label2>$INFO[Container.Viewmode]</label2>
-				<visible>isGreaterThan(Container.ViewCount,1)</visible>
-				<onclick>Container.NextViewMode</onclick>
-			</control>
 			<control type="button" id="6053">
 				<include>MediaMenuItemsCommon</include>
 				<label>$LOCALIZE[31022]</label>
@@ -346,7 +328,6 @@
 			</control>
 			<control type="button" id="19">
 				<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
-				<visible>!Container.Content()</visible>
 				<include>MediaMenuItemsCommon</include>
 				<label>$LOCALIZE[137]</label>
 			</control>
