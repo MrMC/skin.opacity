@@ -29,12 +29,10 @@
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<include condition="!Skin.HasSetting(hide_mediaflags)">MediaFlags</include>
 			</control>
-			<include>CommonScrollbars</include>
 			<include>MediaMenuMouseOverlay</include>
 			<control type="group">
 				<include>MediaMenuCommon</include>
 				<control type="grouplist" id="9000">
-					<top>50</top>
 					<include>MediaMenuListCommon</include>
 					<control type="button" id="10">
 						<description>Watched Toggle</description>

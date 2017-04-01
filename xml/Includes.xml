@@ -24,25 +24,6 @@
 	<constant name="list_top_offset">88</constant>
 	<constant name="list_bottom_offset">88</constant>
 	<constant name="list_item_height">82</constant>
-	<include name="CommonScrollbars">
-		<control type="group">
-			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="System.HasModalDialog">Conditional</animation>
-			<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
-			<control type="scrollbar" id="531">
-				<right>616</right>
-				<top>85</top>
-				<width>13</width>
-				<bottom>86</bottom>
-				<onleft>50</onleft>
-				<onright>50</onright>
-				<orientation>vertical</orientation>
-				<texturesliderbackground />
-				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
-				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-			</control>
-		</control>
-	</include>
 	<include name="HiddenObject">
 		<left>-3000</left>
 		<top>-3000</top>
@@ -931,6 +912,9 @@
 		<param name="flip_bg">true</param>
 		<definition>
 			<control type="group">
+				<animation type="Conditional" condition="ControlGroup(9000).HasFocus | Control.HasFocus(6130)" reversible="true">
+					<effect type="slide" start="0" end="520" time="400" tween="cubic" easing="inout" />
+				</animation>
 				<right>0</right>
 				<width>593</width>
 				<depth>DepthContentPanel</depth>

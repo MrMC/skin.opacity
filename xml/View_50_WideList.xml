@@ -3,6 +3,9 @@
 	<include name="View_50_WideList">
 		<control type="group">
 			<include>OpenClose_Left</include>
+			<animation type="Conditional" condition="ControlGroup(9000).HasFocus | Control.HasFocus(6130)" reversible="true">
+				<effect type="slide" start="0" end="520" time="400" tween="cubic" easing="inout" />
+			</animation>
 			<visible>Control.IsVisible(50)</visible>
 			<include>Visible_Left</include>
 			<control type="list" id="50">
@@ -115,6 +118,19 @@
 				</itemlayout>
 				<include condition="Window.IsActive(music)">SongsListLayout</include>
 				<include>AddonsListLayout</include>
+			</control>
+			<control type="scrollbar" id="531">
+				<right>616</right>
+				<top>85</top>
+				<width>13</width>
+				<bottom>86</bottom>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<orientation>vertical</orientation>
+				<texturesliderbackground />
+				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+				<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="System.HasModalDialog">Conditional</animation>
+				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
 			</control>
 		</control>
 	</include>

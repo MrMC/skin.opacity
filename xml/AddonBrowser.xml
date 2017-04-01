@@ -9,7 +9,6 @@
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="System.HasModalDialog">Conditional</animation>
 			<include>View_50_WideList</include>
-			<include>CommonScrollbars</include>
 			<control type="group">
 				<include>OpenClose_Right</include>
 				<include>Visible_Right</include>
@@ -25,7 +24,6 @@
 			<control type="group">
 				<include>MediaMenuCommon</include>
 				<control type="grouplist" id="9000">
-					<top>50</top>
 					<include>MediaMenuListCommon</include>
 					<control type="label" id="201">
 						<include>MediaMenuLabelCommon</include>

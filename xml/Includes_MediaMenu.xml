@@ -242,13 +242,16 @@
 	</include>
 	<include name="MediaMenuCommon">
 		<include>OpenClose_Left</include>
+			<animation type="Conditional" condition="ControlGroup(9000).HasFocus | Control.HasFocus(6130)" reversible="true">
+				<effect type="slide" start="0" end="520" time="400" tween="cubic" easing="inout" />
+			</animation>
 		<depth>DepthSideBlade</depth>
 		<left>-520</left>
 		<control type="image">
 			<left>0</left>
-			<top>0</top>
+			<top>86</top>
 			<width>520</width>
-			<height>100%</height>
+			<bottom>86</bottom>
 			<texture border="0,0,52,0">lists/panel-mediamenu.png</texture>
 		</control>
 		<control type="button" id="3">
