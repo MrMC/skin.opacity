@@ -13,9 +13,9 @@
 				<include>OpenClose_Left</include>
 				<include>Visible_Left</include>
 				<control type="list" id="50">
-					<left>0</left>
+					<left>80</left>
 					<top>list_top_offset</top>
-					<right>918</right>
+					<right>960</right>
 					<bottom>list_bottom_offset</bottom>
 					<onup>50</onup>
 					<ondown>50</ondown>
@@ -123,7 +123,7 @@
 				<include content="ContentPanel">
 					<param name="left" value="-68" />
 					<param name="width" value="970" />
-					<param name="top" value="-20" />
+					<param name="top" value="68" />
 					<param name="flipx" value="true" />
 				</include>
 				<control type="scrollbar" id="77">
