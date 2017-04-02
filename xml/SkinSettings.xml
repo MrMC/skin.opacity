@@ -8,12 +8,12 @@
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="System.HasModalDialog">Conditional</animation>
 			<control type="group" id="10000">
-				<left>470</left>
+				<left>520</left>
 				<include>OpenClose_Right</include>
 				<control type="grouplist" id="700">
 					<top>90</top>
 					<left>0</left>
-					<right>0</right>
+					<right>50</right>
 					<bottom>90</bottom>
 					<onleft>9000</onleft>
 					<onright>60</onright>
@@ -36,7 +36,7 @@
 				<control type="grouplist" id="600">
 					<top>90</top>
 					<left>0</left>
-					<right>0</right>
+					<right>50</right>
 					<bottom>90</bottom>
 					<onleft>9000</onleft>
 					<onright>60</onright>
@@ -53,7 +53,7 @@
 				<control type="grouplist" id="610">
 					<top>90</top>
 					<left>0</left>
-					<right>0</right>
+					<right>50</right>
 					<bottom>90</bottom>
 					<onleft>9000</onleft>
 					<onright>60</onright>
