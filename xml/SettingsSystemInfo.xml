@@ -95,9 +95,10 @@
 				</control>
 				<control type="group">
 					<bottom>0</bottom>
-					<height>330</height>
+					<height>260</height>
 					<control type="grouplist">
 						<left>430</left>
+						<top>40</top>
 						<orientation>vertical</orientation>
 						<control type="label">
 							<description>CPU Text</description>
@@ -118,17 +119,6 @@
 							<shadowcolor>black</shadowcolor>
 							<font>font27</font>
 						</control>
-					</control>
-					<control type="label">
-						<top>34</top>
-						<left>1210</left>
-						<width>auto</width>
-						<height>50</height>
-						<aligny>bottom</aligny>
-						<textoffsety>10</textoffsety>
-						<label>$LOCALIZE[31031]:</label>
-						<shadowcolor>black</shadowcolor>
-						<font>font25_title</font>
 					</control>
 					<control type="grouplist">
 						<description>Kodi build version</description>
