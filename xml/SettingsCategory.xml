@@ -42,7 +42,7 @@
 			<control type="image" id="11">
 				<description>separator image</description>
 				<height>3</height>
-				<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
+				<texture colordiffuse="primary_color_30" border="3">dialogs/separator-grey.png</texture>
 			</control>
 			<control type="label" id="14">
 				<description>Default Label</description>
