@@ -13,7 +13,6 @@
 			<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="System.HasModalDialog">conditional</animation>
 			<animation effect="slide" end="0,80" time="150" condition="Window.IsVisible(FullscreenVideo)">conditional</animation>
 			<control type="group">
-				<visible>!Window.IsActive(volumebar)</visible>
 				<animation effect="fade" time="200">VisibleChange</animation>
 				<control type="image">
 					<left>20</left>
@@ -28,7 +27,7 @@
 					<description>Header label</description>
 					<left>15</left>
 					<top>20</top>
-					<width>60</width>
+					<width>65</width>
 					<height>60</height>
 					<font>font12</font>
 					<align>center</align>
