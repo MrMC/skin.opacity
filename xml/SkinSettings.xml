@@ -97,12 +97,6 @@
 						<selected>!Skin.HasSetting(HomeMenuNoRadioButton)</selected>
 						<onclick>Skin.ToggleSetting(HomeMenuNoRadioButton)</onclick>
 					</control>
-					<control type="radiobutton" id="614">
-						<label>$LOCALIZE[24001]</label>
-						<include>DefaultSettingButton</include>
-						<selected>!Skin.HasSetting(HomeMenuNoProgramsButton)</selected>
-						<onclick>Skin.ToggleSetting(HomeMenuNoProgramsButton)</onclick>
-					</control>
 					<control type="radiobutton" id="615">
 						<label>$LOCALIZE[1]</label>
 						<include>DefaultSettingButton</include>
@@ -120,12 +114,6 @@
 						<include>DefaultSettingButton</include>
 						<selected>!Skin.HasSetting(HomeMenuNoFavButton)</selected>
 						<onclick>Skin.ToggleSetting(HomeMenuNoFavButton)</onclick>
-					</control>
-					<control type="radiobutton" id="617">
-						<label>$LOCALIZE[8]</label>
-						<include>DefaultSettingButton</include>
-						<selected>!Skin.HasSetting(HomeMenuNoWeatherButton)</selected>
-						<onclick>Skin.ToggleSetting(HomeMenuNoWeatherButton)</onclick>
 					</control>
 				</control>
 			</control>
