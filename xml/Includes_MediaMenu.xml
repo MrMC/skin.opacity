@@ -47,7 +47,7 @@
 				<include>HiddenObject</include>
 			</control>
 			<control type="grouplist" id="9000">
-				<top>50</top>
+				<top>90</top>
 				<left>0</left>
 				<width>470</width>
 				<height>100%</height>
@@ -131,13 +131,6 @@
 					<label2>$PARAM[group_label2]</label2>
 					<onclick>SendClick(28)</onclick>
 					<visible>Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRGuide.xml)</visible>
-				</control>
-				<control type="radiobutton" id="6060">
-					<include>MediaMenuItemsCommon</include>
-					<label>$LOCALIZE[31127]</label>
-					<selected>Control.IsVisible(50)</selected>
-					<onclick>Container.NextViewMode</onclick>
-					<visible>Window.IsActive(MyPVRChannels.xml)</visible>
 				</control>
 				<control type="button" id="6053">
 					<include>MediaMenuItemsCommon</include>
