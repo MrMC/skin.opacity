@@ -92,9 +92,9 @@
 				</focusedlayout>
 				<content>
 					<item>
-						<label>$LOCALIZE[20077]</label>
-						<onclick>ActivateWindow(skinsettings)</onclick>
-						<icon>icons/settings/skin.png</icon>
+						<label>$LOCALIZE[24001]</label>
+						<onclick>ActivateWindow(addonbrowser)</onclick>
+						<icon>icons/settings/addons.png</icon>
 					</item>
 					<item>
 						<label>$LOCALIZE[480]</label>
