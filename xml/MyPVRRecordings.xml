@@ -11,9 +11,9 @@
 			<control type="group">
 				<include>OpenClose_Left</include>
 				<control type="list" id="50">
-					<left>0</left>
+					<left>80</left>
 					<top>list_top_offset</top>
-					<right>778</right>
+					<right>900</right>
 					<bottom>list_bottom_offset</bottom>
 					<onleft>9000</onleft>
 					<onright>73</onright>
@@ -94,7 +94,7 @@
 				<include content="ContentPanel">
 					<param name="left" value="-62" />
 					<param name="width" value="970" />
-					<param name="top" value="-20" />
+					<param name="top" value="68" />
 					<param name="flipx" value="true" />
 				</include>
 				<control type="scrollbar" id="73">
@@ -105,7 +105,6 @@
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<orientation>vertical</orientation>
-					<animation effect="zoom" start="100,100" end="50,100" center="-40,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(73)">conditional</animation>
 				</control>
 				<control type="group">
 					<visible>!ListItem.IsFolder</visible>
