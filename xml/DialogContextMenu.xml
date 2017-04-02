@@ -10,8 +10,8 @@
 	<controls>
 		<control type="group">
 			<left>-300</left>
-			<include>Animation_DialogPopupVisible</include>
-			<visible>Window.IsTopMost(contextmenu)</visible>
+			<include>Visible_Fade</include>
+			<visible>Window.istopmostdialog(contextmenu)</visible>
 			<control type="image">
 				<left>-1920</left>
 				<top>-1080</top>
