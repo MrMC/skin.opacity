@@ -37,11 +37,11 @@
 				<include>OpenClose_Left</include>
 				<left>0</left>
 				<include content="ContentPanel">
-					<param name="width" value="645" />
+					<param name="width" value="545" />
 				</include>
 				<control type="fixedlist" id="9000">
 					<top>85</top>
-					<left>120</left>
+					<left>10</left>
 					<bottom>100</bottom>
 					<width>500</width>
 					<movement>2</movement>
@@ -165,9 +165,24 @@
 							<property name="id">favorites</property>
 							<visible>!Skin.HasSetting(HomeMenuNoFavButton)</visible>
 						</item>
+						<item>
+							<label>$LOCALIZE[10003]</label>
+							<onclick>ActivateWindow(filemanager)</onclick>
+							<property name="menu_id">$NUMBER[14000]</property>
+							<thumb>icons/sidemenu/favourites.png</thumb>
+							<property name="id">favorites</property>
+							<visible>!Skin.HasSetting(HomeMenuNoFavButton)</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[13000]</label>
+							<onclick>ActivateWindow(settings)</onclick>
+							<property name="menu_id">$NUMBER[14000]</property>
+							<thumb>icons/sidemenu/system.png</thumb>
+							<property name="id">system</property>
+						</item>
 					</content>
 				</control>
-				<control type="grouplist" id="700">
+<!-- 				<control type="grouplist" id="700">
 					<orientation>vertical</orientation>
 					<itemgap>0</itemgap>
 					<left>0</left>
@@ -184,12 +199,6 @@
 						<param name="label" value="$LOCALIZE[33060]" />
 					</include>
 					<include content="IconButton">
-						<param name="control_id" value="802" />
-						<param name="onclick" value="ActivateWindow(settings)" />
-						<param name="icon" value="icons/settings.png" />
-						<param name="label" value="$LOCALIZE[21417]" />
-					</include>
-					<include content="IconButton">
 						<param name="control_id" value="803" />
 						<param name="onclick" value="Fullscreen" />
 						<param name="icon" value="icons/now-playing/fullscreen.png" />
@@ -197,7 +206,7 @@
 						<param name="visible" value="Player.HasMedia" />
 					</include>
 				</control>
-			</control>
+ -->			</control>
 			<include>BottomBar</include>
 			<include content="TopBar">
 				<param name="breadcrumbs_label" value="" />
@@ -236,9 +245,9 @@
 			<control type="group" id="2000">
 				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
-				<left>650</left>
+				<left>570</left>
 				<control type="label">
-					<top>120</top>
+					<top>100</top>
 					<width>470</width>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>15</textoffsety>
@@ -249,7 +258,7 @@
 					<label>Header 1</label>
 				</control>
 				<control type="list" id="53">
-					<top>170</top>
+					<top>150</top>
 					<width>1270</width>
 					<height>600</height>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
@@ -321,7 +330,7 @@
 					<content>videodb://movies/titles/</content>
 				</control>
 				<control type="label">
-					<top>545</top>
+					<top>535</top>
 					<width>470</width>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>15</textoffsety>
@@ -332,7 +341,7 @@
 					<label>Header 2</label>
 				</control>
 				<control type="list" id="54">
-					<top>590</top>
+					<top>580</top>
 					<width>1270</width>
 					<height>600</height>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
