@@ -121,7 +121,7 @@
 				</control>
 				<control type="group">
 					<depth>DepthContentPanel</depth>
-					<width>870</width>
+					<width>850</width>
 					<right>0</right>
 					<include>OpenClose_Right</include>
 					<include content="ContentPanel">
@@ -131,10 +131,10 @@
 						<param name="flipx" value="true" />
 					</include>
 					<control type="scrollbar" id="77">
-						<left>-45</left>
-						<top>0</top>
+						<left>-60</left>
+						<top>86</top>
 						<width>12</width>
-						<height>100%</height>
+						<bottom>86</bottom>
 						<onleft>50</onleft>
 						<onright>50</onright>
 						<orientation>vertical</orientation>

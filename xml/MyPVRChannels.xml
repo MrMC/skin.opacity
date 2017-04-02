@@ -169,9 +169,9 @@
 					</include>
 					<control type="scrollbar" id="60">
 						<left>-48</left>
-						<top>list_top_offset</top>
+						<top>86</top>
 						<width>12</width>
-						<bottom>list_bottom_offset</bottom>
+						<bottom>86</bottom>
 						<onleft>50</onleft>
 						<onright>50</onright>
 						<orientation>vertical</orientation>
