@@ -50,7 +50,9 @@
 					<ondown>9000</ondown>
 					<onup>9000</onup>
 					<onleft>700</onleft>
-					<onright>2000</onright>
+					<onright condition="Container(9000).HasFocus(1)">2000</onright> <!-- Movies -->
+					<onright condition="Container(9000).HasFocus(2)">2001</onright> <!-- TvShows -->
+					<onright condition="Container(9000).HasFocus(3)">2002</onright> <!-- Music -->
 					<orientation>vertical</orientation>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<itemlayout height="150">
@@ -89,25 +91,23 @@
 						</control>
 					</focusedlayout>
 					<content>
-						<item>
+						<item id="1">
 							<label>$LOCALIZE[342]</label>
-							<onclick condition="Library.HasContent(movies)">ActivateWindow(Videos,videodb://movies/titles/,return)</onclick>
-							<onclick condition="!Library.HasContent(movies)">ActivateWindow(Videos,sources://video/,return)</onclick>
+							<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
 							<property name="menu_id">$NUMBER[5000]</property>
 							<thumb>icons/sidemenu/movies.png</thumb>
 							<property name="id">movies</property>
-							<visible>!Skin.HasSetting(HomeMenuNoMovieButton)</visible>
+							<visible>Library.HasServices | [!Skin.HasSetting(HomeMenuNoMovieButton) + Library.HasContent(Movies)]</visible>
 						</item>
-						<item>
+						<item id="2">
 							<label>$LOCALIZE[20343]</label>
-							<onclick condition="Library.HasContent(tvshows)">ActivateWindow(Videos,videodb://tvshows/titles/,return)</onclick>
-							<onclick condition="!Library.HasContent(tvshows)">ActivateWindow(Videos,sources://video/,return)</onclick>
+							<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
 							<property name="menu_id">$NUMBER[6000]</property>
 							<thumb>icons/sidemenu/tv.png</thumb>
 							<property name="id">tvshows</property>
-							<visible>!Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
+							<visible>Library.HasServices | [!Skin.HasSetting(HomeMenuNoTVShowButton) + Library.HasContent(TVShows)]</visible>
 						</item>
-						<item>
+						<item id="3">
 							<label>$LOCALIZE[2]</label>
 							<onclick>ActivateWindow(Music,root,return)</onclick>
 							<property name="menu_id">$NUMBER[7000]</property>
@@ -115,7 +115,7 @@
 							<property name="id">music</property>
 							<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
 						</item>
-						<item>
+						<item id="4">
 							<label>$LOCALIZE[20389]</label>
 							<property name="menu_id">$NUMBER[16000]</property>
 							<onclick>ActivateWindow(Videos,musicvideos,return)</onclick>
@@ -123,7 +123,7 @@
 							<property name="id">musicvideos</property>
 							<visible>!Skin.HasSetting(HomeMenuNoMusicVideoButton)</visible>
 						</item>
-						<item>
+						<item id="5">
 							<label>$LOCALIZE[19020]</label>
 							<property name="menu_id">$NUMBER[12000]</property>
 							<onclick>ActivateWindow(TVChannels)</onclick>
@@ -132,7 +132,7 @@
 							<visible>!Skin.HasSetting(HomeMenuNoTVButton)</visible>
 							<visible>System.GetBool(pvrmanager.enabled)</visible>
 						</item>
-						<item>
+						<item id="6">
 							<label>$LOCALIZE[19021]</label>
 							<property name="menu_id">$NUMBER[13000]</property>
 							<onclick>ActivateWindow(RadioChannels)</onclick>
@@ -141,7 +141,7 @@
 							<visible>!Skin.HasSetting(HomeMenuNoRadioButton)</visible>
 							<visible>System.GetBool(pvrmanager.enabled)</visible>
 						</item>
-						<item>
+						<item id="7">
 							<label>$LOCALIZE[1]</label>
 							<onclick>ActivateWindow(Pictures)</onclick>
 							<property name="menu_id">$NUMBER[4000]</property>
@@ -149,7 +149,7 @@
 							<property name="id">pictures</property>
 							<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
 						</item>
-						<item>
+						<item id="8">
 							<label>$LOCALIZE[3]</label>
 							<onclick>ActivateWindow(Videos,root)</onclick>
 							<property name="menu_id">$NUMBER[11000]</property>
@@ -157,7 +157,7 @@
 							<property name="id">video</property>
 							<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
 						</item>
-						<item>
+						<item id="9">
 							<label>$LOCALIZE[10134]</label>
 							<onclick>ActivateWindow(favourites)</onclick>
 							<property name="menu_id">$NUMBER[14000]</property>
@@ -165,7 +165,7 @@
 							<property name="id">favorites</property>
 							<visible>!Skin.HasSetting(HomeMenuNoFavButton)</visible>
 						</item>
-						<item>
+						<item id="10">
 							<label>$LOCALIZE[10003]</label>
 							<onclick>ActivateWindow(filemanager)</onclick>
 							<property name="menu_id">$NUMBER[14000]</property>
@@ -173,7 +173,7 @@
 							<property name="id">favorites</property>
 							<visible>!Skin.HasSetting(HomeMenuNoFavButton)</visible>
 						</item>
-						<item>
+						<item id="11">
 							<label>$LOCALIZE[13000]</label>
 							<onclick>ActivateWindow(settings)</onclick>
 							<property name="menu_id">$NUMBER[14000]</property>
@@ -246,8 +246,9 @@
 				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 				<left>570</left>
+				<visible>Container(9000).HasFocus(1)</visible>
 				<control type="label">
-					<top>100</top>
+					<top>80</top>
 					<width>470</width>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>15</textoffsety>
@@ -255,21 +256,22 @@
 					<font>font25_title</font>
 					<aligny>top</aligny>
 					<textcolor>grey</textcolor>
-					<label>Header 1</label>
+					<label>$INFO[Container(8000).ListItem.Property(ItemType)]</label>
 				</control>
-				<control type="list" id="53">
-					<top>150</top>
+				<control type="list" id="8000">
+					<top>130</top>
 					<width>1270</width>
 					<height>600</height>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<orientation>horizontal</orientation>
 					<onleft>9000</onleft>
-					<onup>54</onup>
-					<ondown>54</ondown>
-					<onright>53</onright>
+					<onup>8010</onup>
+					<ondown>8010</ondown>
+					<onright>8000</onright>
 					<preloaditems>1</preloaditems>
 					<viewtype label="31100">icon</viewtype>
-					<itemlayout width="260" height="400">
+					<visible>IntegerGreaterThan(Container(8000).NumItems,0)</visible>
+					<itemlayout width="260">
 						<control type="group">
 							<depth>DepthContentPopout</depth>
 							<top>2</top>
@@ -278,7 +280,7 @@
 								<top>0</top>
 								<width>216</width>
 								<height>306</height>
-								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 								<bordertexture border="20">overlays/shadow.png</bordertexture>
 								<bordersize>20</bordersize>
 							</control>
@@ -286,7 +288,7 @@
 								<left>8</left>
 								<top>270</top>
 								<width>200</width>
-								<height>100</height>
+								<height>140</height>
 								<label>$INFO[ListItem.Label]</label>
 								<font>font12</font>
 								<shadowcolor>text_shadow</shadowcolor>
@@ -310,7 +312,7 @@
 								<top>0</top>
 								<width>216</width>
 								<height>306</height>
-								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 								<bordertexture border="20">overlays/shadow.png</bordertexture>
 								<bordersize>20</bordersize>
 							</control>
@@ -318,7 +320,7 @@
 								<left>8</left>
 								<top>270</top>
 								<width>200</width>
-								<height>100</height>
+								<height>140</height>
 								<label>$INFO[ListItem.Label]</label>
 								<font>font12</font>
 								<shadowcolor>text_shadow</shadowcolor>
@@ -327,10 +329,9 @@
 							</control>
 						</control>
 					</focusedlayout>
-					<content>videodb://movies/titles/</content>
 				</control>
 				<control type="label">
-					<top>535</top>
+					<top>495</top>
 					<width>470</width>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>15</textoffsety>
@@ -338,20 +339,21 @@
 					<font>font25_title</font>
 					<aligny>top</aligny>
 					<textcolor>grey</textcolor>
-					<label>Header 2</label>
+					<label>$INFO[Container(8010).ListItem.Property(ItemType)]</label>
 				</control>
-				<control type="list" id="54">
-					<top>580</top>
+				<control type="list" id="8010">
+					<top>540</top>
 					<width>1270</width>
 					<height>600</height>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<orientation>horizontal</orientation>
 					<onleft>9000</onleft>
-					<onup>53</onup>
-					<ondown>9000</ondown>
-					<onright>54</onright>
+					<onup>8000</onup>
+					<ondown>8000</ondown>
+					<onright>8010</onright>
 					<preloaditems>1</preloaditems>
 					<viewtype label="31100">icon</viewtype>
+					<visible>IntegerGreaterThan(Container(8010).NumItems,0)</visible>
 					<itemlayout width="260" height="400">
 						<control type="group">
 							<depth>DepthContentPopout</depth>
@@ -361,7 +363,7 @@
 								<top>0</top>
 								<width>240</width>
 								<height>340</height>
-								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 								<bordertexture border="20">overlays/shadow.png</bordertexture>
 								<bordersize>20</bordersize>
 							</control>
@@ -369,7 +371,7 @@
 								<left>20</left>
 								<top>320</top>
 								<width>200</width>
-								<height>70</height>
+								<height>140</height>
 								<label>$INFO[ListItem.Label]</label>
 								<font>font12</font>
 								<shadowcolor>text_shadow</shadowcolor>
@@ -393,7 +395,7 @@
 								<top>0</top>
 								<width>240</width>
 								<height>340</height>
-								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 								<bordertexture border="20">overlays/shadow.png</bordertexture>
 								<bordersize>20</bordersize>
 							</control>
@@ -401,7 +403,7 @@
 								<left>20</left>
 								<top>320</top>
 								<width>200</width>
-								<height>70</height>
+								<height>140</height>
 								<label>$INFO[ListItem.Label]</label>
 								<font>font12</font>
 								<shadowcolor>text_shadow</shadowcolor>
@@ -410,8 +412,353 @@
 							</control>
 						</control>
 					</focusedlayout>
-					<content>videodb://movies/titles/</content>
 				</control>
+			</control>
+			<control type="group" id="2001">
+				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+				<left>570</left>
+				<visible>Container(9000).HasFocus(2)</visible>
+				<control type="label">
+					<top>80</top>
+					<width>470</width>
+					<textoffsetx>20</textoffsetx>
+					<textoffsety>15</textoffsety>
+					<height>50</height>
+					<font>font25_title</font>
+					<aligny>top</aligny>
+					<textcolor>grey</textcolor>
+					<label>$INFO[Container(8001).ListItem.Property(ItemType)]</label>
+				</control>
+				<control type="list" id="8001">
+					<top>130</top>
+					<width>1270</width>
+					<height>600</height>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<orientation>horizontal</orientation>
+					<onleft>9000</onleft>
+					<onup>8011</onup>
+					<ondown>8011</ondown>
+					<onright>8001</onright>
+					<preloaditems>1</preloaditems>
+					<viewtype label="31100">icon</viewtype>
+					<visible>IntegerGreaterThan(Container(8001).NumItems,0)</visible>
+					<itemlayout width="260">
+						<control type="group">
+							<depth>DepthContentPopout</depth>
+							<top>2</top>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>216</width>
+								<height>306</height>
+								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(tvshow.thumb)]</texture>
+								<bordertexture border="20">overlays/shadow.png</bordertexture>
+								<bordersize>20</bordersize>
+							</control>
+							<control type="textbox">
+								<left>8</left>
+								<top>270</top>
+								<width>200</width>
+								<height>140</height>
+								<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Property(SeasonEpisode)]</label>
+								<font>font12</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+								<aligny>center</aligny>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout width="260" height="400">
+						<control type="group">
+							<depth>DepthContentPopout</depth>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" center="auto" start="100" end="108" time="250" tween="sine" />
+							</animation>
+							<animation type="UnFocus" reversible="false">
+								<effect type="zoom" center="auto" start="108" end="100" time="150" tween="sine" />
+							</animation>
+							<top>2</top>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>216</width>
+								<height>306</height>
+								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(tvshow.thumb)]</texture>
+								<bordertexture border="20">overlays/shadow.png</bordertexture>
+								<bordersize>20</bordersize>
+							</control>
+							<control type="textbox">
+								<left>8</left>
+								<top>270</top>
+								<width>200</width>
+								<height>140</height>
+								<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Property(SeasonEpisode)]</label>
+								<font>font12</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+								<aligny>center</aligny>
+							</control>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="label">
+					<top>495</top>
+					<width>470</width>
+					<textoffsetx>20</textoffsetx>
+					<textoffsety>15</textoffsety>
+					<height>50</height>
+					<font>font25_title</font>
+					<aligny>top</aligny>
+					<textcolor>grey</textcolor>
+					<label>$INFO[Container(8011).ListItem.Property(ItemType)]</label>
+				</control>
+				<control type="list" id="8011">
+					<top>540</top>
+					<width>1270</width>
+					<height>600</height>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<orientation>horizontal</orientation>
+					<onleft>9000</onleft>
+					<onup>8001</onup>
+					<ondown>8001</ondown>
+					<onright>8011</onright>
+					<preloaditems>1</preloaditems>
+					<viewtype label="31100">icon</viewtype>
+					<visible>IntegerGreaterThan(Container(8011).NumItems,0)</visible>
+					<itemlayout width="260" height="400">
+						<control type="group">
+							<depth>DepthContentPopout</depth>
+							<top>2</top>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>240</width>
+								<height>340</height>
+								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(tvshow.thumb)]</texture>
+								<bordertexture border="20">overlays/shadow.png</bordertexture>
+								<bordersize>20</bordersize>
+							</control>
+							<control type="textbox">
+								<left>20</left>
+								<top>320</top>
+								<width>200</width>
+								<height>140</height>
+								<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Property(SeasonEpisode)]</label>
+								<font>font12</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+								<aligny>center</aligny>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout width="260" height="400">
+						<control type="group">
+							<depth>DepthContentPopout</depth>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" center="auto" start="100" end="108" time="250" tween="sine" />
+							</animation>
+							<animation type="UnFocus" reversible="false">
+								<effect type="zoom" center="auto" start="108" end="100" time="150" tween="sine" />
+							</animation>
+							<top>2</top>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>240</width>
+								<height>340</height>
+								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(tvshow.thumb)]</texture>
+								<bordertexture border="20">overlays/shadow.png</bordertexture>
+								<bordersize>20</bordersize>
+							</control>
+							<control type="textbox">
+								<left>20</left>
+								<top>320</top>
+								<width>200</width>
+								<height>140</height>
+								<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Property(SeasonEpisode)]</label>
+								<font>font12</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+								<aligny>center</aligny>
+							</control>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="group" id="2002">
+				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+				<left>570</left>
+				<visible>Container(9000).HasFocus(3)</visible>
+				<control type="label">
+					<top>80</top>
+					<width>470</width>
+					<textoffsetx>20</textoffsetx>
+					<textoffsety>15</textoffsety>
+					<height>50</height>
+					<font>font25_title</font>
+					<aligny>top</aligny>
+					<textcolor>grey</textcolor>
+					<label>$INFO[Container(8002).ListItem.Property(ItemType)]</label>
+				</control>
+				<control type="list" id="8002">
+					<top>130</top>
+					<width>1270</width>
+					<height>600</height>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<orientation>horizontal</orientation>
+					<onleft>9000</onleft>
+					<onup>8002</onup>
+					<ondown>8002</ondown>
+					<onright>8002</onright>
+					<preloaditems>1</preloaditems>
+					<viewtype label="31100">icon</viewtype>
+					<visible>IntegerGreaterThan(Container(8002).NumItems,0)</visible>
+					<itemlayout width="306">
+						<control type="group">
+							<depth>DepthContentPopout</depth>
+							<top>2</top>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>306</width>
+								<height>306</height>
+								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Property(thumb)]</texture>
+								<aspectratio aligny="top">stretch</aspectratio>
+								<bordertexture border="20">overlays/shadow.png</bordertexture>
+								<bordersize>20</bordersize>
+							</control>
+							<control type="textbox">
+								<left>8</left>
+								<top>270</top>
+								<width>306</width>
+								<height>140</height>
+								<label>$INFO[ListItem.Album]</label>
+								<font>font12</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+								<aligny>center</aligny>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout width="306" height="400">
+						<control type="group">
+							<depth>DepthContentPopout</depth>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" center="auto" start="100" end="108" time="250" tween="sine" />
+							</animation>
+							<animation type="UnFocus" reversible="false">
+								<effect type="zoom" center="auto" start="108" end="100" time="150" tween="sine" />
+							</animation>
+							<top>2</top>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>306</width>
+								<height>306</height>
+								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Property(thumb)]</texture>
+								<aspectratio aligny="top">stretch</aspectratio>
+								<bordertexture border="20">overlays/shadow.png</bordertexture>
+								<bordersize>20</bordersize>
+							</control>
+							<control type="textbox">
+								<left>8</left>
+								<top>270</top>
+								<width>306</width>
+								<height>140</height>
+								<label>$INFO[ListItem.Album]</label>
+								<font>font12</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+								<aligny>center</aligny>
+							</control>
+						</control>
+					</focusedlayout>
+				</control>
+<!--				<control type="label">
+					<top>495</top>
+					<width>470</width>
+					<textoffsetx>20</textoffsetx>
+					<textoffsety>15</textoffsety>
+					<height>50</height>
+					<font>font25_title</font>
+					<aligny>top</aligny>
+					<textcolor>grey</textcolor>
+					<label>$INFO[Container(8011).ListItem.Property(ItemType)]</label>
+				</control>
+ 				<control type="list" id="8011">
+					<top>540</top>
+					<width>1270</width>
+					<height>600</height>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<orientation>horizontal</orientation>
+					<onleft>9000</onleft>
+					<onup>8001</onup>
+					<ondown>8001</ondown>
+					<onright>8011</onright>
+					<preloaditems>1</preloaditems>
+					<viewtype label="31100">icon</viewtype>
+					<visible>IntegerGreaterThan(Container(8011).NumItems,0)</visible>
+					<itemlayout width="260" height="400">
+						<control type="group">
+							<depth>DepthContentPopout</depth>
+							<top>2</top>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>240</width>
+								<height>340</height>
+								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(tvshow.thumb)]</texture>
+								<bordertexture border="20">overlays/shadow.png</bordertexture>
+								<bordersize>20</bordersize>
+							</control>
+							<control type="textbox">
+								<left>20</left>
+								<top>320</top>
+								<width>200</width>
+								<height>140</height>
+								<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Property(SeasonEpisode)]</label>
+								<font>font12</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+								<aligny>center</aligny>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout width="260" height="400">
+						<control type="group">
+							<depth>DepthContentPopout</depth>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" center="auto" start="100" end="108" time="250" tween="sine" />
+							</animation>
+							<animation type="UnFocus" reversible="false">
+								<effect type="zoom" center="auto" start="108" end="100" time="150" tween="sine" />
+							</animation>
+							<top>2</top>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>240</width>
+								<height>340</height>
+								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(tvshow.thumb)]</texture>
+								<bordertexture border="20">overlays/shadow.png</bordertexture>
+								<bordersize>20</bordersize>
+							</control>
+							<control type="textbox">
+								<left>20</left>
+								<top>320</top>
+								<width>200</width>
+								<height>140</height>
+								<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Property(SeasonEpisode)]</label>
+								<font>font12</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+								<aligny>center</aligny>
+							</control>
+						</control>
+					</focusedlayout>
+				</control> -->
 			</control>
 		</control>
 	</controls>
