@@ -55,10 +55,11 @@
 					<width>700</width>
 					<include>SettingsItemCommon</include>
 				</control>
-				<control type="button" id="19">
+				<control type="togglebutton" id="19">
 					<width>700</width>
 					<include>SettingsItemCommon</include>
-					<label>$LOCALIZE[31032]</label>
+					<label>$LOCALIZE[31032]: $LOCALIZE[584]</label>
+					<altlabel>$LOCALIZE[31032]: $LOCALIZE[585]</altlabel>
 				</control>
 				<control type="spincontrolex" id="23">
 					<width>700</width>
