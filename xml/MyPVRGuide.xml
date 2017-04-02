@@ -17,18 +17,18 @@
 					<effect type="slide" start="0" end="520" time="400" tween="cubic" easing="inout" />
 				</animation>
 				<control type="group">
-					<top>140</top>
+					<top>86</top>
 					<depth>DepthContentPanel</depth>
 					<control type="image">
 						<left>0</left>
-						<top>-10</top>
+						<top>0</top>
 						<width>100%</width>
 						<bottom>336</bottom>
 						<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
 					</control>
 					<control type="epggrid" id="10">
 						<left>0</left>
-						<top>0</top>
+						<top>5</top>
 						<right>20</right>
 						<bottom>340</bottom>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
@@ -176,7 +176,7 @@
 						<right>60</right>
 						<height>30</height>
 						<textcolor>primary_color</textcolor>
-						<label>$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]$INFO[ListItem.EpgEventTitle,  [COLOR white],[/COLOR]]$INFO[ListItem.EpisodeName, [COLOR grey](,)[/COLOR]]$INFO[ListItem.Genre,      $LOCALIZE[515]: [COLOR grey],[/COLOR]]</label>
+						<label>$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]$INFO[ListItem.EpgEventTitle,  [COLOR white],[/COLOR]]$INFO[ListItem.EpisodeName, [COLOR grey](,)[/COLOR]]</label>
 					</control>
 					<control type="textbox">
 						<left>300</left>
