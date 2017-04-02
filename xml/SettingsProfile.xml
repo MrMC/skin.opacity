@@ -9,18 +9,75 @@
 			<control type="group" id="9100">
 				<include>OpenClose_Right</include>
 				<left>472</left>
-				<control type="panel" id="2">
-					<top>163</top>
+				<control type="list" id="2">
+					<top>100</top>
 					<left>30</left>
 					<visible>Container(9000).Hasfocus(2)</visible>
-					<right>0</right>
+					<right>30</right>
 					<bottom>137</bottom>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
 					<onup>2</onup>
 					<ondown>2</ondown>
 					<scrolltime>200</scrolltime>
-					<itemlayout height="390" width="354">
+				<itemlayout height="list_item_height">
+					<control type="group">
+						<control type="label">
+							<left>50</left>
+							<top>0</top>
+							<bottom>0</bottom>
+							<right>100</right>
+							<aligny>center</aligny>
+							<scroll>true</scroll>
+							<label>$INFO[ListItem.Label]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+						<control type="label">
+							<left>50</left>
+							<top>0</top>
+							<bottom>0</bottom>
+							<right>50</right>
+							<aligny>center</aligny>
+							<scroll>true</scroll>
+							<align>right</align>
+							<label>$INFO[ListItem.Label2,$LOCALIZE[31029]: ]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout height="list_item_height">
+					<control type="group">
+						<control type="image">
+							<left>0</left>
+							<right>0</right>
+							<bottom>0</bottom>
+							<texture colordiffuse="primary_color" border="5">buttons/focus.png</texture>
+							<visible>Control.HasFocus(2)</visible>
+						</control>
+						<control type="label">
+							<left>50</left>
+							<top>0</top>
+							<bottom>0</bottom>
+							<right>100</right>
+							<aligny>center</aligny>
+							<scroll>true</scroll>
+							<label>$INFO[ListItem.Label]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+						<control type="label">
+							<left>50</left>
+							<top>0</top>
+							<bottom>0</bottom>
+							<right>50</right>
+							<aligny>center</aligny>
+							<scroll>true</scroll>
+							<align>right</align>
+							<label>$INFO[ListItem.Label2,$LOCALIZE[31029]: ]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+					</control>
+				</focusedlayout>
+<!-- 					<itemlayout height="390" width="354">
 						<control type="image">
 							<top>5</top>
 							<width>320</width>
@@ -131,13 +188,14 @@
 								<visible>!SubString(Listitem.Label,$LOCALIZE[20058])</visible>
 							</control>
 						</control>
-					</focusedlayout>
+					</focusedlayout> -->
 				</control>
 				<control type="grouplist" id="9001">
 					<visible>Container(9000).Hasfocus(1)</visible>
-					<right>0</right>
+					<left>30</left>
+					<right>30</right>
 					<height>735</height>
-					<top>163</top>
+					<top>100</top>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
 					<onup>9001</onup>
@@ -162,7 +220,7 @@
 				</include>
 				<control type="list" id="9000">
 					<left>0</left>
-					<top>160</top>
+					<top>120</top>
 					<width>470</width>
 					<height>567</height>
 					<onleft>9100</onleft>
