@@ -114,7 +114,6 @@
 					<textcolor>grey</textcolor>
 					<label>$LOCALIZE[31008]</label>
 				</control>
-
 			</control>
 			<control type="scrollbar" id="60">
 				<right>0</right>
@@ -146,10 +145,10 @@
 				<description>breadcrumbs label</description>
 				<visible>False</visible>
 			</control>
+			<include content="TopBar">
+				<param name="breadcrumbs_label" value="$LOCALIZE[5]$INFO[Control.GetLabel(2), / ]" />
+			</include>
+			<include>BottomBar</include>
 		</control>
-		<include content="TopBar">
-			<param name="breadcrumbs_label" value="$LOCALIZE[5]$INFO[Control.GetLabel(2), / ]" />
-		</include>
-		<include>BottomBar</include>
 	</controls>
 </window>
