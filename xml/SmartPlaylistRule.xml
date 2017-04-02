@@ -7,6 +7,8 @@
 			<centerleft>50%</centerleft>
 			<width>960</width>
 			<top>330</top>
+			<visible>Window.IsTopMost(smartplaylistrule)</visible>
+			<include>Visible_Fade</include>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="960" />
 				<param name="height" value="500" />
@@ -27,12 +29,12 @@
 				<orientation>vertical</orientation>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
-				<control type="button" id="15">
+				<control type="spincontrolex" id="15">
 					<description>Rule Field</description>
 					<include>SettingsItemCommon</include>
 					<width>900</width>
 				</control>
-				<control type="button" id="16">
+				<control type="spincontrolex" id="16">
 					<description>Rule operator</description>
 					<width>900</width>
 					<include>SettingsItemCommon</include>
