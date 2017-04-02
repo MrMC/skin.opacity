@@ -2,9 +2,10 @@
 <window>
 	<include>Animation_DialogPopupOpenClose</include>
 	<depth>DepthDialog+</depth>
+	<defaultcontrol>10</defaultcontrol>
 	<controls>
 		<control type="group">
-			<height>390</height>
+			<height>500</height>
 			<centertop>50%</centertop>
 			<centerleft>50%</centerleft>
 			<width>915</width>
@@ -21,20 +22,30 @@
 				<top>82</top>
 				<width>855</width>
 				<height>165</height>
-				<label></label>
+				<align>center</align>
 				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 			</control>
-			<control type="progress" id="20">
-				<left>45</left>
-				<top>252</top>
-				<width>825</width>
+			<control type="image">
+				<centerleft>50%</centerleft>
+				<top>230</top>
+				<width>100</width>
+				<height>100</height>
+				<aspectratio>keep</aspectratio>
+				<animation effect="rotate" end="-360" center="auto" time="1000" loop="true" reversible="false" condition="true">Conditional</animation>
+				<texture colordiffuse="primary_color">spinner.png</texture>
+			</control>
+			<control type="label" id="20">
+				<left>0</left>
+				<top>260</top>
+				<right>0</right>
 				<height>24</height>
+				<align>center</align>
 				<info>System.Progressbar</info>
 			</control>
 			<control type="grouplist" id="9000">
 				<orientation>horizontal</orientation>
 				<left>0</left>
-				<top>280</top>
+				<top>340</top>
 				<width>915</width>
 				<align>center</align>
 				<include content="DefaultDialogButton">
