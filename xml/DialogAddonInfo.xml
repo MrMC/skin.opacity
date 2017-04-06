@@ -10,7 +10,7 @@
 			<height>1080</height>
 			<centerleft>50%</centerleft>
 			<width>1920</width>
-			<visible>Window.IsTopMost(addoninformation)</visible>
+			<visible>Window.IsTopMostModal(addoninformation)</visible>
 			<include>Visible_Fade</include>
 			<control type="group">
 				<include>OpenClose_Right</include>

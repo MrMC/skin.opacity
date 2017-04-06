@@ -8,7 +8,7 @@
 			<height>800</height>
 			<centerleft>50%</centerleft>
 			<width>1820</width>
-			<visible>Window.IsTopMost(addonsettings)</visible>
+			<visible>Window.IsTopMostModal(addonsettings)</visible>
 			<include>Visible_Fade</include>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="1820" />

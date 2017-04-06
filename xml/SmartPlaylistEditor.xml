@@ -7,7 +7,7 @@
 			<top>150</top>
 			<centerleft>50%</centerleft>
 			<width>1700</width>
-			<visible>Window.IsTopMost(smartplaylisteditor)</visible>
+			<visible>Window.IsTopMostModal(smartplaylisteditor)</visible>
 			<include>Visible_Fade</include>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="1700" />

@@ -9,7 +9,7 @@
 			<centertop>50%</centertop>
 			<centerleft>50%</centerleft>
 			<width>915</width>
-			<visible>Window.IsTopMost(progressdialog)</visible>
+			<visible>Window.IsTopMostModal(progressdialog)</visible>
 			<include>Visible_Fade</include>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="915" />

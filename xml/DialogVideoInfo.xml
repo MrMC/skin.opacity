@@ -9,7 +9,7 @@
 			<height>1080</height>
 			<centerleft>50%</centerleft>
 			<width>1920</width>
-			<visible>Window.IsTopMost(movieinformation)</visible>
+			<visible>Window.IsTopMostModal(movieinformation)</visible>
 			<include>Visible_Fade</include>
 			<control type="group">
 				<top>150</top>

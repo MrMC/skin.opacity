@@ -9,7 +9,7 @@
 			<width>1520</width>
 			<include>Animation_DialogPopupVisible</include>
 			<visible>!Window.IsVisible(sliderdialog)</visible>
-			<visible>Window.IsTopMost(contentsettings)</visible>
+			<visible>Window.IsTopMostModal(contentsettings)</visible>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="1420" />
 				<param name="height" value="725" />

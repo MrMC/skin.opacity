@@ -8,7 +8,7 @@
 			<width>600</width>
 			<centertop>50%</centertop>
 			<height>700</height>
-			<visible>Window.IsTopMost(shutdownmenu)</visible>
+			<visible>Window.IsTopMostModal(shutdownmenu)</visible>
 			<include>Visible_Fade</include>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="600" />

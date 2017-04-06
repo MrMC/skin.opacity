@@ -16,7 +16,7 @@
 			<height>1080</height>
 			<centerleft>50%</centerleft>
 			<width>1920</width>
-			<visible>Window.IsTopMost(DialogPVRInfo.xml)</visible>
+			<visible>Window.IsTopMostModal(DialogPVRInfo.xml)</visible>
 			<include>Visible_Fade</include>
 			<control type="image">
 				<include>OpenClose_Left</include>

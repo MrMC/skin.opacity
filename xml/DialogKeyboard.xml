@@ -9,7 +9,7 @@
 			<centerleft>50%</centerleft>
 			<width>100%</width>
 			<visible>!Window.IsVisible(numericinput)</visible>
-			<visible>Window.IsTopMost(virtualkeyboard)</visible>
+			<visible>Window.IsTopMostModal(virtualkeyboard)</visible>
 			<include>Animation_DialogPopupVisible</include>
 			<control type="label" id="311">
 				<centerleft>50%</centerleft>

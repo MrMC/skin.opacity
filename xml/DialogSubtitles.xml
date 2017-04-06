@@ -21,7 +21,7 @@
 			<centerleft>50%</centerleft>
 			<width>1720</width>
 			<include>Animation_DialogPopupVisible</include>
-			<visible>Window.IsTopMost(subtitlesearch)</visible>
+			<visible>Window.IsTopMostModal(subtitlesearch)</visible>
 			<control type="group" id="250">
 				<include content="DialogBackgroundCommons">
 					<param name="width" value="1720" />

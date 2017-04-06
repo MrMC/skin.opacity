@@ -7,7 +7,7 @@
 			<centerleft>50%</centerleft>
 			<width>960</width>
 			<top>330</top>
-			<visible>Window.IsTopMost(smartplaylistrule)</visible>
+			<visible>Window.IsTopMostModal(smartplaylistrule)</visible>
 			<include>Visible_Fade</include>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="960" />
