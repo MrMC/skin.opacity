@@ -3,11 +3,14 @@
 	<defaultcontrol always="true">11</defaultcontrol>
 	<controls>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="System.HasModalDialog">Conditional</animation>
 			<control type="group">
 				<depth>DepthOSD</depth>
 				<include>OpenClose_Left</include>
+				<visible>Window.IsTopMostModal(pvrosdchannels)</visible>
+				<include>Visible_Fade</include>
 				<include content="ContentPanel">
+					<param name="top" value="-40" />
+					<param name="bottom" value="-40" />
 					<param name="width" value="941" />
 				</include>
 				<control type="list" id="11">
@@ -42,7 +45,7 @@
 							<width>50</width>
 							<height>12</height>
 							<midtexture border="3">progress/texturebg_white.png</midtexture>
-							<visible>ListItem.HasEpg + !ListItem.IsRecording</visible>
+							<visible>ListItem.HasEpg</visible>
 							<info>ListItem.Progress</info>
 						</control>
 						<control type="image">
@@ -99,7 +102,7 @@
 							<width>50</width>
 							<height>12</height>
 							<colordiffuse>88FFFFFF</colordiffuse>
-							<visible>ListItem.HasEpg + !ListItem.IsRecording</visible>
+							<visible>ListItem.HasEpg</visible>
 							<info>ListItem.Progress</info>
 						</control>
 						<control type="image">
@@ -155,30 +158,19 @@
 					<onup>61</onup>
 					<orientation>vertical</orientation>
 				</control>
-				<control type="image">
-					<left>0</left>
-					<bottom>0</bottom>
-					<width>880</width>
-					<height>90</height>
-					<texture flipy="true">frame/InfoBar.png</texture>
-				</control>
 			</control>
 			<control type="group">
 				<depth>DepthOSD</depth>
 				<include>Animation_TopSlide</include>
-				<control type="image">
-					<left>0</left>
-					<width>880</width>
-					<height>90</height>
-					<texture>frame/InfoBar.png</texture>
-				</control>
 				<control type="label" id="2">
 					<description>header label</description>
 					<textoffsetx>40</textoffsetx>
 					<width>830</width>
+					<right>0</right>
 					<height>70</height>
 					<font>font45</font>
 					<aligny>center</aligny>
+					<align>right</align>
 					<label>&lt; $INFO[VideoPlayer.ChannelGroup] &gt;</label>
 					<shadowcolor>black</shadowcolor>
 				</control>

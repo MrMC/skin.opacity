@@ -4,10 +4,13 @@
 	<controls>
 		<control type="group">
 			<depth>DepthOSD</depth>
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="System.HasModalDialog">Conditional</animation>
 			<control type="group">
 				<include>OpenClose_Left</include>
+				<visible>Window.IsTopMostModal(pvrosdguide)</visible>
+				<include>Visible_Fade</include>
 				<include content="ContentPanel">
+					<param name="top" value="-40" />
+					<param name="bottom" value="-40" />
 					<param name="width" value="840" />
 				</include>
 				<control type="list" id="11">
@@ -94,27 +97,16 @@
 					<orientation>vertical</orientation>
 				</control>
 			</control>
-			<control type="image">
-				<left>0</left>
-				<bottom>0</bottom>
-				<width>100%</width>
-				<height>115</height>
-				<texture flipy="true">frame/InfoBar.png</texture>
-			</control>
 			<control type="group">
 				<include>Animation_TopSlide</include>
-				<control type="image">
-					<left>0</left>
-					<width>780</width>
-					<height>110</height>
-					<texture>frame/InfoBar.png</texture>
-				</control>
 				<control type="label" id="2">
 					<description>header label</description>
 					<textoffsetx>40</textoffsetx>
 					<width>1300</width>
 					<height>70</height>
 					<font>font45</font>
+					<right>0</right>
+					<align>right</align>
 					<aligny>center</aligny>
 					<label>$LOCALIZE[19069]$INFO[Container(11).ListItem.StartDate, - ]</label>
 					<shadowcolor>black</shadowcolor>
