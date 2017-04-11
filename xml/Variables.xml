@@ -81,9 +81,9 @@
 		<value condition="!ListItem.Stringcompare(ListItem.Label,..)">OverlayUnwatched.png</value>
 	</variable>
 	<variable name="ResolutionFlagVar">
-		<value condition="ListItem.IsStereoscopic">flags/videoresolution/3D.png</value>
-		<value condition="isGreaterThan(ListItem.VideoResolution,1080)">flags/videoresolution/4K.png</value>
-		<value>$INFO[ListItem.VideoResolution,flags/videoresolution/,.png]</value>
+		<value condition="ListItem.IsStereoscopic">3D</value>
+		<value condition="isGreaterThan(ListItem.VideoResolution,1080)">4K</value>
+		<value>$INFO[ListItem.VideoResolution]</value>
 	</variable>
 	<variable name="BannerVar">
 		<value condition="!IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>

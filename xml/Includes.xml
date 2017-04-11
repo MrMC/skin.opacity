@@ -287,60 +287,61 @@
 		</definition>
 	</include>
 	<include name="MediaFlags">
-		<!-- 	<control type="grouplist">
-					<orientation>horizontal</orientation>
-					<right>20</right>
-					<top>0</top>
-					<height>70</height>
-					<align>right</align>
-					<itemgap>28</itemgap>
-					<width>1900</width>
-					<usecontrolcoords>true</usecontrolcoords>
-					<control type="group">
-						<width>150</width>
-						<top>-5</top>
-						<visible>Stringcompare(ListItem.DBtype,tvshow)</visible>
-						<include content="MediaFlag">
-							<param name="texture" value="$INFO[ListItem.Studio,resource://resource.images.studios.white/,.png]" />
-						</include>
-					</control>
-					<control type="group">
-						<top>10</top>
-						<width>200</width>
-						<include content="InfoFlag">
-							<param name="visible" value="[Stringcompare(ListItem.DBtype,tvshow) | Stringcompare(ListItem.DBtype,episode)] + !IsEmpty(ListItem.Premiered)" />
-							<param name="icon" value="lists/year.png" />
-							<param name="label" value="$INFO[ListItem.Premiered]" />
-						</include>
-					</control>
-					<control type="group">
-						<width>115</width>
-						<visible>!IsEmpty(ListItem.Duration)</visible>
-						<control type="label">
-							<width>115</width>
-							<height>60</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Duration,, $LOCALIZE[31132]]</label>
-							<font>font_flag</font>
-						</control>
-						<include content="MediaFlag">
-							<param name="texture" value="flags/flag.png" />
-						</include>
-					</control>
-					<include content="MediaFlag">
-						<param name="texture" value="$INFO[ListItem.AudioChannels,flags/audiochannel/,.png]" />
-						<param name="visible" value="!IsEmpty(ListItem.AudioChannels)" />
-					</include>
-					<include content="MediaFlag">
-						<param name="texture" value="$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]" />
-						<param name="visible" value="!IsEmpty(ListItem.AudioCodec)" />
-					</include>
-					<include content="MediaFlag">
-						<param name="texture" value="$VAR[ResolutionFlagVar]" />
-						<param name="visible" value="!IsEmpty(ListItem.VideoResolution)" />
-					</include>
-				</control> -->
+		<control type="grouplist" description="Flags">
+			<right>40</right>
+			<bottom>8</bottom>
+			<width>1000</width>
+			<height>45</height>
+			<itemgap>30</itemgap>
+			<orientation>horizontal</orientation>
+			<align>right</align>
+			<control type="button">
+				<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+				<height>36</height>
+				<width>102</width>
+				<posx>0</posx>
+				<posy>0</posy>
+				<font>Flags</font>
+				<align>center</align>
+				<textoffsetx>0</textoffsetx>
+				<colordiffuse>grey</colordiffuse>
+				<textcolor>grey</textcolor>
+				<texturenofocus>badges/video/ResFrame.png</texturenofocus>
+				<texturefocus>badges/video/ResFrame.png</texturefocus>
+				<label>$VAR[ResolutionFlagVar]</label>
+			</control>
+			<control type="image">
+				<visible>!IsEmpty(ListItem.AudioChannels)</visible>
+				<height>36</height>
+				<width>102</width>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>grey</colordiffuse>
+				<texture>$INFO[ListItem.AudioChannels,badges/channels,.png]</texture>
+			</control>
+			<control type="image">
+				<visible>!IsEmpty(ListItem.AudioCodec)</visible>
+				<height>36</height>
+				<width>102</width>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>grey</colordiffuse>
+				<texture>$INFO[ListItem.AudioCodec,badges/audio/,.png]</texture>
+			</control>
+			<control type="button">
+				<visible>!IsEmpty(ListItem.VideoAspect)</visible>
+				<height>36</height>
+				<width>102</width>
+				<posx>0</posx>
+				<posy>0</posy>
+				<font>Flags</font>
+				<align>center</align>
+				<textoffsetx>0</textoffsetx>
+				<colordiffuse>grey</colordiffuse>
+				<textcolor>grey</textcolor>
+				<texturenofocus>badges/video/FlagFrame.png</texturenofocus>
+				<texturefocus>badges/video/FlagFrame.png</texturefocus>
+				<label>$INFO[ListItem.VideoAspect]</label>
+			</control>
+		</control>
 	</include>
 	<include name="FileManagerPanel">
 		<definition>
@@ -581,13 +582,13 @@
 				<depth>DepthBars</depth>
 				<animation effect="fade" start="0" end="100" time="300" condition="[Window.Previous(fullscreenvideo) | Window.Previous(startup)]">WindowOpen</animation>
 				<!-- 				<control type="image">
-									<left>0</left>
-									<top>0</top>
-									<width>110%</width>
-									<height>60</height>
-									<texture>frame/InfoBar.png</texture>
-									<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
-								</control> -->
+													<left>0</left>
+													<top>0</top>
+													<width>110%</width>
+													<height>60</height>
+													<texture>frame/InfoBar.png</texture>
+													<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
+												</control> -->
 				<control type="grouplist">
 					<left>35</left>
 					<description>Left side of top bar</description>
