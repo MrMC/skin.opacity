@@ -13,7 +13,7 @@
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="1520" />
 				<param name="height" value="870" />
-				<param name="header_label" value="" />
+				<param name="header_label" value="$LOCALIZE[1007]" />
 				<param name="header_id" value="2" />
 			</include>
 			<control type="image">
@@ -35,6 +35,7 @@
 				<ondown>5</ondown>
 				<control type="spincontrolex" id="10">
 					<description>Default SpinControlex</description>
+					<label>1008</label>
 					<include>DefaultSettingButton</include>
 				</control>
 				<control type="edit" id="11">
@@ -42,6 +43,7 @@
 				</control>
 				<control type="button" id="12">
 					<description>Default Button</description>
+					<label>1024</label>
 					<include>DefaultSettingButton</include>
 				</control>
 				<control type="edit" id="16">
@@ -49,12 +51,15 @@
 				</control>
 				<control type="edit" id="13">
 					<include>DefaultSettingButton</include>
+					<label>1013</label>
 				</control>
 				<control type="edit" id="14">
 					<include>DefaultSettingButton</include>
+					<label>1014</label>
 				</control>
 				<control type="edit" id="15">
 					<include>DefaultSettingButton</include>
+					<label>15052</label>
 				</control>
 			</control>
 			<control type="grouplist" id="9000">
@@ -68,11 +73,11 @@
 				<onright>5</onright>
 				<include content="DefaultDialogButton">
 					<param name="id" value="18" />
-					<param name="label" value="" />
+					<param name="label" value="186" />
 				</include>
 				<include content="DefaultDialogButton">
 					<param name="id" value="19" />
-					<param name="label" value="" />
+					<param name="label" value="222" />
 				</include>
 			</control>
 		</control>
