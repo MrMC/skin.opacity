@@ -184,10 +184,10 @@
 				<orientation>vertical</orientation>
 				<visible>Control.IsVisible(50)</visible>
 			</control>
+			<include content="TopBar">
+				<param name="breadcrumbs_label" value="$LOCALIZE[31067]" />
+			</include>
+			<include>BottomBar</include>
 		</control>
-		<include content="TopBar">
-			<param name="breadcrumbs_label" value="$LOCALIZE[31067]" />
-		</include>
-		<include>BottomBar</include>
 	</controls>
 </window>
