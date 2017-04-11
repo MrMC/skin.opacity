@@ -29,7 +29,7 @@
 					<control type="epggrid" id="10">
 						<left>0</left>
 						<top>5</top>
-						<right>20</right>
+						<right>0</right>
 						<bottom>340</bottom>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<timeblocks>34</timeblocks>
