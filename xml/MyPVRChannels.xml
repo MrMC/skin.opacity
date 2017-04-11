@@ -10,7 +10,7 @@
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="System.HasModalDialog">Conditional</animation>
 			<control type="group">
 				<animation type="Conditional" condition="ControlGroup(9000).HasFocus | Control.HasFocus(6130)" reversible="true">
-					<effect type="slide" start="0" end="520" time="400" tween="cubic" easing="inout" />
+					<effect type="slide" start="0" end="520" time="400" tween="sine" easing="inout" />
 				</animation>
 				<control type="group">
 					<include>OpenClose_Left</include>
