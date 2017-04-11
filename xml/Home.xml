@@ -369,7 +369,7 @@
 							</control>
 							<control type="textbox">
 								<left>20</left>
-								<top>320</top>
+								<top>310</top>
 								<width>200</width>
 								<height>140</height>
 								<label>$INFO[ListItem.Label]</label>
@@ -401,7 +401,7 @@
 							</control>
 							<control type="textbox">
 								<left>20</left>
-								<top>320</top>
+								<top>310</top>
 								<width>200</width>
 								<height>140</height>
 								<label>$INFO[ListItem.Label]</label>
@@ -541,7 +541,7 @@
 							</control>
 							<control type="textbox">
 								<left>20</left>
-								<top>320</top>
+								<top>310</top>
 								<width>200</width>
 								<height>140</height>
 								<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Property(SeasonEpisode)]</label>
@@ -573,7 +573,7 @@
 							</control>
 							<control type="textbox">
 								<left>20</left>
-								<top>320</top>
+								<top>310</top>
 								<width>200</width>
 								<height>140</height>
 								<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Property(SeasonEpisode)]</label>
