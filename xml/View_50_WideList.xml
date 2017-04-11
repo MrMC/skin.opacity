@@ -45,6 +45,7 @@
 						<width>32</width>
 						<height>32</height>
 						<texture>$VAR[ListWatchedIconVar]</texture>
+						<visible>!StringCompare(ListItem.Label,..)</visible>
 						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies) | IsEmpty(ListItem.Year)</visible>
 					</control>
 					<control type="label">
@@ -86,6 +87,7 @@
 						<width>32</width>
 						<height>32</height>
 						<texture colordiffuse="grey">$VAR[ListWatchedIconVar]</texture>
+						<visible>!StringCompare(ListItem.Label,..)</visible>
 						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies) | IsEmpty(ListItem.Year)</visible>
 					</control>
 					<control type="label">
@@ -111,6 +113,7 @@
 						<left>35</left>
 						<centertop>50%</centertop>
 						<visible>IsEmpty(ListItem.Year) + IsEmpty(ListItem.Property(Addon.Version))</visible>
+						<visible>!StringCompare(ListItem.Label,..)</visible>
 						<width>32</width>
 						<height>32</height>
 						<texture colordiffuse="grey">$VAR[ListWatchedIconVar]</texture>
