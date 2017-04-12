@@ -66,21 +66,21 @@
 				<top>92</top>
 				<orientation>vertical</orientation>
 				<width>300</width>
-				<height>250</height>
+				<height>350</height>
 				<itemgap>-10</itemgap>
 				<onleft>5</onleft>
 				<onright>5</onright>
 				<include content="DefaultDialogButton">
 					<param name="id" value="28" />
-					<param name="label" value="" />
+					<param name="label" value="186" />
 				</include>
 				<include content="DefaultDialogButton">
 					<param name="id" value="29" />
-					<param name="label" value="" />
+					<param name="label" value="222" />
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="id" value="30" />
-					<param name="label" value="" />
+					<param name="id" value="50" />
+					<param name="label" value="409" />
 				</include>
 			</control>
 		</control>
