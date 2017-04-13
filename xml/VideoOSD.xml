@@ -21,9 +21,16 @@
 			<visible>Window.IsTopMostModal(videoosd)</visible>
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<include>Animation_TopSlide</include>
+			<control type="image">
+				<top>0</top>
+				<left>-40</left>
+				<width>120%</width>
+				<height>100</height>
+				<texture colordiffuse="AAFFFFFF">colors/black.png</texture>
+			</control>
 			<control type="grouplist" id="202">
 				<right>50</right>
-				<top>0</top>
+				<top>10</top>
 				<left>50</left>
 				<height>135</height>
 				<align>center</align>
