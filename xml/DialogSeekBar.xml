@@ -101,7 +101,7 @@
 				<font>font30</font>
 				<wrapmultiline>true</wrapmultiline>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<label>$INFO[Player.TimeRemaining]</label>
+				<label>$INFO[Player.TimeRemaining,- ]</label>
 			</control>
 
 			<control type="progress">
