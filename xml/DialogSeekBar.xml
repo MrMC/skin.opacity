@@ -74,19 +74,18 @@
 				<height>75</height>
 				<align>left</align>
 				<aligny>bottom</aligny>
-				<animation delay="0" effect="slide" time="120" start="0,0" end="0,-20" tween="sine" easing="inout" condition="!IsEmpty(Control.GetLabel(40000))">Conditional</animation>
 				<label>$VAR[SeekTimeLabelVar]</label>
 				<font>font30</font>
 				<shadowcolor>black</shadowcolor>
 				<visible>!Player.ChannelPreviewActive</visible>
 				<animation effect="fade" start="0" end="100" time="200" delay="1000">Visible</animation>
 			</control>
-			<control type="label" id="40000">
+			<control type="label">
 				<left>100</left>
-				<top>134</top>
-				<width>50%</width>
+				<top>20</top>
+				<right>100</right>
 				<height>60</height>
-				<align>left</align>
+				<align>center</align>
 				<aligny>center</aligny>
 				<label>$VAR[SeekLabel]</label>
 				<shadowcolor>black</shadowcolor>
