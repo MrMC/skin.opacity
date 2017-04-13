@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<visible>[[Player.Seeking | Player.DisplayAfterSeek | [Player.Paused + !Player.Caching] | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(fullscreeninfo) | Window.IsActive(videoosd)] + Window.IsActive(fullscreenvideo)] | Window.IsActive(visualisation) | !IsEmpty(Player.SeekNumeric)</visible>
-	<visible>!Window.IsActive(sliderdialog)</visible>
+	<visible>!Window.IsActive(sliderdialog) + !Window.IsActive(subtitlesearch)</visible>
 	<include>Animation_BottomSlide</include>
 	<depth>DepthOSD</depth>
 	<zorder>0</zorder>
