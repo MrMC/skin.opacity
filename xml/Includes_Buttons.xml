@@ -24,7 +24,7 @@
 			<height>49</height>
 			<textoffsetx>40</textoffsetx>
 			<aligny>center</aligny>
-			<font>font12</font>
+			<font>font13</font>
 			<texturefocus />
 			<texturenofocus />
 			<onclick>noop</onclick>
@@ -215,15 +215,14 @@
 	<include name="InfoDialogButton">
 		<param name="width">262</param>
 		<definition>
-			<control type="radiobutton" id="$PARAM[id]">
+			<control type="button" id="$PARAM[id]">
 				<width>$PARAM[width]</width>
-				<height>142</height>
+				<height>100</height>
 				<align>center</align>
-				<aligny>top</aligny>
+				<aligny>center</aligny>
 				<texturefocus border="21" colordiffuse="primary_color">buttons/button-fo.png</texturefocus>
 				<texturenofocus border="21">buttons/button-nofo.png</texturenofocus>
 				<textoffsetx>35</textoffsetx>
-				<textoffsety>78</textoffsety>
 				<radioposx>108</radioposx>
 				<radioposy>16</radioposy>
 				<radiowidth>48</radiowidth>
