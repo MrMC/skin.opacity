@@ -292,9 +292,26 @@
 			<bottom>8</bottom>
 			<width>1000</width>
 			<height>45</height>
-			<itemgap>30</itemgap>
+			<itemgap>15</itemgap>
 			<orientation>horizontal</orientation>
 			<align>right</align>
+			<control type="button">
+				<visible>!IsEmpty(ListItem.Rating)</visible>
+				<height>36</height>
+				<width>102</width>
+				<posx>0</posx>
+				<posy>0</posy>
+				<font>Flags</font>
+				<align>right</align>
+				<aligny>bottom</aligny>
+				<textoffsetx>10</textoffsetx>
+				<textoffsety>-4</textoffsety>
+				<colordiffuse>grey</colordiffuse>
+				<textcolor>grey</textcolor>
+				<texturenofocus>badges/RatingBox.png</texturenofocus>
+				<texturefocus>badges/RatingBox.png</texturefocus>
+				<label>$INFO[ListItem.Rating]</label>
+			</control>
 			<control type="button">
 				<visible>!IsEmpty(ListItem.VideoResolution)</visible>
 				<height>36</height>
@@ -303,7 +320,9 @@
 				<posy>0</posy>
 				<font>Flags</font>
 				<align>center</align>
+				<aligny>bottom</aligny>
 				<textoffsetx>0</textoffsetx>
+				<textoffsety>-4</textoffsety>
 				<colordiffuse>grey</colordiffuse>
 				<textcolor>grey</textcolor>
 				<texturenofocus>badges/video/ResFrame.png</texturenofocus>
@@ -334,7 +353,9 @@
 				<posy>0</posy>
 				<font>Flags</font>
 				<align>center</align>
+				<aligny>bottom</aligny>
 				<textoffsetx>0</textoffsetx>
+				<textoffsety>-4</textoffsety>
 				<colordiffuse>grey</colordiffuse>
 				<textcolor>grey</textcolor>
 				<texturenofocus>badges/video/FlagFrame.png</texturenofocus>
