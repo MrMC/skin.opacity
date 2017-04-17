@@ -93,26 +93,14 @@
 					<height>90</height>
 					<onclick>SettingsLevelChange</onclick>
 					<textoffsetx>30</textoffsetx>
-					<align>right</align>
+					<align>center</align>
+					<font>font30_title</font>
 					<texturefocus colordiffuse="primary_color">colors/white.png</texturefocus>
 					<texturenofocus />
 					<onleft>5</onleft>
 					<onright>5</onright>
 					<onup>3</onup>
 					<ondown>3</ondown>
-				</control>
-				<control type="label">
-					<width>470</width>
-					<left>0</left>
-					<bottom>90</bottom>
-					<textoffsetx>40</textoffsetx>
-					<textoffsety>15</textoffsety>
-					<height>90</height>
-					<font>font25_upper</font>
-					<align>left</align>
-					<aligny>top</aligny>
-					<textcolor>grey</textcolor>
-					<label>$LOCALIZE[31008]</label>
 				</control>
 			</control>
 			<control type="scrollbar" id="60">
