@@ -62,8 +62,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<textoffsetx>35</textoffsetx>
-						<textoffsety>76</textoffsety>
-						<radioposy>17</radioposy>
+						<radioposy>13</radioposy>
 						<radiowidth>100</radiowidth>
 						<font>font12</font>
 						<visible>Control.IsEnabled(13)</visible>
@@ -141,19 +140,18 @@
 				<textcolor>88FFFFFF</textcolor>
 				<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
 			</control>
-        <control type="image">
-            <description>separator image</description>
-            <top>82</top>
-            <height>4</height>
-            <texture colordiffuse="primary_color" border="3">dialogs/separator-grey.png</texture>
-        </control>
-        <control type="image">
-            <description>separator image</description>
-            <bottom>82</bottom>
-            <height>4</height>
-            <texture colordiffuse="primary_color" border="3">dialogs/separator-grey.png</texture>
-        </control>
-
+			<control type="image">
+				<description>separator image</description>
+				<top>82</top>
+				<height>4</height>
+				<texture colordiffuse="primary_color" border="3">dialogs/separator-grey.png</texture>
+			</control>
+			<control type="image">
+				<description>separator image</description>
+				<bottom>82</bottom>
+				<height>4</height>
+				<texture colordiffuse="primary_color" border="3">dialogs/separator-grey.png</texture>
+			</control>
 			<include content="InfoDialogTopBarInfo">
 				<param name="main_label" value="$INFO[ListItem.Property(Addon.Name)]" />
 				<param name="sub_label" value="$INFO[ListItem.Property(Addon.Version),[COLOR grey],[/COLOR]]$INFO[ListItem.Property(Addon.Creator), $LOCALIZE[31071] ]" />
