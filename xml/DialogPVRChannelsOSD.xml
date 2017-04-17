@@ -49,8 +49,8 @@
 							<info>ListItem.Progress</info>
 						</control>
 						<control type="image">
-							<right>15</right>
-							<top>9</top>
+							<right>95</right>
+							<top>22</top>
 							<width>40</width>
 							<height>40</height>
 							<texture>$VAR[PVRStatusImageVar]</texture>
@@ -106,8 +106,8 @@
 							<info>ListItem.Progress</info>
 						</control>
 						<control type="image">
-							<right>15</right>
-							<top>9</top>
+							<right>95</right>
+							<top>22</top>
 							<width>40</width>
 							<height>40</height>
 							<texture>$VAR[PVRStatusImageVar]</texture>
