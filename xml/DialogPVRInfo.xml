@@ -98,5 +98,18 @@
 				<param name="posy" value="40" />
 			</include>
 		</control>
+		<control type="image">
+			<description>separator image</description>
+			<top>82</top>
+			<height>4</height>
+			<texture colordiffuse="primary_color" border="3">dialogs/separator-grey.png</texture>
+		</control>
+		<control type="image">
+			<description>separator image</description>
+			<bottom>82</bottom>
+			<height>4</height>
+			<texture colordiffuse="primary_color" border="3">dialogs/separator-grey.png</texture>
+		</control>
+
 	</controls>
 </window>
