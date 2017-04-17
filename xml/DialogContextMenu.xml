@@ -30,11 +30,11 @@
 				<texturenofocus />
 				<onclick>Action(close)</onclick>
 			</control>
-			<control type="label">
-				<left>-200</left>
-				<top>-100</top>
-				<width>1000</width>
-				<height>70</height>
+			<control type="textbox">
+				<left>-400</left>
+				<top>-150</top>
+				<width>1400</width>
+				<height>130</height>
 				<font>font45_title</font>
 				<label>$INFO[ListItem.Label]</label>
 				<align>center</align>
