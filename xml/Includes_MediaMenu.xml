@@ -22,7 +22,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<font></font>
-				<texturefocus colordiffuse="primary_color">buttons/roundbutton-fo.png</texturefocus>
+				<texturefocus colordiffuse="primary_color">osd/fullscreen/buttons/button-fo.png</texturefocus>
 				<texturenofocus />
 				<radioposx>26</radioposx>
 				<radioposy>0</radioposy>
@@ -65,24 +65,26 @@
 						<label>$LOCALIZE[31063]</label>
 					</control>
 					<control type="label">
+						<top>150</top>
 						<width>470</width>
 						<textoffsetx>20</textoffsetx>
 						<textoffsety>15</textoffsety>
 						<height>50</height>
 						<font>font12</font>
-						<align>right</align>
+						<align>center</align>
 						<aligny>top</aligny>
 						<textcolor>grey</textcolor>
 						<label>$VAR[PVRAreaVar]</label>
 					</control>
 				</control>
 				<control type="group" id="60560">
-					<height>95</height>
+					<height>165</height>
 					<control type="grouplist" id="6056">
 						<orientation>horizontal</orientation>
-						<itemgap>-18</itemgap>
+						<itemgap>0</itemgap>
 						<left>0</left>
-						<height>120</height>
+						<top>20</top>
+						<height>200</height>
 						<onleft>6056</onleft>
 						<onright condition="!Window.IsActive(MyPVRGuide.xml)">50</onright>
 						<onright condition="Window.IsActive(MyPVRGuide.xml)">10</onright>
