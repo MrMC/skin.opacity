@@ -217,6 +217,7 @@
 				<right>0</right>
 				<width>820</width>
 				<include>OpenClose_Right</include>
+				<visible>!Window.IsActive(extendedprogressdialog)</visible>
 				<bottom>0</bottom>
 				<height>60</height>
 				<control type="label">

@@ -262,6 +262,7 @@
 				<visible>!IsEmpty(ListItem.NextTitle)</visible>
 				<label>$INFO[ListItem.NextTitle,[COLOR grey]$LOCALIZE[19031]:[CR][/COLOR]] $INFO[ListItem.NextStartTime]</label>
 				<include>OpenClose_Right</include>
+				<visible>!Window.IsActive(extendedprogressdialog)</visible>
 			</control>
 			<include>MediaMenuMouseOverlay</include>
 			<control type="group">

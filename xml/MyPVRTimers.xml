@@ -171,6 +171,7 @@
 				<right>20</right>
 				<description>Disk usage text</description>
 				<include>OpenClose_Right</include>
+				<visible>!Window.IsActive(extendedprogressdialog)</visible>
 				<bottom>10</bottom>
 				<width>800</width>
 				<height>60</height>
