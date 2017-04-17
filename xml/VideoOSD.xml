@@ -39,8 +39,8 @@
 				<orientation>horizontal</orientation>
 				<onup>201</onup>
 				<ondown>201</ondown>
-				<onleft>606</onleft>
-				<onright>600</onright>
+				<onleft>202</onleft>
+				<onright>202</onright>
 				<control type="button" id="704">
 					<label>$LOCALIZE[24012]</label>
 					<width>300</width>
@@ -93,8 +93,8 @@
 					<orientation>horizontal</orientation>
 					<onup>202</onup>
 					<ondown>202</ondown>
-					<onleft>70043</onleft>
-					<onright>70040</onright>
+					<onleft>201</onleft>
+					<onright>201</onright>
 					<control type="radiobutton" id="600">
 						<include content="OSDButton">
 							<param name="texture" value="osd/fullscreen/buttons/previous.png"/>
