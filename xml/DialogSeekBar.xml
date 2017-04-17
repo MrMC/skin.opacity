@@ -229,8 +229,8 @@
 				<aligny>bottom</aligny>
 				<textoffsetx>10</textoffsetx>
 				<textoffsety>-4</textoffsety>
-				<colordiffuse>grey</colordiffuse>
-				<textcolor>grey</textcolor>
+				<colordiffuse>white</colordiffuse>
+				<textcolor>white</textcolor>
 				<texturenofocus>badges/RatingBox.png</texturenofocus>
 				<texturefocus>badges/RatingBox.png</texturefocus>
 				<label>$INFO[VideoPlayer.Rating]</label>
@@ -246,18 +246,18 @@
 				<aligny>bottom</aligny>
 				<textoffsetx>0</textoffsetx>
 				<textoffsety>-4</textoffsety>
-				<colordiffuse>grey</colordiffuse>
-				<textcolor>grey</textcolor>
+				<colordiffuse>white</colordiffuse>
+				<textcolor>white</textcolor>
 				<texturenofocus>badges/video/ResFrame.png</texturenofocus>
 				<texturefocus>badges/video/ResFrame.png</texturefocus>
-				<label>$VAR[ResolutionFlagVar]</label>
+				<label>$VAR[NowPlayingResolutionFlagVar]</label>
 			</control>
 			<control type="image">
 				<visible>!IsEmpty(VideoPlayer.AudioChannels)</visible>
 				<height>36</height>
 				<width>102</width>
 				<aspectratio>keep</aspectratio>
-				<colordiffuse>grey</colordiffuse>
+				<colordiffuse>white</colordiffuse>
 				<texture>$INFO[VideoPlayer.AudioChannels,badges/channels,.png]</texture>
 			</control>
 			<control type="image">
@@ -265,7 +265,7 @@
 				<height>36</height>
 				<width>102</width>
 				<aspectratio>keep</aspectratio>
-				<colordiffuse>grey</colordiffuse>
+				<colordiffuse>white</colordiffuse>
 				<texture>$INFO[VideoPlayer.AudioCodec,badges/audio/,.png]</texture>
 			</control>
 			<control type="button">
@@ -279,8 +279,8 @@
 				<aligny>bottom</aligny>
 				<textoffsetx>0</textoffsetx>
 				<textoffsety>-4</textoffsety>
-				<colordiffuse>grey</colordiffuse>
-				<textcolor>grey</textcolor>
+				<colordiffuse>white</colordiffuse>
+				<textcolor>white</textcolor>
 				<texturenofocus>badges/video/FlagFrame.png</texturenofocus>
 				<texturefocus>badges/video/FlagFrame.png</texturefocus>
 				<label>$INFO[VideoPlayer.VideoAspect]</label>

@@ -86,6 +86,11 @@
 		<value condition="isGreaterThan(ListItem.VideoResolution,1080)">4K</value>
 		<value>$INFO[ListItem.VideoResolution]</value>
 	</variable>
+	<variable name="NowPlayingResolutionFlagVar">
+		<value condition="VideoPlayer.IsStereoscopic">3D</value>
+		<value condition="isGreaterThan(VideoPlayer.VideoResolution,1080)">4K</value>
+		<value>$INFO[VideoPlayer.VideoResolution]</value>
+	</variable>
 	<variable name="BannerVar">
 		<value condition="!IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
 		<value>$INFO[ListItem.Art(tvshow.banner)]</value>
