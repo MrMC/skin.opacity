@@ -127,6 +127,7 @@
 				<font>font12</font>
 				<align>center</align>
 				<textcolor>grey</textcolor>
+				<visible>!Window.IsVisible(infodialog) + !Window.IsVisible(extendedprogressdialog)</visible>
 				<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 			</control>
 			<control type="label" id="2">
