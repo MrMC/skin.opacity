@@ -225,10 +225,10 @@
 				</include>
 			</control>
 			<control type="label">
-				<left>20</left>
+				<left>40</left>
 				<top>1030</top>
 				<align>left</align>
-				<width>1400</width>
+				<right>700</right>
 				<height>44</height>
 				<font>font20_title</font>
 				<textcolor>99FFFFFF</textcolor>

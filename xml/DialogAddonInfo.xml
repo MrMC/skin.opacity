@@ -16,7 +16,7 @@
 				<include>OpenClose_Right</include>
 				<control type="textbox">
 					<left>670</left>
-					<top>435</top>
+					<top>180</top>
 					<width>1050</width>
 					<height>365</height>
 					<label>$INFO[ListItem.Property(Addon.Summary),[B],[/B][CR]]$INFO[ListItem.Property(Addon.Description)]</label>
@@ -57,13 +57,12 @@
 						<param name="label" value="$LOCALIZE[24069]" />
 					</include>
 					<control type="radiobutton" id="13">
-						<width>262</width>
-						<height>140</height>
-						<align>center</align>
-						<aligny>top</aligny>
+						<width>290</width>
+						<height>100</height>
+						<align>left</align>
+						<aligny>center</aligny>
 						<textoffsetx>35</textoffsetx>
 						<textoffsety>76</textoffsety>
-						<radioposx>81</radioposx>
 						<radioposy>17</radioposy>
 						<radiowidth>100</radiowidth>
 						<font>font12</font>
@@ -128,15 +127,6 @@
 						<font>font36_title</font>
 					</control>
 				</control>
-				<control type="image">
-					<left>-5</left>
-					<top>525</top>
-					<width>540</width>
-					<height>150</height>
-					<texture>dialogs/dialog-bg-nobo.png</texture>
-					<bordertexture border="21">overlays/shadow.png</bordertexture>
-					<bordersize>20</bordersize>
-				</control>
 			</control>
 			<control type="textbox">
 				<left>150</left>
@@ -151,6 +141,19 @@
 				<textcolor>88FFFFFF</textcolor>
 				<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
 			</control>
+        <control type="image">
+            <description>separator image</description>
+            <top>82</top>
+            <height>4</height>
+            <texture colordiffuse="primary_color" border="3">dialogs/separator-grey.png</texture>
+        </control>
+        <control type="image">
+            <description>separator image</description>
+            <bottom>82</bottom>
+            <height>4</height>
+            <texture colordiffuse="primary_color" border="3">dialogs/separator-grey.png</texture>
+        </control>
+
 			<include content="InfoDialogTopBarInfo">
 				<param name="main_label" value="$INFO[ListItem.Property(Addon.Name)]" />
 				<param name="sub_label" value="$INFO[ListItem.Property(Addon.Version),[COLOR grey],[/COLOR]]$INFO[ListItem.Property(Addon.Creator), $LOCALIZE[31071] ]" />
