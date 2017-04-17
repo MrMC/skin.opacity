@@ -53,7 +53,8 @@
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="ListLabel2Var">
-		<value condition="IsEmpty(Container.PluginName) + Container.Content(tvshows) + Stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</value>
+		<value condition="Container.Content(tvshows) + Stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</value>
+		<value condition="Container.Content(movies) + Stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.mpaa]  ∙  $INFO[ListItem.Label2]</value>
 		<value condition="Stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Year]</value>
 		<value>$INFO[ListItem.Label2]</value>
 	</variable>
