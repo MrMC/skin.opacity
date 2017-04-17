@@ -262,12 +262,12 @@
 		<onup>9000</onup>
 		<ondown>9000</ondown>
 		<orientation>vertical</orientation>
-		<itemlayout height="70" width="600">
+		<itemlayout height="90" width="600">
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
 				<width>600</width>
-				<height>70</height>
+				<height>90</height>
 				<texture colordiffuse="dialog_tint">colors/white.png</texture>
 			</control>
 			<control type="label">
@@ -275,26 +275,26 @@
 				<textoffsetx>20</textoffsetx>
 				<top>0</top>
 				<width>600</width>
-				<height>70</height>
+				<height>90</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<textcolor>grey</textcolor>
+				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 		</itemlayout>
-		<focusedlayout height="70" width="600">
+		<focusedlayout height="90" width="600">
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
 				<width>600</width>
-				<height>70</height>
+				<height>90</height>
 				<texture colordiffuse="dialog_tint">colors/white.png</texture>
 			</control>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
 				<width>600</width>
-				<height>70</height>
+				<height>90</height>
 				<texture colordiffuse="primary_color" border="5">buttons/focus.png</texture>
 			</control>
 			<control type="label">
@@ -302,7 +302,7 @@
 				<textoffsetx>20</textoffsetx>
 				<top>0</top>
 				<width>600</width>
-				<height>70</height>
+				<height>90</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]</label>
