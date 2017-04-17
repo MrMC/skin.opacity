@@ -24,7 +24,7 @@
 					<top>90</top>
 					<width>120</width>
 					<height>99</height>
-					<texture>$INFO[MusicPlayer.Codec,flags/audiocodec/,.png]</texture>
+					<texture>$INFO[MusicPlayer.Codec,badges/audio/,.png]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>!Player.ChannelPreviewActive</visible>
 				</control>
@@ -209,7 +209,7 @@
 				<bordersize>20</bordersize>
 				<include>OpenClose_Left</include>
 			</control>
-			<control type="grouplist">
+		<control type="grouplist" description="Flags">
 				<right>20</right>
 				<top>160</top>
 				<width>1000</width>
@@ -218,19 +218,75 @@
 				<orientation>horizontal</orientation>
 				<itemgap>10</itemgap>
 				<visible>!Player.ChannelPreviewActive</visible>
-				<include content="MediaFlag">
-					<param name="texture" value="$INFO[VideoPlayer.AudioChannels,flags/audiochannel/,.png]" />
-				</include>
-				<include content="MediaFlag">
-					<param name="texture" value="$INFO[VideoPlayer.AudioCodec,flags/audiocodec/,.png]" />
-				</include>
-				<include content="MediaFlag">
-					<param name="texture" value="$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]" />
-				</include>
-				<include content="MediaFlag">
-					<param name="texture" value="$INFO[VideoPlayer.VideoCodec,flags/videocodec/,.png]" />
-				</include>
+			<control type="button">
+				<visible>!IsEmpty(VideoPlayer.Rating)</visible>
+				<height>36</height>
+				<width>102</width>
+				<posx>0</posx>
+				<posy>0</posy>
+				<font>Flags</font>
+				<align>right</align>
+				<aligny>bottom</aligny>
+				<textoffsetx>10</textoffsetx>
+				<textoffsety>-4</textoffsety>
+				<colordiffuse>grey</colordiffuse>
+				<textcolor>grey</textcolor>
+				<texturenofocus>badges/RatingBox.png</texturenofocus>
+				<texturefocus>badges/RatingBox.png</texturefocus>
+				<label>$INFO[VideoPlayer.Rating]</label>
 			</control>
+			<control type="button">
+				<visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
+				<height>36</height>
+				<width>102</width>
+				<posx>0</posx>
+				<posy>0</posy>
+				<font>Flags</font>
+				<align>center</align>
+				<aligny>bottom</aligny>
+				<textoffsetx>0</textoffsetx>
+				<textoffsety>-4</textoffsety>
+				<colordiffuse>grey</colordiffuse>
+				<textcolor>grey</textcolor>
+				<texturenofocus>badges/video/ResFrame.png</texturenofocus>
+				<texturefocus>badges/video/ResFrame.png</texturefocus>
+				<label>$VAR[ResolutionFlagVar]</label>
+			</control>
+			<control type="image">
+				<visible>!IsEmpty(VideoPlayer.AudioChannels)</visible>
+				<height>36</height>
+				<width>102</width>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>grey</colordiffuse>
+				<texture>$INFO[VideoPlayer.AudioChannels,badges/channels,.png]</texture>
+			</control>
+			<control type="image">
+				<visible>!IsEmpty(VideoPlayer.AudioCodec)</visible>
+				<height>36</height>
+				<width>102</width>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>grey</colordiffuse>
+				<texture>$INFO[VideoPlayer.AudioCodec,badges/audio/,.png]</texture>
+			</control>
+			<control type="button">
+				<visible>!IsEmpty(VideoPlayer.VideoAspect)</visible>
+				<height>36</height>
+				<width>102</width>
+				<posx>0</posx>
+				<posy>0</posy>
+				<font>Flags</font>
+				<align>center</align>
+				<aligny>bottom</aligny>
+				<textoffsetx>0</textoffsetx>
+				<textoffsety>-4</textoffsety>
+				<colordiffuse>grey</colordiffuse>
+				<textcolor>grey</textcolor>
+				<texturenofocus>badges/video/FlagFrame.png</texturenofocus>
+				<texturefocus>badges/video/FlagFrame.png</texturefocus>
+				<label>$INFO[VideoPlayer.VideoAspect]</label>
+			</control>
+		</control>
+
 		</control>
 	</controls>
 </window>
