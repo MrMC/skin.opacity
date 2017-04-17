@@ -21,9 +21,9 @@
 			<control type="image">
 				<include>OpenClose_Left</include>
 				<left>114</left>
-				<top>236</top>
-				<width>461</width>
-				<height>461</height>
+				<top>200</top>
+				<width>420</width>
+				<height>420</height>
 				<aspectratio>keep</aspectratio>
 				<texture fallback="DefaultTVShows.png">$INFO[ListItem.Icon]</texture>
 			</control>
@@ -33,7 +33,7 @@
 				<include>OpenClose_Right</include>
 				<control type="button" id="61">
 					<left>600</left>
-					<top>-18</top>
+					<top>-58</top>
 					<width>1170</width>
 					<height>509</height>
 					<font></font>
@@ -41,17 +41,37 @@
 					<onright>61</onright>
 					<ondown>9000</ondown>
 					<onup>49</onup>
+					<texturenofocus></texturenofocus>
 					<onclick>SetProperty(TextViewer_Header,$LOCALIZE[207],home)</onclick>
 					<onclick>SetProperty(TextViewer_Text,$ESCINFO[ListItem.Plot],home)</onclick>
 					<onclick>ActivateWindow(1102)</onclick>
 				</control>
+				<control type="label">
+					<left>0</left>
+					<top>-110</top>
+					<right>0</right>
+					<height>425</height>
+					<align>center</align>
+					<font>font30_title</font>
+					<label>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime]  ∙  $INFO[ListItem.StartDate][CR]</label>
+				</control>
+
+				<control type="textbox" id="400">
+					<left>70</left>
+					<top>410</top>
+					<width>510</width>
+					<height>425</height>
+					<align>left</align>
+					<label>$INFO[ListItem.Season, [COLOR grey]S[/COLOR]]$INFO[ListItem.Episode, [COLOR grey]E[/COLOR],: ]$INFO[ListItem.EpisodeName,[B],[/B][CR]]$INFO[ListItem.Genre,[COLOR grey]$LOCALIZE[515]:[/COLOR] ,[CR]]</label>
+					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+				</control>
 				<control type="textbox" id="400">
 					<left>660</left>
-					<top>20</top>
+					<top>-80</top>
 					<width>1050</width>
-					<height>425</height>
+					<height>575</height>
 					<align>justify</align>
-					<label>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime] ($INFO[ListItem.Duration])[CR]$INFO[ListItem.StartDate][CR]$INFO[ListItem.Season, [COLOR grey]S[/COLOR]]$INFO[ListItem.Episode, [COLOR grey]E[/COLOR],: ]$INFO[ListItem.EpisodeName,[B],[/B][CR]]$INFO[ListItem.Genre,[COLOR grey]$LOCALIZE[515]:[/COLOR] ,[CR]]$INFO[ListItem.Writer,[COLOR grey]$LOCALIZE[20417]:[/COLOR] ,[CR]]$INFO[ListItem.Director,[COLOR grey]$LOCALIZE[20339]:[/COLOR] ,[CR]]$INFO[ListItem.Cast,[COLOR grey]$LOCALIZE[206]:[/COLOR] ,[CR]][CR]$INFO[ListItem.Plot]</label>
+					<label>$INFO[ListItem.Writer,[COLOR grey]$LOCALIZE[20417]:[/COLOR] ,[CR]]$INFO[ListItem.Director,[COLOR grey]$LOCALIZE[20339]:[/COLOR] ,[CR]]$INFO[ListItem.Cast,[COLOR grey]$LOCALIZE[206]:[/COLOR] ,[CR]][CR]$INFO[ListItem.Plot]</label>
 					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="grouplist" id="9000">
@@ -97,19 +117,18 @@
 				<param name="sub_label" value="$INFO[ListItem.ChannelName]" />
 				<param name="posy" value="40" />
 			</include>
+			<control type="image">
+				<description>separator image</description>
+				<top>82</top>
+				<height>4</height>
+				<texture colordiffuse="primary_color" border="3">dialogs/separator-grey.png</texture>
+			</control>
+			<control type="image">
+				<description>separator image</description>
+				<bottom>82</bottom>
+				<height>4</height>
+				<texture colordiffuse="primary_color" border="3">dialogs/separator-grey.png</texture>
+			</control>
 		</control>
-		<control type="image">
-			<description>separator image</description>
-			<top>82</top>
-			<height>4</height>
-			<texture colordiffuse="primary_color" border="3">dialogs/separator-grey.png</texture>
-		</control>
-		<control type="image">
-			<description>separator image</description>
-			<bottom>82</bottom>
-			<height>4</height>
-			<texture colordiffuse="primary_color" border="3">dialogs/separator-grey.png</texture>
-		</control>
-
 	</controls>
 </window>
