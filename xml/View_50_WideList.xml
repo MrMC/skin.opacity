@@ -77,7 +77,7 @@
 						<width>80</width>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Year]</label>
-						<textcolor>primary_color</textcolor>
+						<textcolor>grey</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 						<visible>!Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(movies)</visible>
 					</control>
