@@ -92,25 +92,16 @@
 						<param name="visible" value="!IsEmpty(ListItem.Status)" />
 					</include>
 				</control>
-				<control type="group">
-					<visible>Stringcompare(Container(50).NumItems,0) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(banner))</visible>
-					<control type="image">
-						<left>0</left>
-						<top>164</top>
-						<width>1245</width>
-						<height>328</height>
-						<texture border="21">dialogs/dialog-bg.png</texture>
-					</control>
-					<control type="textbox">
-						<left>17</left>
-						<top>185</top>
-						<width>1210</width>
-						<height>283</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font36_title</font>
-						<label>$LOCALIZE[31079]</label>
-					</control>
+				<control type="textbox">
+					<left>617</left>
+					<top>185</top>
+					<width>610</width>
+					<height>283</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font36_title</font>
+					<label>$LOCALIZE[31079]</label>
+					<visible>Stringcompare(Container(50).NumItems,0)</visible>
 				</control>
 				<control type="panel" id="50">
 					<top>140</top>
