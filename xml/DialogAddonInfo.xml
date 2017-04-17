@@ -19,7 +19,7 @@
 					<top>180</top>
 					<width>1050</width>
 					<height>365</height>
-					<label>$INFO[ListItem.Property(Addon.Summary),[B],[/B][CR]]$INFO[ListItem.Property(Addon.Description)]</label>
+					<label>$INFO[ListItem.Property(Addon.Description)]</label>
 					<autoscroll delay="5000" repeat="7500" time="5000">true</autoscroll>
 				</control>
 				<include content="LeftRightArrows">
