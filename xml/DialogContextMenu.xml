@@ -62,7 +62,7 @@
 				<left>0</left>
 				<top></top>
 				<width>600</width>
-				<height>65</height>
+				<height>80</height>
 				<align>center</align>
 				<texturefocus colordiffuse="primary_color" border="5">buttons/focus.png</texturefocus>
 				<texturenofocus />
