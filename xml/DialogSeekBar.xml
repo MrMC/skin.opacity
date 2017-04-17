@@ -102,7 +102,6 @@
 				<animation effect="fade" time="200">VisibleChange</animation>
 				<label>$INFO[Player.TimeRemaining,- ]</label>
 			</control>
-
 			<control type="progress">
 				<left>100</left>
 				<top>73</top>
@@ -133,7 +132,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>Player.ShowInfo + VideoPlayer.Content(LiveTV) + Window.IsActive(fullscreenvideo) + !Window.IsActive(fullscreeninfo)</visible>
+			<visible>Player.ShowInfo + VideoPlayer.Content(LiveTV) + Window.IsActive(fullscreenvideo)</visible>
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<bottom>0</bottom>
 			<height>380</height>
@@ -192,10 +191,16 @@
 				<autoscroll delay="5000" repeat="7500" time="5000"></autoscroll>
 			</control>
 		</control>
-		<control type="image">
+		<control type="group">
+			<visible>Player.ShowInfo + !VideoPlayer.Content(LiveTV) + Window.IsActive(fullscreenvideo)</visible>
+			<animation effect="fade" time="400">VisibleChange</animation>
+			<visible>!Window.IsActive(videobookmarks)</visible>
+			<bottom>0</bottom>
+			<height>380</height>
+			<control type="image">
 				<depth>DepthOSD+</depth>
 				<left>10</left>
-				<top>320</top>
+				<top>-380</top>
 				<width>400</width>
 				<height>600</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
@@ -204,14 +209,12 @@
 				<bordersize>20</bordersize>
 				<include>OpenClose_Left</include>
 			</control>
-
 			<control type="grouplist">
 				<right>20</right>
-				<top>860</top>
+				<top>160</top>
 				<width>1000</width>
 				<height>100</height>
 				<align>right</align>
-				<include>Animation_BottomSlide</include>
 				<orientation>horizontal</orientation>
 				<itemgap>10</itemgap>
 				<visible>!Player.ChannelPreviewActive</visible>
@@ -228,5 +231,6 @@
 					<param name="texture" value="$INFO[VideoPlayer.VideoCodec,flags/videocodec/,.png]" />
 				</include>
 			</control>
+		</control>
 	</controls>
 </window>
