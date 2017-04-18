@@ -9,7 +9,7 @@
 			<height>1080</height>
 			<centerleft>50%</centerleft>
 			<width>1920</width>
-			<visible>Window.IsActive(DialogAlbumInfo.xml)</visible>
+			<visible>Window.IsTopMost(DialogAlbumInfo.xml)</visible>
 			<include>Visible_Fade</include>
 			<control type="group">
 				<include>OpenClose_Left</include>
@@ -276,38 +276,6 @@
 					<align>center</align>
 					<itemgap>0</itemgap>
 					<orientation>horizontal</orientation>
-					<control type="group" id="420">
-						<width>262</width>
-						<visible>Stringcompare(ListItem.DBType,song)</visible>
-						<control type="button" id="7">
-							<include content="VideoInfoButtonsCommon">
-								<param name="icon" value="" />
-							</include>
-							<label>$LOCALIZE[31033]</label>
-							<onup>130</onup>
-							<onleft>12</onleft>
-							<onright>120</onright>
-							<onup condition="isGreaterThan(Container(5000).CurrentItem,3)">210</onup>
-							<onup condition="!isGreaterThan(Container(5000).CurrentItem,3)">138</onup>
-						</control>
-						<control type="label">
-							<label>$INFO[ListItem.UserRating]</label>
-							<font>font45_title</font>
-							<left>0</left>
-							<top>24</top>
-							<width>262</width>
-							<align>center</align>
-						</control>
-						<control type="image">
-							<texture>icons/infodialogs/rating.png</texture>
-							<left>107</left>
-							<top>30</top>
-							<width>48</width>
-							<height>48</height>
-							<align>center</align>
-							<visible>IsEmpty(ListItem.UserRating)</visible>
-						</control>
-					</control>
 					<control type="radiobutton" id="120">
 						<include content="VideoInfoButtonsCommon">
 							<param name="icon" value="icons/infodialogs/image.png" />
@@ -343,7 +311,7 @@
 				</include>
 			</control>
 			<control type="group">
-				<visible>Stringcompare(ListItem.DBType,artist)</visible>
+				<visible>Container.Content(artists)</visible>
 				<include content="InfoDialogTopBarInfo">
 					<param name="main_label" value="$INFO[ListItem.Artist]" />
 					<param name="sub_label" value="$INFO[ListItem.Genre]" />
@@ -351,20 +319,24 @@
 				</include>
 			</control>
 			<control type="group">
-				<visible>Stringcompare(ListItem.DBType,album)</visible>
+				<visible>Container.Content(albums)</visible>
 				<include content="InfoDialogTopBarInfo">
 					<param name="main_label" value="$INFO[ListItem.Album]$INFO[ListItem.Year, ([COLOR grey],[/COLOR])]" />
 					<param name="sub_label" value="$INFO[ListItem.Artist]" />
 					<param name="id" value="33334" />
 				</include>
 			</control>
-			<control type="group">
-				<visible>Stringcompare(ListItem.DBType,song) + !Window.IsActive(musicinformation)</visible>
-				<include content="InfoDialogTopBarInfo">
-					<param name="main_label" value="[COLOR primary_color]$INFO[ListItem.TrackNumber]. [/COLOR]$INFO[ListItem.Title]" />
-					<param name="sub_label" value="$INFO[ListItem.Artist,, - ]$INFO[ListItem.Album]$INFO[ListItem.Year, ([COLOR grey],[/COLOR])]" />
-					<param name="id" value="33335" />
-				</include>
+			<control type="image">
+				<description>separator image</description>
+				<top>82</top>
+				<height>4</height>
+				<texture colordiffuse="primary_color" border="3">dialogs/separator-grey.png</texture>
+			</control>
+			<control type="image">
+				<description>separator image</description>
+				<bottom>82</bottom>
+				<height>4</height>
+				<texture colordiffuse="primary_color" border="3">dialogs/separator-grey.png</texture>
 			</control>
 		</control>
 	</controls>
