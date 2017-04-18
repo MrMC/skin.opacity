@@ -28,11 +28,6 @@
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.ChannelName]</value>
 		<value condition="Player.HasAudio">$INFO[MusicPlayer.Artist]</value>
 	</variable>
-	<variable name="FullScreenInfoTextBoxVar">
-		<value condition="Control.HasFocus(5553)">$INFO[VideoPlayer.Tagline,[B],[/B][CR]]$INFO[VideoPlayer.Plot]</value>
-		<value condition="Control.HasFocus(5555)">$INFO[VideoPlayer.NextTitle,[B],[/B][CR]]$INFO[VideoPlayer.NextPlot]</value>
-		<value>$INFO[VideoPlayer.CastAndRole]</value>
-	</variable>
 	<variable name="NowPlayingIconVar">
 		<value condition="Player.Paused">icons/now-playing/pause.png</value>
 		<value>icons/now-playing/play.png</value>
@@ -90,10 +85,6 @@
 		<value condition="VideoPlayer.IsStereoscopic">3D</value>
 		<value condition="isGreaterThan(VideoPlayer.VideoResolution,1080)">4K</value>
 		<value>$INFO[VideoPlayer.VideoResolution]</value>
-	</variable>
-	<variable name="BannerVar">
-		<value condition="!IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
-		<value>$INFO[ListItem.Art(tvshow.banner)]</value>
 	</variable>
 	<variable name="PosterVar">
 		<value condition="ListItem.Stringcompare(ListItem.Label,..)">DefaultFolderBackPoster.png</value>
@@ -191,11 +182,6 @@
 		<value condition="!IsEmpty(Container.Art(tvshow.fanart))">$INFO[Container.Art(tvshow.fanart)]</value>
 		<value condition="!IsEmpty(Container.Art(artist.fanart))">$INFO[Container.Art(artist.fanart)]</value>
 		<value>$INFO[Container.Art(fanart)]</value>
-	</variable>
-	<variable name="WeatherFanartVar">
-		<value condition="!IsEmpty(Container.ListItem.Property(FanartCode))">$INFO[Skin.String(WeatherFanart.path)]$INFO[Container.ListItem.Property(FanartCode)]$INFO[Skin.String(WeatherFanart.ext)]</value>
-		<value condition="!IsEmpty(Window(weather).Property(current.fanartcode)) + !IsEmpty(Skin.String(weatherfanart.path))">$INFO[Skin.String(weatherfanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]$INFO[Skin.String(weatherfanart.ext)]</value>
-		<value condition="!IsEmpty(Skin.String(HomeFanart.path))">$INFO[Skin.String(HomeFanart.path)]weather$INFO[Skin.String(HomeFanart.ext)]</value>
 	</variable>
 	<variable name="ListWatchedIconVar">
 		<value condition="ListItem.IsRecording">windows/pvr/record.png</value>
