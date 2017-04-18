@@ -41,6 +41,8 @@
 					<onup>50</onup>
 					<onright>140</onright>
 					<onleft>140</onleft>
+					<visible>![IntegerGreaterThan(Container(50).NumItems,6) + Control.HasFocus(50)]</visible>
+					<include>Visible_Fade</include>
 					<include content="InfoDialogMetadata">
 						<param name="control_id" value="147" />
 						<param name="label" value="$INFO[ListItem.Director,[COLOR grey]$LOCALIZE[20339]: [/COLOR]]" />
@@ -106,54 +108,56 @@
 				<control type="panel" id="50">
 					<top>140</top>
 					<left>630</left>
-					<width>600</width>
+					<width>1300</width>
 					<height>350</height>
 					<onleft>50</onleft>
 					<onright>50</onright>
-					<ondown>140</ondown>
+					<ondown>5000</ondown>
+					<onup>5000</onup>
 					<visible>true</visible>
 					<scrolltime>200</scrolltime>
+					<animation effect="slide" start="0,0" end="-630,0" time="500" tween="sine" easing="inout" condition="IntegerGreaterThan(Container(50).NumItems,6) + Control.HasFocus(50)">Conditional</animation>
 					<orientation>horizontal</orientation>
-					<focusedlayout height="55">
+					<focusedlayout height="55" width="650">
 						<control type="image">
 							<left>0</left>
-							<right>0</right>
+							<right>20</right>
 							<height>55</height>
 							<texture colordiffuse="primary_color" border="5">buttons/focus.png</texture>
 							<visible>Control.hasFocus(50)</visible>
 						</control>
 						<control type="label">
-							<left>35</left>
+							<left>30</left>
 							<height>55</height>
-							<right>90</right>
+							<right>50</right>
 							<aligny>center</aligny>
 							<scroll>true</scroll>
 							<label>$INFO[ListItem.Label]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 						<control type="label">
-							<left>40</left>
+							<left>30</left>
 							<height>55</height>
-							<right>40</right>
+							<right>50</right>
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label2]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 					</focusedlayout>
-					<itemlayout height="55">
+					<itemlayout height="55" width="650">
 						<control type="label">
-							<left>35</left>
+							<left>30</left>
 							<height>55</height>
-							<right>90</right>
+							<right>50</right>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 						<control type="label">
-							<left>40</left>
+							<left>30</left>
 							<height>55</height>
-							<right>40</right>
+							<right>50</right>
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label2]</label>
@@ -170,7 +174,7 @@
 				<height>400</height>
 				<onleft>5000</onleft>
 				<onright>5000</onright>
-				<onup>140</onup>
+				<onup>50</onup>
 				<include>OpenClose_Left</include>
 				<ondown condition="!isGreaterThan(Container(5000).Position,4)">SetFocus(50,$INFO[Container(5000).Position])</ondown>
 				<ondown condition="isGreaterThan(Container(5000).Position,4)">SetFocus(50,4)</ondown>
