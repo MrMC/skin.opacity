@@ -10,29 +10,6 @@
 			<control type="group" id="10000">
 				<left>520</left>
 				<include>OpenClose_Right</include>
-				<control type="grouplist" id="700">
-					<top>90</top>
-					<left>0</left>
-					<right>50</right>
-					<bottom>90</bottom>
-					<onleft>9000</onleft>
-					<onright>60</onright>
-					<onup>600</onup>
-					<ondown>600</ondown>
-					<visible>Container(9000).HasFocus(1)</visible>
-					<control type="radiobutton" id="702">
-						<label>$LOCALIZE[20189]</label>
-						<include>DefaultSettingButton</include>
-						<onclick>Skin.ToggleSetting(autoscroll)</onclick>
-						<selected>Skin.HasSetting(autoscroll)</selected>
-					</control>
-					<control type="radiobutton" id="705">
-						<label>$LOCALIZE[31160]</label>
-						<include>DefaultSettingButton</include>
-						<onclick>Skin.ToggleSetting(hide_mediaflags)</onclick>
-						<selected>!Skin.HasSetting(hide_mediaflags)</selected>
-					</control>
-				</control>
 				<control type="grouplist" id="600">
 					<top>90</top>
 					<left>0</left>
@@ -161,10 +138,6 @@
 						</control>
 					</focusedlayout>
 					<content>
-						<item id="1">
-							<label>$LOCALIZE[128]</label>
-							<onclick>noop</onclick>
-						</item>
 						<item id="2">
 							<label>$LOCALIZE[31061]</label>
 							<onclick>noop</onclick>

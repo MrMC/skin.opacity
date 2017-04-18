@@ -282,29 +282,12 @@
 							<include content="VideoInfoButtonsCommon">
 								<param name="icon" value="" />
 							</include>
-							<label>$LOCALIZE[31033]</label>
+							<label>$LOCALIZE[31033]: $INFO[ListItem.UserRating]</label>
 							<onup>130</onup>
 							<onleft>12</onleft>
 							<onright>120</onright>
 							<onup condition="isGreaterThan(Container(5000).CurrentItem,3)">210</onup>
 							<onup condition="!isGreaterThan(Container(5000).CurrentItem,3)">138</onup>
-						</control>
-						<control type="label">
-							<label>$INFO[ListItem.UserRating]</label>
-							<font>font45_title</font>
-							<left>0</left>
-							<top>24</top>
-							<width>262</width>
-							<align>center</align>
-						</control>
-						<control type="image">
-							<texture>icons/infodialogs/rating.png</texture>
-							<left>107</left>
-							<top>30</top>
-							<width>48</width>
-							<height>48</height>
-							<align>center</align>
-							<visible>IsEmpty(ListItem.UserRating)</visible>
 						</control>
 					</control>
 					<include content="InfoDialogButton">
