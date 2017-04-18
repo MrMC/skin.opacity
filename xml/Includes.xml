@@ -1006,7 +1006,7 @@
 							<param name="sortby" value="year" />
 							<param name="sortorder" value="descending" />
 							<param name="item_label" value="$INFO[ListItem.Year,[COLOR primary_color],[/COLOR]  -  ]$INFO[ListItem.Label]" />
-							<param name="visible" value="Stringcompare(ListItem.DBType,artist)" />
+							<param name="visible" value="Container.Content(artists)" />
 						</include>
 						<include content="InfoList">
 							<param name="list_id" value="43000" />
@@ -1015,7 +1015,7 @@
 							<param name="sortby" value="track" />
 							<param name="sortorder" value="ascending" />
 							<param name="item_label" value="$INFO[ListItem.Duration,[COLOR primary_color],[/COLOR]  -  ]$INFO[ListItem.Label]" />
-							<param name="visible" value="Stringcompare(ListItem.DBType,album)" />
+							<param name="visible" value="Container.Content(albums)" />
 						</include>
 					</control>
 				</control>

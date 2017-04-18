@@ -61,7 +61,7 @@
 					<include content="InfoDialogMetadata">
 						<param name="control_id" value="150" />
 						<param name="label" value="[COLOR grey]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre]" />
-						<param name="visible" value="!IsEmpty(ListItem.Genre) + Stringcompare(ListItem.DBType,movie)" />
+						<param name="visible" value="!IsEmpty(ListItem.Genre) + Container.Content(movies)" />
 					</include>
 					<include content="InfoDialogMetadata">
 						<param name="control_id" value="152" />
@@ -81,7 +81,7 @@
 					<include content="InfoDialogMetadata">
 						<param name="control_id" value="155" />
 						<param name="label" value="[COLOR grey]$LOCALIZE[31048]: [/COLOR]$INFO[ListItem.Season,, $LOCALIZE[36905]]$INFO[ListItem.Episode, (, $LOCALIZE[20453])]" />
-						<param name="visible" value="!IsEmpty(ListItem.Season) + !Stringcompare(ListItem.DBType,episode)" />
+						<param name="visible" value="!IsEmpty(ListItem.Season) + !Container.Content(episodes)" />
 					</include>
 					<include content="InfoDialogMetadata">
 						<param name="control_id" value="156" />
