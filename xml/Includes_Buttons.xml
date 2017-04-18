@@ -19,13 +19,14 @@
 		<radioposy>0</radioposy>
 	</include>
 	<include name="InfoDialogMetadata">
-		<control type="button" id="$PARAM[control_id]">
-			<width>600</width>
+		<control type="label" id="$PARAM[control_id]">
+			<width>640</width>
 			<height>55</height>
 			<textoffsetx>40</textoffsetx>
 			<aligny>center</aligny>
 			<font>font13</font>
 			<texturefocus />
+			<scroll>true</scroll>
 			<texturenofocus />
 			<onclick>noop</onclick>
 			<label>$PARAM[label]</label>
