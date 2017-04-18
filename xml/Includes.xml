@@ -457,17 +457,17 @@
 		<param name="id">33333</param>
 		<param name="posy">16</param>
 		<definition>
-				<control type="label">
-					<width>100%</width>
-					<include>OpenClose_Fade</include>
-					<label>$PARAM[main_label]</label>
-					<font>font52_title</font>
-					<shadowcolor>text_shadow</shadowcolor>
-					<height>80</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<scroll>true</scroll>
-				</control>
+			<control type="label">
+				<width>100%</width>
+				<include>OpenClose_Fade</include>
+				<label>$PARAM[main_label]</label>
+				<font>font52_title</font>
+				<shadowcolor>text_shadow</shadowcolor>
+				<height>80</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<scroll>true</scroll>
+			</control>
 		</definition>
 	</include>
 	<include name="LeftRightArrows">
@@ -528,8 +528,8 @@
 			<top>-2000</top>
 			<width>6000</width>
 			<height>6000</height>
-		<texture colordiffuse="AAFFFFFF">colors/black.png</texture>
-		<visible>Window.IsActive(fullscreenvideo)</visible>
+			<texture colordiffuse="AAFFFFFF">colors/black.png</texture>
+			<visible>Window.IsActive(fullscreenvideo)</visible>
 		</control>
 		<control type="button">
 			<left>-2000</left>
@@ -579,13 +579,13 @@
 				<depth>DepthBars</depth>
 				<animation effect="fade" start="0" end="100" time="300" condition="[Window.Previous(fullscreenvideo) | Window.Previous(startup)]">WindowOpen</animation>
 				<!-- 				<control type="image">
-													<left>0</left>
-													<top>0</top>
-													<width>110%</width>
-													<height>60</height>
-													<texture>frame/InfoBar.png</texture>
-													<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
-												</control> -->
+																	<left>0</left>
+																	<top>0</top>
+																	<width>110%</width>
+																	<height>60</height>
+																	<texture>frame/InfoBar.png</texture>
+																	<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
+																</control> -->
 				<control type="grouplist">
 					<left>35</left>
 					<description>Left side of top bar</description>
@@ -715,32 +715,16 @@
 					<animation effect="fade" start="0" end="100" time="300" condition="Window.Previous(fullscreenvideo) | Window.Previous(startup)">WindowOpen</animation>
 					<include>ColoredBackgroundImages</include>
 				</control>
-				<control type="group" id="31111">
+				<control type="image" id="31111">
 					<visible>![Player.HasVideo | [Player.HasAudio + Visualisation.Enabled + !IsEmpty(Visualisation.Name)]]</visible>
 					<depth>DepthBackground</depth>
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 					<animation effect="fade" time="400">VisibleChange</animation>
-					<control type="image" id="32111">
-						<include>FullScreenDimensions</include>
-						<aspectratio>scale</aspectratio>
-						<fadetime>400</fadetime>
-						<animation effect="fade" time="400">VisibleChange</animation>
-						<texture background="true" colordiffuse="37FFFFFF">$VAR[MediaFanartVar]</texture>
-						<visible>!Control.IsVisible(502) | System.HasModalDialog</visible>
-					</control>
-					<control type="image">
-						<left>-3</left>
-						<top>0</top>
-						<right>1193</right>
-						<height>100%</height>
-						<aspectratio aligny="center">scale</aspectratio>
-						<fadetime>400</fadetime>
-						<include>OpenClose_Left</include>
-						<animation effect="fade" time="400">VisibleChange</animation>
-						<texture background="true" colordiffuse="37FFFFFF">$VAR[PosterVar]</texture>
-						<visible>!Control.IsVisible(32111)</visible>
-					</control>
+					<include>FullScreenDimensions</include>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<texture background="true" colordiffuse="37FFFFFF">$VAR[MediaFanartVar]</texture>
 				</control>
 			</control>
 		</definition>
