@@ -25,9 +25,9 @@
 				<top>-30</top>
 				<control type="textbox">
 					<left>40</left>
-					<top>540</top>
+					<top>570</top>
 					<width>1130</width>
-					<height>363</height>
+					<height>333</height>
 					<label fallback="19055">$INFO[ListItem.Tagline,[B],[/B][CR]]$INFO[ListItem.Plot]</label>
 					<autoscroll delay="10000" time="5000" repeat="10000">true</autoscroll>
 				</control>
@@ -35,8 +35,8 @@
 					<orientation>vertical</orientation>
 					<left>0</left>
 					<top>140</top>
-					<height>355</height>
-					<itemgap>-8</itemgap>
+					<height>380</height>
+					<itemgap>-7</itemgap>
 					<ondown>5000</ondown>
 					<onup>50</onup>
 					<onright>140</onright>
@@ -109,7 +109,7 @@
 					<top>140</top>
 					<left>630</left>
 					<width>1300</width>
-					<height>350</height>
+					<height>400</height>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<ondown>5000</ondown>
