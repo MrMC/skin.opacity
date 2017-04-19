@@ -95,9 +95,9 @@
 		<value>$INFO[ListItem.Art(poster)]</value>
 	</variable>
 	<variable name="InfoDialogPosterVar">
-		<value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
+		<value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="!IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
-		<value condition="!IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
+		<value condition="!IsEmpty(ListItem.Art(tvshow.thumb))">$INFO[ListItem.Art(tvshow.thumb)]</value>
 	</variable>
 	<variable name="ListPosterVar">
 		<value condition="ListItem.Stringcompare(ListItem.Label,..)">DefaultFolderBackPoster.png</value>
