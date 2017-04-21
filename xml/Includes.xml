@@ -579,13 +579,13 @@
 				<depth>DepthBars</depth>
 				<animation effect="fade" start="0" end="100" time="300" condition="[Window.Previous(fullscreenvideo) | Window.Previous(startup)]">WindowOpen</animation>
 				<!-- 				<control type="image">
-																	<left>0</left>
-																	<top>0</top>
-																	<width>110%</width>
-																	<height>60</height>
-																	<texture>frame/InfoBar.png</texture>
-																	<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
-																</control> -->
+																					<left>0</left>
+																					<top>0</top>
+																					<width>110%</width>
+																					<height>60</height>
+																					<texture>frame/InfoBar.png</texture>
+																					<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
+																				</control> -->
 				<control type="grouplist">
 					<left>35</left>
 					<description>Left side of top bar</description>
@@ -957,6 +957,16 @@
 						<info>ListItem.PercentPlayed</info>
 						<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 					</control>
+				</control>
+				<control type="button" id="4000">
+					<left>30</left>
+					<top>240</top>
+					<width>530</width>
+					<height>370</height>
+					<texturefocus></texturefocus>
+					<texturenofocus></texturenofocus>
+					<onclick>SetFocus(50)</onclick>
+					<onclick>Info</onclick>
 				</control>
 				<control type="textbox" id="15500">
 					<left>30</left>
