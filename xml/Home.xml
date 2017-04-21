@@ -260,9 +260,9 @@
 								</control>
 								<control type="textbox">
 									<left>8</left>
-									<top>270</top>
+									<top>280</top>
 									<width>200</width>
-									<height>140</height>
+									<height>84</height>
 									<label>$INFO[ListItem.Label]</label>
 									<font>font12</font>
 									<shadowcolor>text_shadow</shadowcolor>
@@ -292,9 +292,9 @@
 								</control>
 								<control type="textbox">
 									<left>8</left>
-									<top>270</top>
+									<top>280</top>
 									<width>200</width>
-									<height>140</height>
+									<height>84</height>
 									<label>$INFO[ListItem.Label]</label>
 									<font>font12</font>
 									<shadowcolor>text_shadow</shadowcolor>
@@ -343,9 +343,9 @@
 								</control>
 								<control type="textbox">
 									<left>20</left>
-									<top>310</top>
+									<top>280</top>
 									<width>200</width>
-									<height>140</height>
+									<height>84</height>
 									<label>$INFO[ListItem.Label]</label>
 									<font>font12</font>
 									<shadowcolor>text_shadow</shadowcolor>
@@ -375,9 +375,9 @@
 								</control>
 								<control type="textbox">
 									<left>20</left>
-									<top>310</top>
+									<top>280</top>
 									<width>200</width>
-									<height>140</height>
+									<height>84</height>
 									<label>$INFO[ListItem.Label]</label>
 									<font>font12</font>
 									<shadowcolor>text_shadow</shadowcolor>
@@ -432,9 +432,9 @@
 								</control>
 								<control type="textbox">
 									<left>8</left>
-									<top>270</top>
+									<top>280</top>
 									<width>200</width>
-									<height>140</height>
+									<height>84</height>
 									<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Property(SeasonEpisode)]</label>
 									<font>font12</font>
 									<shadowcolor>text_shadow</shadowcolor>
@@ -464,9 +464,9 @@
 								</control>
 								<control type="textbox">
 									<left>8</left>
-									<top>270</top>
+									<top>280</top>
 									<width>200</width>
-									<height>140</height>
+									<height>84</height>
 									<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Property(SeasonEpisode)]</label>
 									<font>font12</font>
 									<shadowcolor>text_shadow</shadowcolor>
@@ -515,9 +515,9 @@
 								</control>
 								<control type="textbox">
 									<left>20</left>
-									<top>310</top>
+									<top>330</top>
 									<width>200</width>
-									<height>140</height>
+									<height>100</height>
 									<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Property(SeasonEpisode)]</label>
 									<font>font12</font>
 									<shadowcolor>text_shadow</shadowcolor>
@@ -547,9 +547,9 @@
 								</control>
 								<control type="textbox">
 									<left>20</left>
-									<top>310</top>
+									<top>330</top>
 									<width>200</width>
-									<height>140</height>
+									<height>100</height>
 									<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Property(SeasonEpisode)]</label>
 									<font>font12</font>
 									<shadowcolor>text_shadow</shadowcolor>
@@ -605,9 +605,9 @@
 								</control>
 								<control type="textbox">
 									<left>8</left>
-									<top>270</top>
+									<top>230</top>
 									<width>306</width>
-									<height>140</height>
+									<height>100</height>
 									<label>$INFO[ListItem.Album]</label>
 									<font>font12</font>
 									<shadowcolor>text_shadow</shadowcolor>
@@ -638,9 +638,9 @@
 								</control>
 								<control type="textbox">
 									<left>8</left>
-									<top>270</top>
+									<top>230</top>
 									<width>306</width>
-									<height>140</height>
+									<height>100</height>
 									<label>$INFO[ListItem.Album]</label>
 									<font>font12</font>
 									<shadowcolor>text_shadow</shadowcolor>
