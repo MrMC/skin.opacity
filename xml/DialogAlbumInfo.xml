@@ -9,7 +9,7 @@
 			<height>1080</height>
 			<centerleft>50%</centerleft>
 			<width>1920</width>
-			<visible>Window.IsTopMost(DialogAlbumInfo.xml)</visible>
+			<visible>Window.IsTopMostModal(DialogAlbumInfo.xml)</visible>
 			<include>Visible_Fade</include>
 			<control type="group">
 				<include>OpenClose_Left</include>
