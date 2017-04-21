@@ -55,6 +55,7 @@
 						<right>100</right>
 						<aligny>center</aligny>
 						<scroll>true</scroll>
+						<font>font14</font>
 						<label>$INFO[ListItem.Label]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
@@ -65,6 +66,7 @@
 						<right>40</right>
 						<align>right</align>
 						<aligny>center</aligny>
+						<font>font14</font>
 						<label>$VAR[ListLabel2Var]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
@@ -97,6 +99,7 @@
 						<right>100</right>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
+						<font>font14</font>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
 					<control type="label">
@@ -106,6 +109,7 @@
 						<right>40</right>
 						<align>right</align>
 						<aligny>center</aligny>
+						<font>font14</font>
 						<label>$VAR[ListLabel2Var]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
@@ -152,6 +156,7 @@
 				<right>90</right>
 				<aligny>center</aligny>
 				<scroll>true</scroll>
+				<font>font14</font>
 				<label>$INFO[ListItem.Label]</label>
 				<shadowcolor>text_shadow</shadowcolor>
 			</control>
@@ -161,6 +166,7 @@
 				<right>40</right>
 				<align>right</align>
 				<aligny>center</aligny>
+				<font>font14</font>
 				<label>$INFO[ListItem.Label2]</label>
 				<shadowcolor>text_shadow</shadowcolor>
 			</control>
@@ -171,6 +177,7 @@
 				<height>80</height>
 				<right>90</right>
 				<aligny>center</aligny>
+				<font>font14</font>
 				<label>$INFO[ListItem.Label]</label>
 				<shadowcolor>text_shadow</shadowcolor>
 			</control>
@@ -180,6 +187,7 @@
 				<right>40</right>
 				<align>right</align>
 				<aligny>center</aligny>
+				<font>font14</font>
 				<label>$INFO[ListItem.Label2]</label>
 				<textcolor>grey</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
@@ -208,6 +216,7 @@
 				<right>100</right>
 				<aligny>center</aligny>
 				<scroll>true</scroll>
+				<font>font14</font>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 			<control type="label">
@@ -216,7 +225,7 @@
 				<right>40</right>
 				<align>right</align>
 				<aligny>center</aligny>
-				<font>font27</font>
+				<font>font14</font>
 				<label>$VAR[AddonsLabel2Var]</label>
 			</control>
 		</focusedlayout>
@@ -234,6 +243,7 @@
 				<right>100</right>
 				<aligny>center</aligny>
 				<scroll>true</scroll>
+				<font>font14</font>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 			<control type="label">
@@ -242,7 +252,7 @@
 				<right>40</right>
 				<align>right</align>
 				<aligny>center</aligny>
-				<font>font27</font>
+				<font>font14</font>
 				<label>$VAR[AddonsLabel2Var]</label>
 				<textcolor>grey</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
