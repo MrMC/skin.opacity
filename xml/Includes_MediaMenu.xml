@@ -245,6 +245,7 @@
 			<texturefocus flipx="true" colordiffuse="primary_color">overlays/arrowright.png</texturefocus>
 			<texturenofocus flipx="true" colordiffuse="primary_color">overlays/arrowright.png</texturenofocus>
 			<onclick>SetFocus(9000)</onclick>
+			<visible>!Window.IsActive(MyPVRGuide.xml)</visible>
 			<animation effect="zoom" start="0,100" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 			<animation effect="zoom" start="100,100" end="0,100" center="auto" time="200">WindowClose</animation>
 		</control>
