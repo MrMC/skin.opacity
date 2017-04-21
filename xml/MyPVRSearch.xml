@@ -131,7 +131,7 @@
 						<param name="flipx" value="true" />
 					</include>
 					<control type="scrollbar" id="77">
-						<left>-60</left>
+						<left>-66</left>
 						<top>86</top>
 						<width>18</width>
 						<bottom>86</bottom>
