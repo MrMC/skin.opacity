@@ -27,7 +27,7 @@
 					<left>40</left>
 					<top>570</top>
 					<width>1130</width>
-					<height>333</height>
+					<bottom>215</bottom>
 					<label fallback="19055">$INFO[ListItem.Tagline,[B],[/B][CR]]$INFO[ListItem.Plot]</label>
 					<autoscroll delay="10000" time="5000" repeat="10000">true</autoscroll>
 				</control>
@@ -169,9 +169,9 @@
 			</control>
 			<control type="grouplist" id="5000">
 				<left>0</left>
-				<top>890</top>
+				<bottom>100</bottom>
 				<right>0</right>
-				<height>400</height>
+				<height>100</height>
 				<onleft>5000</onleft>
 				<onright>5000</onright>
 				<onup>50</onup>
@@ -221,7 +221,7 @@
 			</control>
 			<control type="label">
 				<left>40</left>
-				<top>1030</top>
+				<bottom>10</bottom>
 				<align>left</align>
 				<right>700</right>
 				<height>44</height>
@@ -246,18 +246,6 @@
 				<bottom>0</bottom>
 				<height>70</height>
 				<include>MediaFlags</include>
-			</control>
-			<control type="image">
-				<description>separator image</description>
-				<top>82</top>
-				<height>4</height>
-				<texture colordiffuse="primary_color" border="3">dialogs/separator-grey.png</texture>
-			</control>
-			<control type="image">
-				<description>separator image</description>
-				<bottom>82</bottom>
-				<height>4</height>
-				<texture colordiffuse="primary_color" border="3">dialogs/separator-grey.png</texture>
 			</control>
 		</control>
 	</controls>

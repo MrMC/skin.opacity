@@ -459,6 +459,7 @@
 		<definition>
 			<control type="label">
 				<width>100%</width>
+				<top>20</top>
 				<include>OpenClose_Fade</include>
 				<label>$PARAM[main_label]</label>
 				<font>font52_title</font>
