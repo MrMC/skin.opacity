@@ -23,7 +23,7 @@
 	<constant name="dialogbuttons_itemgap">-20</constant>
 	<constant name="list_top_offset">102</constant>
 	<constant name="list_bottom_offset">102</constant>
-	<constant name="list_item_height">100</constant>
+	<constant name="list_item_height">108</constant>
 	<include name="HiddenObject">
 		<left>-3000</left>
 		<top>-3000</top>
