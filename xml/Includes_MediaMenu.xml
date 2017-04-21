@@ -232,11 +232,22 @@
 	</include>
 	<include name="MediaMenuCommon">
 		<include>OpenClose_Left</include>
-			<animation type="Conditional" condition="ControlGroup(9000).HasFocus | Control.HasFocus(6130)" reversible="true">
-				<effect type="slide" start="0" end="520" time="400" tween="sine" easing="inout" />
-			</animation>
+		<animation type="Conditional" condition="ControlGroup(9000).HasFocus | Control.HasFocus(6130)" reversible="true">
+			<effect type="slide" start="0" end="520" time="400" tween="sine" easing="inout" />
+		</animation>
 		<depth>DepthSideBlade</depth>
 		<left>-520</left>
+		<control type="button">
+			<left>540</left>
+			<centertop>50%</centertop>
+			<width>28</width>
+			<height>28</height>
+			<texturefocus flipx="true" colordiffuse="primary_color">overlays/arrowright.png</texturefocus>
+			<texturenofocus flipx="true" colordiffuse="primary_color">overlays/arrowright.png</texturenofocus>
+			<onclick>SetFocus(9000)</onclick>
+			<animation effect="zoom" start="0,100" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
+			<animation effect="zoom" start="100,100" end="0,100" center="auto" time="200">WindowClose</animation>
+		</control>
 		<control type="image">
 			<left>0</left>
 			<top>86</top>
