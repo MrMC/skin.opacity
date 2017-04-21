@@ -29,16 +29,6 @@
 						<texture colordiffuse="primary_color" border="5">buttons/focus.png</texture>
 						<visible>Control.HasFocus(50)</visible>
 					</control>
-					<control type="label">
-						<left>18</left>
-						<top>0</top>
-						<bottom>0</bottom>
-						<width>80</width>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Year]</label>
-						<shadowcolor>text_shadow</shadowcolor>
-						<visible>!Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(movies)</visible>
-					</control>
 					<control type="image">
 						<left>35</left>
 						<centertop>50%</centertop>
@@ -46,7 +36,6 @@
 						<height>32</height>
 						<texture>$VAR[ListWatchedIconVar]</texture>
 						<visible>!StringCompare(ListItem.Label,..)</visible>
-						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies) | IsEmpty(ListItem.Year)</visible>
 					</control>
 					<control type="label">
 						<left>105</left>
@@ -72,17 +61,6 @@
 					</control>
 				</focusedlayout>
 				<itemlayout height="list_item_height" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(actors) | Container.Content(directors) | Container.Content(files) | Container.Content(mixed) | Container.Content(videos) | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)">
-					<control type="label">
-						<left>18</left>
-						<top>0</top>
-						<bottom>0</bottom>
-						<width>80</width>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Year]</label>
-						<textcolor>grey</textcolor>
-						<shadowcolor>text_shadow</shadowcolor>
-						<visible>!Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(movies)</visible>
-					</control>
 					<control type="image">
 						<left>35</left>
 						<centertop>50%</centertop>
@@ -90,7 +68,6 @@
 						<height>32</height>
 						<texture colordiffuse="grey">$VAR[ListWatchedIconVar]</texture>
 						<visible>!StringCompare(ListItem.Label,..)</visible>
-						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies) | IsEmpty(ListItem.Year)</visible>
 					</control>
 					<control type="label">
 						<left>105</left>

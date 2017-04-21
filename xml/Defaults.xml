@@ -117,8 +117,8 @@
 	</default>
 	<default type="scrollbar">
 		<texturesliderbackground colordiffuse="29FFFFFF">colors/white.png</texturesliderbackground>
-		<texturesliderbar colordiffuse="FFAAAAAA">colors/white.png</texturesliderbar>
-		<texturesliderbarfocus colordiffuse="primary_color">colors/white.png</texturesliderbarfocus>
+		<texturesliderbar colordiffuse="FFAAAAAA" border="20">lists/scrollbar-focus.png</texturesliderbar>
+		<texturesliderbarfocus colordiffuse="primary_color" border="20">lists/scrollbar-focus.png</texturesliderbarfocus>
 		<textureslidernib></textureslidernib>
 		<textureslidernibfocus></textureslidernibfocus>
 		<showonepage>false</showonepage>
