@@ -958,7 +958,7 @@
 						<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 					</control>
 				</control>
-				<control type="button" id="4000">
+				<control type="button">
 					<left>30</left>
 					<top>240</top>
 					<width>530</width>
