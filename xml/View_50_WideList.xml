@@ -59,7 +59,7 @@
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
 					<control type="label">
-						<left>140</left>
+						<left>50%</left>
 						<top>0</top>
 						<bottom>0</bottom>
 						<right>40</right>
@@ -100,7 +100,7 @@
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
 					<control type="label">
-						<left>140</left>
+						<left>50%</left>
 						<top>0</top>
 						<bottom>0</bottom>
 						<right>40</right>
