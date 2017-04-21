@@ -48,21 +48,27 @@
 								<param name="list_id" value="9101" />
 								<param name="visible" value="Container(9000).HasFocus(1)" />
 							</include>
-							<content target="video">videodb://movies/</content>
+							<content>
+								<include>HomeSubMenuMovies</include>
+							</content>
 						</control>
 						<control type="fixedlist" id="9102">
 							<include content="SubMenuList">
 								<param name="list_id" value="9102" />
 								<param name="visible" value="Container(9000).HasFocus(2)" />
 							</include>
-							<content target="video">videodb://tvshows/</content>
+							<content>
+								<include>HomeSubMenuTVShows</include>
+							</content>
 						</control>
 						<control type="fixedlist" id="9103">
 							<include content="SubMenuList">
 								<param name="list_id" value="9103" />
 								<param name="visible" value="Container(9000).HasFocus(3)" />
 							</include>
-							<content target="music">musicdb://</content>
+							<content>
+								<include>HomeSubMenuMusic</include>
+							</content>
 						</control>
 					</control>
 					<control type="fixedlist" id="9000">
