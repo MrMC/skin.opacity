@@ -81,7 +81,7 @@
 				<control type="scrollbar" id="60">
 					<right>0</right>
 					<top>93</top>
-					<width>12</width>
+					<width>18</width>
 					<bottom>312</bottom>
 					<orientation>vertical</orientation>
 					<texturesliderbackground />

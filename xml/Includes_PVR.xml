@@ -92,7 +92,7 @@
 		<control type="scrollbar" id="$PARAM[scrollbar_id]">
 			<left>495</left>
 			<top>75</top>
-			<width>12</width>
+			<width>18</width>
 			<height>700</height>
 			<onleft>$PARAM[list_id]</onleft>
 			<onright>$PARAM[onright]</onright>

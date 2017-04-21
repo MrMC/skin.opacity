@@ -221,7 +221,7 @@
 				</control>
 				<control type="scrollbar" id="73">
 					<left>925</left>
-					<width>12</width>
+					<width>18</width>
 					<height>600</height>
 					<onleft>120</onleft>
 					<onright>160</onright>

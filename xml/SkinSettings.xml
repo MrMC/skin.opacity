@@ -152,7 +152,7 @@
 			<control type="scrollbar" id="60">
 				<right>0</right>
 				<top>list_top_offset</top>
-				<width>12</width>
+				<width>18</width>
 				<bottom>list_bottom_offset</bottom>
 				<orientation>vertical</orientation>
 				<texturesliderbackground />

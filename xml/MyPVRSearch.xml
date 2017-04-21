@@ -133,7 +133,7 @@
 					<control type="scrollbar" id="77">
 						<left>-60</left>
 						<top>86</top>
-						<width>12</width>
+						<width>18</width>
 						<bottom>86</bottom>
 						<onleft>50</onleft>
 						<onright>50</onright>

@@ -47,7 +47,7 @@
 					<control type="scrollbar" id="60">
 						<left>1840</left>
 						<top>20</top>
-						<width>12</width>
+						<width>18</width>
 						<height>780</height>
 						<orientation>vertical</orientation>
 					</control>

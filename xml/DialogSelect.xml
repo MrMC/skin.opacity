@@ -120,7 +120,7 @@
 			<control type="scrollbar" id="61">
 				<left>910</left>
 				<top>100</top>
-				<width>12</width>
+				<width>18</width>
 				<height>625</height>
 				<onleft condition="Control.IsVisible(3)">3</onleft>
 				<onleft condition="Control.IsVisible(6)">6</onleft>

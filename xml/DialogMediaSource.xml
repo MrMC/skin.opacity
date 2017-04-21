@@ -78,7 +78,7 @@
 		<control type="scrollbar" id="60">
 			<left>870</left>
 			<top>166</top>
-			<width>12</width>
+			<width>18</width>
 			<height>243</height>
 			<onleft>10</onleft>
 			<onright>9000</onright>
