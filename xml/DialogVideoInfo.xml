@@ -116,7 +116,7 @@
 					<onup>5000</onup>
 					<visible>true</visible>
 					<scrolltime>200</scrolltime>
-					<animation effect="slide" start="0,0" end="-630,0" time="500" tween="sine" easing="inout" condition="IntegerGreaterThan(Container(50).NumItems,6) + Control.HasFocus(50)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="-630,0" time="500" tween="sine" easing="inout" condition="IntegerGreaterThan(Container(50).NumItems,7) + Control.HasFocus(50)">Conditional</animation>
 					<orientation>horizontal</orientation>
 					<focusedlayout height="55" width="650">
 						<control type="image">
