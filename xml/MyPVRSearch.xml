@@ -27,13 +27,13 @@
 						<onright>77</onright>
 						<pagecontrol>77</pagecontrol>
 						<scrolltime>200</scrolltime>
-						<itemlayout height="100">
+						<itemlayout height="list_item_height">
 							<control type="label">
 								<visible>IsEmpty(ListItem.Date)</visible>
 								<left>120</left>
 								<top>0</top>
 								<right>30</right>
-								<height>100</height>
+								<bottom>0</bottom>
 								<font>font36_title</font>
 								<aligny>center</aligny>
 								<label>$INFO[ListItem.Label]</label>
@@ -53,7 +53,7 @@
 									<left>120</left>
 									<top>10</top>
 									<right>30</right>
-									<height>100</height>
+									<bottom>0</bottom>
 									<aligny>top</aligny>
 									<label>$INFO[ListItem.ChannelName][COLOR grey]$INFO[ListItem.Label, - ][/COLOR]</label>
 								</control>
@@ -61,19 +61,19 @@
 									<left>120</left>
 									<top>20</top>
 									<width>350</width>
-									<height>100</height>
+									<bottom>0</bottom>
 									<font>font12</font>
 									<aligny>center</aligny>
 									<label>$INFO[ListItem.Date]</label>
 								</control>
 							</control>
 						</itemlayout>
-						<focusedlayout height="100">
+						<focusedlayout height="list_item_height">
 							<control type="image">
 								<left>0</left>
 								<top>0</top>
 								<right>0</right>
-								<height>101</height>
+								<bottom>0</bottom>
 								<texture colordiffuse="primary_color" border="5">buttons/focus.png</texture>
 								<visible>Control.HasFocus(50)</visible>
 							</control>
@@ -82,7 +82,7 @@
 								<left>120</left>
 								<top>0</top>
 								<right>30</right>
-								<height>100</height>
+								<bottom>0</bottom>
 								<font>font36_title</font>
 								<aligny>center</aligny>
 								<label>$INFO[ListItem.Label]</label>
@@ -102,7 +102,7 @@
 									<left>120</left>
 									<top>10</top>
 									<right>30</right>
-									<height>100</height>
+									<bottom>0</bottom>
 									<aligny>top</aligny>
 									<label>$INFO[ListItem.ChannelName]$INFO[ListItem.Label, - ]</label>
 								</control>
@@ -110,7 +110,7 @@
 									<left>120</left>
 									<top>20</top>
 									<width>350</width>
-									<height>100</height>
+									<bottom>0</bottom>
 									<font>font12</font>
 									<aligny>center</aligny>
 									<label>$INFO[ListItem.Date]</label>

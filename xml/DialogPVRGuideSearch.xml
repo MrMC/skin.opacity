@@ -5,20 +5,20 @@
 	<controls>
 		<control type="group">
 			<centertop>50%</centertop>
-			<height>820</height>
+			<height>990</height>
 			<centerleft>50%</centerleft>
 			<width>1780</width>
 			<visible>Window.IsTopMostModal(DialogPVRGuideSearch.xml)</visible>
 			<include>Visible_Fade</include>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="1780" />
-				<param name="height" value="820" />
+				<param name="height" value="990" />
 				<param name="header_label" value="$LOCALIZE[19142]" />
 				<param name="header_id" value="2" />
 			</include>
 			<control type="edit" id="9">
 				<left>10</left>
-				<top>80</top>
+				<top>40</top>
 				<width>1460</width>
 				<height>100</height>
 				<textoffsetx>60</textoffsetx>
@@ -32,7 +32,7 @@
 			<control type="textbox">
 				<description>Search help</description>
 				<left>30</left>
-				<top>160</top>
+				<top>120</top>
 				<width>1440</width>
 				<height>68</height>
 				<font>font12</font>
@@ -41,14 +41,14 @@
 			</control>
 			<control type="image">
 				<left>10</left>
-				<top>210</top>
+				<top>170</top>
 				<width>1460</width>
-				<height>600</height>
+				<height>840</height>
 				<texture border="40">buttons/dialogbutton-nofo.png</texture>
 			</control>
 			<control type="grouplist" id="5000">
 				<left>30</left>
-				<top>230</top>
+				<top>190</top>
 				<onright>6000</onright>
 				<onleft>9000</onleft>
 				<ondown>9</ondown>
@@ -113,7 +113,7 @@
 			</control>
 			<control type="grouplist" id="6000">
 				<left>740</left>
-				<top>230</top>
+				<top>190</top>
 				<onright>9000</onright>
 				<onleft>5000</onleft>
 				<ondown>9</ondown>
@@ -177,7 +177,7 @@
 				</control>
 			</control>
 			<control type="grouplist" id="9000">
-				<top>80</top>
+				<top>40</top>
 				<left>1460</left>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
