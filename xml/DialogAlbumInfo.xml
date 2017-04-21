@@ -18,8 +18,8 @@
 				<control type="image">
 					<left>4</left>
 					<top>4</top>
-					<width>607</width>
-					<height>607</height>
+					<width>567</width>
+					<height>567</height>
 					<aspectratio>scale</aspectratio>
 					<texture>dialogs/dialog-bg-nobo.png</texture>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
@@ -29,8 +29,8 @@
 					<depth>DepthContentPopout</depth>
 					<left>24</left>
 					<top>24</top>
-					<width>567</width>
-					<height>567</height>
+					<width>527</width>
+					<height>527</height>
 					<aspectratio aligny="top">scale</aspectratio>
 					<fadetime>300</fadetime>
 					<texture background="true" fallback="DefaultAudio.png">$INFO[ListItem.Art(thumb)]</texture>
@@ -118,7 +118,7 @@
 							<right>50</right>
 							<aligny>center</aligny>
 							<scroll>true</scroll>
-							<label>$INFO[ListItem.Label]</label>
+							<label>$INFO[ListItem.TrackNumber,[COLOR grey],:[/COLOR]  ]$INFO[ListItem.Label]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 						<control type="label">
@@ -137,7 +137,7 @@
 							<height>55</height>
 							<right>50</right>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
+							<label>$INFO[ListItem.TrackNumber,[COLOR grey],:[/COLOR]  ]$INFO[ListItem.Label]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 						<control type="label">
@@ -214,68 +214,123 @@
 				</include>
 			</control>
 		</control>
-
-
-				<control type="grouplist" id="4000">
-					<orientation>vertical</orientation>
-					<left>670</left>
-					<top>140</top>
-					<height>380</height>
-					<itemgap>-7</itemgap>
-					<ondown>5000</ondown>
-					<onup>50</onup>
-					<onright>140</onright>
-					<onleft>140</onleft>
-					<visible>![IntegerGreaterThan(Container(50).NumItems,6) + Control.HasFocus(50)]</visible>
-					<include>Visible_Fade</include>
-					<include content="InfoDialogMetadata">
-						<param name="control_id" value="147" />
-						<param name="label" value="$INFO[ListItem.Artist,[COLOR grey]$LOCALIZE[557]: [/COLOR]]" />
-						<param name="visible" value="!IsEmpty(ListItem.Artist)" />
-					</include>
-					<include content="InfoDialogMetadata">
-						<param name="control_id" value="148" />
-						<param name="label" value="$INFO[ListItem.Genre,[COLOR grey]$LOCALIZE[515]: [/COLOR]]" />
-						<param name="visible" value="!IsEmpty(ListItem.Genre)" />
-					</include>
-					<include content="InfoDialogMetadata">
-						<param name="control_id" value="149" />
-						<param name="label" value="[COLOR grey]$LOCALIZE[563]: [/COLOR]$INFO[ListItem.Rating]" />
-						<param name="visible" value="!IsEmpty(ListItem.Rating)" />
-					</include>
-					<include content="InfoDialogMetadata">
-						<param name="control_id" value="150" />
-						<param name="label" value="[COLOR grey]$LOCALIZE[175]: [/COLOR]$INFO[ListItem.Property(Album_Mood)]" />
-						<param name="visible" value="!IsEmpty(ListItem.Property(Album_Mood))" />
-					</include>
-					<include content="InfoDialogMetadata">
-						<param name="control_id" value="152" />
-						<param name="label" value="[COLOR grey]$LOCALIZE[176]: [/COLOR]$INFO[ListItem.Property(Album_Style)]" />
-						<param name="visible" value="!IsEmpty(ListItem.Property(Album_Style))" />
-					</include>
-					<include content="InfoDialogMetadata">
-						<param name="control_id" value="153" />
-						<param name="label" value="[COLOR grey]$LOCALIZE[21895]: [/COLOR]$INFO[ListItem.Property(Album_Theme)]" />
-						<param name="visible" value="!IsEmpty(ListItem.Property(Album_Theme))" />
-					</include>
-					<include content="InfoDialogMetadata">
-						<param name="control_id" value="154" />
-						<param name="label" value="[COLOR grey]$LOCALIZE[146]: [/COLOR]$INFO[ListItem.Property(Album_Type)]" />
-						<param name="visible" value="!IsEmpty(ListItem.Property(Album_Type))" />
-					</include>
-					<include content="InfoDialogMetadata">
-						<param name="control_id" value="155" />
-						<param name="label" value="[COLOR grey]$LOCALIZE[21899]: [/COLOR]$INFO[ListItem.Property(Album_Label)]" />
-						<param name="visible" value="!IsEmpty(ListItem.Property(Album_Label))" />
-					</include>
-					<include content="InfoDialogMetadata">
-						<param name="control_id" value="156" />
-						<param name="label" value="[COLOR grey]$LOCALIZE[562]: [/COLOR]$INFO[ListItem.Year]" />
-						<param name="visible" value="!IsEmpty(ListItem.Year)" />
-					</include>
-				</control>
-
-
-
+		<control type="grouplist" id="4000">
+			<orientation>vertical</orientation>
+			<left>600</left>
+			<top>140</top>
+			<height>380</height>
+			<itemgap>-7</itemgap>
+			<ondown>5000</ondown>
+			<onup>50</onup>
+			<onright>140</onright>
+			<onleft>140</onleft>
+			<visible>![IntegerGreaterThan(Container(50).NumItems,7) + Control.HasFocus(50)]</visible>
+			<visible>Container.Content(albums)</visible>
+			<include>Visible_Fade</include>
+			<include content="InfoDialogMetadata">
+				<param name="control_id" value="147" />
+				<param name="label" value="$INFO[ListItem.Artist,[COLOR grey]$LOCALIZE[557]: [/COLOR]]" />
+				<param name="visible" value="!IsEmpty(ListItem.Artist)" />
+			</include>
+			<include content="InfoDialogMetadata">
+				<param name="control_id" value="148" />
+				<param name="label" value="$INFO[ListItem.Genre,[COLOR grey]$LOCALIZE[515]: [/COLOR]]" />
+				<param name="visible" value="!IsEmpty(ListItem.Genre)" />
+			</include>
+			<include content="InfoDialogMetadata">
+				<param name="control_id" value="149" />
+				<param name="label" value="[COLOR grey]$LOCALIZE[563]: [/COLOR]$INFO[ListItem.Rating]" />
+				<param name="visible" value="!IsEmpty(ListItem.Rating)" />
+			</include>
+			<include content="InfoDialogMetadata">
+				<param name="control_id" value="150" />
+				<param name="label" value="[COLOR grey]$LOCALIZE[175]: [/COLOR]$INFO[ListItem.Property(Album_Mood)]" />
+				<param name="visible" value="!IsEmpty(ListItem.Property(Album_Mood))" />
+			</include>
+			<include content="InfoDialogMetadata">
+				<param name="control_id" value="152" />
+				<param name="label" value="[COLOR grey]$LOCALIZE[176]: [/COLOR]$INFO[ListItem.Property(Album_Style)]" />
+				<param name="visible" value="!IsEmpty(ListItem.Property(Album_Style))" />
+			</include>
+			<include content="InfoDialogMetadata">
+				<param name="control_id" value="153" />
+				<param name="label" value="[COLOR grey]$LOCALIZE[21895]: [/COLOR]$INFO[ListItem.Property(Album_Theme)]" />
+				<param name="visible" value="!IsEmpty(ListItem.Property(Album_Theme))" />
+			</include>
+			<include content="InfoDialogMetadata">
+				<param name="control_id" value="154" />
+				<param name="label" value="[COLOR grey]$LOCALIZE[146]: [/COLOR]$INFO[ListItem.Property(Album_Type)]" />
+				<param name="visible" value="!IsEmpty(ListItem.Property(Album_Type))" />
+			</include>
+			<include content="InfoDialogMetadata">
+				<param name="control_id" value="155" />
+				<param name="label" value="[COLOR grey]$LOCALIZE[21899]: [/COLOR]$INFO[ListItem.Property(Album_Label)]" />
+				<param name="visible" value="!IsEmpty(ListItem.Property(Album_Label))" />
+			</include>
+			<include content="InfoDialogMetadata">
+				<param name="control_id" value="156" />
+				<param name="label" value="[COLOR grey]$LOCALIZE[562]: [/COLOR]$INFO[ListItem.Year]" />
+				<param name="visible" value="!IsEmpty(ListItem.Year)" />
+			</include>
+		</control>
+		<control type="grouplist" id="4001">
+			<orientation>vertical</orientation>
+			<left>600</left>
+			<top>140</top>
+			<height>380</height>
+			<itemgap>-7</itemgap>
+			<ondown>5000</ondown>
+			<onup>50</onup>
+			<onright>140</onright>
+			<onleft>140</onleft>
+			<visible>![IntegerGreaterThan(Container(50).NumItems,7) + Control.HasFocus(50)]</visible>
+			<visible>Container.Content(artists)</visible>
+			<include>Visible_Fade</include>
+			<include content="InfoDialogMetadata">
+				<param name="control_id" value="4147" />
+				<param name="label" value="$INFO[ListItem.Property(Artist_Born),[COLOR grey]$LOCALIZE[21893]: [/COLOR]]" />
+				<param name="visible" value="!IsEmpty(ListItem.Property(Artist_Born))" />
+			</include>
+			<include content="InfoDialogMetadata">
+				<param name="control_id" value="4148" />
+				<param name="label" value="$INFO[ListItem.Property(Artist_Formed),[COLOR grey]$LOCALIZE[21894]: [/COLOR]]" />
+				<param name="visible" value="!IsEmpty(ListItem.Property(Artist_Formed))" />
+			</include>
+			<include content="InfoDialogMetadata">
+				<param name="control_id" value="4149" />
+				<param name="label" value="[COLOR grey]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre]" />
+				<param name="visible" value="!IsEmpty(ListItem.Genre)" />
+			</include>
+			<include content="InfoDialogMetadata">
+				<param name="control_id" value="4150" />
+				<param name="label" value="[COLOR grey]$LOCALIZE[175]: [/COLOR]$INFO[ListItem.Property(Artist_Mood)]" />
+				<param name="visible" value="!IsEmpty(ListItem.Property(Artist_Mood))" />
+			</include>
+			<include content="InfoDialogMetadata">
+				<param name="control_id" value="4152" />
+				<param name="label" value="[COLOR grey]$LOCALIZE[176]: [/COLOR]$INFO[ListItem.Property(Artist_Style)]" />
+				<param name="visible" value="!IsEmpty(ListItem.Property(Artist_Style))" />
+			</include>
+			<include content="InfoDialogMetadata">
+				<param name="control_id" value="4153" />
+				<param name="label" value="[COLOR grey]$LOCALIZE[21892]: [/COLOR]$INFO[ListItem.Property(Artist_Instrument)]" />
+				<param name="visible" value="!IsEmpty(ListItem.Property(Artist_Instrument))" />
+			</include>
+			<include content="InfoDialogMetadata">
+				<param name="control_id" value="4154" />
+				<param name="label" value="[COLOR grey]$LOCALIZE[21897]: [/COLOR]$INFO[ListItem.Property(Artist_Died)]" />
+				<param name="visible" value="!IsEmpty(ListItem.Property(Artist_Died))" />
+			</include>
+			<include content="InfoDialogMetadata">
+				<param name="control_id" value="4155" />
+				<param name="label" value="[COLOR grey]$LOCALIZE[21896]: [/COLOR]$INFO[ListItem.Property(Artist_Disbanded)]" />
+				<param name="visible" value="!IsEmpty(ListItem.Property(Artist_Disbanded))" />
+			</include>
+			<include content="InfoDialogMetadata">
+				<param name="control_id" value="4156" />
+				<param name="label" value="[COLOR grey]$LOCALIZE[21898]: [/COLOR]$INFO[ListItem.Property(Artist_YearsActive)]" />
+				<param name="visible" value="!IsEmpty(ListItem.Property(Artist_YearsActive))" />
+			</include>
+		</control>
 	</controls>
 </window>
