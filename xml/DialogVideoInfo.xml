@@ -176,8 +176,8 @@
 				<onright>5000</onright>
 				<onup>50</onup>
 				<include>OpenClose_Left</include>
-				<ondown condition="!isGreaterThan(Container(5000).Position,4)">SetFocus(50,$INFO[Container(5000).Position])</ondown>
-				<ondown condition="isGreaterThan(Container(5000).Position,4)">SetFocus(50,4)</ondown>
+				<ondown condition="!IntegerGreaterThan(Container(5000).Position,4)">SetFocus(50,$INFO[Container(5000).Position])</ondown>
+				<ondown condition="IntegerGreaterThan(Container(5000).Position,4)">SetFocus(50,4)</ondown>
 				<itemgap>-16</itemgap>
 				<align>center</align>
 				<orientation>horizontal</orientation>

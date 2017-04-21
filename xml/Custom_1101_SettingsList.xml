@@ -119,7 +119,7 @@
 						<radioposx>590</radioposx>
 						<label>$LOCALIZE[24022]</label>
 						<onclick>ToggleStereoMode</onclick>
-						<selected>isGreaterThan(System.StereoscopicMode,0)</selected>
+						<selected>IntegerGreaterThan(System.StereoscopicMode,0)</selected>
 					</control>
 					<control type="button" id="13102">
 						<width>700</width>

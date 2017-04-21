@@ -231,7 +231,7 @@
 				<shadowcolor>black</shadowcolor>
 				<align>right</align>
 				<font>font30_title</font>
-				<visible>!isGreaterThan(PVR.backenddiskspaceprogr,100)</visible>
+				<visible>!IntegerGreaterThan(PVR.backenddiskspaceprogr,100)</visible>
 			</control>
 			<control type="group">
 				<include>MediaMenuCommon</include>

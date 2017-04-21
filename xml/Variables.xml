@@ -76,12 +76,12 @@
 	</variable>
 	<variable name="ResolutionFlagVar">
 		<value condition="ListItem.IsStereoscopic">3D</value>
-		<value condition="isGreaterThan(ListItem.VideoResolution,1080)">4K</value>
+		<value condition="IntegerGreaterThan(ListItem.VideoResolution,1080)">4K</value>
 		<value>$INFO[ListItem.VideoResolution]</value>
 	</variable>
 	<variable name="NowPlayingResolutionFlagVar">
 		<value condition="VideoPlayer.IsStereoscopic">3D</value>
-		<value condition="isGreaterThan(VideoPlayer.VideoResolution,1080)">4K</value>
+		<value condition="IntegerGreaterThan(VideoPlayer.VideoResolution,1080)">4K</value>
 		<value>$INFO[VideoPlayer.VideoResolution]</value>
 	</variable>
 	<variable name="PosterVar">
@@ -135,8 +135,8 @@
 	</variable>
 	<variable name="VolumeIconVar">
 		<value condition="Player.Muted">dialogs/volume/mute.png</value>
-		<value condition="isGreaterThan(Player.Volume,66)">dialogs/volume/volume.png</value>
-		<value condition="isGreaterThan(Player.Volume,33)">dialogs/volume/volume2.png</value>
+		<value condition="IntegerGreaterThan(Player.Volume,66)">dialogs/volume/volume.png</value>
+		<value condition="IntegerGreaterThan(Player.Volume,33)">dialogs/volume/volume2.png</value>
 		<value condition="player.passthrough">dialogs/volume/volume.png</value>
 		<value>dialogs/volume/volume1.png</value>
 	</variable>
@@ -194,7 +194,7 @@
 		<value condition="ListItem.IsCollection">overlays/set.png</value>
 		<value condition="ListItem.IsPlaying">overlays/watched/OverlayPlaying-List.png</value>
 		<value condition="ListItem.IsResumable">overlays/watched/resume.png</value>
-		<value condition="isGreaterThan(ListItem.Playcount,0)">$INFO[ListItem.Overlay]</value>
+		<value condition="IntegerGreaterThan(ListItem.Playcount,0)">$INFO[ListItem.Overlay]</value>
 	</variable>
 	<!-- Breadcrumbs -->
 	<variable name="BreadcrumbsVideoVar">

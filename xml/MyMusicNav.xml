@@ -46,7 +46,7 @@
 						<include>MediaMenuItemsCommon</include>
 						<label>$LOCALIZE[31056]</label>
 						<onclick>ActivateWindow(musicplaylist)</onclick>
-						<visible>isGreaterThan(Playlist.Length(music),0)</visible>
+						<visible>IntegerGreaterThan(Playlist.Length(music),0)</visible>
 					</control>
 					<include>MediaMenuNowPlaying</include>
 				</control>

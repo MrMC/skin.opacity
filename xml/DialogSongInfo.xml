@@ -286,8 +286,8 @@
 							<onup>130</onup>
 							<onleft>12</onleft>
 							<onright>120</onright>
-							<onup condition="isGreaterThan(Container(5000).CurrentItem,3)">210</onup>
-							<onup condition="!isGreaterThan(Container(5000).CurrentItem,3)">138</onup>
+							<onup condition="IntegerGreaterThan(Container(5000).CurrentItem,3)">210</onup>
+							<onup condition="!IntegerGreaterThan(Container(5000).CurrentItem,3)">138</onup>
 						</control>
 					</control>
 					<include content="InfoDialogButton">
