@@ -175,12 +175,12 @@
 							<height>262</height>
 							<label>$LOCALIZE[19076] ($INFO[Container(5000).NumItems,[B],[/B] $LOCALIZE[31036]])</label>
 							<font>font37</font>
-							<visible>ListItem.IsFolder + !ListItem.Stringcompare(ListItem.Label,..)</visible>
+							<visible>ListItem.IsFolder + !StringCompare(ListItem.Label,..)</visible>
 						</control>
 						<control type="group">
 							<left>-10</left>
 							<top>60</top>
-							<visible>ListItem.IsFolder + !ListItem.Stringcompare(ListItem.Label,..)</visible>
+							<visible>ListItem.IsFolder + !StringCompare(ListItem.Label,..)</visible>
 							<control type="panel" id="5000">
 								<top>20</top>
 								<width>780</width>

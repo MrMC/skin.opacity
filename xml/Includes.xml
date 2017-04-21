@@ -1002,7 +1002,7 @@
 						<font>font27</font>
 						<textcolor>80FFFFFF</textcolor>
 						<label>$LOCALIZE[19055]</label>
-						<visible>!ListItem.Stringcompare(ListItem.Label,..)</visible>
+						<visible>!StringCompare(ListItem.Label,..)</visible>
 						<visible>!isGreaterThan(Container(42000).NumItems,0) + !isGreaterThan(Container(43000).NumItems,0)</visible>
 						<visible>!Container.Content() | !IsEmpty(ListItem.Plot)</visible>
 					</control>

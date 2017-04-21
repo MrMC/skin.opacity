@@ -72,7 +72,7 @@
 		<value condition="ListItem.Property(Addon.Installed) + !ListItem.Property(Addon.Enabled) + Window.IsActive(addonbrowser)">icons/addonstatus/disable.png</value>
 		<value condition="ListItem.Property(addon.UpdateAvail)">icons/addonstatus/update.png</value>
 		<value condition="ListItem.Property(Addon.Installed)">OverlayWatched.png</value>
-		<value condition="!ListItem.Stringcompare(ListItem.Label,..)">OverlayUnwatched.png</value>
+		<value condition="!StringCompare(ListItem.Label,..)">OverlayUnwatched.png</value>
 	</variable>
 	<variable name="ResolutionFlagVar">
 		<value condition="ListItem.IsStereoscopic">3D</value>
@@ -85,7 +85,7 @@
 		<value>$INFO[VideoPlayer.VideoResolution]</value>
 	</variable>
 	<variable name="PosterVar">
-		<value condition="ListItem.Stringcompare(ListItem.Label,..)">DefaultFolderBackPoster.png</value>
+		<value condition="StringCompare(ListItem.Label,..)">DefaultFolderBackPoster.png</value>
 		<value condition="!IsEmpty(Container.Art(season.poster)) + Container.Content(episodes)">$INFO[Container.Art(season.poster)]</value>
 		<value condition="!IsEmpty(Container.Art(tvshow.poster)) + Container.Content(episodes)">$INFO[Container.Art(tvshow.poster)]</value>
 		<value condition="!IsEmpty(Container.Art(tvshow.poster)) + Container.Content(seasons) + Window.IsActive(movieinformation)">$INFO[Container.Art(tvshow.poster)]</value>
@@ -99,7 +99,7 @@
 		<value condition="!IsEmpty(ListItem.Art(tvshow.thumb))">$INFO[ListItem.Art(tvshow.thumb)]</value>
 	</variable>
 	<variable name="ListPosterVar">
-		<value condition="ListItem.Stringcompare(ListItem.Label,..)">DefaultFolderBackPoster.png</value>
+		<value condition="StringCompare(ListItem.Label,..)">DefaultFolderBackPoster.png</value>
 		<value>$INFO[ListItem.Art(poster)]</value>
 	</variable>
 	<variable name="VideoPlayerForwardRewindVar">
@@ -187,7 +187,7 @@
 		<value condition="ListItem.IsResumable">overlays/watched/resume.png</value>
 		<value condition="ListItem.IsCollection">overlays/set.png</value>
 		<value condition="!IsEmpty(ListItem.Overlay)">$INFO[ListItem.Overlay]</value>
-		<value condition="!ListItem.Stringcompare(ListItem.Label,..)">OverlayUnwatched.png</value>
+		<value condition="!StringCompare(ListItem.Label,..)">OverlayUnwatched.png</value>
 	</variable>
 	<variable name="WallWatchedIconVar">
 		<value condition="ListItem.IsRecording">windows/pvr/record.png</value>
