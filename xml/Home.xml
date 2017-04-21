@@ -70,6 +70,24 @@
 								<include>HomeSubMenuMusic</include>
 							</content>
 						</control>
+						<control type="fixedlist" id="9104">
+							<include content="SubMenuList">
+								<param name="list_id" value="9104" />
+								<param name="visible" value="Container(9000).HasFocus(5)" />
+							</include>
+							<content>
+								<include>HomeSubMenuTV</include>
+							</content>
+						</control>
+						<control type="fixedlist" id="9105">
+							<include content="SubMenuList">
+								<param name="list_id" value="9105" />
+								<param name="visible" value="Container(9000).HasFocus(6)" />
+							</include>
+							<content>
+								<include>HomeSubMenuRadio</include>
+							</content>
+						</control>
 					</control>
 					<control type="fixedlist" id="9000">
 						<top>85</top>
@@ -176,6 +194,7 @@
 								<onclick>ActivateWindow(TVChannels)</onclick>
 								<thumb>icons/sidemenu/livetv.png</thumb>
 								<property name="id">livetv</property>
+								<property name="submenu">true</property>
 								<visible>!Skin.HasSetting(HomeMenuNoTVButton)</visible>
 								<visible>System.GetBool(pvrmanager.enabled)</visible>
 							</item>
@@ -185,6 +204,7 @@
 								<onclick>ActivateWindow(RadioChannels)</onclick>
 								<thumb>icons/sidemenu/radio.png</thumb>
 								<property name="id">radio</property>
+								<property name="submenu">true</property>
 								<visible>!Skin.HasSetting(HomeMenuNoRadioButton)</visible>
 								<visible>System.GetBool(pvrmanager.enabled)</visible>
 							</item>
