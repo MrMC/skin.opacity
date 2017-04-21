@@ -28,7 +28,7 @@
 						<viewtype label="List">list</viewtype>
 						<preloaditems>1</preloaditems>
 						<pagecontrol>60</pagecontrol>
-						<focusedlayout height="90">
+						<focusedlayout height="list_item_height">
 							<control type="image">
 								<left>0</left>
 								<top>0</top>
@@ -41,7 +41,7 @@
 								<right>20</right>
 								<top>10</top>
 								<width>80</width>
-								<height>70</height>
+								<bottom>10</bottom>
 								<aspectratio align="right">keep</aspectratio>
 								<texture>$INFO[listitem.icon]</texture>
 							</control>
@@ -56,9 +56,10 @@
 							</control>
 							<control type="image">
 								<right>110</right>
-								<top>25</top>
+								<top>0</top>
 								<width>40</width>
-								<height>40</height>
+								<aspectratio>keep</aspectratio>
+								<bottom>0</bottom>
 								<texture>$VAR[PVRStatusImageVar]</texture>
 							</control>
 							<control type="label">
@@ -94,12 +95,12 @@
 								<shadowcolor>text_shadow</shadowcolor>
 							</control>
 						</focusedlayout>
-						<itemlayout height="90">
+						<itemlayout height="list_item_height">
 							<control type="image">
 								<right>20</right>
 								<top>10</top>
 								<width>80</width>
-								<height>70</height>
+								<bottom>10</bottom>
 								<aspectratio align="right">keep</aspectratio>
 								<texture>$INFO[listitem.icon]</texture>
 							</control>
@@ -114,9 +115,10 @@
 							</control>
 							<control type="image">
 								<right>110</right>
-								<top>25</top>
+								<top>0</top>
 								<width>40</width>
-								<height>40</height>
+								<aspectratio>keep</aspectratio>
+								<bottom>0</bottom>
 								<texture>$VAR[PVRStatusImageVar]</texture>
 							</control>
 							<control type="label">
