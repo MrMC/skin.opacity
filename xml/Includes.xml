@@ -1003,31 +1003,7 @@
 						<textcolor>80FFFFFF</textcolor>
 						<label>$LOCALIZE[19055]</label>
 						<visible>!StringCompare(ListItem.Label,..)</visible>
-						<visible>!IntegerGreaterThan(Container(42000).NumItems,0) + !IntegerGreaterThan(Container(43000).NumItems,0)</visible>
 						<visible>!Container.Content() | !IsEmpty(ListItem.Plot)</visible>
-					</control>
-					<control type="group">
-						<left>20</left>
-						<top>640</top>
-						<visible>!IsEmpty(ListItem.DBID)</visible>
-						<include content="InfoList">
-							<param name="list_id" value="42000" />
-							<param name="bottom" value="100" />
-							<param name="width" value="540" />
-							<param name="sortby" value="year" />
-							<param name="sortorder" value="descending" />
-							<param name="item_label" value="$INFO[ListItem.Year,[COLOR primary_color],[/COLOR]  -  ]$INFO[ListItem.Label]" />
-							<param name="visible" value="Container.Content(artists)" />
-						</include>
-						<include content="InfoList">
-							<param name="list_id" value="43000" />
-							<param name="bottom" value="100" />
-							<param name="width" value="540" />
-							<param name="sortby" value="track" />
-							<param name="sortorder" value="ascending" />
-							<param name="item_label" value="$INFO[ListItem.Duration,[COLOR primary_color],[/COLOR]  -  ]$INFO[ListItem.Label]" />
-							<param name="visible" value="Container.Content(albums)" />
-						</include>
 					</control>
 				</control>
 			</control>
