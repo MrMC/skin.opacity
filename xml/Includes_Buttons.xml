@@ -25,10 +25,7 @@
 			<textoffsetx>40</textoffsetx>
 			<aligny>center</aligny>
 			<font>font13</font>
-			<texturefocus />
 			<scroll>true</scroll>
-			<texturenofocus />
-			<onclick>noop</onclick>
 			<label>$PARAM[label]</label>
 			<visible>$PARAM[visible]</visible>
 		</control>
@@ -114,7 +111,7 @@
 		<width>120</width>
 		<height>120</height>
 		<textoffsety>27</textoffsety>
-		<texturefocus colordiffuse="primary_color">buttons/roundbutton-fo.png</texturefocus>
+		<texturefocus colordiffuse="primary_color">osd/fullscreen/buttons/button-fo.png</texturefocus>
 		<texturenofocus />
 		<align>center</align>
 		<aligny>top</aligny>
@@ -139,11 +136,11 @@
 		</definition>
 	</include>
 	<include name="IconButton">
-		<param name="height">120</param>
+		<param name="height">100</param>
 		<param name="visible">true</param>
 		<definition>
 			<control type="radiobutton" id="$PARAM[control_id]">
-				<width>120</width>
+				<width>100</width>
 				<height>$PARAM[height]</height>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -151,9 +148,9 @@
 				<onclick>$PARAM[onclick_2]</onclick>
 				<font></font>
 				<label>$PARAM[label]</label>
-				<texturefocus colordiffuse="primary_color">buttons/roundbutton-fo.png</texturefocus>
+				<texturefocus colordiffuse="primary_color">osd/fullscreen/buttons/button-fo.png</texturefocus>
 				<texturenofocus />
-				<radioposx>40</radioposx>
+				<radioposx>30</radioposx>
 				<radioposy>0</radioposy>
 				<radiowidth>40</radiowidth>
 				<radioheight>40</radioheight>
@@ -166,19 +163,19 @@
 		</definition>
 	</include>
 	<include name="BottomMainMenuToggleItem">
-		<param name="height">120</param>
+		<param name="height">100</param>
 		<definition>
 			<control type="radiobutton" id="$PARAM[control_id]">
-				<width>120</width>
+				<width>100</width>
 				<height>$PARAM[height]</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<onclick>$PARAM[onclick]</onclick>
 				<font></font>
 				<label>$PARAM[label]</label>
-				<texturefocus colordiffuse="primary_color">buttons/roundbutton-fo.png</texturefocus>
+				<texturefocus colordiffuse="primary_color">osd/fullscreen/buttons/button-fo.png</texturefocus>
 				<texturenofocus />
-				<radioposx>40</radioposx>
+				<radioposx>30</radioposx>
 				<radioposy>0</radioposy>
 				<radiowidth>40</radiowidth>
 				<radioheight>40</radioheight>

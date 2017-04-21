@@ -270,7 +270,7 @@
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<animation effect="fade" time="300">VisibleChange</animation>
 			<orientation>horizontal</orientation>
-			<itemgap>-17</itemgap>
+			<itemgap>10</itemgap>
 			<left>5</left>
 			<onleft>14100</onleft>
 			<width>450</width>
