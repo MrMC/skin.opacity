@@ -7,6 +7,8 @@
 			<left>13%</left>
 			<centertop>50%</centertop>
 			<height>770</height>
+			<visible>Window.IsTopMostModal(1102)</visible>
+			<include>Visible_Fade</include>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="84%" />
 				<param name="height" value="770" />
