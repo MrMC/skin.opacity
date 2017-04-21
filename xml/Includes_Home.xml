@@ -38,10 +38,10 @@
 		</content>
 	</include>
 	<include name="SubMenuList">
-		<top>85</top>
-		<left>-500</left>
+		<top>95</top>
+		<left>-400</left>
 		<bottom>100</bottom>
-		<width>500</width>
+		<width>400</width>
 		<movement>2</movement>
 		<focusposition>2</focusposition>
 		<ondown>$PARAM[list_id]</ondown>
@@ -51,20 +51,19 @@
 		<onright>9000</onright>
 		<orientation>vertical</orientation>
 		<scrolltime tween="cubic" easing="out">500</scrolltime>
-		<itemlayout height="150">
+		<itemlayout height="100">
 			<control type="group">
 				<control type="label">
 					<left>50</left>
 					<right>40</right>
-					<height>150</height>
-					<font>font45</font>
+					<height>100</height>
 					<label>$INFO[ListItem.Label]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 				</control>
 			</control>
 		</itemlayout>
-		<focusedlayout height="150">
+		<focusedlayout height="100">
 			<control type="group">
 				<left>0</left>
 				<right>0</right>
@@ -73,13 +72,12 @@
 					<right>25</right>
 					<height>100%</height>
 					<visible>Control.HasFocus($PARAM[list_id])</visible>
-					<texture colordiffuse="primary_color" border="50">buttons/dialogbutton-fo.png</texture>
+					<texture colordiffuse="primary_color" border="5">buttons/focus.png</texture>
 				</control>
 				<control type="label">
 					<left>50</left>
 					<right>45</right>
-					<height>150</height>
-					<font>font45</font>
+					<height>100</height>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
 					<align>left</align>
