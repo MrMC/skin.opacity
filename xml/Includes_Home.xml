@@ -42,8 +42,6 @@
 		<left>-400</left>
 		<bottom>100</bottom>
 		<width>400</width>
-		<movement>2</movement>
-		<focusposition>2</focusposition>
 		<ondown>$PARAM[list_id]</ondown>
 		<onup>$PARAM[list_id]</onup>
 		<visible>$PARAM[visible]</visible>

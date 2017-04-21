@@ -43,7 +43,7 @@
 						<param name="width" value="1065" />
 					</include>
 					<control type="group" id="9100">
-						<control type="fixedlist" id="9101">
+						<control type="list" id="9101">
 							<include content="SubMenuList">
 								<param name="list_id" value="9101" />
 								<param name="visible" value="Container(9000).HasFocus(1)" />
@@ -52,7 +52,7 @@
 								<include>HomeSubMenuMovies</include>
 							</content>
 						</control>
-						<control type="fixedlist" id="9102">
+						<control type="list" id="9102">
 							<include content="SubMenuList">
 								<param name="list_id" value="9102" />
 								<param name="visible" value="Container(9000).HasFocus(2)" />
@@ -61,7 +61,7 @@
 								<include>HomeSubMenuTVShows</include>
 							</content>
 						</control>
-						<control type="fixedlist" id="9103">
+						<control type="list" id="9103">
 							<include content="SubMenuList">
 								<param name="list_id" value="9103" />
 								<param name="visible" value="Container(9000).HasFocus(3)" />
@@ -70,7 +70,7 @@
 								<include>HomeSubMenuMusic</include>
 							</content>
 						</control>
-						<control type="fixedlist" id="9104">
+						<control type="list" id="9104">
 							<include content="SubMenuList">
 								<param name="list_id" value="9104" />
 								<param name="visible" value="Container(9000).HasFocus(5)" />
@@ -79,7 +79,7 @@
 								<include>HomeSubMenuTV</include>
 							</content>
 						</control>
-						<control type="fixedlist" id="9105">
+						<control type="list" id="9105">
 							<include content="SubMenuList">
 								<param name="list_id" value="9105" />
 								<param name="visible" value="Container(9000).HasFocus(6)" />
