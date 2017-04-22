@@ -95,18 +95,6 @@
 						<label></label>
 						<visible>Stringcompare(Container(50).NumItems,0)</visible>
 					</control>
-					<control type="button" id="130">
-						<onup>50</onup>
-						<ondown>9000</ondown>
-						<left>586</left>
-						<width>1190</width>
-						<height>320</height>
-						<label></label>
-						<texturenofocus border="21">dialogs/dialog-bg.png</texturenofocus>
-						<onclick>SetProperty(TextViewer_Header,$LOCALIZE[21821],home)</onclick>
-						<onclick>SetProperty(TextViewer_Text,$ESCVAR[MusicInfoTextboxVar],home)</onclick>
-						<onclick>ActivateWindow(1102)</onclick>
-					</control>
 					<control type="group">
 						<animation effect="slide" start="0,0" end="0,-295" time="0" condition="Stringcompare(Container(50).NumItems,0)">Conditional</animation>
 						<visible>[!Stringcompare(Container(50).NumItems,0) + IsEmpty(Control.GetLabel(400))] | [Stringcompare(Container(50).NumItems,0) + !IsEmpty(Control.GetLabel(400))]</visible>
@@ -147,7 +135,7 @@
 					<width>1100</width>
 					<height>240</height>
 					<wrapmultiline>true</wrapmultiline>
-					<label>$VAR[MusicInfoTextboxVar]</label>
+					<label>$INFO[ListItem.Comment,[B]$LOCALIZE[569][/B][CR][COLOR=white],[/COLOR]]</label>
 					<textcolor>primary_color</textcolor>
 				</control>
 				<control type="panel" id="50">
@@ -282,7 +270,7 @@
 							<include content="VideoInfoButtonsCommon">
 								<param name="icon" value="" />
 							</include>
-							<label>$LOCALIZE[31033]: $INFO[ListItem.UserRating]</label>
+							<label>$LOCALIZE[31033]$INFO[ListItem.UserRating,: ]</label>
 							<onup>130</onup>
 							<onleft>12</onleft>
 							<onright>120</onright>
