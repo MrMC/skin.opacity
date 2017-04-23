@@ -182,10 +182,10 @@
 				<wrapmultiline>true</wrapmultiline>
 				<font>font27</font>
 			</control>
-		</control>
-		<control type="group">
-			<include>MediaMenuCommon</include>
-			<include>PVRSideBar</include>
+			<control type="group">
+				<include>MediaMenuCommon</include>
+				<include>PVRSideBar</include>
+			</control>
 		</control>
 		<control type="label" id="29">
 			<font>-</font>
