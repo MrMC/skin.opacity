@@ -38,6 +38,7 @@
 				<ondown>noop</ondown>
 				<onleft>5000</onleft>
 				<onright>699</onright>
+				<align>center</align>
 				<control type="radiobutton" id="600">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/previous.png"/>
@@ -75,20 +76,6 @@
 					<onclick>PlayerControl(Next)</onclick>
 					<visible>MusicPlayer.HasNext</visible>
 				</control>
-			</control>
-			<control type="grouplist" id="202">
-				<right>20</right>
-				<top>30</top>
-				<width>1850</width>
-				<height>135</height>
-				<align>right</align>
-				<itemgap>20</itemgap>
-				<scrolltime tween="sine">200</scrolltime>
-				<orientation>horizontal</orientation>
-				<onup>87</onup>
-				<ondown>noop</ondown>
-				<onleft>605</onleft>
-				<onright>600</onright>
 				<control type="group" id="699">
 					<width>76</width>
 					<height>76</height>
