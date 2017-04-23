@@ -26,6 +26,10 @@
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.ChannelName]</value>
 		<value condition="Player.HasAudio">$INFO[MusicPlayer.Artist]</value>
 	</variable>
+	<variable name="MusicInfoListLabelVar">
+		<value condition="Container.Content(artists)">$INFO[ListItem.Label]</value>
+		<value>$INFO[ListItem.TrackNumber,[COLOR grey],:[/COLOR]  ]$INFO[ListItem.Label]</value>
+	</variable>
 	<variable name="NowPlayingIconVar">
 		<value condition="Player.Paused">icons/now-playing/pause.png</value>
 		<value>icons/now-playing/play.png</value>

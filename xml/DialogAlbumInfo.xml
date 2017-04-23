@@ -118,7 +118,7 @@
 							<right>50</right>
 							<aligny>center</aligny>
 							<scroll>true</scroll>
-							<label>$INFO[ListItem.TrackNumber,[COLOR grey],:[/COLOR]  ]$INFO[ListItem.Label]</label>
+							<label>$VAR[MusicInfoListLabelVar]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 						<control type="label">
@@ -137,7 +137,7 @@
 							<height>55</height>
 							<right>50</right>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.TrackNumber,[COLOR grey],:[/COLOR]  ]$INFO[ListItem.Label]</label>
+							<label>$VAR[MusicInfoListLabelVar]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 						<control type="label">
@@ -224,6 +224,7 @@
 			<onup>50</onup>
 			<onright>140</onright>
 			<onleft>140</onleft>
+			<include>OpenClose_Right</include>
 			<visible>![IntegerGreaterThan(Container(50).NumItems,7) + Control.HasFocus(50)]</visible>
 			<visible>Container.Content(albums)</visible>
 			<include>Visible_Fade</include>
