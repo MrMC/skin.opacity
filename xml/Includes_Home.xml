@@ -110,9 +110,8 @@
 			<visible>Library.HasContent(Video)</visible>
 		</item>
 		<item id="90107">
-			<label>24001</label>
-			<onclick>ActivateWindow(Videos,Addons,return)</onclick>
-			<visible>false</visible>
+			<label>$LOCALIZE[136]</label>
+			<onclick>ActivateWindow(Videos,playlists,return)</onclick>
 		</item>
 	</include>
 	<include name="HomeSubMenuMovies">
@@ -198,9 +197,8 @@
 			<visible>Library.HasContent(Music)</visible>
 		</item>
 		<item id="90117">
-			<label>24001</label>
-			<onclick>ActivateWindow(Music,Addons,return)</onclick>
-			<visible>false</visible>
+			<label>$LOCALIZE[136]</label>
+			<onclick>ActivateWindow(Music,playlists,return)</onclick>
 		</item>
 	</include>
 	<include name="HomeSubMenuSystem">
