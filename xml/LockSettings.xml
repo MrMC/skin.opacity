@@ -8,7 +8,7 @@
 			<centerleft>50%</centerleft>
 			<width>1520</width>
 			<include>Animation_DialogPopupVisible</include>
-			<visible>!Window.IsVisible(sliderdialog)</visible>
+			<visible>Window.IsTopMost(locksettings)</visible>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="1520" />
 				<param name="height" value="870" />
@@ -72,15 +72,11 @@
 				<onright>5</onright>
 				<include content="DefaultDialogButton">
 					<param name="id" value="28" />
-					<param name="label" value="" />
+					<param name="label" value="$LOCALIZE[186]" />
 				</include>
 				<include content="DefaultDialogButton">
 					<param name="id" value="29" />
-					<param name="label" value="" />
-				</include>
-				<include content="DefaultDialogButton">
-					<param name="id" value="30" />
-					<param name="label" value="" />
+					<param name="label" value="$LOCALIZE[222]" />
 				</include>
 			</control>
 		</control>
