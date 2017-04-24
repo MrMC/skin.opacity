@@ -111,7 +111,7 @@
 		<width>120</width>
 		<height>120</height>
 		<textoffsety>27</textoffsety>
-		<texturefocus colordiffuse="primary_color">osd/fullscreen/buttons/button-fo.png</texturefocus>
+		<texturefocus colordiffuse="primary_color">dialogs/squarebutton-fo.png</texturefocus>
 		<texturenofocus />
 		<align>center</align>
 		<aligny>top</aligny>

@@ -171,7 +171,7 @@
 						<description>prev button</description>
 						<width>125</width>
 						<height>125</height>
-						<texturefocus colordiffuse="primary_color">buttons/roundbutton-fo.png</texturefocus>
+						<texturefocus colordiffuse="primary_color">dialogs/squarebutton-fo.png</texturefocus>
 						<texturenofocus />
 						<textureradioonfocus colordiffuse="FFFFFFFF">icons/keyboard/arrowleft.png</textureradioonfocus>
 						<textureradioonnofocus colordiffuse="FFFFFFFF">icons/keyboard/arrowleft.png</textureradioonnofocus>
@@ -194,7 +194,7 @@
 						<description>next button</description>
 						<width>125</width>
 						<height>125</height>
-						<texturefocus colordiffuse="primary_color">buttons/roundbutton-fo.png</texturefocus>
+						<texturefocus colordiffuse="primary_color">dialogs/squarebutton-fo.png</texturefocus>
 						<texturenofocus />
 						<textureradioonfocus colordiffuse="FFFFFFFF">icons/keyboard/arrowright.png</textureradioonfocus>
 						<textureradioonnofocus colordiffuse="FFFFFFFF">icons/keyboard/arrowright.png</textureradioonnofocus>
