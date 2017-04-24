@@ -134,12 +134,12 @@
 					<orientation>vertical</orientation>
 				</control>
 			</control>
+			<include content="TopBar">
+				<param name="breadcrumbs_label" value="$LOCALIZE[31065]" />
+				<param name="sublabel">$INFO[Container.TotalTime,, - ] $INFO[Playlist.Position(video),, / ]$INFO[Playlist.Length(video)]</param>
+			</include>
+			<include>BottomBar</include>
 		</control>
-		<include content="TopBar">
-			<param name="breadcrumbs_label" value="$LOCALIZE[31065]" />
-			<param name="sublabel">$INFO[Container.TotalTime,, - ] $INFO[Playlist.Position(video),, / ]$INFO[Playlist.Length(video)]</param>
-		</include>
-		<include>BottomBar</include>
 		<control type="group">
 			<depth>DepthBars</depth>
 			<bottom>0</bottom>
