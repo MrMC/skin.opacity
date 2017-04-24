@@ -389,7 +389,7 @@
 						<height>120</height>
 						<onup>160</onup>
 						<ondown>100</ondown>
-						<texturefocus colordiffuse="primary_color">buttons/roundbutton-fo.png</texturefocus>
+						<texturefocus colordiffuse="primary_color">dialogs/squarebutton-fo.png</texturefocus>
 						<texturenofocus />
 						<textureradioonfocus colordiffuse="FFFFFFFF">icons/keyboard/letters.png</textureradioonfocus>
 						<textureradioonnofocus colordiffuse="FFFFFFFF">icons/keyboard/letters.png</textureradioonnofocus>
@@ -405,7 +405,7 @@
 						<height>120</height>
 						<onup>161</onup>
 						<ondown>101</ondown>
-						<texturefocus colordiffuse="primary_color">buttons/roundbutton-fo.png</texturefocus>
+						<texturefocus colordiffuse="primary_color">dialogs/squarebutton-fo.png</texturefocus>
 						<texturenofocus />
 						<textureradioonfocus colordiffuse="FFFFFFFF">icons/keyboard/capslock.png</textureradioonfocus>
 						<textureradioonnofocus colordiffuse="primary_color">icons/keyboard/capslock.png</textureradioonnofocus>
@@ -422,7 +422,7 @@
 						<height>120</height>
 						<onup>162</onup>
 						<ondown>102</ondown>
-						<texturefocus colordiffuse="primary_color">buttons/roundbutton-fo.png</texturefocus>
+						<texturefocus colordiffuse="primary_color">dialogs/squarebutton-fo.png</texturefocus>
 						<texturenofocus />
 						<textureradioonfocus colordiffuse="FFFFFFFF">icons/keyboard/shift.png</textureradioonfocus>
 						<textureradioonnofocus colordiffuse="primary_color">icons/keyboard/shift.png</textureradioonnofocus>
@@ -454,7 +454,7 @@
 						<height>120</height>
 						<ondown>107</ondown>
 						<onup>167</onup>
-						<texturefocus colordiffuse="primary_color">buttons/roundbutton-fo.png</texturefocus>
+						<texturefocus colordiffuse="primary_color">dialogs/squarebutton-fo.png</texturefocus>
 						<texturenofocus />
 						<textureradioonfocus colordiffuse="FFFFFFFF">icons/keyboard/arrowleft.png</textureradioonfocus>
 						<textureradioonnofocus colordiffuse="FFFFFFFF">icons/keyboard/arrowleft.png</textureradioonnofocus>
@@ -470,7 +470,7 @@
 						<height>120</height>
 						<ondown>108</ondown>
 						<onup>168</onup>
-						<texturefocus colordiffuse="primary_color">buttons/roundbutton-fo.png</texturefocus>
+						<texturefocus colordiffuse="primary_color">dialogs/squarebutton-fo.png</texturefocus>
 						<texturenofocus />
 						<textureradioonfocus colordiffuse="FFFFFFFF">icons/keyboard/arrowright.png</textureradioonfocus>
 						<textureradioonnofocus colordiffuse="FFFFFFFF">icons/keyboard/arrowright.png</textureradioonnofocus>
@@ -486,7 +486,7 @@
 						<height>120</height>
 						<onup>169</onup>
 						<ondown>109</ondown>
-						<texturefocus colordiffuse="primary_color">buttons/roundbutton-fo.png</texturefocus>
+						<texturefocus colordiffuse="primary_color">dialogs/squarebutton-fo.png</texturefocus>
 						<texturenofocus />
 						<textureradioonfocus colordiffuse="FFFFFFFF">icons/keyboard/backspace.png</textureradioonfocus>
 						<textureradioonnofocus colordiffuse="FFFFFFFF">icons/keyboard/backspace.png</textureradioonnofocus>
