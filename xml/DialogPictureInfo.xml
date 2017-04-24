@@ -74,7 +74,7 @@
 								<aligny>center</aligny>
 								<font>font12</font>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>primary_color</textcolor>
+								<textcolor>grey</textcolor>
 								<shadowcolor>text_shadow</shadowcolor>
 							</control>
 							<control type="label">
@@ -96,7 +96,7 @@
 								<aligny>center</aligny>
 								<label>$INFO[ListItem.Label]</label>
 								<font>font12</font>
-								<textcolor>primary_color</textcolor>
+								<textcolor>grey</textcolor>
 								<shadowcolor>text_shadow</shadowcolor>
 							</control>
 							<control type="label">
