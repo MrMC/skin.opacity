@@ -137,9 +137,9 @@
 						<icon>icons/settings/sysinfo.png</icon>
 					</item>
 					<item>
-						<label>$LOCALIZE[24001]</label>
-						<onclick>ActivateWindow(addonbrowser)</onclick>
-						<icon>icons/settings/addons.png</icon>
+						<label>$LOCALIZE[21412]</label>
+						<onclick>ActivateWindow(informationproviderbrowser)</onclick>
+						<icon>icons/settings/media.png</icon>
 					</item>
 				</content>
 			</control>
