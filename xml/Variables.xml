@@ -186,13 +186,6 @@
 		<value condition="!IsEmpty(ListItem.Overlay)">$INFO[ListItem.Overlay]</value>
 		<value condition="!StringCompare(ListItem.Label,..)">OverlayUnwatched.png</value>
 	</variable>
-	<variable name="WallWatchedIconVar">
-		<value condition="ListItem.IsRecording">windows/pvr/record.png</value>
-		<value condition="ListItem.IsCollection">overlays/set.png</value>
-		<value condition="ListItem.IsPlaying">overlays/watched/OverlayPlaying-List.png</value>
-		<value condition="ListItem.IsResumable">overlays/watched/resume.png</value>
-		<value condition="IntegerGreaterThan(ListItem.Playcount,0)">$INFO[ListItem.Overlay]</value>
-	</variable>
 	<!-- Breadcrumbs -->
 	<variable name="BreadcrumbsVideoVar">
 		<value condition="Container.Content(movies) | SubString(container.folderpath,library://video/movies/,left) | SubString(container.folderpath,videodb://movies,left)">$LOCALIZE[20342]</value>
