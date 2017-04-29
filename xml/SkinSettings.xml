@@ -26,6 +26,12 @@
 						<onclick>Skin.ToggleSetting(no_fanart)</onclick>
 						<selected>!Skin.HasSetting(no_fanart)</selected>
 					</control>
+					<control type="radiobutton" id="606">
+						<label>$LOCALIZE[31024]</label>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.ToggleSetting(alternative_watched_icons)</onclick>
+						<selected>Skin.HasSetting(alternative_watched_icons)</selected>
+					</control>
 				</control>
 				<control type="grouplist" id="610">
 					<top>90</top>
