@@ -27,17 +27,6 @@
 					<texture>$INFO[MusicPlayer.UserRating,flags/starrating/,.png]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
-				<control type="label">
-					<top>134</top>
-					<left>100</left>
-					<width>400</width>
-					<height>50</height>
-					<aligny>center</aligny>
-					<font>font30</font>
-					<wrapmultiline>true</wrapmultiline>
-					<label>[COLOR grey]$LOCALIZE[21396]:[/COLOR]$INFO[player.chapter]$INFO[player.chaptercount, / ]</label>
-					<visible>player.chaptercount</visible>
-				</control>
 				<control type="group">
 					<visible>Player.Recording</visible>
 					<control type="image">
@@ -70,6 +59,17 @@
 				<shadowcolor>black</shadowcolor>
 				<visible>!Player.ChannelPreviewActive</visible>
 				<animation effect="fade" start="0" end="100" time="200" delay="1000">Visible</animation>
+			</control>
+			<control type="label">
+				<top>134</top>
+				<left>100</left>
+				<width>400</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>font30</font>
+				<wrapmultiline>true</wrapmultiline>
+				<label>[COLOR grey]$LOCALIZE[21396]:[/COLOR]$INFO[player.chapter]$INFO[player.chaptercount, / ]</label>
+				<visible>player.chaptercount</visible>
 			</control>
 			<control type="label">
 				<left>100</left>
