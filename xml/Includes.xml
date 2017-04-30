@@ -767,6 +767,7 @@
 				<itemgap>10</itemgap>
 				<right>24</right>
 				<width>1200</width>
+				<visible>!Window.IsActive(extendedprogressdialog)</visible>
 				<control type="label">
 					<width>auto</width>
 					<height>48</height>
@@ -789,6 +790,7 @@
 				<left>24</left>
 				<width>1200</width>
 				<itemgap>10</itemgap>
+				<visible>!Window.IsActive(infodialog)</visible>
 				<control type="image">
 					<width>54</width>
 					<height>44</height>
