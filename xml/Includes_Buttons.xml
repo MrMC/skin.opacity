@@ -20,7 +20,6 @@
 	</include>
 	<include name="InfoDialogMetadata">
 		<control type="label" id="$PARAM[control_id]">
-			<width>640</width>
 			<height>55</height>
 			<textoffsetx>40</textoffsetx>
 			<aligny>center</aligny>
