@@ -199,6 +199,7 @@
 				<left>600</left>
 				<top>160</top>
 				<height>380</height>
+				<width>640</width>
 				<itemgap>-7</itemgap>
 				<ondown>5000</ondown>
 				<onup>50</onup>
@@ -259,6 +260,7 @@
 				<left>600</left>
 				<top>160</top>
 				<height>380</height>
+				<width>640</width>
 				<itemgap>-7</itemgap>
 				<ondown>5000</ondown>
 				<onup>50</onup>

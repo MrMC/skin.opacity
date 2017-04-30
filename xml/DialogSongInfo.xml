@@ -95,6 +95,7 @@
 			<orientation>vertical</orientation>
 			<left>650</left>
 			<top>180</top>
+			<width>1120</width>
 			<height>380</height>
 			<itemgap>-7</itemgap>
 			<ondown>5000</ondown>
