@@ -308,7 +308,7 @@
 									<left>8</left>
 									<top>280</top>
 									<width>200</width>
-									<height>84</height>
+									<height>120</height>
 									<label>$INFO[ListItem.Label]</label>
 									<font>font12</font>
 									<shadowcolor>text_shadow</shadowcolor>
@@ -340,7 +340,7 @@
 									<left>8</left>
 									<top>280</top>
 									<width>200</width>
-									<height>84</height>
+									<height>120</height>
 									<label>$INFO[ListItem.Label]</label>
 									<font>font12</font>
 									<shadowcolor>text_shadow</shadowcolor>
@@ -351,7 +351,7 @@
 						</focusedlayout>
 					</control>
 					<control type="label">
-						<top>495</top>
+						<top>515</top>
 						<width>470</width>
 						<textoffsetx>20</textoffsetx>
 						<textoffsety>15</textoffsety>
@@ -362,7 +362,7 @@
 						<label>$INFO[Container(8010).ListItem.Property(ItemType)]</label>
 					</control>
 					<control type="list" id="8010">
-						<top>540</top>
+						<top>570</top>
 						<width>1270</width>
 						<height>600</height>
 						<scrolltime tween="cubic" easing="out">500</scrolltime>
@@ -381,17 +381,17 @@
 								<control type="image">
 									<left>0</left>
 									<top>0</top>
-									<width>240</width>
-									<height>340</height>
+									<width>216</width>
+									<height>306</height>
 									<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 									<bordertexture border="20">overlays/shadow.png</bordertexture>
 									<bordersize>20</bordersize>
 								</control>
 								<control type="textbox">
-									<left>20</left>
+									<left>8</left>
 									<top>280</top>
 									<width>200</width>
-									<height>84</height>
+									<height>120</height>
 									<label>$INFO[ListItem.Label]</label>
 									<font>font12</font>
 									<shadowcolor>text_shadow</shadowcolor>
@@ -413,17 +413,17 @@
 								<control type="image">
 									<left>0</left>
 									<top>0</top>
-									<width>240</width>
-									<height>340</height>
+									<width>216</width>
+									<height>306</height>
 									<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 									<bordertexture border="20">overlays/shadow.png</bordertexture>
 									<bordersize>20</bordersize>
 								</control>
 								<control type="textbox">
-									<left>20</left>
+									<left>8</left>
 									<top>280</top>
 									<width>200</width>
-									<height>84</height>
+									<height>120</height>
 									<label>$INFO[ListItem.Label]</label>
 									<font>font12</font>
 									<shadowcolor>text_shadow</shadowcolor>
@@ -480,7 +480,7 @@
 									<left>8</left>
 									<top>280</top>
 									<width>200</width>
-									<height>84</height>
+									<height>120</height>
 									<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Property(SeasonEpisode)]</label>
 									<font>font12</font>
 									<shadowcolor>text_shadow</shadowcolor>
@@ -512,7 +512,7 @@
 									<left>8</left>
 									<top>280</top>
 									<width>200</width>
-									<height>84</height>
+									<height>120</height>
 									<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Property(SeasonEpisode)]</label>
 									<font>font12</font>
 									<shadowcolor>text_shadow</shadowcolor>
@@ -523,7 +523,7 @@
 						</focusedlayout>
 					</control>
 					<control type="label">
-						<top>495</top>
+						<top>515</top>
 						<width>470</width>
 						<textoffsetx>20</textoffsetx>
 						<textoffsety>15</textoffsety>
@@ -534,7 +534,7 @@
 						<label>$INFO[Container(8011).ListItem.Property(ItemType)]</label>
 					</control>
 					<control type="list" id="8011">
-						<top>540</top>
+						<top>570</top>
 						<width>1270</width>
 						<height>600</height>
 						<scrolltime tween="cubic" easing="out">500</scrolltime>
@@ -546,24 +546,24 @@
 						<preloaditems>1</preloaditems>
 						<viewtype label="31100">icon</viewtype>
 						<visible>IntegerGreaterThan(Container(8011).NumItems,0)</visible>
-						<itemlayout width="260" height="400">
+						<itemlayout width="260">
 							<control type="group">
 								<depth>DepthContentPopout</depth>
 								<top>2</top>
 								<control type="image">
 									<left>0</left>
 									<top>0</top>
-									<width>240</width>
-									<height>340</height>
+									<width>216</width>
+									<height>306</height>
 									<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(tvshow.thumb)]</texture>
 									<bordertexture border="20">overlays/shadow.png</bordertexture>
 									<bordersize>20</bordersize>
 								</control>
 								<control type="textbox">
-									<left>20</left>
-									<top>330</top>
+									<left>8</left>
+									<top>280</top>
 									<width>200</width>
-									<height>100</height>
+									<height>120</height>
 									<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Property(SeasonEpisode)]</label>
 									<font>font12</font>
 									<shadowcolor>text_shadow</shadowcolor>
@@ -585,17 +585,17 @@
 								<control type="image">
 									<left>0</left>
 									<top>0</top>
-									<width>240</width>
-									<height>340</height>
+									<width>216</width>
+									<height>306</height>
 									<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(tvshow.thumb)]</texture>
 									<bordertexture border="20">overlays/shadow.png</bordertexture>
 									<bordersize>20</bordersize>
 								</control>
 								<control type="textbox">
-									<left>20</left>
-									<top>330</top>
+									<left>8</left>
+									<top>280</top>
 									<width>200</width>
-									<height>100</height>
+									<height>120</height>
 									<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Property(SeasonEpisode)]</label>
 									<font>font12</font>
 									<shadowcolor>text_shadow</shadowcolor>
