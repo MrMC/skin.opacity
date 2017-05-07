@@ -9,7 +9,7 @@
 			<height>3240</height>
 			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-			<texture></texture>
+			<texture colordiffuse="AAFFFFFF">colors/black.png</texture>
 		</control>
 		<control type="group">
 			<centertop>50%</centertop>
@@ -19,12 +19,13 @@
 			<include>Animation_DialogPopupVisible</include>
 			<visible>Window.IsTopMostModal(subtitlesearch)</visible>
 			<control type="group" id="250">
-				<include content="DialogBackgroundCommons">
-					<param name="width" value="1720" />
-					<param name="height" value="750" />
-					<param name="header_label" value="$LOCALIZE[24012]" />
-					<param name="header_id" value="100" />
-				</include>
+				<control type="image" id="110" description="Service Logo">
+		          <posx>30</posx>
+		          <posy>0</posy>
+		          <width>375</width>
+		          <height>60</height>
+		          <aspectratio>keep</aspectratio>
+		        </control>
 				<control type="group">
 					<left>1320</left>
 					<control type="grouplist">
@@ -82,13 +83,12 @@
 					<height>640</height>
 					<texture border="40">buttons/dialogbutton-nofo.png</texture>
 				</control>
-				<control type="label">
+				<control type="label" id="180">
 					<description>Video label</description>
-					<top>-45</top>
+					<top>-110</top>
 					<width>920</width>
 					<height>30</height>
 					<font>font30_title</font>
-					<label>$INFO[Player.FileName]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>grey</textcolor>
@@ -111,7 +111,7 @@
 							<top>5</top>
 							<width>50</width>
 							<height>50</height>
-							<texture>$INFO[ListItem.Thumb,windows/subtitles/flags/,.png]</texture>
+							<texture>$INFO[ListItem.Thumb,Subtitles/flags/,.png]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="label">
@@ -130,7 +130,7 @@
 							<top>60</top>
 							<width>30</width>
 							<height>20</height>
-							<texture>windows/subtitles/icon_close_caption.png</texture>
+							<texture>Subtitles/icon_close_caption.png</texture>
 							<visible>ListItem.property(hearing_imp)</visible>
 						</control>
 						<control type="image">
@@ -138,7 +138,7 @@
 							<top>60</top>
 							<width>60</width>
 							<height>20</height>
-							<texture>windows/subtitles/icon_sync.png</texture>
+							<texture>Subtitles/icon_sync.png</texture>
 							<visible>ListItem.property(sync)</visible>
 						</control>
 						<control type="textbox">
@@ -171,7 +171,7 @@
 							<top>5</top>
 							<width>50</width>
 							<height>50</height>
-							<texture>$INFO[ListItem.Thumb,windows/subtitles/flags/,.png]</texture>
+							<texture>$INFO[ListItem.Thumb,Subtitles/flags/,.png]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="label">
@@ -190,7 +190,7 @@
 							<top>60</top>
 							<width>30</width>
 							<height>20</height>
-							<texture>windows/subtitles/icon_close_caption.png</texture>
+							<texture>Subtitles/icon_close_caption.png</texture>
 							<visible>ListItem.property(hearing_imp)</visible>
 						</control>
 						<control type="image">
@@ -198,7 +198,7 @@
 							<top>60</top>
 							<width>60</width>
 							<height>20</height>
-							<texture>windows/subtitles/icon_sync.png</texture>
+							<texture>Subtitles/icon_sync.png</texture>
 							<visible>ListItem.property(sync)</visible>
 						</control>
 						<control type="textbox">
