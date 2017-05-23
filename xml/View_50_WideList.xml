@@ -47,6 +47,7 @@
 						<font>font14</font>
 						<label>$INFO[ListItem.Label]</label>
 						<shadowcolor>text_shadow</shadowcolor>
+						<selectedcolor>white</selectedcolor>
 					</control>
 					<control type="label">
 						<left>50%</left>
@@ -58,6 +59,7 @@
 						<font>font14</font>
 						<label>$VAR[ListLabel2Var]</label>
 						<shadowcolor>text_shadow</shadowcolor>
+						<selectedcolor>white</selectedcolor>
 					</control>
 				</focusedlayout>
 				<itemlayout height="list_item_height" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(actors) | Container.Content(directors) | Container.Content(files) | Container.Content(mixed) | Container.Content(videos) | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)">
