@@ -126,7 +126,7 @@
 		<item id="90163">
 			<label>20434</label>
 			<onclick>ActivateWindow(Videos,MovieSets,return)</onclick>
-			<visible>Library.HasContent(MovieSets)</visible>
+			<visible>Library.HasContent(MovieSets) | Library.HasServices</visible>
 		</item>
 		<item id="90164">
 			<label>369</label>
