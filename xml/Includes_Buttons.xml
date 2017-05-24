@@ -37,7 +37,7 @@
 			<top>0</top>
 			<height>$PARAM[height]</height>
 			<aligny>center</aligny>
-			<invalidcolor>invalid</invalidcolor>
+			<invalidcolor>white</invalidcolor>
 			<selectedcolor>selected</selectedcolor>
 			<texturefocus colordiffuse="primary_color" border="5">buttons/focus.png</texturefocus>
 			<texturenofocus />
