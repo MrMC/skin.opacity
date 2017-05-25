@@ -226,8 +226,8 @@
 								<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
 							</item>
 							<item id="8">
-								<label>$LOCALIZE[3]</label>
-								<onclick>ActivateWindow(Videos,root)</onclick>
+								<label>$LOCALIZE[20094]</label>
+								<onclick>ActivateWindow(MediaSources,root)</onclick>
 								<property name="menu_id">$NUMBER[11000]</property>
 								<thumb>icons/sidemenu/videos.png</thumb>
 								<property name="id">video</property>
