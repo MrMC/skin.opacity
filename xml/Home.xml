@@ -27,7 +27,7 @@
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<animation effect="fade" time="400">VisibleChange</animation>
-			<texture background="true" colordiffuse="bg_overlay">$VAR[HomeFanartVar]</texture>
+			<texture background="true" colordiffuse="bg_overlay_lighter">$VAR[HomeFanartVar]</texture>
 			<visible>!Player.HasMedia</visible>
 		</control>
 		<control type="group">
