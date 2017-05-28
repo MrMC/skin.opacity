@@ -47,6 +47,12 @@
 			<linespacing>0.8</linespacing>
 		</font>
 		<font>
+			<name>font35</name>
+			<filename>NotoSans-Regular.ttf</filename>
+			<size>35</size>
+			<style>lighten</style>
+		</font>
+		<font>
 			<name>font37</name>
 			<filename>NotoSans-Regular.ttf</filename>
 			<size>37</size>
