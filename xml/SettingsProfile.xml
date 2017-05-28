@@ -31,6 +31,7 @@
 							<scroll>true</scroll>
 							<label>$INFO[ListItem.Label]</label>
 							<shadowcolor>text_shadow</shadowcolor>
+							<font>font35</font>
 						</control>
 						<control type="label">
 							<left>50</left>
@@ -42,6 +43,7 @@
 							<align>right</align>
 							<label>$INFO[ListItem.Label2,$LOCALIZE[31029]: ]</label>
 							<shadowcolor>text_shadow</shadowcolor>
+							<font>font35</font>
 						</control>
 					</control>
 				</itemlayout>
@@ -63,6 +65,7 @@
 							<scroll>true</scroll>
 							<label>$INFO[ListItem.Label]</label>
 							<shadowcolor>text_shadow</shadowcolor>
+							<font>font35</font>
 						</control>
 						<control type="label">
 							<left>50</left>
@@ -74,6 +77,7 @@
 							<align>right</align>
 							<label>$INFO[ListItem.Label2,$LOCALIZE[31029]: ]</label>
 							<shadowcolor>text_shadow</shadowcolor>
+							<font>font35</font>
 						</control>
 					</control>
 				</focusedlayout>

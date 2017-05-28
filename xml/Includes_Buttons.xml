@@ -41,6 +41,7 @@
 			<selectedcolor>selected</selectedcolor>
 			<texturefocus colordiffuse="primary_color" border="5">buttons/focus.png</texturefocus>
 			<texturenofocus />
+			<font>font35</font>
 		</definition>
 	</include>
 	<include name="DialogSettingButton">

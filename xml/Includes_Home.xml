@@ -58,6 +58,7 @@
 					<label>$INFO[ListItem.Label]</label>
 					<align>left</align>
 					<aligny>center</aligny>
+					<font>font35</font>
 				</control>
 			</control>
 		</itemlayout>
@@ -80,6 +81,7 @@
 					<label>$INFO[ListItem.Label]</label>
 					<align>left</align>
 					<scroll>true</scroll>
+					<font>font35</font>
 				</control>
 			</control>
 		</focusedlayout>
