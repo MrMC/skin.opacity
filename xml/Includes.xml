@@ -951,7 +951,7 @@
 						<texture background="true">$VAR[IconWallThumbVar]</texture>
 					</control>
 					<control type="progress">
-						<left>140</left>
+						<left>138</left>
 						<top>610</top>
 						<width>310</width>
 						<height>6</height>
