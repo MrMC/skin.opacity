@@ -195,7 +195,7 @@
 								<onclick>ActivateWindow(Videos,musicvideos,return)</onclick>
 								<thumb>icons/sidemenu/musicvideos.png</thumb>
 								<property name="id">musicvideos</property>
-								<visible>!Skin.HasSetting(HomeMenuNoMusicVideoButton)</visible>
+								<visible>!Skin.HasSetting(HomeMenuNoMusicVideoButton) + [Library.HasServices | Library.HasContent(musicvideos)]</visible>
 							</item>
 							<item id="5">
 								<label>$LOCALIZE[19020]</label>
