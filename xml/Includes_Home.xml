@@ -90,17 +90,17 @@
 		<item id="90102">
 			<label>342</label>
 			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
-			<visible>Library.HasServices | [Library.HasContent(Movies) + Skin.HasSetting(HomeMenuNoMovieButton)]</visible>
+			<visible>[Library.HasServices | Library.HasContent(Movies)] + Skin.HasSetting(HomeMenuNoMovieButton)</visible>
 		</item>
 		<item id="90103">
 			<label>20343</label>
 			<onclick>ActivateWindow(Videos,TvShowTitles,return)</onclick>
-			<visible>Library.HasServices | [Library.HasContent(TVShows) + Skin.HasSetting(HomeMenuNoTVShowButton)]</visible>
+			<visible>[Library.HasServices | Library.HasContent(TVShows)] + Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
 		</item>
 		<item id="90104">
 			<label>20389</label>
 			<onclick>ActivateWindow(Videos,MusicVideoTitles,return)</onclick>
-			<visible>Library.HasContent(MusicVideos)</visible>
+			<visible>[Library.HasServices | Library.HasContent(MusicVideos)] + Skin.HasSetting(HomeMenuNoMusicVideoButton)</visible>
 		</item>
 		<item id="90105">
 			<label>744</label>
