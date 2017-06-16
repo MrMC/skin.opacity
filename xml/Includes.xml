@@ -1003,7 +1003,7 @@
 					<visible>IsEmpty(Control.GetLabel(15500)) + !ListItem.IsCollection</visible>
 					<control type="textbox">
 						<left>30</left>
-						<top>460</top>
+						<top>700</top>
 						<width>530</width>
 						<height>413</height>
 						<align>center</align>
