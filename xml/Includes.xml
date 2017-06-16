@@ -971,18 +971,25 @@
 					<onclick>SetFocus(50)</onclick>
 					<onclick>Info</onclick>
 				</control>
+				<control type="label">
+					<left>30</left>
+					<top>635</top>
+					<width>525</width>
+					<height>44</height>
+					<label>$INFO[ListItem.Genre,[COLOR grey]$LOCALIZE[515]: [/COLOR],[CR]]</label>
+				</control>
 				<control type="textbox" id="15500">
 					<left>30</left>
-					<top>640</top>
+					<top>700</top>
 					<width>525</width>
-					<bottom>117</bottom>
+					<bottom>125</bottom>
 					<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog</autoscroll>
 					<label>$VAR[ListBoxInfoVar]</label>
 					<visible>!Container.Content() | !IsEmpty(ListItem.Plot)</visible>
 				</control>
 				<control type="group">
 					<left>20</left>
-					<top>640</top>
+					<top>690</top>
 					<visible>ListItem.IsCollection</visible>
 					<include content="InfoList">
 						<param name="bottom" value="100" />

@@ -60,7 +60,6 @@
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(artist_description)]</value>
 		<value condition="!IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
 		<value condition="Container.Content(songs)">$INFO[ListItem.Genre,[COLOR grey]$LOCALIZE[515]: [/COLOR],[CR]]$INFO[ListItem.Duration,[COLOR grey]$LOCALIZE[180]: [/COLOR],[CR]]$INFO[ListItem.Playcount,[COLOR grey]$LOCALIZE[567]: [/COLOR],[CR]]</value>
-		<value>$INFO[ListItem.Genre,[COLOR grey]$LOCALIZE[515]: [/COLOR],[CR]]</value>
 	</variable>
 	<variable name="AddonsListIconVar">
 		<value condition="!IsEmpty(ListItem.Property(Addon.Broken))">icons/addonstatus/disable.png</value>
