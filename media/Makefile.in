@@ -1,23 +1,22 @@
 TARGET=Textures.xbt
-TARGET_CURIAL=curial.xbt
-TARGET_FLAT=flat.xbt
 
-all: $(TARGET) $(TARGET_CURIAL) $(TARGET_FLAT)
+IMAGES := $(shell find . -name "*jpg")
+IMAGES += $(shell find . -name "*png")
+IMAGES += $(shell find . -name "*gif")
+
+all: $(TARGET)
 
 .PHONY: force
 
-$(TARGET):
+$(TARGET): $(IMAGES)
+ifeq (@ARCH@,arm)
+	@TEXTUREPACKER@ -dupecheck -use_none -input . -output $(TARGET)
+else
 	@TEXTUREPACKER@ -dupecheck -input . -output $(TARGET)
 
-$(TARGET_CURIAL):
-	@TEXTUREPACKER@ -dupecheck -input ../themes/curial -output $(TARGET_CURIAL)
-
-$(TARGET_FLAT):
-	@TEXTUREPACKER@ -dupecheck -input ../themes/flat -output $(TARGET_FLAT)
+endif
 
 clean:
 	rm -f $(TARGET)
-	rm -f $(TARGET_CURIAL)
-	rm -f $(TARGET_FLAT)
-
 distclean: clean
+
