@@ -280,13 +280,40 @@
 			<itemgap>15</itemgap>
 			<orientation>horizontal</orientation>
 			<align>right</align>
+			<control type="group">
+				<visible>!IsEmpty(ListItem.Mpaa)</visible>
+				<width>122</width>
+				<control type="image">
+					<height>36</height>
+					<width>122</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<align>right</align>
+					<aligny>bottom</aligny>
+					<colordiffuse>grey</colordiffuse>
+					<texture>badges/MpaaBox.png</texture>
+				</control>
+				<control type="label">
+					<height>36</height>
+					<width>124</width>
+					<posx>0</posx>
+					<posy>8</posy>
+					<font>font_flag</font>
+					<align>center</align>
+					<aligny>bottom</aligny>
+					<textoffsetx>10</textoffsetx>
+					<textoffsety>-4</textoffsety>
+					<textcolor>grey</textcolor>
+					<label>$INFO[ListItem.Mpaa]</label>
+				</control>
+			</control>
 			<control type="button">
 				<visible>!IsEmpty(ListItem.Rating)</visible>
 				<height>36</height>
 				<width>102</width>
 				<posx>0</posx>
 				<posy>0</posy>
-				<font>Flags</font>
+				<font>font13</font>
 				<align>right</align>
 				<aligny>bottom</aligny>
 				<textoffsetx>10</textoffsetx>
@@ -303,7 +330,7 @@
 				<width>102</width>
 				<posx>0</posx>
 				<posy>0</posy>
-				<font>Flags</font>
+				<font>font13</font>
 				<align>center</align>
 				<aligny>bottom</aligny>
 				<textoffsetx>0</textoffsetx>
@@ -336,7 +363,7 @@
 				<width>102</width>
 				<posx>0</posx>
 				<posy>0</posy>
-				<font>Flags</font>
+				<font>font13</font>
 				<align>center</align>
 				<aligny>bottom</aligny>
 				<textoffsetx>0</textoffsetx>

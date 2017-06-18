@@ -73,7 +73,8 @@
 		<!-- Title Fonts -->
 		<font>
 			<name>font_flag</name>
-			<filename>NotoSans-Bold.ttf</filename>
+			<filename>NotoSans-Regular.ttf</filename>
+			<style>lighten</style>
 			<size>18</size>
 		</font>
 		<font>
