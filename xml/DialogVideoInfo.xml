@@ -26,7 +26,7 @@
 				<control type="textbox">
 					<left>40</left>
 					<top>570</top>
-					<width>1130</width>
+					<right>170</right>
 					<bottom>215</bottom>
 					<label fallback="19055">$INFO[ListItem.Tagline,[B],[/B][CR]]$INFO[ListItem.Plot]</label>
 					<autoscroll delay="10000" time="5000" repeat="10000">true</autoscroll>
@@ -242,8 +242,6 @@
 				<param name="sub_label" value="$VAR[VideoInfoSubLabelVar]" />
 			</include>
 			<control type="group">
-				<centerleft>50%</centerleft>
-				<width>1920</width>
 				<bottom>0</bottom>
 				<height>70</height>
 				<include>MediaFlags</include>
