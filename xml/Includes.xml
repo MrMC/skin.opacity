@@ -302,7 +302,7 @@
 					<align>center</align>
 					<aligny>bottom</aligny>
 					<textoffsetx>10</textoffsetx>
-					<textoffsety>-4</textoffsety>
+					<textoffsety>-3</textoffsety>
 					<textcolor>grey</textcolor>
 					<label>$INFO[ListItem.Mpaa]</label>
 				</control>
