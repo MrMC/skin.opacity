@@ -12,7 +12,7 @@
 				<left>40</left>
 				<top>list_top_offset</top>
 				<bottom>list_bottom_offset</bottom>
-				<right>650</right>
+				<right>647</right>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<orientation>vertical</orientation>
 				<pagecontrol>531</pagecontrol>
