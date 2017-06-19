@@ -9,10 +9,10 @@
 			<visible>Control.IsVisible(50)</visible>
 			<include>Visible_Left</include>
 			<control type="list" id="50">
-				<left>80</left>
+				<left>40</left>
 				<top>list_top_offset</top>
 				<bottom>list_bottom_offset</bottom>
-				<right>700</right>
+				<right>650</right>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<orientation>vertical</orientation>
 				<pagecontrol>531</pagecontrol>
@@ -30,7 +30,7 @@
 						<visible>Control.HasFocus(50)</visible>
 					</control>
 					<control type="image">
-						<left>35</left>
+						<left>30</left>
 						<centertop>50%</centertop>
 						<width>32</width>
 						<height>32</height>
@@ -38,10 +38,10 @@
 						<visible>!StringCompare(ListItem.Label,..)</visible>
 					</control>
 					<control type="label">
-						<left>105</left>
+						<left>85</left>
 						<top>0</top>
 						<bottom>0</bottom>
-						<right>100</right>
+						<right>90</right>
 						<aligny>center</aligny>
 						<scroll>true</scroll>
 						<font>font45</font>
@@ -53,7 +53,7 @@
 						<left>50%</left>
 						<top>0</top>
 						<bottom>0</bottom>
-						<right>40</right>
+						<right>30</right>
 						<align>right</align>
 						<aligny>center</aligny>
 						<font>font45</font>
@@ -64,7 +64,7 @@
 				</focusedlayout>
 				<itemlayout height="list_item_height" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(actors) | Container.Content(directors) | Container.Content(files) | Container.Content(mixed) | Container.Content(videos) | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)">
 					<control type="image">
-						<left>35</left>
+						<left>30</left>
 						<centertop>50%</centertop>
 						<width>32</width>
 						<height>32</height>
@@ -72,10 +72,10 @@
 						<visible>!StringCompare(ListItem.Label,..)</visible>
 					</control>
 					<control type="label">
-						<left>105</left>
+						<left>85</left>
 						<top>0</top>
 						<bottom>0</bottom>
-						<right>100</right>
+						<right>90</right>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 						<font>font45</font>
@@ -85,7 +85,7 @@
 						<left>50%</left>
 						<top>0</top>
 						<bottom>0</bottom>
-						<right>40</right>
+						<right>30</right>
 						<align>right</align>
 						<aligny>center</aligny>
 						<font>font45</font>
@@ -93,7 +93,7 @@
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
 					<control type="image">
-						<left>35</left>
+						<left>30</left>
 						<centertop>50%</centertop>
 						<visible>IsEmpty(ListItem.Year) + IsEmpty(ListItem.Property(Addon.Version))</visible>
 						<visible>!StringCompare(ListItem.Label,..)</visible>

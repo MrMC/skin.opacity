@@ -238,7 +238,7 @@
 		<depth>DepthSideBlade</depth>
 		<left>-520</left>
 		<control type="button">
-			<left>540</left>
+			<left>530</left>
 			<centertop>50%</centertop>
 			<width>28</width>
 			<height>28</height>
