@@ -117,11 +117,11 @@
 						<!-- Music -->
 						<orientation>vertical</orientation>
 						<scrolltime tween="cubic" easing="out">500</scrolltime>
-						<itemlayout height="150">
+						<itemlayout height="120">
 							<control type="label">
 								<left>90</left>
 								<right>40</right>
-								<height>150</height>
+								<height>110</height>
 								<font>font45</font>
 								<label>$INFO[ListItem.Label]</label>
 								<align>left</align>
@@ -129,21 +129,22 @@
 								<animation effect="fade" start="100" end="30" time="200" tween="sine" condition="ControlGroup(9100).HasFocus">Conditional</animation>
 							</control>
 						</itemlayout>
-						<focusedlayout height="150">
+						<focusedlayout height="120">
 							<control type="group">
 								<left>40</left>
 								<right>0</right>
 								<control type="image">
 									<left>0</left>
 									<right>25</right>
-									<height>100%</height>
+									<top>-10</top>
+									<height>110%</height>
 									<visible>Control.HasFocus(9000)</visible>
 									<texture colordiffuse="primary_color" border="50">buttons/dialogbutton-fo.png</texture>
 								</control>
 								<control type="label">
 									<left>50</left>
 									<right>40</right>
-									<height>150</height>
+									<height>110</height>
 									<font>font45</font>
 									<aligny>center</aligny>
 									<label>$INFO[ListItem.Label]</label>
