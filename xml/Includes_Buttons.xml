@@ -30,7 +30,7 @@
 		</control>
 	</include>
 	<include name="DefaultSettingButton">
-		<param name="height">100</param>
+		<param name="height">80</param>
 		<param name="textoffsetx">40</param>
 		<definition>
 			<textoffsetx>$PARAM[textoffsetx]</textoffsetx>
