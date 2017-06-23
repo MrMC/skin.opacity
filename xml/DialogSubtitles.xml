@@ -38,12 +38,18 @@
 							<param name="id" value="160" />
 							<param name="label" value="$LOCALIZE[24120]" />
 							<param name="width" value="420" />
-							<param name="height" value="150" />
+							<param name="height" value="130" />
+						</include>
+						<include content="DefaultDialogButton">
+							<param name="id" value="170" />
+							<param name="label" value="$LOCALIZE[24148]" />
+							<param name="width" value="420" />
+							<param name="height" value="130" />
 						</include>
 					</control>
 					<control type="label" id="140">
 						<description>textarea</description>
-						<top>280</top>
+						<top>390</top>
 						<width>380</width>
 						<height>40</height>
 						<align>center</align>
