@@ -60,7 +60,7 @@
 					<texturenofocus />
 					<radioposx>1</radioposx>
 					<radioposy>0</radioposy>
-					<selected>Player.Paused</selected>
+					<selected>Player.Paused | Player.Forwarding | Player.Rewinding</selected>
 					<onclick>PlayerControl(Play)</onclick>
 				</control>
 				<control type="radiobutton" id="603">
