@@ -2,7 +2,7 @@
 <window>
 	<include>Animation_DialogPopupOpenClose</include>
 	<depth>DepthDialog+</depth>
-	<defaultcontrol>9000</defaultcontrol>
+	<defaultcontrol always="true">10</defaultcontrol>
 	<controls>
 		<control type="group">
 			<height>390</height>
