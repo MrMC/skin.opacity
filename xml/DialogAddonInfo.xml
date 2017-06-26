@@ -129,7 +129,7 @@
 			</control>
 			<control type="textbox">
 				<left>150</left>
-				<top>980</top>
+				<top>975</top>
 				<width>1620</width>
 				<height>82</height>
 				<align>center</align>
@@ -142,13 +142,13 @@
 			</control>
 			<control type="image">
 				<description>separator image</description>
-				<top>82</top>
+				<top>105</top>
 				<height>4</height>
 				<texture colordiffuse="primary_color" border="3">dialogs/separator-grey.png</texture>
 			</control>
 			<control type="image">
 				<description>separator image</description>
-				<bottom>82</bottom>
+				<bottom>105</bottom>
 				<height>4</height>
 				<texture colordiffuse="primary_color" border="3">dialogs/separator-grey.png</texture>
 			</control>
