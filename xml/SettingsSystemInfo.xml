@@ -245,6 +245,7 @@
 						</include>
 						<width>420</width>
 						<label>$LOCALIZE[12389]</label>
+						<visible>false</visible>
 					</control>
 				</control>
 			</control>
