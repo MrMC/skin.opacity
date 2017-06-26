@@ -101,9 +101,9 @@
 					<control type="fixedlist" id="9000">
 						<top>85</top>
 						<left>0</left>
-						<bottom>100</bottom>
+						<bottom>140</bottom>
 						<width>540</width>
-						<movement>2</movement>
+						<movement>4</movement>
 						<focusposition>2</focusposition>
 						<onfocus>ClearProperty(listposition,home)</onfocus>
 						<ondown>9000</ondown>
