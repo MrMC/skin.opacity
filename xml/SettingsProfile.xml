@@ -5,7 +5,8 @@
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="System.HasModalDialog">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="System.HasModalDialog + !Window.IsTopmostModal(progressdialog) + !Window.IsTopmostModal(busydialog)">Conditional</animation>
+			<animation effect="fade" start="100" end="25" time="200" tween="sine" condition="Window.IsTopmostModal(progressdialog) | Window.IsTopmostModal(busydialog)">Conditional</animation>
 			<control type="group" id="9100">
 				<include>OpenClose_Right</include>
 				<left>472</left>
@@ -20,179 +21,179 @@
 					<onup>2</onup>
 					<ondown>2</ondown>
 					<scrolltime>200</scrolltime>
-				<itemlayout height="list_item_height">
-					<control type="group">
-						<control type="label">
-							<left>50</left>
-							<top>0</top>
-							<bottom>0</bottom>
-							<right>100</right>
-							<aligny>center</aligny>
-							<scroll>true</scroll>
-							<label>$INFO[ListItem.Label]</label>
-							<shadowcolor>text_shadow</shadowcolor>
-							<font>font35</font>
-						</control>
-						<control type="label">
-							<left>50</left>
-							<top>0</top>
-							<bottom>0</bottom>
-							<right>50</right>
-							<aligny>center</aligny>
-							<scroll>true</scroll>
-							<align>right</align>
-							<label>$INFO[ListItem.Label2,$LOCALIZE[31029]: ]</label>
-							<shadowcolor>text_shadow</shadowcolor>
-							<font>font35</font>
-						</control>
-					</control>
-				</itemlayout>
-				<focusedlayout height="list_item_height">
-					<control type="group">
-						<control type="image">
-							<left>0</left>
-							<right>0</right>
-							<bottom>0</bottom>
-							<texture colordiffuse="primary_color" border="5">buttons/focus.png</texture>
-							<visible>Control.HasFocus(2)</visible>
-						</control>
-						<control type="label">
-							<left>50</left>
-							<top>0</top>
-							<bottom>0</bottom>
-							<right>100</right>
-							<aligny>center</aligny>
-							<scroll>true</scroll>
-							<label>$INFO[ListItem.Label]</label>
-							<shadowcolor>text_shadow</shadowcolor>
-							<font>font35</font>
-						</control>
-						<control type="label">
-							<left>50</left>
-							<top>0</top>
-							<bottom>0</bottom>
-							<right>50</right>
-							<aligny>center</aligny>
-							<scroll>true</scroll>
-							<align>right</align>
-							<label>$INFO[ListItem.Label2,$LOCALIZE[31029]: ]</label>
-							<shadowcolor>text_shadow</shadowcolor>
-							<font>font35</font>
-						</control>
-					</control>
-				</focusedlayout>
-<!-- 					<itemlayout height="390" width="354">
-						<control type="image">
-							<top>5</top>
-							<width>320</width>
-							<height>380</height>
-							<texture>dialogs/dialog-bg-nobo.png</texture>
-							<bordertexture border="21">overlays/shadow.png</bordertexture>
-							<bordersize>20</bordersize>
-						</control>
-						<control type="image">
-							<left>51</left>
-							<top>38</top>
-							<width>215</width>
-							<height>215</height>
-							<aspectratio>scale</aspectratio>
-							<texture fallback="DefaultUser.png">$INFO[Listitem.Icon]</texture>
-						</control>
-						<control type="label">
-							<left>10</left>
-							<top>255</top>
-							<width>305</width>
-							<height>100</height>
-							<align>center</align>
-							<aligny>top</aligny>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-						<control type="label">
-							<left>10</left>
-							<top>290</top>
-							<width>305</width>
-							<height>100</height>
-							<font>font10</font>
-							<textcolor>grey</textcolor>
-							<align>center</align>
-							<aligny>top</aligny>
-							<label>$LOCALIZE[31029]:</label>
-							<visible>!Stringcompare(Listitem.Label,$LOCALIZE[20058])</visible>
-						</control>
-						<control type="label">
-							<left>10</left>
-							<top>321</top>
-							<width>305</width>
-							<height>100</height>
-							<textcolor>grey</textcolor>
-							<font>font10</font>
-							<align>center</align>
-							<aligny>top</aligny>
-							<label fallback="13170">$INFO[ListItem.Label2]</label>
-							<visible>!SubString(Listitem.Label,$LOCALIZE[20058])</visible>
+					<itemlayout height="list_item_height">
+						<control type="group">
+							<control type="label">
+								<left>50</left>
+								<top>0</top>
+								<bottom>0</bottom>
+								<right>100</right>
+								<aligny>center</aligny>
+								<scroll>true</scroll>
+								<label>$INFO[ListItem.Label]</label>
+								<shadowcolor>text_shadow</shadowcolor>
+								<font>font35</font>
+							</control>
+							<control type="label">
+								<left>50</left>
+								<top>0</top>
+								<bottom>0</bottom>
+								<right>50</right>
+								<aligny>center</aligny>
+								<scroll>true</scroll>
+								<align>right</align>
+								<label>$INFO[ListItem.Label2,$LOCALIZE[31029]: ]</label>
+								<shadowcolor>text_shadow</shadowcolor>
+								<font>font35</font>
+							</control>
 						</control>
 					</itemlayout>
-					<focusedlayout height="390" width="354">
+					<focusedlayout height="list_item_height">
 						<control type="group">
-							<animation effect="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="160,190">Focus</animation>
-							<animation effect="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="160,190">UnFocus</animation>
 							<control type="image">
-								<top>5</top>
-								<width>320</width>
-								<height>380</height>
-								<texture>dialogs/dialog-bg-nobo.png</texture>
-								<bordertexture border="21">overlays/shadow.png</bordertexture>
-								<bordersize>20</bordersize>
-							</control>
-							<control type="image">
-								<top>5</top>
-								<width>320</width>
-								<height>380</height>
-								<texture colordiffuse="primary_color">colors/grey.png</texture>
-								<bordersize>20</bordersize>
-								<include>Animation_FocusTextureFade</include>
-							</control>
-							<control type="image">
-								<left>51</left>
-								<top>38</top>
-								<width>215</width>
-								<height>215</height>
-								<aspectratio>scale</aspectratio>
-								<texture fallback="DefaultUser.png">$INFO[Listitem.Icon]</texture>
+								<left>0</left>
+								<right>0</right>
+								<bottom>0</bottom>
+								<texture colordiffuse="primary_color" border="5">buttons/focus.png</texture>
+								<visible>Control.HasFocus(2)</visible>
 							</control>
 							<control type="label">
-								<left>10</left>
-								<top>255</top>
-								<width>305</width>
-								<height>100</height>
-								<align>center</align>
-								<aligny>top</aligny>
+								<left>50</left>
+								<top>0</top>
+								<bottom>0</bottom>
+								<right>100</right>
+								<aligny>center</aligny>
+								<scroll>true</scroll>
 								<label>$INFO[ListItem.Label]</label>
+								<shadowcolor>text_shadow</shadowcolor>
+								<font>font35</font>
 							</control>
 							<control type="label">
-								<left>10</left>
-								<top>290</top>
-								<width>305</width>
-								<height>100</height>
-								<font>font10</font>
-								<align>center</align>
-								<aligny>top</aligny>
-								<label>$LOCALIZE[31029]:</label>
-								<visible>!SubString(Listitem.Label,$LOCALIZE[20058])</visible>
-							</control>
-							<control type="label">
-								<left>10</left>
-								<top>321</top>
-								<width>305</width>
-								<height>100</height>
-								<font>font10</font>
-								<align>center</align>
-								<aligny>top</aligny>
-								<label fallback="13170">$INFO[ListItem.Label2]</label>
-								<visible>!SubString(Listitem.Label,$LOCALIZE[20058])</visible>
+								<left>50</left>
+								<top>0</top>
+								<bottom>0</bottom>
+								<right>50</right>
+								<aligny>center</aligny>
+								<scroll>true</scroll>
+								<align>right</align>
+								<label>$INFO[ListItem.Label2,$LOCALIZE[31029]: ]</label>
+								<shadowcolor>text_shadow</shadowcolor>
+								<font>font35</font>
 							</control>
 						</control>
-					</focusedlayout> -->
+					</focusedlayout>
+					<!-- 					<itemlayout height="390" width="354">
+											<control type="image">
+												<top>5</top>
+												<width>320</width>
+												<height>380</height>
+												<texture>dialogs/dialog-bg-nobo.png</texture>
+												<bordertexture border="21">overlays/shadow.png</bordertexture>
+												<bordersize>20</bordersize>
+											</control>
+											<control type="image">
+												<left>51</left>
+												<top>38</top>
+												<width>215</width>
+												<height>215</height>
+												<aspectratio>scale</aspectratio>
+												<texture fallback="DefaultUser.png">$INFO[Listitem.Icon]</texture>
+											</control>
+											<control type="label">
+												<left>10</left>
+												<top>255</top>
+												<width>305</width>
+												<height>100</height>
+												<align>center</align>
+												<aligny>top</aligny>
+												<label>$INFO[ListItem.Label]</label>
+											</control>
+											<control type="label">
+												<left>10</left>
+												<top>290</top>
+												<width>305</width>
+												<height>100</height>
+												<font>font10</font>
+												<textcolor>grey</textcolor>
+												<align>center</align>
+												<aligny>top</aligny>
+												<label>$LOCALIZE[31029]:</label>
+												<visible>!Stringcompare(Listitem.Label,$LOCALIZE[20058])</visible>
+											</control>
+											<control type="label">
+												<left>10</left>
+												<top>321</top>
+												<width>305</width>
+												<height>100</height>
+												<textcolor>grey</textcolor>
+												<font>font10</font>
+												<align>center</align>
+												<aligny>top</aligny>
+												<label fallback="13170">$INFO[ListItem.Label2]</label>
+												<visible>!SubString(Listitem.Label,$LOCALIZE[20058])</visible>
+											</control>
+										</itemlayout>
+										<focusedlayout height="390" width="354">
+											<control type="group">
+												<animation effect="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="160,190">Focus</animation>
+												<animation effect="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="160,190">UnFocus</animation>
+												<control type="image">
+													<top>5</top>
+													<width>320</width>
+													<height>380</height>
+													<texture>dialogs/dialog-bg-nobo.png</texture>
+													<bordertexture border="21">overlays/shadow.png</bordertexture>
+													<bordersize>20</bordersize>
+												</control>
+												<control type="image">
+													<top>5</top>
+													<width>320</width>
+													<height>380</height>
+													<texture colordiffuse="primary_color">colors/grey.png</texture>
+													<bordersize>20</bordersize>
+													<include>Animation_FocusTextureFade</include>
+												</control>
+												<control type="image">
+													<left>51</left>
+													<top>38</top>
+													<width>215</width>
+													<height>215</height>
+													<aspectratio>scale</aspectratio>
+													<texture fallback="DefaultUser.png">$INFO[Listitem.Icon]</texture>
+												</control>
+												<control type="label">
+													<left>10</left>
+													<top>255</top>
+													<width>305</width>
+													<height>100</height>
+													<align>center</align>
+													<aligny>top</aligny>
+													<label>$INFO[ListItem.Label]</label>
+												</control>
+												<control type="label">
+													<left>10</left>
+													<top>290</top>
+													<width>305</width>
+													<height>100</height>
+													<font>font10</font>
+													<align>center</align>
+													<aligny>top</aligny>
+													<label>$LOCALIZE[31029]:</label>
+													<visible>!SubString(Listitem.Label,$LOCALIZE[20058])</visible>
+												</control>
+												<control type="label">
+													<left>10</left>
+													<top>321</top>
+													<width>305</width>
+													<height>100</height>
+													<font>font10</font>
+													<align>center</align>
+													<aligny>top</aligny>
+													<label fallback="13170">$INFO[ListItem.Label2]</label>
+													<visible>!SubString(Listitem.Label,$LOCALIZE[20058])</visible>
+												</control>
+											</control>
+										</focusedlayout> -->
 				</control>
 				<control type="grouplist" id="9001">
 					<visible>Container(9000).Hasfocus(1)</visible>

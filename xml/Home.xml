@@ -31,7 +31,8 @@
 			<visible>!Player.HasMedia</visible>
 		</control>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="System.HasModalDialog">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="System.HasModalDialog + !Window.IsTopmostModal(progressdialog) + !Window.IsTopmostModal(busydialog)">Conditional</animation>
+			<animation effect="fade" start="100" end="25" time="200" tween="sine" condition="Window.IsTopmostModal(progressdialog) | Window.IsTopmostModal(busydialog)">Conditional</animation>
 			<control type="group">
 				<animation effect="slide" start="0" end="420" time="400" tween="sine" easing="inout" condition="ControlGroup(9100).HasFocus">Conditional</animation>
 				<control type="group">
@@ -205,8 +206,8 @@
 								<thumb>icons/sidemenu/livetv.png</thumb>
 								<property name="id">livetv</property>
 								<property name="submenu">true</property>
-								<visible>!Skin.HasSetting(HomeMenuNoTVButton)</visible>
-								<visible>System.GetBool(pvrmanager.enabled)</visible>
+<!-- 								<visible>!Skin.HasSetting(HomeMenuNoTVButton)</visible>
+								<visible>System.GetBool(pvrmanager.enabled)</visible> -->
 							</item>
 							<item id="6">
 								<label>$LOCALIZE[19021]</label>
@@ -252,16 +253,15 @@
 							</item>
 						</content>
 					</control>
-				<control type="button">
-					<left>0</left>
-					<top>80</top>
-					<width>40</width>
-					<bottom>80</bottom>
-					<texturefocus></texturefocus>
-					<texturenofocus></texturenofocus>
-					<onclick>SetFocus(9100)</onclick>
-				</control>
-
+					<control type="button">
+						<left>0</left>
+						<top>80</top>
+						<width>40</width>
+						<bottom>80</bottom>
+						<texturefocus></texturefocus>
+						<texturenofocus></texturenofocus>
+						<onclick>SetFocus(9100)</onclick>
+					</control>
 				</control>
 				<control type="group" id="2000">
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>

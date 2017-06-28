@@ -4,7 +4,8 @@
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="System.HasModalDialog">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="System.HasModalDialog + !Window.IsTopmostModal(progressdialog) + !Window.IsTopmostModal(busydialog)">Conditional</animation>
+			<animation effect="fade" start="100" end="25" time="200" tween="sine" condition="Window.IsTopmostModal(progressdialog) | Window.IsTopmostModal(busydialog)">Conditional</animation>
 			<control type="group">
 				<include>OpenClose_Right</include>
 				<control type="image">
