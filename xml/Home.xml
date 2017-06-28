@@ -154,7 +154,7 @@
 							</control>
 							<control type="image">
 								<left>10</left>
-								<top>60</top>
+								<top>45</top>
 								<width>28</width>
 								<height>28</height>
 								<texture flipx="true" colordiffuse="primary_color">overlays/arrowright.png</texture>
