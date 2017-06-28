@@ -32,7 +32,7 @@
 		</control>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="System.HasModalDialog + !Window.IsTopmostModal(progressdialog) + !Window.IsTopmostModal(busydialog)">Conditional</animation>
-			<animation effect="fade" start="100" end="25" time="200" tween="sine" condition="Window.IsTopmostModal(progressdialog) | Window.IsTopmostModal(busydialog)">Conditional</animation>
+			<animation effect="fade" start="100" end="3" time="200" tween="sine" condition="Window.IsTopmostModal(progressdialog) | Window.IsTopmostModal(busydialog)">Conditional</animation>
 			<control type="group">
 				<animation effect="slide" start="0" end="420" time="400" tween="sine" easing="inout" condition="ControlGroup(9100).HasFocus">Conditional</animation>
 				<control type="group">
