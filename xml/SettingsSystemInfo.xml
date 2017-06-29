@@ -79,7 +79,7 @@
 					<autoscroll delay="5000" repeat="7500" time="5000">true</autoscroll>
 				</control>
 				<control type="scrollbar" id="60">
-					<right>0</right>
+					<right>10</right>
 					<top>93</top>
 					<width>18</width>
 					<bottom>312</bottom>
