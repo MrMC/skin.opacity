@@ -7,9 +7,8 @@
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group" id="50">
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="System.HasModalDialog + !Window.IsTopmostModal(progressdialog) + !Window.IsTopmostModal(busydialog)">Conditional</animation>
-			<animation effect="fade" start="100" end="3" time="200" tween="sine" condition="Window.IsTopmostModal(progressdialog) | Window.IsTopmostModal(busydialog)">Conditional</animation>
-			<control type="group">
+			<animation effect="fade" start="100" end="3" time="200" tween="sine" condition="System.HasModalDialog">Conditional</animation>
+						<control type="group">
 				<description>Guide Timeline</description>
 				<visible>Control.IsVisible(10)</visible>
 				<include>OpenClose_Right</include>
