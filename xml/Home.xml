@@ -250,6 +250,12 @@
 								<thumb>icons/sidemenu/system.png</thumb>
 								<property name="id">system</property>
 							</item>
+							<item id="12">
+								<label>$LOCALIZE[20126]</label>
+								<onclick>System.LogOff</onclick>
+								<visible>System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)</visible>
+								<visible>System.Loggedon</visible>
+							</item>
 						</content>
 					</control>
 					<control type="button">
