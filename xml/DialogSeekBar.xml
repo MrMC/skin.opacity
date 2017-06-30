@@ -143,10 +143,10 @@
 			</control>
 			<control type="label">
 				<left>20</left>
-				<width>220</width>
-				<top>-80</top>
+				<width>1000</width>
+				<top>-100</top>
 				<height>25</height>
-				<label>$INFO[VideoPlayer.ChannelNumberLabel]</label>
+				<label>$INFO[VideoPlayer.ChannelNumberLabel] - $INFO[VideoPlayer.ChannelName]</label>
 				<shadowcolor>black</shadowcolor>
 				<align>center</align>
 				<font>WeatherTemp</font>
