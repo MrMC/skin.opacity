@@ -145,7 +145,7 @@
 				</control>
 				<control type="label">
 					<right>20</right>
-					<width>800</width>
+					<width>1000</width>
 					<top>190</top>
 					<height>25</height>
 					<label>$INFO[VideoPlayer.NextTitle,[COLOR grey]$LOCALIZE[19031]: [/COLOR], - ][COLOR grey]$INFO[VideoPlayer.NextStartTime]$INFO[VideoPlayer.NextEndTime: ][/COLOR]</label>
@@ -175,13 +175,13 @@
 			</control>	
 			<control type="label">
 				<animation effect="slide" start="0,0" end="0,240" time="0" tween="sine" easing="inout" condition="![!IsEmpty(VideoPlayer.Plot) | !IsEmpty(Player.Art(thumb))]">Conditional</animation>
-				<left>20</left>
-				<width>1000</width>
+				<left>90</left>
+				<width>100%</width>
 				<top>-100</top>
 				<height>25</height>
 				<label>$INFO[VideoPlayer.ChannelNumberLabel] - $INFO[VideoPlayer.ChannelName]</label>
 				<shadowcolor>black</shadowcolor>
-				<align>center</align>
+				<align>left</align>
 				<font>WeatherTemp</font>
 				<aligny>center</aligny>
 			</control>
