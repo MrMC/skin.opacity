@@ -127,21 +127,54 @@
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<bottom>0</bottom>
 			<height>420</height>
-			<control type="image">
-				<left>0</left>
-				<width>100%</width>
-				<height>240</height>
-				<texture>dialogs/dialog-bg-nobo.png</texture>
-			</control>
-			<control type="image">
-				<left>30</left>
-				<top>20</top>
-				<width>200</width>
-				<height>200</height>
-				<aspectratio aligny="center">keep</aspectratio>
-				<texture>$INFO[Player.Art(thumb)]</texture>
-			</control>
+			<control type="group">
+				<visible>!IsEmpty(VideoPlayer.Plot) | !IsEmpty(Player.Art(thumb))</visible>
+				<control type="image">
+					<left>0</left>
+					<width>100%</width>
+					<height>240</height>
+					<texture>dialogs/dialog-bg-nobo.png</texture>
+				</control>
+				<control type="image">
+					<left>30</left>
+					<top>20</top>
+					<width>200</width>
+					<height>200</height>
+					<aspectratio aligny="center">keep</aspectratio>
+					<texture>$INFO[Player.Art(thumb)]</texture>
+				</control>
+				<control type="label">
+					<right>20</right>
+					<width>800</width>
+					<top>190</top>
+					<height>25</height>
+					<label>$INFO[VideoPlayer.NextTitle,[COLOR grey]$LOCALIZE[19031]: [/COLOR], - ][COLOR grey]$INFO[VideoPlayer.NextStartTime]$INFO[VideoPlayer.NextEndTime: ][/COLOR]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<visible>VideoPlayer.HasEpg</visible>
+				</control>
+				<control type="label">
+					<left>260</left>
+					<right>50</right>
+					<top>20</top>
+					<height>25</height>
+					<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.EpisodeName, (,)]</label>
+					<align>left</align>
+					<font>font36_title</font>
+					<aligny>center</aligny>
+				</control>
+				<control type="textbox">
+					<left>260</left>
+					<top>55</top>
+					<right>50</right>
+					<height>120</height>
+					<label fallback="416">$INFO[VideoPlayer.Plot]</label>
+					<align>justify</align>
+					<autoscroll delay="5000" repeat="7500" time="5000"></autoscroll>
+				</control>
+			</control>	
 			<control type="label">
+				<animation effect="slide" start="0,0" end="0,240" time="0" tween="sine" easing="inout" condition="![!IsEmpty(VideoPlayer.Plot) | !IsEmpty(Player.Art(thumb))]">Conditional</animation>
 				<left>20</left>
 				<width>1000</width>
 				<top>-100</top>
@@ -151,35 +184,6 @@
 				<align>center</align>
 				<font>WeatherTemp</font>
 				<aligny>center</aligny>
-			</control>
-			<control type="label">
-				<right>20</right>
-				<width>800</width>
-				<top>190</top>
-				<height>25</height>
-				<label>$INFO[VideoPlayer.NextTitle,[COLOR grey]$LOCALIZE[19031]: [/COLOR], - ][COLOR grey]$INFO[VideoPlayer.NextStartTime]$INFO[VideoPlayer.NextEndTime: ][/COLOR]</label>
-				<align>right</align>
-				<aligny>center</aligny>
-				<visible>VideoPlayer.HasEpg</visible>
-			</control>
-			<control type="label">
-				<left>260</left>
-				<right>50</right>
-				<top>20</top>
-				<height>25</height>
-				<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.EpisodeName, (,)]</label>
-				<align>left</align>
-				<font>font36_title</font>
-				<aligny>center</aligny>
-			</control>
-			<control type="textbox">
-				<left>260</left>
-				<top>55</top>
-				<right>50</right>
-				<height>120</height>
-				<label fallback="416">$INFO[VideoPlayer.Plot]</label>
-				<align>justify</align>
-				<autoscroll delay="5000" repeat="7500" time="5000"></autoscroll>
 			</control>
 		</control>
 		<control type="group">
