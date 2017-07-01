@@ -204,10 +204,6 @@
 		</item>
 	</include>
 	<include name="HomeSubMenuSystem">
-		<item id="90123">
-			<label>7</label>
-			<onclick>ActivateWindow(FileManager)</onclick>
-		</item>
 		<item id="90124">
 			<label>20092</label>
 			<onclick>ActivateWindow(Loginscreen)</onclick>
@@ -216,11 +212,15 @@
 			<label>130</label>
 			<onclick>ActivateWindow(SystemInfo)</onclick>
 		</item>
-		<item id="90126">
+		<item id="90123">
+			<label>7</label>
+			<onclick>ActivateWindow(FileManager)</onclick>
+		</item>
+<!-- 		<item id="90126">
 			<label>14111</label>
 			<onclick>ActivateWindow(EventLog,events://,return)</onclick>
 			<visible>system.getbool(eventlog.enabled)</visible>
-		</item>
+		</item> -->
 	</include>
 	<include name="HomeSubMenuPlayDisc">
 		<item id="90132">

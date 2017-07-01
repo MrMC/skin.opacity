@@ -97,6 +97,15 @@
 								<include>HomeSubMenuVideos</include>
 							</content>
 						</control>
+						<control type="list" id="9107">
+							<include content="SubMenuList">
+								<param name="list_id" value="9107" />
+								<param name="visible" value="Container(9000).HasFocus(11)" />
+							</include>
+							<content>
+								<include>HomeSubMenuSystem</include>
+							</content>
+						</control>
 					</control>
 					<control type="fixedlist" id="9000">
 						<top>85</top>
@@ -249,12 +258,7 @@
 								<property name="menu_id">$NUMBER[14000]</property>
 								<thumb>icons/sidemenu/system.png</thumb>
 								<property name="id">system</property>
-							</item>
-							<item id="12">
-								<label>$LOCALIZE[20126]</label>
-								<onclick>System.LogOff</onclick>
-								<visible>System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)</visible>
-								<visible>System.Loggedon</visible>
+								<property name="submenu">true</property>
 							</item>
 						</content>
 					</control>
