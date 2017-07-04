@@ -5,6 +5,7 @@
 		<control type="group">
 			<depth>DepthMax</depth>
 			<bottom>0</bottom>
+			<animation effect="slide" end="0,-950" time="300" tween="sine" easing="inout" condition="Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)">conditional</animation>
 			<height>110</height>
 			<right>0</right>
 			<left>0</left>
