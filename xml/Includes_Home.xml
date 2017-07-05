@@ -1,42 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="SubmenuContent">
-		<content target="$PARAM[widget_target]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
-	</include>
-	<include name="PVRSubMenuContent">
-		<content>
-			<item>
-				<label>$LOCALIZE[19019]</label>
-				<onclick>ActivateWindow($PARAM[pvr_type]Channels)</onclick>
-				<thumb>DefaultAddonPeripheral.png</thumb>
-			</item>
-			<item>
-				<label>$LOCALIZE[19069]</label>
-				<onclick>ActivateWindow($PARAM[pvr_type]Guide)</onclick>
-				<thumb>icons/pvr/epg.png</thumb>
-			</item>
-			<item>
-				<label>$LOCALIZE[19017]</label>
-				<onclick>ActivateWindow($PARAM[pvr_type]Recordings)</onclick>
-				<thumb>icons/pvr/recording.png</thumb>
-			</item>
-			<item>
-				<label>$LOCALIZE[19040]</label>
-				<onclick>ActivateWindow($PARAM[pvr_type]Timers)</onclick>
-				<thumb>icons/pvr/timer.png</thumb>
-			</item>
-			<item>
-				<label>$LOCALIZE[19138]</label>
-				<onclick>ActivateWindow($PARAM[pvr_type]TimerRules)</onclick>
-				<thumb>icons/pvr/timer-rule.png</thumb>
-			</item>
-			<item>
-				<label>$LOCALIZE[137]</label>
-				<onclick>ActivateWindow($PARAM[pvr_type]Search)</onclick>
-				<thumb>DefaultAddonsSearch.png</thumb>
-			</item>
-		</content>
-	</include>
 	<include name="SubMenuList">
 		<top>105</top>
 		<left>-400</left>
