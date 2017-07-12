@@ -88,15 +88,6 @@
 								<include>HomeSubMenuRadio</include>
 							</content>
 						</control>
-						<control type="list" id="9106">
-							<include content="SubMenuList">
-								<param name="list_id" value="9106" />
-								<param name="visible" value="Container(9000).HasFocus(8)" />
-							</include>
-							<content>
-								<include>HomeSubMenuVideos</include>
-							</content>
-						</control>
 						<control type="list" id="9107">
 							<include content="SubMenuList">
 								<param name="list_id" value="9107" />
@@ -249,7 +240,6 @@
 								<property name="menu_id">$NUMBER[11000]</property>
 								<thumb>icons/sidemenu/videos.png</thumb>
 								<property name="id">video</property>
-								<property name="submenu">true</property>
 								<visible>!Skin.HasSetting(HomeMenuNoMediaSourceButton)</visible>
 							</item>
 							<item id="11">
