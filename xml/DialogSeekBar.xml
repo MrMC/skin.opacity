@@ -68,7 +68,7 @@
 				<aligny>center</aligny>
 				<font>font30</font>
 				<wrapmultiline>true</wrapmultiline>
-				<label>[COLOR grey]$LOCALIZE[21396]:[/COLOR]$INFO[player.chapter]$INFO[player.chaptercount, / ]</label>
+				<label>[COLOR primary_color]$LOCALIZE[21396]: [/COLOR] $INFO[player.chapter]$INFO[player.chaptercount, / ]</label>
 				<visible>player.chaptercount</visible>
 			</control>
 			<control type="label">
