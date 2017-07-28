@@ -206,8 +206,8 @@
 								<thumb>icons/sidemenu/livetv.png</thumb>
 								<property name="id">livetv</property>
 								<property name="submenu">true</property>
-<!-- 								<visible>!Skin.HasSetting(HomeMenuNoTVButton)</visible>
-								<visible>System.GetBool(pvrmanager.enabled)</visible> -->
+								<visible>!Skin.HasSetting(HomeMenuNoTVButton)</visible>
+								<visible>System.GetBool(pvrmanager.enabled)</visible>
 							</item>
 							<item id="6">
 								<label>$LOCALIZE[19021]</label>
