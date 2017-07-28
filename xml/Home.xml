@@ -342,7 +342,7 @@
 									<top>280</top>
 									<width>200</width>
 									<height>120</height>
-									<label>$INFO[ListItem.Label]</label>
+									<label>[B]$INFO[ListItem.Label][/B]</label>
 									<font>font12</font>
 									<shadowcolor>text_shadow</shadowcolor>
 									<align>center</align>
@@ -425,7 +425,7 @@
 									<top>280</top>
 									<width>200</width>
 									<height>120</height>
-									<label>$INFO[ListItem.Label]</label>
+									<label>[B]$INFO[ListItem.Label][/B]</label>
 									<font>font12</font>
 									<shadowcolor>text_shadow</shadowcolor>
 									<align>center</align>
@@ -514,7 +514,7 @@
 									<top>280</top>
 									<width>200</width>
 									<height>120</height>
-									<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Property(SeasonEpisode)]</label>
+									<label>[B]$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Property(SeasonEpisode)][/B]</label>
 									<font>font12</font>
 									<shadowcolor>text_shadow</shadowcolor>
 									<align>center</align>
@@ -597,7 +597,7 @@
 									<top>280</top>
 									<width>200</width>
 									<height>120</height>
-									<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Property(SeasonEpisode)]</label>
+									<label>[B]$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Property(SeasonEpisode)][/B]</label>
 									<font>font12</font>
 									<shadowcolor>text_shadow</shadowcolor>
 									<align>center</align>
@@ -688,7 +688,7 @@
 									<top>280</top>
 									<width>290</width>
 									<height>100</height>
-									<label>$INFO[ListItem.Album]</label>
+									<label>[B]$INFO[ListItem.Album][/B]</label>
 									<font>font12</font>
 									<shadowcolor>text_shadow</shadowcolor>
 									<align>center</align>
