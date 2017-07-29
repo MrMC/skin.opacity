@@ -337,6 +337,27 @@
 									<bordertexture border="20">overlays/shadow.png</bordertexture>
 									<bordersize>20</bordersize>
 								</control>
+								<control type="image">
+									<left>0</left>
+									<top>0</top>
+									<width>216</width>
+									<height>306</height>
+									<texture colordiffuse="primary_color" background="true">overlays/FrameRA.png</texture>
+									<visible>Control.HasFocus(8000)</visible>
+									<bordersize>20</bordersize>
+								</control>
+								<control type="textbox">
+									<left>8</left>
+									<top>280</top>
+									<width>200</width>
+									<height>120</height>
+									<label>$INFO[ListItem.Label]</label>
+									<font>font12</font>
+									<shadowcolor>text_shadow</shadowcolor>
+									<align>center</align>
+									<aligny>center</aligny>
+									<visible>!Control.HasFocus(8000)</visible>
+								</control>
 								<control type="textbox">
 									<left>8</left>
 									<top>280</top>
@@ -347,6 +368,7 @@
 									<shadowcolor>text_shadow</shadowcolor>
 									<align>center</align>
 									<aligny>center</aligny>
+									<visible>Control.HasFocus(8000)</visible>
 								</control>
 							</control>
 						</focusedlayout>
@@ -420,6 +442,27 @@
 									<bordertexture border="20">overlays/shadow.png</bordertexture>
 									<bordersize>20</bordersize>
 								</control>
+								<control type="image">
+									<left>0</left>
+									<top>0</top>
+									<width>216</width>
+									<height>306</height>
+									<texture colordiffuse="primary_color" background="true">overlays/FrameRA.png</texture>
+									<visible>Control.HasFocus(8010)</visible>
+									<bordersize>20</bordersize>
+								</control>
+								<control type="textbox">
+									<left>8</left>
+									<top>280</top>
+									<width>200</width>
+									<height>120</height>
+									<label>$INFO[ListItem.Label]</label>
+									<font>font12</font>
+									<shadowcolor>text_shadow</shadowcolor>
+									<align>center</align>
+									<aligny>center</aligny>
+									<visible>!Control.HasFocus(8010)</visible>
+								</control>
 								<control type="textbox">
 									<left>8</left>
 									<top>280</top>
@@ -430,6 +473,7 @@
 									<shadowcolor>text_shadow</shadowcolor>
 									<align>center</align>
 									<aligny>center</aligny>
+									<visible>Control.HasFocus(8010)</visible>
 								</control>
 							</control>
 						</focusedlayout>
@@ -509,6 +553,27 @@
 									<bordertexture border="20">overlays/shadow.png</bordertexture>
 									<bordersize>20</bordersize>
 								</control>
+								<control type="image">
+									<left>0</left>
+									<top>0</top>
+									<width>216</width>
+									<height>306</height>
+									<texture colordiffuse="primary_color" background="true">overlays/FrameRA.png</texture>
+									<visible>Control.HasFocus(8001)</visible>
+									<bordersize>20</bordersize>
+								</control>
+								<control type="textbox">
+									<left>8</left>
+									<top>280</top>
+									<width>200</width>
+									<height>120</height>
+									<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Property(SeasonEpisode)]</label>
+									<font>font12</font>
+									<shadowcolor>text_shadow</shadowcolor>
+									<align>center</align>
+									<aligny>center</aligny>
+									<visible>!Control.HasFocus(8001)</visible>
+								</control>
 								<control type="textbox">
 									<left>8</left>
 									<top>280</top>
@@ -519,6 +584,7 @@
 									<shadowcolor>text_shadow</shadowcolor>
 									<align>center</align>
 									<aligny>center</aligny>
+									<visible>Control.HasFocus(8001)</visible>
 								</control>
 							</control>
 						</focusedlayout>
@@ -592,6 +658,15 @@
 									<bordertexture border="20">overlays/shadow.png</bordertexture>
 									<bordersize>20</bordersize>
 								</control>
+								<control type="image">
+									<left>0</left>
+									<top>0</top>
+									<width>216</width>
+									<height>306</height>
+									<texture colordiffuse="primary_color" background="true">overlays/FrameRA.png</texture>
+									<visible>Control.HasFocus(8011)</visible>
+									<bordersize>20</bordersize>
+								</control>
 								<control type="textbox">
 									<left>8</left>
 									<top>280</top>
@@ -602,6 +677,19 @@
 									<shadowcolor>text_shadow</shadowcolor>
 									<align>center</align>
 									<aligny>center</aligny>
+									<visible>Control.HasFocus(8011)</visible>
+								</control>
+								<control type="textbox">
+									<left>8</left>
+									<top>280</top>
+									<width>200</width>
+									<height>120</height>
+									<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Property(SeasonEpisode)]</label>
+									<font>font12</font>
+									<shadowcolor>text_shadow</shadowcolor>
+									<align>center</align>
+									<aligny>center</aligny>
+									<visible>!Control.HasFocus(8011)</visible>
 								</control>
 							</control>
 						</focusedlayout>
@@ -683,6 +771,27 @@
 									<bordertexture border="20">overlays/shadow.png</bordertexture>
 									<bordersize>20</bordersize>
 								</control>
+								<control type="image">
+									<left>0</left>
+									<top>0</top>
+									<width>306</width>
+									<height>306</height>
+									<texture colordiffuse="primary_color" background="true">overlays/FrameAlbum.png</texture>
+									<visible>Control.HasFocus(8002)</visible>
+									<bordersize>20</bordersize>
+								</control>
+								<control type="textbox">
+									<left>8</left>
+									<top>280</top>
+									<width>290</width>
+									<height>100</height>
+									<label>$INFO[ListItem.Album]</label>
+									<font>font12</font>
+									<shadowcolor>text_shadow</shadowcolor>
+									<align>center</align>
+									<aligny>center</aligny>
+									<visible>!Control.HasFocus(8002)</visible>
+								</control>
 								<control type="textbox">
 									<left>8</left>
 									<top>280</top>
@@ -693,6 +802,7 @@
 									<shadowcolor>text_shadow</shadowcolor>
 									<align>center</align>
 									<aligny>center</aligny>
+									<visible>Control.HasFocus(8002)</visible>
 								</control>
 							</control>
 						</focusedlayout>
