@@ -277,7 +277,7 @@
 						<font>font25_title</font>
 						<aligny>top</aligny>
 						<textcolor>grey</textcolor>
-						<label>$INFO[Container(8000).ListItem.Property(ItemType)]</label>
+						<label>[UPPERCASE]$INFO[Container(8000).ListItem.Property(ItemType)][/UPPERCASE]</label>
 					</control>
 					<control type="list" id="8000">
 						<top>130</top>
@@ -334,16 +334,7 @@
 									<width>216</width>
 									<height>306</height>
 									<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
-									<bordertexture border="20">overlays/shadow.png</bordertexture>
-									<bordersize>20</bordersize>
-								</control>
-								<control type="image">
-									<left>0</left>
-									<top>0</top>
-									<width>216</width>
-									<height>306</height>
-									<texture colordiffuse="primary_color" background="true">overlays/FrameRA.png</texture>
-									<visible>Control.HasFocus(8000)</visible>
+									<bordertexture border="20">overlays/frameRA.png</bordertexture>
 									<bordersize>20</bordersize>
 								</control>
 								<control type="textbox">
@@ -382,7 +373,7 @@
 						<font>font25_title</font>
 						<aligny>top</aligny>
 						<textcolor>grey</textcolor>
-						<label>$INFO[Container(8010).ListItem.Property(ItemType)]</label>
+						<label>[UPPERCASE]$INFO[Container(8010).ListItem.Property(ItemType)][/UPPERCASE]</label>
 					</control>
 					<control type="list" id="8010">
 						<top>570</top>
@@ -439,16 +430,7 @@
 									<width>216</width>
 									<height>306</height>
 									<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
-									<bordertexture border="20">overlays/shadow.png</bordertexture>
-									<bordersize>20</bordersize>
-								</control>
-								<control type="image">
-									<left>0</left>
-									<top>0</top>
-									<width>216</width>
-									<height>306</height>
-									<texture colordiffuse="primary_color" background="true">overlays/FrameRA.png</texture>
-									<visible>Control.HasFocus(8010)</visible>
+									<bordertexture border="20">overlays/frameRA.png</bordertexture>
 									<bordersize>20</bordersize>
 								</control>
 								<control type="textbox">
@@ -493,7 +475,7 @@
 						<font>font25_title</font>
 						<aligny>top</aligny>
 						<textcolor>grey</textcolor>
-						<label>$INFO[Container(8001).ListItem.Property(ItemType)]</label>
+						<label>[UPPERCASE]$INFO[Container(8001).ListItem.Property(ItemType)][/UPPERCASE]</label>
 					</control>
 					<control type="list" id="8001">
 						<top>130</top>
@@ -550,16 +532,7 @@
 									<width>216</width>
 									<height>306</height>
 									<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(tvshow.thumb)]</texture>
-									<bordertexture border="20">overlays/shadow.png</bordertexture>
-									<bordersize>20</bordersize>
-								</control>
-								<control type="image">
-									<left>0</left>
-									<top>0</top>
-									<width>216</width>
-									<height>306</height>
-									<texture colordiffuse="primary_color" background="true">overlays/FrameRA.png</texture>
-									<visible>Control.HasFocus(8001)</visible>
+									<bordertexture border="20">overlays/frameRA.png</bordertexture>
 									<bordersize>20</bordersize>
 								</control>
 								<control type="textbox">
@@ -598,7 +571,7 @@
 						<font>font25_title</font>
 						<aligny>top</aligny>
 						<textcolor>grey</textcolor>
-						<label>$INFO[Container(8011).ListItem.Property(ItemType)]</label>
+						<label>[UPPERCASE]$INFO[Container(8011).ListItem.Property(ItemType)][/UPPERCASE]</label>
 					</control>
 					<control type="list" id="8011">
 						<top>570</top>
@@ -655,16 +628,7 @@
 									<width>216</width>
 									<height>306</height>
 									<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(tvshow.thumb)]</texture>
-									<bordertexture border="20">overlays/shadow.png</bordertexture>
-									<bordersize>20</bordersize>
-								</control>
-								<control type="image">
-									<left>0</left>
-									<top>0</top>
-									<width>216</width>
-									<height>306</height>
-									<texture colordiffuse="primary_color" background="true">overlays/FrameRA.png</texture>
-									<visible>Control.HasFocus(8011)</visible>
+									<bordertexture border="20">overlays/frameRA.png</bordertexture>
 									<bordersize>20</bordersize>
 								</control>
 								<control type="textbox">
@@ -709,7 +673,7 @@
 						<font>font25_title</font>
 						<aligny>top</aligny>
 						<textcolor>grey</textcolor>
-						<label>$INFO[Container(8002).ListItem.Property(ItemType)]</label>
+						<label>[UPPERCASE]$INFO[Container(8002).ListItem.Property(ItemType)][/UPPERCASE]</label>
 					</control>
 					<control type="list" id="8002">
 						<top>130</top>
@@ -768,16 +732,7 @@
 									<height>306</height>
 									<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Property(thumb)]</texture>
 									<aspectratio aligny="top">stretch</aspectratio>
-									<bordertexture border="20">overlays/shadow.png</bordertexture>
-									<bordersize>20</bordersize>
-								</control>
-								<control type="image">
-									<left>0</left>
-									<top>0</top>
-									<width>306</width>
-									<height>306</height>
-									<texture colordiffuse="primary_color" background="true">overlays/FrameAlbum.png</texture>
-									<visible>Control.HasFocus(8002)</visible>
+									<bordertexture border="20">overlays/frameAlbum.png</bordertexture>
 									<bordersize>20</bordersize>
 								</control>
 								<control type="textbox">
