@@ -109,6 +109,10 @@
 			<label>344</label>
 			<onclick>ActivateWindow(Videos,MovieActors,return)</onclick>
 		</item>
+		<item id="90168">
+			<label>653</label>
+			<onclick>UpdateLibrary(video)</onclick>
+		</item>
 	</include>
 	<include name="HomeSubMenuTVShows">
 		<item id="90172">
@@ -134,6 +138,10 @@
 		<item id="90176">
 			<label>344</label>
 			<onclick>ActivateWindow(Videos,TVShowActors,return)</onclick>
+		</item>
+		<item id="90177">
+			<label>653</label>
+			<onclick>UpdateLibrary(video)</onclick>
 		</item>
 	</include>
 	<include name="HomeSubMenuMusic">
