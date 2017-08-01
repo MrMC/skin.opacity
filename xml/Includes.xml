@@ -7,6 +7,7 @@
 	<include file="Includes_Buttons.xml" />
 	<include file="Includes_PVR.xml" />
 	<include file="View_50_WideList.xml" />
+	<include file="View_51_Poster.xml" />
 	<include file="Variables.xml" />
 	<constant name="DepthDialog">0.50</constant>
 	<constant name="DepthDialog+">0.52</constant>
