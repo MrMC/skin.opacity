@@ -11,7 +11,7 @@
 			<control type="panel" id="51">
 				<left>40</left>
 				<top>list_top_offset</top>
-				<bottom>80</bottom>
+				<bottom>85</bottom>
 				<right>580</right>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<orientation>vertical</orientation>
@@ -20,6 +20,7 @@
 				<onright>531</onright>
 				<onup>51</onup>
 				<ondown>51</ondown>
+				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.content(seasons)</visible>
 				<viewtype label="$LOCALIZE[31107]">list</viewtype>
 				<include content="PosterLayout">
 					<param name="list_id" value="51" />

@@ -35,7 +35,6 @@
 			<control type="group">
 				<include>MediaMenuCommon</include>
 				<control type="grouplist" id="9000">
-					<include>MediaMenuListCommon</include>
 					<control type="button" id="1022">
 						<description>Watched Toggle</description>
 						<include>MediaMenuItemsCommon</include>
@@ -43,7 +42,7 @@
 						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.content(seasons)</visible>
 						<onclick>Container.NextViewMode</onclick>
 					</control>
-
+					<include>MediaMenuListCommon</include>
 					<control type="button" id="10">
 						<description>Watched Toggle</description>
 						<include>MediaMenuItemsCommon</include>
