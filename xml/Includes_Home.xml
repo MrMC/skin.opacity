@@ -114,6 +114,96 @@
 			<onclick>UpdateLibrary(video)</onclick>
 		</item>
 	</include>
+	<include name="PosterLayout">
+		<param name="list_id">8011</param>
+		<param name="label">$INFO[ListItem.Label]</param>
+		<param name="thumb">$INFO[ListItem.Thumb]</param>
+		<param name="item_width">260</param>
+		<definition>
+			<itemlayout width="$PARAM[item_width]" height="400">
+				<control type="group">
+					<depth>DepthContentPopout</depth>
+					<top>2</top>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>216</width>
+						<height>306</height>
+						<texture fallback="DefaultVideo.png" background="true">$PARAM[thumb]</texture>
+						<bordertexture border="20">overlays/shadow.png</bordertexture>
+						<bordersize>20</bordersize>
+					</control>
+					<control type="textbox">
+						<left>8</left>
+						<top>280</top>
+						<width>200</width>
+						<height>120</height>
+						<label>$PARAM[label]</label>
+						<font>font12</font>
+						<shadowcolor>text_shadow</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+				</control>
+			</itemlayout>
+			<focusedlayout width="$PARAM[item_width]" height="400">
+				<control type="group">
+					<depth>DepthContentPopout</depth>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="auto" start="100" end="108" time="250" tween="sine" />
+					</animation>
+					<animation type="UnFocus" reversible="false">
+						<effect type="zoom" center="auto" start="108" end="100" time="150" tween="sine" />
+					</animation>
+					<top>2</top>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>216</width>
+						<height>306</height>
+						<texture fallback="DefaultVideo.png" background="true">$PARAM[thumb]</texture>
+						<bordertexture border="20">overlays/shadow.png</bordertexture>
+						<bordersize>20</bordersize>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>216</width>
+						<height>306</height>
+						<texture fallback="DefaultVideo.png" background="true">$PARAM[thumb]</texture>
+						<bordertexture border="20">overlays/frameRA.png</bordertexture>
+						<animation effect="fade" start="0" end="100" time="200">Focus</animation>
+						<animation effect="fade" start="100" end="0" time="200">UnFocus</animation>
+						<bordersize>20</bordersize>
+					</control>
+					<control type="textbox">
+						<left>0</left>
+						<top>280</top>
+						<width>216</width>
+						<height>120</height>
+						<label>[B]$PARAM[label][/B]</label>
+						<font>font12</font>
+						<shadowcolor>text_shadow</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<visible>Control.HasFocus($PARAM[list_id])</visible>
+					</control>
+					<control type="textbox">
+						<left>8</left>
+						<top>280</top>
+						<width>200</width>
+						<height>120</height>
+						<label>$PARAM[label]</label>
+						<font>font12</font>
+						<shadowcolor>text_shadow</shadowcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<visible>!Control.HasFocus($PARAM[list_id])</visible>
+					</control>
+				</control>
+			</focusedlayout>
+		</definition>
+	</include>
 	<include name="HomeSubMenuTVShows">
 		<item id="90172">
 			<label>$LOCALIZE[31008]</label>
@@ -187,11 +277,11 @@
 			<label>7</label>
 			<onclick>ActivateWindow(FileManager)</onclick>
 		</item>
-<!-- 		<item id="90126">
-			<label>14111</label>
-			<onclick>ActivateWindow(EventLog,events://,return)</onclick>
-			<visible>system.getbool(eventlog.enabled)</visible>
-		</item> -->
+		<!-- 		<item id="90126">
+							<label>14111</label>
+							<onclick>ActivateWindow(EventLog,events://,return)</onclick>
+							<visible>system.getbool(eventlog.enabled)</visible>
+						</item> -->
 	</include>
 	<include name="HomeSubMenuPlayDisc">
 		<item id="90132">
