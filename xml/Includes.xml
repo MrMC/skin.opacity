@@ -657,7 +657,7 @@
 					<textureradioonnofocus colordiffuse="grey">icons/back.png</textureradioonnofocus>
 					<textureradioofffocus>icons/back.png</textureradioofffocus>
 					<textureradiooffnofocus colordiffuse="grey">icons/back.png</textureradiooffnofocus>
-					<visible>!Window.IsActive(home) + !Window.IsActive(loginscreen) + !Window.IsActive(infodialog)</visible>
+					<visible>System.IsTouch + !Window.IsActive(home) + !Window.IsActive(loginscreen) + !Window.IsActive(infodialog)</visible>
 				</control>
 			</control>
 		</definition>
