@@ -176,7 +176,7 @@
 						<animation effect="fade" start="100" end="0" time="200">UnFocus</animation>
 						<bordersize>20</bordersize>
 					</control>
-					<control type="textbox">
+<!-- 					<control type="textbox">
 						<left>0</left>
 						<top>280</top>
 						<width>216</width>
@@ -187,7 +187,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<visible>Control.HasFocus($PARAM[list_id])</visible>
-					</control>
+					</control> -->
 					<control type="textbox">
 						<left>8</left>
 						<top>280</top>
@@ -198,7 +198,7 @@
 						<shadowcolor>text_shadow</shadowcolor>
 						<align>center</align>
 						<aligny>center</aligny>
-						<visible>!Control.HasFocus($PARAM[list_id])</visible>
+						<!-- <visible>!Control.HasFocus($PARAM[list_id])</visible> -->
 					</control>
 				</control>
 			</focusedlayout>
