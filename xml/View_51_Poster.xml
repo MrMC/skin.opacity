@@ -21,7 +21,7 @@
 				<onup>51</onup>
 				<ondown>51</ondown>
 				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.content(seasons)</visible>
-				<viewtype label="$LOCALIZE[31107]">list</viewtype>
+				<viewtype label="$LOCALIZE[31102]">list</viewtype>
 				<include content="PosterLayout">
 					<param name="list_id" value="51" />
 					<param name="item_width" value="250" />

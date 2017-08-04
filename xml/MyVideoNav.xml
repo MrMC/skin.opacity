@@ -38,7 +38,7 @@
 					<control type="button" id="1022">
 						<description>Watched Toggle</description>
 						<include>MediaMenuItemsCommon</include>
-						<label>31023</label>
+						<label>$LOCALIZE[31023]: $INFO[Container.ViewMode]</label>
 						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.content(seasons)</visible>
 						<onclick>Container.NextViewMode</onclick>
 					</control>
