@@ -605,6 +605,7 @@
 					<include>FullScreenDimensions</include>
 					<aspectratio>scale</aspectratio>
 					<fadetime>400</fadetime>
+					<visible>Window.IsMedia</visible>
 					<texture background="true" colordiffuse="37FFFFFF">$VAR[MediaFanartVar]</texture>
 				</control>
 			</control>
