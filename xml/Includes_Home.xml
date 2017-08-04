@@ -14,6 +14,12 @@
 		<scrolltime tween="cubic" easing="out">500</scrolltime>
 		<itemlayout height="100">
 			<control type="group">
+				<control type="image">
+					<description>separator image</description>
+					<height>3</height>
+					<visible>!IsEmpty(ListItem.Property(separator))</visible>
+					<texture colordiffuse="primary_color_30" border="3">dialogs/separator-grey.png</texture>
+				</control>
 				<control type="label">
 					<left>50</left>
 					<right>40</right>
@@ -26,26 +32,29 @@
 			</control>
 		</itemlayout>
 		<focusedlayout height="100">
-			<control type="group">
+			<control type="image">
+				<description>separator image</description>
+				<height>3</height>
+				<visible>!IsEmpty(ListItem.Property(separator))</visible>
+				<visible>!Control.HasFocus($PARAM[list_id])</visible>
+				<texture colordiffuse="primary_color_30" border="3">dialogs/separator-grey.png</texture>
+			</control>
+			<control type="image">
 				<left>0</left>
-				<right>0</right>
-				<control type="image">
-					<left>0</left>
-					<right>25</right>
-					<height>100%</height>
-					<visible>Control.HasFocus($PARAM[list_id])</visible>
-					<texture colordiffuse="primary_color" border="5">buttons/focus.png</texture>
-				</control>
-				<control type="label">
-					<left>50</left>
-					<right>45</right>
-					<height>100</height>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label]</label>
-					<align>left</align>
-					<scroll>true</scroll>
-					<font>font35</font>
-				</control>
+				<right>25</right>
+				<height>100%</height>
+				<visible>Control.HasFocus($PARAM[list_id])</visible>
+				<texture colordiffuse="primary_color" border="5">buttons/focus.png</texture>
+			</control>
+			<control type="label">
+				<left>50</left>
+				<right>45</right>
+				<height>100</height>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Label]</label>
+				<align>left</align>
+				<scroll>true</scroll>
+				<font>font35</font>
 			</control>
 		</focusedlayout>
 	</include>
@@ -111,6 +120,7 @@
 		</item>
 		<item id="90168">
 			<label>653</label>
+			<property name="separator">true</property>
 			<onclick>UpdateLibrary(video)</onclick>
 		</item>
 	</include>
@@ -176,18 +186,18 @@
 						<animation effect="fade" start="100" end="0" time="200">UnFocus</animation>
 						<bordersize>20</bordersize>
 					</control>
-<!-- 					<control type="textbox">
-						<left>0</left>
-						<top>280</top>
-						<width>216</width>
-						<height>120</height>
-						<label>[B]$PARAM[label][/B]</label>
-						<font>font12</font>
-						<shadowcolor>text_shadow</shadowcolor>
-						<align>center</align>
-						<aligny>center</aligny>
-						<visible>Control.HasFocus($PARAM[list_id])</visible>
-					</control> -->
+					<!-- 					<control type="textbox">
+											<left>0</left>
+											<top>280</top>
+											<width>216</width>
+											<height>120</height>
+											<label>[B]$PARAM[label][/B]</label>
+											<font>font12</font>
+											<shadowcolor>text_shadow</shadowcolor>
+											<align>center</align>
+											<aligny>center</aligny>
+											<visible>Control.HasFocus($PARAM[list_id])</visible>
+										</control> -->
 					<control type="textbox">
 						<left>8</left>
 						<top>280</top>
@@ -231,6 +241,7 @@
 		</item>
 		<item id="90177">
 			<label>653</label>
+			<property name="separator">true</property>
 			<onclick>UpdateLibrary(video)</onclick>
 		</item>
 	</include>
@@ -263,6 +274,11 @@
 			<label>$LOCALIZE[136]</label>
 			<onclick>ActivateWindow(Music,playlists,return)</onclick>
 		</item>
+		<item id="90118">
+			<label>653</label>
+			<property name="separator">true</property>
+			<onclick>UpdateLibrary(music)</onclick>
+		</item>
 	</include>
 	<include name="HomeSubMenuSystem">
 		<item id="90124">
@@ -278,10 +294,10 @@
 			<onclick>ActivateWindow(FileManager)</onclick>
 		</item>
 		<!-- 		<item id="90126">
-							<label>14111</label>
-							<onclick>ActivateWindow(EventLog,events://,return)</onclick>
-							<visible>system.getbool(eventlog.enabled)</visible>
-						</item> -->
+									<label>14111</label>
+									<onclick>ActivateWindow(EventLog,events://,return)</onclick>
+									<visible>system.getbool(eventlog.enabled)</visible>
+								</item> -->
 	</include>
 	<include name="HomeSubMenuPlayDisc">
 		<item id="90132">
