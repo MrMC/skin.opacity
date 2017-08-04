@@ -129,11 +129,12 @@
 		<param name="label">$INFO[ListItem.Label]</param>
 		<param name="thumb">$INFO[ListItem.Thumb]</param>
 		<param name="item_width">260</param>
+		<param name="y_offset">2</param>
 		<definition>
 			<itemlayout width="$PARAM[item_width]" height="400">
 				<control type="group">
 					<depth>DepthContentPopout</depth>
-					<top>2</top>
+					<top>$PARAM[y_offset]</top>
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
@@ -165,7 +166,7 @@
 					<animation type="UnFocus" reversible="false">
 						<effect type="zoom" center="auto" start="108" end="100" time="150" tween="sine" />
 					</animation>
-					<top>2</top>
+					<top>$PARAM[y_offset]</top>
 					<control type="image">
 						<left>0</left>
 						<top>0</top>

@@ -10,7 +10,7 @@
 			<include>Visible_Left</include>
 			<control type="panel" id="51">
 				<left>40</left>
-				<top>list_top_offset</top>
+				<top>85</top>
 				<bottom>85</bottom>
 				<right>580</right>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
@@ -25,6 +25,7 @@
 				<include content="PosterLayout">
 					<param name="list_id" value="51" />
 					<param name="item_width" value="250" />
+					<param name="y_offset" value="20" />
 				</include>
 			</control>
 			<control type="scrollbar" id="531">
