@@ -183,6 +183,10 @@
 				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
 				<visible>Control.IsVisible(610)</visible>
 			</control>
+			<include content="TopBar">
+				<param name="breadcrumbs_label" value="$LOCALIZE[5] / $LOCALIZE[20077]" />
+			</include>
+			<include>BottomBar</include>
 			<control type="textbox" id="6">
 				<include>OpenClose_Right</include>
 				<description>description area</description>
@@ -197,10 +201,6 @@
 				<visible>!Window.IsVisible(infodialog) + !Window.IsVisible(extendedprogressdialog)</visible>
 				<label>$VAR[SkinSettingsHelpTextVar]</label>
 			</control>
-			<include content="TopBar">
-				<param name="breadcrumbs_label" value="$LOCALIZE[5] / $LOCALIZE[20077]" />
-			</include>
-			<include>BottomBar</include>
 		</control>
 	</controls>
 </window>
