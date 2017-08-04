@@ -15,9 +15,9 @@
 				<right>580</right>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<orientation>vertical</orientation>
-				<pagecontrol>531</pagecontrol>
+				<pagecontrol>532</pagecontrol>
 				<onleft>9000</onleft>
-				<onright>531</onright>
+				<onright>532</onright>
 				<onup>51</onup>
 				<ondown>51</ondown>
 				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.content(seasons)</visible>
@@ -28,7 +28,7 @@
 					<param name="y_offset" value="20" />
 				</include>
 			</control>
-			<control type="scrollbar" id="531">
+			<control type="scrollbar" id="532">
 				<right>616</right>
 				<top>85</top>
 				<width>18</width>
