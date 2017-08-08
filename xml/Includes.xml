@@ -764,11 +764,21 @@
 						<top>150</top>
 						<left>30</left>
 						<width>470</width>
-						<height>50</height>
+						<height>30</height>
+						<font>font30_title</font>
+						<aligny>top</aligny>
+						<textcolor>grey</textcolor>
+						<label>$INFO[ListItem.TVShowTitle]</label>
+					</control>
+					<control type="label">
+						<top>190</top>
+						<left>30</left>
+						<width>470</width>
+						<height>25</height>
 						<font>font25_title</font>
 						<aligny>top</aligny>
 						<textcolor>grey</textcolor>
-						<label>$INFO[ListItem.TVShowTitle][CR]$INFO[ListItem.Title]</label>
+						<label>$INFO[ListItem.Title]</label>
 					</control>
 					<control type="image">
 						<left>30</left>
