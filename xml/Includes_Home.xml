@@ -58,36 +58,6 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="HomeSubMenuVideos">
-		<item id="90102">
-			<label>342</label>
-			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
-			<visible>[Library.HasServices | Library.HasContent(Movies)] + Skin.HasSetting(HomeMenuNoMovieButton)</visible>
-		</item>
-		<item id="90103">
-			<label>20343</label>
-			<onclick>ActivateWindow(Videos,TvShowTitles,return)</onclick>
-			<visible>[Library.HasServices | Library.HasContent(TVShows)] + Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
-		</item>
-		<item id="90104">
-			<label>20389</label>
-			<onclick>ActivateWindow(Videos,MusicVideoTitles,return)</onclick>
-			<visible>[Library.HasServices | Library.HasContent(MusicVideos)] + Skin.HasSetting(HomeMenuNoMusicVideoButton)</visible>
-		</item>
-		<item id="90105">
-			<label>744</label>
-			<onclick>ActivateWindow(Videos,Files,return)</onclick>
-		</item>
-		<item id="90106">
-			<label>14022</label>
-			<onclick>ActivateWindow(Videos,Root)</onclick>
-			<visible>Library.HasContent(Video)</visible>
-		</item>
-		<item id="90107">
-			<label>$LOCALIZE[136]</label>
-			<onclick>ActivateWindow(Videos,playlists,return)</onclick>
-		</item>
-	</include>
 	<include name="HomeSubMenuMovies">
 		<item id="90162">
 			<label>$LOCALIZE[31008]</label>
@@ -299,13 +269,6 @@
 									<onclick>ActivateWindow(EventLog,events://,return)</onclick>
 									<visible>system.getbool(eventlog.enabled)</visible>
 								</item> -->
-	</include>
-	<include name="HomeSubMenuPlayDisc">
-		<item id="90132">
-			<label>13391</label>
-			<onclick>SetFocus(9000)</onclick>
-			<onclick>EjectTray()</onclick>
-		</item>
 	</include>
 	<include name="HomeSubMenuTV">
 		<item id="90143">
