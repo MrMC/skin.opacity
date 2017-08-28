@@ -306,7 +306,6 @@
 						<ondown>8010</ondown>
 						<onright>8000</onright>
 						<preloaditems>1</preloaditems>
-						<viewtype label="31100">icon</viewtype>
 						<visible>IntegerGreaterThan(Container(8000).NumItems,0)</visible>
 						<itemlayout width="260" height="308">
 							<control type="group">
@@ -387,7 +386,6 @@
 						<ondown>8000</ondown>
 						<onright>8010</onright>
 						<preloaditems>1</preloaditems>
-						<viewtype label="31100">icon</viewtype>
 						<visible>IntegerGreaterThan(Container(8010).NumItems,0)</visible>
 						<itemlayout width="260" height="308">
 							<control type="group">
@@ -476,7 +474,6 @@
 						<ondown>8011</ondown>
 						<onright>8001</onright>
 						<preloaditems>1</preloaditems>
-						<viewtype label="31100">icon</viewtype>
 						<visible>IntegerGreaterThan(Container(8001).NumItems,0)</visible>
 						<itemlayout width="260" height="306">
 							<control type="group">
@@ -557,7 +554,6 @@
 						<ondown>8001</ondown>
 						<onright>8011</onright>
 						<preloaditems>1</preloaditems>
-						<viewtype label="31100">icon</viewtype>
 						<visible>IntegerGreaterThan(Container(8011).NumItems,0)</visible>
 						<itemlayout width="260" height="306">
 							<control type="group">
@@ -646,7 +642,6 @@
 						<ondown>8002</ondown>
 						<onright>8002</onright>
 						<preloaditems>1</preloaditems>
-						<viewtype label="31100">icon</viewtype>
 						<visible>IntegerGreaterThan(Container(8002).NumItems,0)</visible>
 						<itemlayout width="306" height="306">
 							<control type="group">
