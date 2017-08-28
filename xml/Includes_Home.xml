@@ -100,8 +100,9 @@
 		<param name="thumb">$INFO[ListItem.Thumb]</param>
 		<param name="item_width">260</param>
 		<param name="y_offset">2</param>
+		<param name="condition">True</param>
 		<definition>
-			<itemlayout width="$PARAM[item_width]" height="400">
+			<itemlayout width="$PARAM[item_width]" height="400" condition="$PARAM[condition]">
 				<control type="group">
 					<depth>DepthContentPopout</depth>
 					<top>$PARAM[y_offset]</top>
@@ -127,7 +128,7 @@
 					</control>
 				</control>
 			</itemlayout>
-			<focusedlayout width="$PARAM[item_width]" height="400">
+			<focusedlayout width="$PARAM[item_width]" height="400" condition="$PARAM[condition]">
 				<control type="group">
 					<depth>DepthContentPopout</depth>
 					<animation type="Focus" reversible="false">
