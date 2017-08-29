@@ -115,6 +115,14 @@
 						<bordertexture border="20">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
 					</control>
+					<control type="image">
+						<left>178</left>
+						<top>5</top>
+						<width>32</width>
+						<height>32</height>
+						<texture>overlays/watched/watched-alt.png</texture>
+						<visible>IntegerGreaterThan(ListItem.PlayCount,0)</visible>
+					</control>
 					<control type="textbox">
 						<left>8</left>
 						<top>280</top>
@@ -158,18 +166,14 @@
 						<animation effect="fade" start="100" end="0" time="200">UnFocus</animation>
 						<bordersize>20</bordersize>
 					</control>
-					<!-- 					<control type="textbox">
-											<left>0</left>
-											<top>280</top>
-											<width>216</width>
-											<height>120</height>
-											<label>[B]$PARAM[label][/B]</label>
-											<font>font12</font>
-											<shadowcolor>text_shadow</shadowcolor>
-											<align>center</align>
-											<aligny>center</aligny>
-											<visible>Control.HasFocus($PARAM[list_id])</visible>
-										</control> -->
+					<control type="image">
+						<left>178</left>
+						<top>5</top>
+						<width>32</width>
+						<height>32</height>
+						<texture>overlays/watched/watched-alt.png</texture>
+						<visible>IntegerGreaterThan(ListItem.PlayCount,0)</visible>
+					</control>
 					<control type="textbox">
 						<left>8</left>
 						<top>280</top>
