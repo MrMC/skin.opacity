@@ -120,8 +120,8 @@
 						<top>5</top>
 						<width>32</width>
 						<height>32</height>
-						<texture>overlays/watched/watched-alt.png</texture>
-						<visible>IntegerGreaterThan(ListItem.PlayCount,0)</visible>
+						<texture>$VAR[ListWatchedIconVar]</texture>
+						<visible>!StringCompare(ListItem.Label,..)</visible>
 					</control>
 					<control type="textbox">
 						<left>8</left>
@@ -171,8 +171,8 @@
 						<top>5</top>
 						<width>32</width>
 						<height>32</height>
-						<texture>overlays/watched/watched-alt.png</texture>
-						<visible>IntegerGreaterThan(ListItem.PlayCount,0)</visible>
+						<texture>$VAR[ListWatchedIconVar]</texture>
+						<visible>!StringCompare(ListItem.Label,..)</visible>
 					</control>
 					<control type="textbox">
 						<left>8</left>
