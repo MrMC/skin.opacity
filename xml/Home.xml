@@ -320,6 +320,24 @@
 									<bordertexture border="20">overlays/shadow.png</bordertexture>
 									<bordersize>20</bordersize>
 								</control>
+								<control type="progress">
+									<left>20</left>
+									<top>286</top>
+									<width>176</width>
+									<height>6</height>
+									<texturebg>-</texturebg>
+									<midtexture colordiffuse="primary_color">colors\white.png</midtexture>
+									<info>ListItem.PercentPlayed</info>
+									<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
+								</control>
+								<control type="image">
+									<left>20</left>
+									<top>286</top>
+									<width>176</width>
+									<height>4</height>
+									<texture colordiffuse="primary_color">colors\white.png</texture>
+									<visible>IntegerGreaterThan(ListItem.PlayCount,0) + !IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
+								</control>
 							</control>
 						</itemlayout>
 						<focusedlayout width="260" height="308">
@@ -347,6 +365,24 @@
 									<height>306</height>
 									<texture>overlays/FrameRA.png</texture>
 									<visible>Control.HasFocus(8000)</visible>
+								</control>
+								<control type="progress">
+									<left>20</left>
+									<top>286</top>
+									<width>176</width>
+									<height>6</height>
+									<texturebg>-</texturebg>
+									<midtexture colordiffuse="primary_color">colors\white.png</midtexture>
+									<info>ListItem.PercentPlayed</info>
+									<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
+								</control>
+								<control type="image">
+									<left>20</left>
+									<top>286</top>
+									<width>176</width>
+									<height>4</height>
+									<texture colordiffuse="primary_color">colors\white.png</texture>
+									<visible>IntegerGreaterThan(ListItem.PlayCount,0) + !IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 								</control>
 							</control>
 						</focusedlayout>
@@ -400,6 +436,24 @@
 									<bordertexture border="20">overlays/shadow.png</bordertexture>
 									<bordersize>20</bordersize>
 								</control>
+								<control type="progress">
+									<left>20</left>
+									<top>280</top>
+									<width>176</width>
+									<height>6</height>
+									<texturebg>-</texturebg>
+									<midtexture colordiffuse="primary_color">colors\white.png</midtexture>
+									<info>ListItem.PercentPlayed</info>
+									<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
+								</control>
+								<control type="image">
+									<left>20</left>
+									<top>280</top>
+									<width>176</width>
+									<height>4</height>
+									<texture colordiffuse="primary_color">colors\white.png</texture>
+									<visible>IntegerGreaterThan(ListItem.PlayCount,0) + !IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
+								</control>
 							</control>
 						</itemlayout>
 						<focusedlayout width="260" height="308">
@@ -427,6 +481,24 @@
 									<height>306</height>
 									<texture>overlays/FrameRA.png</texture>
 									<visible>Control.HasFocus(8010)</visible>
+								</control>
+								<control type="progress">
+									<left>20</left>
+									<top>280</top>
+									<width>176</width>
+									<height>6</height>
+									<texturebg>-</texturebg>
+									<midtexture colordiffuse="primary_color">colors\white.png</midtexture>
+									<info>ListItem.PercentPlayed</info>
+									<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
+								</control>
+								<control type="image">
+									<left>20</left>
+									<top>280</top>
+									<width>176</width>
+									<height>4</height>
+									<texture colordiffuse="primary_color">colors\white.png</texture>
+									<visible>IntegerGreaterThan(ListItem.PlayCount,0) + !IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 								</control>
 							</control>
 						</focusedlayout>
@@ -500,6 +572,24 @@
 									<bordertexture border="20">overlays/shadow.png</bordertexture>
 									<bordersize>20</bordersize>
 								</control>
+								<control type="progress">
+									<left>20</left>
+									<top>280</top>
+									<width>176</width>
+									<height>6</height>
+									<texturebg>-</texturebg>
+									<midtexture colordiffuse="primary_color">colors\white.png</midtexture>
+									<info>ListItem.PercentPlayed</info>
+									<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
+								</control>
+								<control type="image">
+									<left>20</left>
+									<top>280</top>
+									<width>176</width>
+									<height>4</height>
+									<texture colordiffuse="primary_color">colors\white.png</texture>
+									<visible>IntegerGreaterThan(ListItem.PlayCount,0) + !IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
+								</control>
 							</control>
 						</itemlayout>
 						<focusedlayout width="260" height="306">
@@ -527,6 +617,24 @@
 									<height>306</height>
 									<texture>overlays/FrameRA.png</texture>
 									<visible>Control.HasFocus(8001)</visible>
+								</control>
+								<control type="progress">
+									<left>20</left>
+									<top>280</top>
+									<width>176</width>
+									<height>6</height>
+									<texturebg>-</texturebg>
+									<midtexture colordiffuse="primary_color">colors\white.png</midtexture>
+									<info>ListItem.PercentPlayed</info>
+									<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
+								</control>
+								<control type="image">
+									<left>20</left>
+									<top>280</top>
+									<width>176</width>
+									<height>4</height>
+									<texture colordiffuse="primary_color">colors\white.png</texture>
+									<visible>IntegerGreaterThan(ListItem.PlayCount,0) + !IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 								</control>
 							</control>
 						</focusedlayout>
@@ -592,6 +700,24 @@
 									<bordertexture border="20">overlays/shadow.png</bordertexture>
 									<bordersize>20</bordersize>
 								</control>
+								<control type="progress">
+									<left>20</left>
+									<top>280</top>
+									<width>176</width>
+									<height>6</height>
+									<texturebg>-</texturebg>
+									<midtexture colordiffuse="primary_color">colors\white.png</midtexture>
+									<info>ListItem.PercentPlayed</info>
+									<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
+								</control>
+								<control type="image">
+									<left>20</left>
+									<top>280</top>
+									<width>176</width>
+									<height>4</height>
+									<texture colordiffuse="primary_color">colors\white.png</texture>
+									<visible>IntegerGreaterThan(ListItem.PlayCount,0) + !IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
+								</control>
 							</control>
 						</itemlayout>
 						<focusedlayout width="260" height="306">
@@ -619,6 +745,24 @@
 									<height>306</height>
 									<texture>overlays/FrameRA.png</texture>
 									<visible>Control.HasFocus(8011)</visible>
+								</control>
+								<control type="progress">
+									<left>20</left>
+									<top>280</top>
+									<width>176</width>
+									<height>6</height>
+									<texturebg>-</texturebg>
+									<midtexture colordiffuse="primary_color">colors\white.png</midtexture>
+									<info>ListItem.PercentPlayed</info>
+									<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
+								</control>
+								<control type="image">
+									<left>20</left>
+									<top>280</top>
+									<width>176</width>
+									<height>4</height>
+									<texture colordiffuse="primary_color">colors\white.png</texture>
+									<visible>IntegerGreaterThan(ListItem.PlayCount,0) + !IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 								</control>
 							</control>
 						</focusedlayout>
