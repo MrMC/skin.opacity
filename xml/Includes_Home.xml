@@ -115,13 +115,15 @@
 						<bordertexture border="20">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
 					</control>
-					<control type="image">
-						<left>178</left>
-						<top>5</top>
-						<width>32</width>
-						<height>32</height>
-						<texture>$VAR[ListWatchedIconVar]</texture>
-						<visible>!StringCompare(ListItem.Label,..)</visible>
+					<control type="progress">
+						<left>20</left>
+						<top>286</top>
+						<width>176</width>
+						<height>6</height>
+						<texturebg>-</texturebg>
+						<midtexture colordiffuse="primary_color">colors\white.png</midtexture>
+						<info>ListItem.PercentPlayed</info>
+						<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 					</control>
 					<control type="textbox">
 						<left>8</left>
@@ -166,13 +168,15 @@
 						<animation effect="fade" start="100" end="0" time="200">UnFocus</animation>
 						<bordersize>20</bordersize>
 					</control>
-					<control type="image">
-						<left>178</left>
-						<top>5</top>
-						<width>32</width>
-						<height>32</height>
-						<texture>$VAR[ListWatchedIconVar]</texture>
-						<visible>!StringCompare(ListItem.Label,..)</visible>
+					<control type="progress">
+						<left>20</left>
+						<top>286</top>
+						<width>176</width>
+						<height>6</height>
+						<texturebg>-</texturebg>
+						<midtexture colordiffuse="primary_color">colors\white.png</midtexture>
+						<info>ListItem.PercentPlayed</info>
+						<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 					</control>
 					<control type="textbox">
 						<left>8</left>
