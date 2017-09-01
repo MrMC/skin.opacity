@@ -125,6 +125,14 @@
 						<info>ListItem.PercentPlayed</info>
 						<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 					</control>
+					<control type="image">
+						<left>20</left>
+						<top>288</top>
+						<width>176</width>
+						<height>4</height>
+						<texture colordiffuse="primary_color">colors\white.png</texture>
+						<visible>IntegerGreaterThan(ListItem.PlayCount,0) + !IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
+					</control>
 					<control type="textbox">
 						<left>8</left>
 						<top>280</top>
@@ -177,6 +185,14 @@
 						<midtexture colordiffuse="primary_color">colors\white.png</midtexture>
 						<info>ListItem.PercentPlayed</info>
 						<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
+					</control>
+					<control type="image">
+						<left>20</left>
+						<top>288</top>
+						<width>176</width>
+						<height>4</height>
+						<texture colordiffuse="primary_color">colors\white.png</texture>
+						<visible>IntegerGreaterThan(ListItem.PlayCount,0) + !IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 					</control>
 					<control type="textbox">
 						<left>8</left>
