@@ -460,9 +460,21 @@
 						<font>font25_title</font>
 						<aligny>top</aligny>
 						<textcolor>grey</textcolor>
-						<label>[B]$INFO[Container(8001).ListItem.Property(ItemType)] :[/B] $INFO[Container(8001).ListItem.TVShowTitle] - $INFO[Container(8001).ListItem.Property(SeasonEpisode)]</label>
-						<visible>Control.HasFocus(8001)</visible>
+						<label>[B]$INFO[Container(8001).ListItem.Property(ItemType)] :[/B] $INFO[Container(8001).ListItem.TVShowTitle] - $INFO[Container(8001).ListItem.Label]</label>
+						<visible>Control.HasFocus(8001) + !Container(8001).ListItem.Property(MediaServicesItem)</visible>
 					</control>
+					<control type="label">
+						<top>105</top>
+						<width>1270</width>
+						<textoffsetx>20</textoffsetx>
+						<textoffsety>15</textoffsety>
+						<height>50</height>
+						<font>font25_title</font>
+						<aligny>top</aligny>
+						<textcolor>grey</textcolor>
+						<label>[B]$INFO[Container(8001).ListItem.Property(ItemType)] :[/B] $INFO[Container(8001).ListItem.TVShowTitle] - $INFO[Container(8001).ListItem.Property(SeasonEpisode)] - $INFO[Container(8001).ListItem.Label]</label>
+						<visible>Control.HasFocus(8001) + Container(8001).ListItem.Property(MediaServicesItem)</visible>
+					</control>	
 					<control type="list" id="8001">
 						<top>185</top>
 						<width>1270</width>
@@ -540,9 +552,21 @@
 						<font>font25_title</font>
 						<aligny>top</aligny>
 						<textcolor>grey</textcolor>
-						<label>[B]$INFO[Container(8011).ListItem.Property(ItemType)] :[/B] $INFO[Container(8011).ListItem.TVShowTitle] - $INFO[Container(8011).ListItem.Property(SeasonEpisode)]</label>
-						<visible>Control.HasFocus(8011)</visible>
+						<label>[B]$INFO[Container(8011).ListItem.Property(ItemType)] :[/B] $INFO[Container(8011).ListItem.TVShowTitle] - $INFO[Container(8011).ListItem.Property(SeasonEpisode)] - $INFO[Container(8011).ListItem.Label]</label>
+						<visible>Control.HasFocus(8011) + Container(8011).ListItem.Property(MediaServicesItem)</visible>
 					</control>
+					<control type="label">
+						<top>545</top>
+						<width>1270</width>
+						<textoffsetx>20</textoffsetx>
+						<textoffsety>15</textoffsety>
+						<height>50</height>
+						<font>font25_title</font>
+						<aligny>top</aligny>
+						<textcolor>grey</textcolor>
+						<label>[B]$INFO[Container(8011).ListItem.Property(ItemType)] :[/B] $INFO[Container(8011).ListItem.TVShowTitle] - $INFO[Container(8011).ListItem.Label]</label>
+						<visible>Control.HasFocus(8011) + !Container(8011).ListItem.Property(MediaServicesItem)</visible>
+					</control>	
 					<control type="list" id="8011">
 						<top>625</top>
 						<width>1270</width>
