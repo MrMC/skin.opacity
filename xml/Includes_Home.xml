@@ -275,6 +275,12 @@
 			<property name="separator">true</property>
 			<onclick>UpdateLibrary(music)</onclick>
 		</item>
+		<item id="90119">
+			<label>Player controls</label>
+			<property name="separator">true</property>
+			<onclick>ActivateWindow(playercontrols)</onclick>
+			<visible>Player.HasAudio</visible>
+		</item>
 	</include>
 	<include name="HomeSubMenuSystem">
 		<item id="90124">
