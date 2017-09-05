@@ -242,22 +242,27 @@
 		</item>
 	</include>
 	<include name="HomeSubMenuMusic">
+		<item id="90111">
+			<label>$LOCALIZE[31008]</label>
+			<onclick>ActivateWindow(Music,RecentlyAddedAlbums,return)</onclick>
+			<visible>Library.HasContent(Music) | Library.HasServices</visible>
+		</item>
 		<item id="90112">
 			<label>133</label>
 			<onclick>ActivateWindow(Music,Artists,return)</onclick>
-			<visible>Library.HasContent(Music)</visible>
+			<visible>Library.HasContent(Music) | Library.HasServices</visible>
 		</item>
 		<item id="90113">
 			<label>132</label>
 			<onclick>ActivateWindow(Music,Albums,return)</onclick>
-			<visible>Library.HasContent(Music)</visible>
+			<visible>Library.HasContent(Music) | Library.HasServices</visible>
 		</item>
 		<item id="90114">
 			<label>134</label>
 			<onclick>ActivateWindow(Music,Songs,return)</onclick>
-			<visible>Library.HasContent(Music)</visible>
+			<visible>Library.HasContent(Music) | Library.HasServices</visible>
 		</item>
-		<item id="90115">
+<!-- 		<item id="90115">
 			<label>744</label>
 			<onclick>ActivateWindow(Music,Files,return)</onclick>
 		</item>
@@ -265,7 +270,7 @@
 			<label>14022</label>
 			<onclick>ActivateWindow(Music,Root)</onclick>
 			<visible>Library.HasContent(Music)</visible>
-		</item>
+		</item> -->
 		<item id="90117">
 			<label>$LOCALIZE[136]</label>
 			<onclick>ActivateWindow(Music,playlists,return)</onclick>
