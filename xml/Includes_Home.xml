@@ -102,7 +102,7 @@
 		<param name="y_offset">2</param>
 		<param name="condition">True</param>
 		<definition>
-			<itemlayout width="$PARAM[item_width]" height="400" condition="$PARAM[condition]">
+			<itemlayout width="$PARAM[item_width]" height="412" condition="$PARAM[condition]">
 				<control type="group">
 					<depth>DepthContentPopout</depth>
 					<top>$PARAM[y_offset]</top>
@@ -117,25 +117,27 @@
 					</control>
 					<control type="progress">
 						<left>20</left>
-						<top>286</top>
+						<top>270</top>
 						<width>176</width>
-						<height>6</height>
+						<height>10</height>
 						<texturebg>-</texturebg>
-						<midtexture colordiffuse="primary_color">colors\white.png</midtexture>
+						<midtexture colordiffuse="primary_color">colors/white12px.png</midtexture>
 						<info>ListItem.PercentPlayed</info>
 						<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 					</control>
-					<control type="image">
+					<control type="progress">
 						<left>20</left>
-						<top>288</top>
+						<top>276</top>
 						<width>176</width>
-						<height>4</height>
-						<texture colordiffuse="primary_color">colors\white.png</texture>
+						<height>10</height>
+						<texturebg colordiffuse="primary_color">colors/white12px.png</texturebg>
+						<midtexture colordiffuse="primary_color">colors/white12px.png</midtexture>
+						<info>100</info>
 						<visible>IntegerGreaterThan(ListItem.PlayCount,0) + !IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 					</control>
 					<control type="textbox">
 						<left>8</left>
-						<top>280</top>
+						<top>292</top>
 						<width>200</width>
 						<height>120</height>
 						<label>$PARAM[label]</label>
@@ -146,7 +148,7 @@
 					</control>
 				</control>
 			</itemlayout>
-			<focusedlayout width="$PARAM[item_width]" height="400" condition="$PARAM[condition]">
+			<focusedlayout width="$PARAM[item_width]" height="412" condition="$PARAM[condition]">
 				<control type="group">
 					<depth>DepthContentPopout</depth>
 					<animation type="Focus" reversible="false">
@@ -178,25 +180,27 @@
 					</control>
 					<control type="progress">
 						<left>20</left>
-						<top>286</top>
+						<top>270</top>
 						<width>176</width>
-						<height>6</height>
+						<height>10</height>
 						<texturebg>-</texturebg>
-						<midtexture colordiffuse="primary_color">colors\white.png</midtexture>
+						<midtexture colordiffuse="primary_color">colors/white12px.png</midtexture>
 						<info>ListItem.PercentPlayed</info>
 						<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 					</control>
-					<control type="image">
+					<control type="progress">
 						<left>20</left>
-						<top>288</top>
+						<top>276</top>
 						<width>176</width>
-						<height>4</height>
-						<texture colordiffuse="primary_color">colors\white.png</texture>
+						<height>10</height>
+						<texturebg colordiffuse="primary_color">colors/white12px.png</texturebg>
+						<midtexture colordiffuse="primary_color">colors/white12px.png</midtexture>
+						<info>100</info>
 						<visible>IntegerGreaterThan(ListItem.PlayCount,0) + !IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 					</control>
 					<control type="textbox">
 						<left>8</left>
-						<top>280</top>
+						<top>292</top>
 						<width>200</width>
 						<height>120</height>
 						<label>$PARAM[label]</label>

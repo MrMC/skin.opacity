@@ -322,20 +322,22 @@
 								</control>
 								<control type="progress">
 									<left>20</left>
-									<top>286</top>
+									<top>270</top>
 									<width>176</width>
-									<height>6</height>
+									<height>10</height>
 									<texturebg>-</texturebg>
-									<midtexture colordiffuse="primary_color">colors\white.png</midtexture>
+									<midtexture colordiffuse="primary_color">colors/white12px.png</midtexture>
 									<info>ListItem.PercentPlayed</info>
 									<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 								</control>
-								<control type="image">
+								<control type="progress">
 									<left>20</left>
-									<top>286</top>
+									<top>276</top>
 									<width>176</width>
-									<height>4</height>
-									<texture colordiffuse="primary_color">colors\white.png</texture>
+									<height>10</height>
+									<texturebg colordiffuse="primary_color">colors/white12px.png</texturebg>
+									<midtexture colordiffuse="primary_color">colors/white12px.png</midtexture>
+									<info>100</info>
 									<visible>IntegerGreaterThan(ListItem.PlayCount,0) + !IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 								</control>
 							</control>
@@ -368,20 +370,22 @@
 								</control>
 								<control type="progress">
 									<left>20</left>
-									<top>286</top>
+									<top>270</top>
 									<width>176</width>
-									<height>6</height>
+									<height>10</height>
 									<texturebg>-</texturebg>
-									<midtexture colordiffuse="primary_color">colors\white.png</midtexture>
+									<midtexture colordiffuse="primary_color">colors/white12px.png</midtexture>
 									<info>ListItem.PercentPlayed</info>
 									<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 								</control>
-								<control type="image">
+								<control type="progress">
 									<left>20</left>
-									<top>286</top>
+									<top>276</top>
 									<width>176</width>
-									<height>4</height>
-									<texture colordiffuse="primary_color">colors\white.png</texture>
+									<height>10</height>
+									<texturebg colordiffuse="primary_color">colors/white12px.png</texturebg>
+									<midtexture colordiffuse="primary_color">colors/white12px.png</midtexture>
+									<info>100</info>
 									<visible>IntegerGreaterThan(ListItem.PlayCount,0) + !IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 								</control>
 							</control>
@@ -438,20 +442,22 @@
 								</control>
 								<control type="progress">
 									<left>20</left>
-									<top>280</top>
+									<top>270</top>
 									<width>176</width>
-									<height>6</height>
+									<height>10</height>
 									<texturebg>-</texturebg>
-									<midtexture colordiffuse="primary_color">colors\white.png</midtexture>
+									<midtexture colordiffuse="primary_color">colors/white12px.png</midtexture>
 									<info>ListItem.PercentPlayed</info>
 									<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 								</control>
-								<control type="image">
+								<control type="progress">
 									<left>20</left>
-									<top>280</top>
+									<top>276</top>
 									<width>176</width>
-									<height>4</height>
-									<texture colordiffuse="primary_color">colors\white.png</texture>
+									<height>10</height>
+									<texturebg colordiffuse="primary_color">colors/white12px.png</texturebg>
+									<midtexture colordiffuse="primary_color">colors/white12px.png</midtexture>
+									<info>100</info>
 									<visible>IntegerGreaterThan(ListItem.PlayCount,0) + !IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 								</control>
 							</control>
@@ -484,20 +490,22 @@
 								</control>
 								<control type="progress">
 									<left>20</left>
-									<top>280</top>
+									<top>270</top>
 									<width>176</width>
-									<height>6</height>
+									<height>10</height>
 									<texturebg>-</texturebg>
-									<midtexture colordiffuse="primary_color">colors\white.png</midtexture>
+									<midtexture colordiffuse="primary_color">colors/white12px.png</midtexture>
 									<info>ListItem.PercentPlayed</info>
 									<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 								</control>
-								<control type="image">
+								<control type="progress">
 									<left>20</left>
-									<top>280</top>
+									<top>276</top>
 									<width>176</width>
-									<height>4</height>
-									<texture colordiffuse="primary_color">colors\white.png</texture>
+									<height>10</height>
+									<texturebg colordiffuse="primary_color">colors/white12px.png</texturebg>
+									<midtexture colordiffuse="primary_color">colors/white12px.png</midtexture>
+									<info>100</info>
 									<visible>IntegerGreaterThan(ListItem.PlayCount,0) + !IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 								</control>
 							</control>
@@ -574,20 +582,22 @@
 								</control>
 								<control type="progress">
 									<left>20</left>
-									<top>280</top>
+									<top>270</top>
 									<width>176</width>
-									<height>6</height>
+									<height>10</height>
 									<texturebg>-</texturebg>
-									<midtexture colordiffuse="primary_color">colors\white.png</midtexture>
+									<midtexture colordiffuse="primary_color">colors/white12px.png</midtexture>
 									<info>ListItem.PercentPlayed</info>
 									<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 								</control>
-								<control type="image">
+								<control type="progress">
 									<left>20</left>
-									<top>280</top>
+									<top>276</top>
 									<width>176</width>
-									<height>4</height>
-									<texture colordiffuse="primary_color">colors\white.png</texture>
+									<height>10</height>
+									<texturebg colordiffuse="primary_color">colors/white12px.png</texturebg>
+									<midtexture colordiffuse="primary_color">colors/white12px.png</midtexture>
+									<info>100</info>
 									<visible>IntegerGreaterThan(ListItem.PlayCount,0) + !IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 								</control>
 							</control>
@@ -620,20 +630,22 @@
 								</control>
 								<control type="progress">
 									<left>20</left>
-									<top>280</top>
+									<top>270</top>
 									<width>176</width>
-									<height>6</height>
+									<height>10</height>
 									<texturebg>-</texturebg>
-									<midtexture colordiffuse="primary_color">colors\white.png</midtexture>
+									<midtexture colordiffuse="primary_color">colors/white12px.png</midtexture>
 									<info>ListItem.PercentPlayed</info>
 									<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 								</control>
-								<control type="image">
+								<control type="progress">
 									<left>20</left>
-									<top>280</top>
+									<top>276</top>
 									<width>176</width>
-									<height>4</height>
-									<texture colordiffuse="primary_color">colors\white.png</texture>
+									<height>10</height>
+									<texturebg colordiffuse="primary_color">colors/white12px.png</texturebg>
+									<midtexture colordiffuse="primary_color">colors/white12px.png</midtexture>
+									<info>100</info>
 									<visible>IntegerGreaterThan(ListItem.PlayCount,0) + !IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 								</control>
 							</control>
@@ -702,20 +714,22 @@
 								</control>
 								<control type="progress">
 									<left>20</left>
-									<top>280</top>
+									<top>270</top>
 									<width>176</width>
-									<height>6</height>
+									<height>10</height>
 									<texturebg>-</texturebg>
-									<midtexture colordiffuse="primary_color">colors\white.png</midtexture>
+									<midtexture colordiffuse="primary_color">colors/white12px.png</midtexture>
 									<info>ListItem.PercentPlayed</info>
 									<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 								</control>
-								<control type="image">
+								<control type="progress">
 									<left>20</left>
-									<top>280</top>
+									<top>276</top>
 									<width>176</width>
-									<height>4</height>
-									<texture colordiffuse="primary_color">colors\white.png</texture>
+									<height>10</height>
+									<texturebg colordiffuse="primary_color">colors/white12px.png</texturebg>
+									<midtexture colordiffuse="primary_color">colors/white12px.png</midtexture>
+									<info>100</info>
 									<visible>IntegerGreaterThan(ListItem.PlayCount,0) + !IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 								</control>
 							</control>
@@ -748,20 +762,22 @@
 								</control>
 								<control type="progress">
 									<left>20</left>
-									<top>280</top>
+									<top>270</top>
 									<width>176</width>
-									<height>6</height>
+									<height>10</height>
 									<texturebg>-</texturebg>
-									<midtexture colordiffuse="primary_color">colors\white.png</midtexture>
+									<midtexture colordiffuse="primary_color">colors/white12px.png</midtexture>
 									<info>ListItem.PercentPlayed</info>
 									<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 								</control>
-								<control type="image">
+								<control type="progress">
 									<left>20</left>
-									<top>280</top>
+									<top>276</top>
 									<width>176</width>
-									<height>4</height>
-									<texture colordiffuse="primary_color">colors\white.png</texture>
+									<height>10</height>
+									<texturebg colordiffuse="primary_color">colors/white12px.png</texturebg>
+									<midtexture colordiffuse="primary_color">colors/white12px.png</midtexture>
+									<info>100</info>
 									<visible>IntegerGreaterThan(ListItem.PlayCount,0) + !IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 								</control>
 							</control>
