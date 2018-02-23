@@ -837,7 +837,7 @@
 					<top>635</top>
 					<width>525</width>
 					<height>44</height>
-					<label>$INFO[ListItem.Genre,[COLOR grey]$LOCALIZE[515]: [/COLOR],[CR]]</label>
+					<label>$VAR[InfoLineVar,[B],[/B]]</label>
 				</control>
 				<control type="textbox" id="15500">
 					<left>30</left>
