@@ -235,6 +235,13 @@
 								<property name="id">video</property>
 								<visible>!Skin.HasSetting(HomeMenuNoMediaSourceButton)</visible>
 							</item>
+							<item id="13">
+								<label>$LOCALIZE[24001]</label>
+								<onclick>ActivateWindow(Programs,Addons,return)</onclick>
+								<property name="menu_id">$NUMBER[11000]</property>
+								<property name="id">video</property>
+								<visible>!Skin.HasSetting(HomeMenuNoAddonsButton)</visible>
+							</item>
 							<item id="11">
 								<label>$LOCALIZE[10004]</label>
 								<onclick>ActivateWindow(settings)</onclick>
