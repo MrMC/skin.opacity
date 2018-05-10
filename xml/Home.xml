@@ -185,7 +185,7 @@
 								<onclick>RunAddon(script.plex)</onclick>
 								<property name="menu_id">$NUMBER[19001]</property>
 								<property name="id">plex</property>
-								<visible>Skin.HasSetting(HomeMenuPlexButton)</visible>
+								<visible>Skin.HasSetting(HomeMenuPlexButton) + System.HasAddon(script.plex)</visible>
 							</item>
 							<item id="3">
 								<label>$LOCALIZE[2]</label>
