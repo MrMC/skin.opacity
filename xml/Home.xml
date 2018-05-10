@@ -247,7 +247,7 @@
 								<onclick>ActivateWindow(Programs,Addons,return)</onclick>
 								<property name="menu_id">$NUMBER[19000]</property>
 								<property name="id">addons</property>
-								<visible>!Skin.HasSetting(HomeMenuNoAddonsButton)</visible>
+								<visible>!Skin.HasSetting(HomeMenuNoAddonsButton) + System.HasExtensions</visible>
 							</item>
 							<item id="11">
 								<label>$LOCALIZE[10004]</label>
