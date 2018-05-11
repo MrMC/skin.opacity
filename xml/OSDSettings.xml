@@ -36,7 +36,7 @@
 				<itemgap>20</itemgap>
 				<scrolltime tween="sine">200</scrolltime>
 				<orientation>horizontal</orientation>
-				<onup>201</onup>
+				<onup>Close</onup>
 				<ondown>201</ondown>
 				<onleft>202</onleft>
 				<onright>202</onright>
