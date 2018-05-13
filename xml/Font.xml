@@ -3,6 +3,11 @@
 	<fontset id="Default" idloc="15109">
 		<!-- Normal Fonts -->
 		<font>
+			<name>fontOSDSettings</name>
+			<filename>arial.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
 			<name>font10</name>
 			<filename>NotoSans-Regular.ttf</filename>
 			<size>23</size>
@@ -142,6 +147,11 @@
 	</fontset>
 	<fontset id="Arial" idloc="31053">
 		<!-- Arial Font better for non English -->
+		<font>
+			<name>fontOSDSettings</name>
+			<filename>arial.ttf</filename>
+			<size>28</size>
+		</font>
 		<font>
 			<name>font10</name>
 			<filename>arial.ttf</filename>

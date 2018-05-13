@@ -932,4 +932,80 @@
 			</control>
 		</definition>
 	</include>
+	<include name="VideoMenuInfo">
+	<control type="group" description="Info group">
+	  <top>90</top>
+	  <control type="image">
+		<left>25</left>
+		<top>30</top>
+		<width>250</width>
+		<height>290</height>
+		<texture>$INFO[VideoPlayer.Cover]</texture>
+		<aspectratio align="center" aligny="top">keep</aspectratio>
+	  </control>
+	  <control type="group">
+		<left>0</left>
+		<top>30</top>
+		<control type="label" description="Main label">
+		  <visible>![VideoPlayer.Content(MusicVideos)]</visible>
+		  <include>FullscreenInfoLabelMain</include>
+		  <label>[B]$INFO[VideoPlayer.Title][/B]</label>
+		</control>
+		<control type="label" description="Main label">
+		  <visible>VideoPlayer.Content(MusicVideos)</visible>
+		  <include>FullscreenInfoLabelMain</include>
+		  <label>[B]$INFO[VideoPlayer.Artist][/B]</label>
+		</control>
+		<control type="label" description="Label 2">
+		  <visible>VideoPlayer.Content(MusicVideos)</visible>
+		  <include>FullscreenInfoLabel2</include>
+		  <label>$INFO[VideoPlayer.Album]</label>
+		</control>
+		<control type="label" description="Label 2">
+		  <visible>VideoPlayer.Content(Episodes)</visible>
+		  <include>FullscreenInfoLabel2</include>
+		  <label>$INFO[VideoPlayer.TVShowTitle] - $LOCALIZE[20373] $INFO[VideoPlayer.Season], $LOCALIZE[20359] $INFO[VideoPlayer.Episode]</label>
+		</control>
+		<control type="label" description="Label 2">
+		  <visible>![VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(episodes)]</visible>
+		  <include>FullscreenInfoLabel2</include>
+		  <label>$INFO[VideoPlayer.Genre]</label>
+		</control>
+		<control type="textbox">
+		  <left>300</left>
+		  <top>99</top>
+		  <width>1500</width>
+		  <height>152</height>
+		  <label>$INFO[VideoPlayer.Plot]</label>
+		  <align>left</align>
+		  <autoscroll>false</autoscroll>
+		  <font>font10</font>
+		</control>
+		<control type="label" description="Details">
+		  <top>270</top>
+		  <font>font12</font>
+		  <include>FullscreenInfoLabel2</include>
+		  <label>[UPPERCASE]$INFO[VideoPlayer.VideoCodec]$INFO[VideoPlayer.VideoResolution, / ]$INFO[VideoPlayer.AudioCodec, • ]$INFO[VideoPlayer.AudioChannels, / ][/UPPERCASE]</label>
+		</control>
+	  </control>
+	</control>
+  </include>
+  <include name="FullscreenInfoLabelMain">
+	<left>300</left>
+	<top>-6</top>
+	<width>1200</width>
+	<scroll>false</scroll>
+	<align>left</align>
+	<font>font30_title</font>
+	<textcolor>grey</textcolor>
+  </include>
+  <include name="FullscreenInfoLabel2">
+	<left>300</left>
+	<top>45</top>
+	<width>1200</width>
+	<scroll>false</scroll>
+	<align>left</align>
+	<textcolor>grey</textcolor>
+	<font>font25_narrow</font>
+  </include>
 </includes>
