@@ -75,7 +75,7 @@
 		  <include>VisibleFadeEffect</include>
 		  <top>100</top>
 		  <centerleft>50%</centerleft>
-		  <width max="1800">auto</width>
+		  <width>95%</width>
 		  <height>80</height>
 		  <onup>9000</onup>
 		  <onleft>9002</onleft>
@@ -87,7 +87,7 @@
 			<height>100</height>
 			<align>center</align>
 			<font>fontOSDSettings</font>
-			<focusedcolor>red</focusedcolor>
+			<focusedcolor>primary_color</focusedcolor>
 			<texturefocus></texturefocus>
 			<texturenofocus></texturenofocus>
 		  </control>
@@ -97,7 +97,7 @@
 		  <include>VisibleFadeEffect</include>
 		  <top>100</top>
 		  <centerleft>50%</centerleft>
-		  <width max="1800">auto</width>
+		  <width>95%</width>
 		  <height>80</height>
 		  <onup>9000</onup>
 		  <onleft>9003</onleft>
@@ -109,7 +109,7 @@
 			<height>100</height>
 			<align>center</align>
 			<font>fontOSDSettings</font>
-			<focusedcolor>red</focusedcolor>
+			<focusedcolor>primary_color</focusedcolor>
 			<texturefocus></texturefocus>
 			<texturenofocus></texturenofocus>
 		  </control>
@@ -151,6 +151,25 @@
 			<label>CMS</label>
 			<onclick>ActivateWindow(osdcmssettings)</onclick>
 		  </control>
+		</control>
+	  </control>
+	  <control type="group">
+	  	<visible>ControlGroup(9000).HasFocus(102) | ControlGroup(9000).HasFocus(103)</visible>
+		<control type="image">
+			<left>30</left>
+			<top>135</top>
+			<width>28</width>
+			<height>28</height>
+			<texture flipx="true" colordiffuse="primary_color">overlays/arrowright.png</texture>
+			<visible>[ControlGroup(9000).HasFocus(102) + Container(9002).HasPrevious] | [ControlGroup(9000).HasFocus(103) + Container(9003).HasPrevious]</visible>
+		</control>
+		<control type="image">
+			<right>30</right>
+			<top>135</top>
+			<width>28</width>
+			<height>28</height>
+			<texture colordiffuse="primary_color">overlays/arrowright.png</texture>
+			<visible>[ControlGroup(9000).HasFocus(102) + Container(9002).HasNext] | [ControlGroup(9000).HasFocus(103) + Container(9003).HasNext]</visible>
 		</control>
 	  </control>
 	</control>
