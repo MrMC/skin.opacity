@@ -50,7 +50,7 @@
 						<control type="list" id="9101">
 							<include content="SubMenuList">
 								<param name="list_id" value="9101" />
-								<param name="visible" value="Container(9000).HasFocus(1)" />
+								<param name="visible" value="Container(9000).HasFocus(1) | [Container(9000).ListItem.Property(service) + StringCompare(Container(9000).ListItem.Property(type),Movies)]" />
 							</include>
 							<content>
 								<include>HomeSubMenuMovies</include>
@@ -59,7 +59,7 @@
 						<control type="list" id="9102">
 							<include content="SubMenuList">
 								<param name="list_id" value="9102" />
-								<param name="visible" value="Container(9000).HasFocus(2)" />
+								<param name="visible" value="Container(9000).HasFocus(2) | [Container(9000).ListItem.Property(service) + StringCompare(Container(9000).ListItem.Property(type),tvshows)]" />
 							</include>
 							<content>
 								<include>HomeSubMenuTVShows</include>
@@ -163,25 +163,25 @@
 								<texture flipx="true" colordiffuse="primary_color">overlays/arrowright.png</texture>
 								<animation effect="zoom" start="0,100" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 								<animation effect="zoom" start="100,100" end="0,100" center="auto" time="200">WindowClose</animation>
-								<visible>!IsEmpty(Container(9000).ListItem.Property(submenu))</visible>
+								<visible>!IsEmpty(Container(9000).ListItem.Property(submenu)) | [Container(9000).ListItem.Property(service) + !StringCompare(Container(9000).ListItem.Property(type),music)]</visible>
 							</control>
 						</focusedlayout>
 						<content>
 							<item id="1">
 								<label>$LOCALIZE[342]</label>
-								<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+								<onclick>ActivateWindow(Videos,MovieTitlesLocal,return)</onclick>
 								<property name="menu_id">$NUMBER[5000]</property>
 								<property name="id">movies</property>
 								<property name="submenu">true</property>
-								<visible>!Skin.HasSetting(HomeMenuNoMovieButton) + [Library.HasServices | Library.HasContent(Movies)]</visible>
+								<visible>!Skin.HasSetting(HomeMenuNoMovieButton) + Library.HasContent(Movies)</visible>
 							</item>
 							<item id="2">
 								<label>$LOCALIZE[20343]</label>
-								<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
+								<onclick>ActivateWindow(Videos,TVShowTitlesLocal,return)</onclick>
 								<property name="menu_id">$NUMBER[6000]</property>
 								<property name="id">tvshows</property>
 								<property name="submenu">true</property>
-								<visible>!Skin.HasSetting(HomeMenuNoTVShowButton) + [Library.HasServices | Library.HasContent(TVShows)]</visible>
+								<visible>!Skin.HasSetting(HomeMenuNoTVShowButton) + Library.HasContent(TVShows)</visible>
 							</item>
 							<item id="14">
 								<label>Plex</label>
@@ -192,18 +192,18 @@
 							</item>
 							<item id="3">
 								<label>$LOCALIZE[2]</label>
-								<onclick>ActivateWindow(Music,root,return)</onclick>
+								<onclick>ActivateWindow(Music,rootLocal,return)</onclick>
 								<property name="menu_id">$NUMBER[7000]</property>
 								<property name="id">music</property>
 								<property name="submenu">true</property>
-								<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
+								<visible>!Skin.HasSetting(HomeMenuNoMusicButton) + Library.HasContent(music)</visible>
 							</item>
 							<item id="4">
 								<label>$LOCALIZE[20389]</label>
 								<property name="menu_id">$NUMBER[16000]</property>
 								<onclick>ActivateWindow(Videos,musicvideos,return)</onclick>
 								<property name="id">musicvideos</property>
-								<visible>!Skin.HasSetting(HomeMenuNoMusicVideoButton) + [Library.HasServices | Library.HasContent(musicvideos)]</visible>
+								<visible>!Skin.HasSetting(HomeMenuNoMusicVideoButton) + Library.HasContent(musicvideos)</visible>
 							</item>
 							<item id="5">
 								<label>$LOCALIZE[19020]</label>
@@ -229,7 +229,7 @@
 								<onclick>ActivateWindow(Pictures)</onclick>
 								<property name="menu_id">$NUMBER[4000]</property>
 								<property name="id">pictures</property>
-								<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
+								<visible>!Skin.HasSetting(HomeMenuNoPicturesButton) + [Library.HasContent(pictures) + !Library.HasServices]</visible>
 							</item>
 							<item id="9">
 								<label>$LOCALIZE[10134]</label>
