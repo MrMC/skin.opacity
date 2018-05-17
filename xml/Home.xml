@@ -3,7 +3,10 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
-		<control type="button" id="20000">
+    <control type="button" id="4000" description="Servers selection">
+			<include>HiddenObject</include>
+		</control>
+    <control type="button" id="20000">
 			<include>HiddenObject</include>
 			<animation effect="fade" time="300" start="100" end="0">Focus</animation>
 			<onfocus>SetFocus(2000)</onfocus>
@@ -110,11 +113,11 @@
 						<ondown>9000</ondown>
 						<onup>9000</onup>
 						<onleft>9100</onleft>
-						<onright condition="Container(9000).HasFocus(1)">2000</onright>
+						<onright condition="Container(9000).HasFocus(1) | StringCompare(Container(9000).ListItem.Property(type),Movies)">2000</onright>
 						<!-- Movies -->
-						<onright condition="Container(9000).HasFocus(2)">2001</onright>
+						<onright condition="Container(9000).HasFocus(2) | StringCompare(Container(9000).ListItem.Property(type),tvshows)">2001</onright>
 						<!-- TvShows -->
-						<onright condition="Container(9000).HasFocus(3)">2002</onright>
+						<onright condition="Container(9000).HasFocus(3) | StringCompare(Container(9000).ListItem.Property(type),music)">2002</onright>
 						<!-- Music -->
 						<orientation>vertical</orientation>
 						<scrolltime tween="cubic" easing="out">500</scrolltime>
@@ -280,7 +283,7 @@
 					<left>570</left>
 					<centertop>50%</centertop>
 					<height>1050</height>
-					<visible>Container(9000).HasFocus(1)</visible>
+					<visible>Container(9000).HasFocus(1) | StringCompare(Container(9000).ListItem.Property(type),Movies)</visible>
 					<control type="label">
 						<top>70</top>
 						<width>470</width>
@@ -391,7 +394,7 @@
 					<left>570</left>
 					<centertop>50%</centertop>
 					<height>1050</height>
-					<visible>Container(9000).HasFocus(2)</visible>
+					<visible>Container(9000).HasFocus(2) | StringCompare(Container(9000).ListItem.Property(type),tvshows)</visible>
 					<control type="label">
 						<top>70</top>
 						<width>470</width>
@@ -427,7 +430,7 @@
 						<textcolor>grey</textcolor>
 						<label>[B]$INFO[Container(8001).ListItem.Property(ItemType)] :[/B] $INFO[Container(8001).ListItem.TVShowTitle] - $INFO[Container(8001).ListItem.Property(SeasonEpisode)] - $INFO[Container(8001).ListItem.Label]</label>
 						<visible>Control.HasFocus(8001) + Container(8001).ListItem.Property(MediaServicesItem)</visible>
-					</control>	
+					</control>
 					<control type="list" id="8001">
 						<top>125</top>
 						<width>1270</width>
@@ -490,7 +493,7 @@
 						<textcolor>grey</textcolor>
 						<label>[B]$INFO[Container(8011).ListItem.Property(ItemType)] :[/B] $INFO[Container(8011).ListItem.TVShowTitle] - $INFO[Container(8011).ListItem.Label]</label>
 						<visible>Control.HasFocus(8011) + !Container(8011).ListItem.Property(MediaServicesItem)</visible>
-					</control>	
+					</control>
 					<control type="list" id="8011">
 						<top>575</top>
 						<width>1270</width>
@@ -525,7 +528,7 @@
 					<left>570</left>
 					<centertop>50%</centertop>
 					<height>650</height>
-					<visible>Container(9000).HasFocus(3)</visible>
+					<visible>Container(9000).HasFocus(3) | StringCompare(Container(9000).ListItem.Property(type),music)</visible>
 					<control type="label">
 						<top>105</top>
 						<width>470</width>

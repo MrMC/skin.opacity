@@ -296,6 +296,11 @@
 			<label>20092</label>
 			<onclick>ActivateWindow(Loginscreen)</onclick>
 		</item>
+		<item id="90127">
+			<label>$LOCALIZE[706]$INFO[Control.GetLabel(4000),-]</label>
+			<onclick>SendClick(,4000)</onclick>
+			<visible>Control.IsVisible(4000)</visible>
+		</item>
 		<item id="90125">
 			<label>130</label>
 			<onclick>ActivateWindow(SystemInfo)</onclick>
@@ -304,11 +309,6 @@
 			<label>7</label>
 			<onclick>ActivateWindow(FileManager)</onclick>
 		</item>
-		<!-- 		<item id="90126">
-									<label>14111</label>
-									<onclick>ActivateWindow(EventLog,events://,return)</onclick>
-									<visible>system.getbool(eventlog.enabled)</visible>
-								</item> -->
 	</include>
 	<include name="HomeSubMenuTV">
 		<item id="90143">
