@@ -50,7 +50,7 @@
 						<control type="list" id="9101">
 							<include content="SubMenuList">
 								<param name="list_id" value="9101" />
-								<param name="visible" value="Container(9000).ListItem.Property(service) + Container(9000).ListItem.Property(submenu) + StringCompare(Container(9000).ListItem.Property(type),Movies)" />
+								<param name="visible" value="Container(9000).ListItem.Property(submenu) + StringCompare(Container(9000).ListItem.Property(type),Movies)" />
 							</include>
 							<content>
 								<include>HomeSubMenuMovies</include>
@@ -59,7 +59,7 @@
 						<control type="list" id="9102">
 							<include content="SubMenuList">
 								<param name="list_id" value="9102" />
-								<param name="visible" value="Container(9000).ListItem.Property(service) + Container(9000).ListItem.Property(submenu) + StringCompare(Container(9000).ListItem.Property(type),tvshows)" />
+								<param name="visible" value="Container(9000).ListItem.Property(submenu) + StringCompare(Container(9000).ListItem.Property(type),tvshows)" />
 							</include>
 							<content>
 								<include>HomeSubMenuTVShows</include>
@@ -68,7 +68,7 @@
 						<control type="list" id="9103">
 							<include content="SubMenuList">
 								<param name="list_id" value="9103" />
-								<param name="visible" value="Container(9000).ListItem.Property(service) + Container(9000).ListItem.Property(submenu) + StringCompare(Container(9000).ListItem.Property(type),music)" />
+								<param name="visible" value="Container(9000).ListItem.Property(submenu) + StringCompare(Container(9000).ListItem.Property(type),music)" />
 							</include>
 							<content>
 								<include>HomeSubMenuMusic</include>
@@ -77,7 +77,7 @@
 						<control type="list" id="9104">
 							<include content="SubMenuList">
 								<param name="list_id" value="9104" />
-								<param name="visible" value="Container(9000).ListItem.Property(service) + Container(9000).ListItem.Property(submenu) + StringCompare(Container(9000).ListItem.Property(type),livetv)" />
+								<param name="visible" value="Container(9000).ListItem.Property(submenu) + StringCompare(Container(9000).ListItem.Property(type),livetv)" />
 							</include>
 							<content>
 								<include>HomeSubMenuTV</include>
@@ -86,7 +86,7 @@
 						<control type="list" id="9105">
 							<include content="SubMenuList">
 								<param name="list_id" value="9105" />
-								<param name="visible" value="Container(9000).ListItem.Property(service) + Container(9000).ListItem.Property(submenu) + StringCompare(Container(9000).ListItem.Property(type),radio)" />
+								<param name="visible" value="Container(9000).ListItem.Property(submenu) + StringCompare(Container(9000).ListItem.Property(type),radio)" />
 							</include>
 							<content>
 								<include>HomeSubMenuRadio</include>
