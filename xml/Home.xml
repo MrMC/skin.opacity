@@ -95,7 +95,7 @@
 						<control type="list" id="9107">
 							<include content="SubMenuList">
 								<param name="list_id" value="9107" />
-								<param name="visible" value="Container(9000).ListItem.Property(service) + Container(9000).ListItem.Property(submenu) + StringCompare(Container(9000).ListItem.Property(type),system)" />
+								<param name="visible" value="StringCompare(Container(9000).ListItem.Property(type),system)" />
 							</include>
 							<content>
 								<include>HomeSubMenuSystem</include>
