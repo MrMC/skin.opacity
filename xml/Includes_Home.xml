@@ -263,23 +263,26 @@
 	<include name="HomeSubMenuMusic">
 		<item id="90111">
 			<label>$LOCALIZE[31008]</label>
-			<onclick>ActivateWindow(Music,RecentlyAddedAlbums,return)</onclick>
-			<visible>Library.HasContent(Music) | Library.HasServices</visible>
-		</item>
+			<onclick condition="!Container(9000).ListItem.Property(service)">ActivateWindow(Music,RecentlyAddedAlbums,return)</onclick>
+			<onclick condition="Container(9000).ListItem.Property(service)">ActivateWindow(Videos,$INFO[Container(9000).ListItem.Property(servicetype)]://music/recentlyaddedalbums/$INFO[Container(9000).ListItem.Property(base64url)],return)</onclick>
+<!-- 			<visible>Library.HasContent(Music) | Library.HasServices</visible>
+ -->		</item>
 		<item id="90112">
 			<label>133</label>
-			<onclick>ActivateWindow(Music,Artists,return)</onclick>
-			<visible>Library.HasContent(Music) | Library.HasServices</visible>
+			<onclick condition="!Container(9000).ListItem.Property(service)">ActivateWindow(Music,Artists,return)</onclick>
+			<onclick condition="Container(9000).ListItem.Property(service)">ActivateWindow(Videos,$INFO[Container(9000).ListItem.Property(servicetype)]://music/filter/all/$INFO[Container(9000).ListItem.Property(base64url)],return)</onclick>
+			<!-- <visible>Library.HasContent(Music) | Library.HasServices</visible> -->
 		</item>
 		<item id="90113">
 			<label>132</label>
-			<onclick>ActivateWindow(Music,Albums,return)</onclick>
-			<visible>Library.HasContent(Music) | Library.HasServices</visible>
+			<onclick condition="!Container(9000).ListItem.Property(service)">ActivateWindow(Music,Albums,return)</onclick>
+			<onclick condition="Container(9000).ListItem.Property(service)">ActivateWindow(Videos,$INFO[Container(9000).ListItem.Property(servicetype)]://music/filter/album/$INFO[Container(9000).ListItem.Property(base64url)],return)</onclick>
+			<!-- <visible>Library.HasContent(Music) | Library.HasServices</visible> -->
 		</item>
 		<item id="90114">
 			<label>134</label>
 			<onclick>ActivateWindow(Music,Songs,return)</onclick>
-			<visible>Library.HasContent(Music) | Library.HasServices</visible>
+			<!-- <visible>Library.HasContent(Music) | Library.HasServices</visible> -->
 		</item>
 <!-- 		<item id="90115">
 			<label>744</label>
@@ -298,6 +301,7 @@
 			<label>653</label>
 			<property name="separator">true</property>
 			<onclick>UpdateLibrary(music)</onclick>
+			<visible>!Container(9000).ListItem.Property(service)</visible>
 		</item>
 		<item id="90119">
 			<label>Player controls</label>
