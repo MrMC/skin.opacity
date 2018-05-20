@@ -36,7 +36,7 @@
 		</control>
 		<control type="group">
 			<animation effect="fade" start="100" end="3" time="200" tween="sine" condition="System.HasModalDialog">Conditional</animation>
-						<control type="group">
+			<control type="group">
 				<animation effect="slide" start="0" end="420" time="400" tween="sine" easing="inout" condition="ControlGroup(9100).HasFocus">Conditional</animation>
 				<control type="group">
 					<depth>DepthContentPanel</depth>
@@ -105,13 +105,13 @@
 					<control type="fixedlist" id="9000">
 						<top>85</top>
 						<left>0</left>
-						<bottom>140</bottom>
+						<bottom>230</bottom>
 						<width>540</width>
-						<movement>4</movement>
+						<movement>3</movement>
 						<focusposition>2</focusposition>
 						<onfocus>ClearProperty(listposition,home)</onfocus>
-						<ondown>9000</ondown>
-						<onup>9000</onup>
+						<ondown>6056</ondown>
+						<onup>6056</onup>
 						<onleft>9100</onleft>
 						<onright condition="Container(9000).HasFocus(1) | StringCompare(Container(9000).ListItem.Property(type),Movies)">2000</onright>
 						<!-- Movies -->
@@ -166,6 +166,76 @@
 								<visible>Container(9000).ListItem.Property(submenu)</visible>
 							</control>
 						</focusedlayout>
+					</control>
+					<control type="group">
+						<control type="image">
+							<animation effect="slide" start="0,0" end="0,-50" time="500" tween="sine" easing="inout" condition="Control.HasFocus(4005) | Control.HasFocus(4001) | Control.HasFocus(4002) | Control.HasFocus(4003) | Control.HasFocus(4004)">Conditional</animation>
+							<description>separator image</description>
+							<bottom>185</bottom>
+							<left>0</left>
+							<width>525</width>
+							<height>4</height>
+							<texture colordiffuse="primary_color_30" border="3">dialogs/separator-grey.png</texture>
+						</control>
+						<control type="label">
+							<bottom>185</bottom>
+							<width>525</width>
+							<textoffsetx>20</textoffsetx>
+							<textoffsety>15</textoffsety>
+							<height>50</height>
+							<font>font12</font>
+							<align>center</align>
+							<aligny>top</aligny>
+							<textcolor>grey</textcolor>
+							<label>$VAR[HomeButtonAreaVar]</label>
+							<animation effect="fade" time="500" delay="200" tween="sine" easing="inout">VisibleChange</animation>
+							<visible>Control.HasFocus(4005) | Control.HasFocus(4001) | Control.HasFocus(4002) | Control.HasFocus(4003) | Control.HasFocus(4004)</visible>
+						</control>
+						<control type="group" id="60560">
+							<control type="grouplist" id="6056">
+								<orientation>horizontal</orientation>
+								<itemgap>0</itemgap>
+								<left>30</left>
+								<bottom>-30</bottom>
+								<height>200</height>
+								<onleft>6056</onleft>
+								<onright>6056</onright>
+								<onup>9000</onup>
+								<ondown>9000</ondown>
+								<width>525</width>
+								<include content="HomeQuickNavItemsCommon">
+									<param name="control_id" value="4005" />
+									<param name="click" value="SendClick(,4000)" />
+									<param name="visible" value="true" />
+									<param name="icon" value="icons/submenu/media40.png" />
+								</include>
+								<include content="HomeQuickNavItemsCommon">
+									<param name="control_id" value="4004" />
+									<param name="click" value="System.LogOff" />
+									<!-- <param name="visible" value="IntegerGreaterThan(System.ProfileCount,1)" /> -->
+									<param name="visible" value="true" />
+									<param name="icon" value="icons/submenu/profiles40.png" />
+								</include>
+								<include content="HomeQuickNavItemsCommon">
+									<param name="control_id" value="4003" />
+									<param name="click" value="ActivateWindow(Programs,Addons,return)" />
+									<param name="visible" value="true" />
+									<param name="icon" value="icons/submenu/add-ons.png" />
+								</include>
+								<include content="HomeQuickNavItemsCommon">
+									<param name="control_id" value="4001" />
+									<param name="click" value="ActivateWindow(favourites)" />
+									<param name="visible" value="true" />
+									<param name="icon" value="icons/favourites.png" />
+								</include>
+								<include content="HomeQuickNavItemsCommon">
+									<param name="control_id" value="4002" />
+									<param name="click" value="ActivateWindow(settings)" />
+									<param name="visible" value="true" />
+									<param name="icon" value="icons/submenu/system40.png" />
+								</include>
+							</control>
+						</control>
 					</control>
 					<control type="button">
 						<left>0</left>

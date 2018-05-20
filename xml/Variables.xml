@@ -250,6 +250,13 @@
 		<value condition="Control.HasFocus(104)">$LOCALIZE[19138]</value>
 		<value condition="Control.HasFocus(105)">$LOCALIZE[137]</value>
 	</variable>
+	<variable name="HomeButtonAreaVar">
+		<value condition="Control.HasFocus(4001)">$LOCALIZE[10134]</value> <!-- favourites -->
+		<value condition="Control.HasFocus(4002)">$LOCALIZE[10004]</value> <!-- settings -->
+		<value condition="Control.HasFocus(4003)">$LOCALIZE[24001]</value> <!-- extensions -->
+		<value condition="Control.HasFocus(4004)">$INFO[system.profilename]</value> <!-- profiles -->
+		<value condition="Control.HasFocus(4005)">$LOCALIZE[706]$INFO[Control.GetLabel(4000), - ]</value> <!-- server -->
+	</variable>
 	<variable name="PlayerControlsRepeatImageVar">
 		<value condition="Playlist.IsRepeatOne">osd/fullscreen/buttons/repeat-one.png</value>
 		<value condition="Playlist.IsRepeat">osd/fullscreen/buttons/repeat-all.png</value>
