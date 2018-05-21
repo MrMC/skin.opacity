@@ -105,7 +105,7 @@
 					<control type="fixedlist" id="9000">
 						<top>85</top>
 						<left>0</left>
-						<bottom>230</bottom>
+						<bottom>250</bottom>
 						<width>540</width>
 						<movement>3</movement>
 						<focusposition>2</focusposition>
@@ -207,7 +207,7 @@
 								<include content="HomeQuickNavItemsCommon">
 									<param name="control_id" value="4005" />
 									<param name="click" value="SendClick(,4000)" />
-									<param name="visible" value="true" />
+									<param name="visible" value="Control.IsVisible(4000)" />
 									<param name="icon" value="icons/submenu/media40.png" />
 								</include>
 								<include content="HomeQuickNavItemsCommon">
