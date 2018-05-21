@@ -3,10 +3,10 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
-		<control type="button" id="4000" description="Servers selection">
+		<control type="button" id="4000">
 			<include>HiddenObject</include>
 		</control>
-	    <control type="button" id="20000">
+		<control type="button" id="20000">
 			<include>HiddenObject</include>
 			<animation effect="fade" time="300" start="100" end="0">Focus</animation>
 			<onfocus>SetFocus(2000)</onfocus>
@@ -169,7 +169,7 @@
 					</control>
 					<control type="group">
 						<control type="image">
-							<animation effect="slide" start="0,0" end="0,-50" time="500" tween="sine" easing="inout" condition="Control.HasFocus(4005) | Control.HasFocus(4001) | Control.HasFocus(4002) | Control.HasFocus(4003) | Control.HasFocus(4004)">Conditional</animation>
+							<animation effect="slide" end="0,-50" time="150" reversibe="true" condition="Control.IsVisible(9999)">Conditional</animation>
 							<description>separator image</description>
 							<bottom>185</bottom>
 							<left>0</left>
@@ -177,7 +177,7 @@
 							<height>4</height>
 							<texture colordiffuse="primary_color_30" border="3">dialogs/separator-grey.png</texture>
 						</control>
-						<control type="label">
+						<control type="label" id="9999">
 							<bottom>185</bottom>
 							<width>525</width>
 							<textoffsetx>20</textoffsetx>
@@ -188,21 +188,22 @@
 							<aligny>top</aligny>
 							<textcolor>grey</textcolor>
 							<label>$VAR[HomeButtonAreaVar]</label>
-							<animation effect="fade" time="500" delay="200" tween="sine" easing="inout">VisibleChange</animation>
-							<visible>Control.HasFocus(4005) | Control.HasFocus(4001) | Control.HasFocus(4002) | Control.HasFocus(4003) | Control.HasFocus(4004)</visible>
+							<animation effect="fade" time="200">VisibleChange</animation>
+							<visible>ControlGroup(6056).HasFocus()</visible>
 						</control>
 						<control type="group" id="60560">
 							<control type="grouplist" id="6056">
 								<orientation>horizontal</orientation>
 								<itemgap>0</itemgap>
-								<left>30</left>
+								<left>0</left>
 								<bottom>-30</bottom>
 								<height>200</height>
 								<onleft>6056</onleft>
 								<onright>6056</onright>
 								<onup>9000</onup>
 								<ondown>9000</ondown>
-								<width>525</width>
+								<width max="525">auto</width>
+								<align>center</align>
 								<include content="HomeQuickNavItemsCommon">
 									<param name="control_id" value="4005" />
 									<param name="click" value="SendClick(,4000)" />
@@ -212,7 +213,7 @@
 								<include content="HomeQuickNavItemsCommon">
 									<param name="control_id" value="4004" />
 									<param name="click" value="System.LogOff" />
-									<!-- <param name="visible" value="IntegerGreaterThan(System.ProfileCount,1)" /> -->
+									<param name="visible" value="IntegerGreaterThan(System.ProfileCount,1)" />
 									<param name="visible" value="true" />
 									<param name="icon" value="icons/submenu/profiles40.png" />
 								</include>
@@ -242,8 +243,10 @@
 						<top>80</top>
 						<width>40</width>
 						<bottom>80</bottom>
-						<texturefocus></texturefocus>
-						<texturenofocus></texturenofocus>
+						<texturefocus>
+						</texturefocus>
+						<texturenofocus>
+						</texturenofocus>
 						<onclick>SetFocus(9100)</onclick>
 					</control>
 				</control>
