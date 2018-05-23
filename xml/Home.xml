@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">9000</defaultcontrol>
+	<defaultcontrol always="false">9000</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
 		<control type="button" id="4000">
@@ -214,7 +214,6 @@
 									<param name="control_id" value="4004" />
 									<param name="click" value="System.LogOff" />
 									<param name="visible" value="IntegerGreaterThan(System.ProfileCount,1)" />
-									<param name="visible" value="true" />
 									<param name="icon" value="icons/submenu/profiles40.png" />
 								</include>
 								<include content="HomeQuickNavItemsCommon">
