@@ -13,7 +13,7 @@
 		<left>-40</left>
 		<width>120%</width>
 		<height>450</height>
-		<texture>colors/black.png</texture>
+		<texture colordiffuse="AAFFFFFF">colors/black.png</texture>
 	  </control>
 	  <control type="image" description="Background">
 		<left>0</left>
