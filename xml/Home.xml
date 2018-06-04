@@ -6,6 +6,9 @@
 		<control type="button" id="4000">
 			<include>HiddenObject</include>
 		</control>
+		<control type="button" id="4004">
+			<include>HiddenObject</include>
+		</control>
 		<control type="button" id="20000">
 			<include>HiddenObject</include>
 			<animation effect="fade" time="300" start="100" end="0">Focus</animation>
@@ -211,9 +214,9 @@
 									<param name="icon" value="icons/submenu/media40.png" />
 								</include>
 								<include content="HomeQuickNavItemsCommon">
-									<param name="control_id" value="4004" />
-									<param name="click" value="System.LogOff" />
-									<param name="visible" value="IntegerGreaterThan(System.ProfileCount,1)" />
+									<param name="control_id" value="4006" />
+									<param name="click" value="SendClick(,4004)" />
+									<param name="visible" value="Control.IsVisible(4004)" />
 									<param name="icon" value="icons/submenu/profiles40.png" />
 								</include>
 								<include content="HomeQuickNavItemsCommon">

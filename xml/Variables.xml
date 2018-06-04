@@ -254,7 +254,7 @@
 		<value condition="Control.HasFocus(4001)">$LOCALIZE[10134]</value> <!-- favourites -->
 		<value condition="Control.HasFocus(4002)">$LOCALIZE[10004]</value> <!-- settings -->
 		<value condition="Control.HasFocus(4003)">$LOCALIZE[24001]</value> <!-- extensions -->
-		<value condition="Control.HasFocus(4004)">$INFO[system.profilename]</value> <!-- profiles -->
+		<value condition="Control.HasFocus(4006)">$INFO[Control.GetLabel(4004)]</value> <!-- profiles -->
 		<value condition="Control.HasFocus(4005)">$LOCALIZE[706]$INFO[Control.GetLabel(4000), - ]</value> <!-- server -->
 	</variable>
 	<variable name="PlayerControlsRepeatImageVar">
