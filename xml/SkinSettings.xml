@@ -132,24 +132,6 @@
 						<onclick>Skin.ToggleSetting(HomeMenuPlexButton)</onclick>
 					</control> -->
 				</control>
-				<control type="grouplist" id="620">
-					<top>90</top>
-					<left>0</left>
-					<right>50</right>
-					<bottom>90</bottom>
-					<onleft>9000</onleft>
-					<onright>60</onright>
-					<onup>610</onup>
-					<pagecontrol>60</pagecontrol>
-					<ondown>600</ondown>
-					<visible>Container(9000).HasFocus(4)</visible>
-					<control type="radiobutton" id="621">
-						<label>$LOCALIZE[35507]</label>
-						<include>DefaultSettingButton</include>
-						<selected>Skin.HasSetting(tv_to_gude)</selected>
-						<onclick>Skin.ToggleSetting(tv_to_gude)</onclick>
-					</control>
-				</control>
 			</control>
 			<control type="group">
 				<depth>DepthContentPanel</depth>
@@ -197,10 +179,6 @@
 					<content>
 						<item id="2">
 							<label>$LOCALIZE[31061]</label>
-							<onclick>noop</onclick>
-						</item>
-						<item id="4">
-							<label>$LOCALIZE[35506]</label>
 							<onclick>noop</onclick>
 						</item>
 						<item id="3">
