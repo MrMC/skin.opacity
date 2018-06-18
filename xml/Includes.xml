@@ -882,7 +882,7 @@
 	<include name="HomeShelfThumb">
 		<param name="is_focused">false</param>
 		<param name="focused_ID"></param>
-		<param name="item_thumb"></param>
+		<param name="item_thumb">$VAR[shelf_item_thumb]</param>
 		<definition>
 			<control type="group">
 				<depth>DepthContentPopout</depth>
@@ -906,7 +906,8 @@
 					<top>0</top>
 					<width>282</width>
 					<height>400</height>
-					<texture fallback="DefaultVideo.png" background="true">$INFO[$PARAM[item_thumb]]</texture>
+					<texture fallback="DefaultVideo.png" background="true">$PARAM[item_thumb]</texture>
+          <aspectratio>scale</aspectratio>
 					<bordersize>20</bordersize>
 				</control>
 				<control type="progress">

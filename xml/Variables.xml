@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<variable name="PVRStatusImageVar">
+  <variable name="shelf_item_thumb">
+    <value condition="!IsEmpty(ListItem.Art(tvshow.thumb))">$INFO[ListItem.Art(tvshow.thumb)]</value>
+		<value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
+  </variable>
+  <variable name="PVRStatusImageVar">
 		<value condition="ListItem.IsRecording">windows/pvr/record.png</value>
 		<value condition="ListItem.HasTimer | ListItem.HasTimerSchedule">windows/pvr/timer.png</value>
 	</variable>
