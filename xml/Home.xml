@@ -285,7 +285,7 @@
 					</control>
 					<control type="list" id="8000">
 						<top>125</top>
-						<width>1270</width>
+						<width>1350</width>
 						<height>400</height>
 						<scrolltime tween="cubic" easing="out">500</scrolltime>
 						<orientation>horizontal</orientation>
@@ -299,15 +299,12 @@
 							<include content="HomeShelfThumb">
 								<param name="is_focused" value="false" />
 								<param name="focused_ID" value="8000" />
-								<param name="item_thumb" value="ListItem.Art(thumb)" />
-								
 							</include>
 						</itemlayout>
 						<focusedlayout width="285" height="400">
 							<include content="HomeShelfThumb">
 								<param name="is_focused" value="true" />
 								<param name="focused_ID" value="8000" />
-								<param name="item_thumb" value="ListItem.Art(thumb)" />
 							</include>
 						</focusedlayout>
 					</control>
@@ -337,7 +334,7 @@
 					</control>
 					<control type="list" id="8010">
 						<top>575</top>
-						<width>1270</width>
+						<width>1350</width>
 						<height>400</height>
 						<scrolltime tween="cubic" easing="out">500</scrolltime>
 						<orientation>horizontal</orientation>
@@ -351,14 +348,12 @@
 							<include content="HomeShelfThumb">
 								<param name="is_focused" value="false" />
 								<param name="focused_ID" value="8010" />
-								<param name="item_thumb" value="ListItem.Art(thumb)" />
 							</include>
 						</itemlayout>
 						<focusedlayout width="285" height="400">
 							<include content="HomeShelfThumb">
 								<param name="is_focused" value="true" />
 								<param name="focused_ID" value="8010" />
-								<param name="item_thumb" value="ListItem.Art(thumb)" />
 							</include>
 						</focusedlayout>
 					</control>
@@ -408,7 +403,7 @@
 					</control>
 					<control type="list" id="8001">
 						<top>125</top>
-						<width>1270</width>
+						<width>1350</width>
 						<height>400</height>
 						<scrolltime tween="cubic" easing="out">500</scrolltime>
 						<orientation>horizontal</orientation>
@@ -422,14 +417,12 @@
 							<include content="HomeShelfThumb">
 								<param name="is_focused" value="false" />
 								<param name="focused_ID" value="8001" />
-								<param name="item_thumb" value="ListItem.Art(tvshow.thumb)" />
 							</include>
 						</itemlayout>
 						<focusedlayout width="285" height="400">
 							<include content="HomeShelfThumb">
 								<param name="is_focused" value="true" />
 								<param name="focused_ID" value="8001" />
-								<param name="item_thumb" value="ListItem.Art(tvshow.thumb)" />
 							</include>
 						</focusedlayout>
 					</control>
@@ -471,7 +464,7 @@
 					</control>
 					<control type="list" id="8011">
 						<top>575</top>
-						<width>1270</width>
+						<width>1350</width>
 						<height>400</height>
 						<scrolltime tween="cubic" easing="out">500</scrolltime>
 						<orientation>horizontal</orientation>
@@ -485,14 +478,12 @@
 							<include content="HomeShelfThumb">
 								<param name="is_focused" value="false" />
 								<param name="focused_ID" value="8011" />
-								<param name="item_thumb" value="ListItem.Art(tvshow.thumb)" />
 							</include>
 						</itemlayout>
 						<focusedlayout width="285" height="400">
 							<include content="HomeShelfThumb">
 								<param name="is_focused" value="true" />
 								<param name="focused_ID" value="8011" />
-								<param name="item_thumb" value="ListItem.Art(tvshow.thumb)" />
 							</include>
 						</focusedlayout>
 					</control>
@@ -530,7 +521,7 @@
 					</control>
 					<control type="list" id="8002">
 						<top>180</top>
-						<width>1210</width>
+						<width>1350</width>
 						<height>308</height>
 						<scrolltime tween="cubic" easing="out">500</scrolltime>
 						<orientation>horizontal</orientation>
@@ -549,7 +540,7 @@
 									<top>0</top>
 									<width>306</width>
 									<height>306</height>
-									<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Property(thumb)]</texture>
+									<texture fallback="DefaultAudio.png" background="true">$INFO[ListItem.Property(thumb)]</texture>
 									<aspectratio aligny="top">stretch</aspectratio>
 									<bordertexture border="20">overlays/shadow.png</bordertexture>
 									<bordersize>20</bordersize>
@@ -571,7 +562,7 @@
 									<top>0</top>
 									<width>306</width>
 									<height>306</height>
-									<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Property(thumb)]</texture>
+									<texture fallback="DefaultAudio.png" background="true">$INFO[ListItem.Property(thumb)]</texture>
 									<aspectratio aligny="top">stretch</aspectratio>
 									<bordersize>20</bordersize>
 								</control>
