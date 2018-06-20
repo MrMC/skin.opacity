@@ -5,7 +5,7 @@
   <controls>
 	<control type="group">
 	  <include>OpenClose</include>
-	  <visible>![Window.IsActive(fullscreeninfo) | Window.IsActive(videoosdsettings.xml) | Window.IsActive(dialogslider.xml)]</visible>
+	  <visible>![Window.IsActive(fullscreeninfo) | Window.IsActive(videoosdsettings.xml)]</visible>
 	  <include>VisibleFadeEffect</include>
 	  <control type="image" description="Background">
 		<animation condition="!ControlGroup(9000).HasFocus(101)" effect="slide" start="0,0" end="0,-240" time="0" tween="cubic" easing="inout" reversible="true">Conditional</animation>
