@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>9000</defaultcontrol>
+	<controls>
+		<include>DefaultBackground</include>
+		<control type="group">
+			<animation effect="fade" start="100" end="3" time="200" tween="sine" condition="System.HasModalDialog">Conditional</animation>
+			<control type="group">
+				<left>60</left>
+				<top>70</top>
+				<include>OpenClose_Right</include>
+				<control type="list" id="940">
+					<left>530</left>
+					<top>105</top>
+					<height>850</height>
+					<onleft>9000</onleft>
+					<orientation>vertical</orientation>
+					<preloaditems>1</preloaditems>
+					<itemlayout width="1000" height="110">
+						<control type="textbox">
+							<left>50</left>
+							<top>25</top>
+							<width>1000</width>
+							<height>100</height>
+							<textcolor>white</textcolor>
+							<aligny>left</aligny>
+							<font>font35</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout width="1000" height="110">
+						<control type="image">
+							<width>1000</width>
+							<height>100</height>
+							<texture colordiffuse="primary_color" border="5">buttons/focus.png</texture>
+							<visible>Control.HasFocus(940)</visible>
+						</control>
+						<control type="textbox">
+							<left>50</left>
+							<top>25</top>
+							<width>1000</width>
+							<height>100</height>
+							<textcolor>white</textcolor>
+							<aligny>left</aligny>
+							<font>font35</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="group">
+				<left>0</left>
+				<top>0</top>
+				<depth>DepthContentPanel</depth>
+				<include>OpenClose_Left</include>
+				<include content="ContentPanel">
+					<param name="width" value="580" />
+				</include>
+				<control type="grouplist" id="9000">
+					<left>0</left>
+					<top>160</top>
+					<width>520</width>
+					<height>100%</height>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<onright condition="Control.HasFocus(95)">940</onright>
+					<control type="button" id="94">
+						<description>Subscription Info</description>
+						<include content="DefaultSettingButton">
+							<param name="height" value="88" />
+						</include>
+						<width>520</width>
+						<label>$LOCALIZE[29915]</label>
+					</control>
+					<control type="button" id="95">
+						<description>Subscribe</description>
+						<include content="DefaultSettingButton">
+							<param name="height" value="88" />
+						</include>
+						<width>520</width>
+						<label>$LOCALIZE[33105]</label>
+					</control>
+					<control type="button" id="96">
+						<description>Restore</description>
+						<include content="DefaultSettingButton">
+							<param name="height" value="88" />
+						</include>
+						<width>520</width>
+						<label>$LOCALIZE[33106]</label>
+					</control>
+				</control>
+			</control>
+			<include content="TopBar">
+				<param name="breadcrumbs_label" value="App Store" />
+			</include>
+			<include>BottomBar</include>
+		</control>
+	</controls>
+</window>

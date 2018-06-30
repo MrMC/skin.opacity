@@ -116,6 +116,8 @@
           <item>
             <label>$LOCALIZE[20094]</label>
             <onclick>ActivateWindow(MediaSources,root)</onclick>
+<!--             <label>App Store</label>
+            <onclick>ActivateWindow(appstore)</onclick> -->
             <icon>icons/settings/filemanager.png</icon>
           </item>
           <item>
