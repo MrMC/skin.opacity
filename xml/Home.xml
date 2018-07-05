@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="false">9000</defaultcontrol>
+	<defaultcontrol always="false">20002</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
 		<control type="button" id="4000">
@@ -22,6 +22,13 @@
 			<onfocus>SetFocus(2000)</onfocus>
 			<onclick>noop</onclick>
 			<visible allowhiddenfocus="true">Control.HasFocus(20001)</visible>
+		</control>
+		<control type="button" id="20002">
+			<include>HiddenObject</include>
+			<animation effect="fade" time="300" start="100" end="0">Focus</animation>
+			<onfocus>SetFocus(9000,0)</onfocus>
+			<onclick>noop</onclick>
+			<visible allowhiddenfocus="true">Control.HasFocus(20002)</visible>
 		</control>
 		<include>DefaultBackground</include>
 		<control type="image">
@@ -111,8 +118,7 @@
 						<bottom>250</bottom>
 						<width>540</width>
 						<movement>3</movement>
-						<focusposition>2</focusposition>
-						<onfocus>ClearProperty(listposition,home)</onfocus>
+						<focusposition>0</focusposition>
 						<ondown>6056</ondown>
 						<onup>6056</onup>
 						<onleft>9100</onleft>
