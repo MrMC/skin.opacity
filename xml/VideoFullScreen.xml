@@ -40,7 +40,7 @@
 		</control>
 		<control type="group" id="1">
 			<depth>DepthOSD+</depth>
-			<visible>Player.Caching</visible>
+			<visible>Player.Caching + !Stringcompare(Player.Filenameandpath,special://xbmc/media/Splash.mp4)</visible>
 			<animation delay="300" effect="fade" time="200">Visible</animation>
 			<animation effect="fade" delay="200" time="150">Hidden</animation>
 			<centerleft>50%</centerleft>

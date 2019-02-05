@@ -12,6 +12,7 @@
 			<height>75</height>
 			<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="System.HasModalDialog">conditional</animation>
 			<animation effect="slide" end="0,80" time="150" condition="Window.IsVisible(FullscreenVideo)">conditional</animation>
+			<visible>!Stringcompare(Player.Filenameandpath,special://xbmc/media/Splash.mp4)</visible>
 			<control type="group">
 				<animation effect="fade" time="200">VisibleChange</animation>
 				<control type="image">

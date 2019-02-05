@@ -17,6 +17,7 @@
 				<centertop>50%</centertop>
 				<width>80</width>
 				<height>80</height>
+				<visible>!Stringcompare(Player.Filenameandpath,special://xbmc/media/Splash.mp4)</visible>
 				<control type="image">
 					<centerleft>50%</centerleft>
 					<centertop>50%</centertop>
