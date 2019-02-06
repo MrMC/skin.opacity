@@ -182,7 +182,7 @@
 		<value condition="Skin.HasSetting(dark_theme)">-</value>
 		<value condition="Skin.HasSetting(enable_custom_background) + !IsEmpty(Skin.String(Custom.Background))">$INFO[Skin.String(Custom.Background)]</value>
 		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo)">$INFO[Window(home).Property(infobackground)]</value>
-		<value>special://skin/extras/backgrounds/SKINDEFAULT.jpg</value>
+		<value>special://skin/extras/backgrounds/SKINDEFAULT.png</value>
 	</variable>
 	<variable name="MediaFanartVar">
 		<value condition="Skin.HasSetting(dark_theme)">-</value>
