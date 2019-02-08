@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <colors>
-    <color name="primary_color">FF00FF00</color>
-    <color name="primary_color_30">5000FF00</color>
+    <color name="primary_color">FF52B54B</color>
+    <color name="primary_color_30">5052B54B</color>
     <color name="selected">FF00FFD1</color>
-    <color name="systemfocus">FF00FF00</color>
+    <color name="systemfocus">FF52B54B</color>
 </colors>
