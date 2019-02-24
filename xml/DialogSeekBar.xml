@@ -5,9 +5,12 @@
 	<include>Animation_BottomSlide</include>
 	<depth>DepthOSD</depth>
 	<zorder>0</zorder>
+	<onload condition="VideoPlayer.Content(LiveTV)">ActivateWindow(1106)</onload>
+	<onunload condition="VideoPlayer.Content(LiveTV)">Dialog.Close(1106)</onunload>
 	<onunload>Dialog.Close(osdsettings)</onunload>
 	<controls>
 		<control type="group">
+			<visible>!Window.IsActive(1106)</visible>
 			<bottom>0</bottom>
 			<height>190</height>
 			<control type="image">
@@ -136,7 +139,7 @@
 				<visible>!VideoPlayer.Content(livetv)</visible>
 			</control>
 		</control>
-		<control type="group">
+<!-- 		<control type="group">
 			<visible>Player.ShowInfo + VideoPlayer.Content(LiveTV) + Window.IsActive(fullscreenvideo)</visible>
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<bottom>0</bottom>
@@ -199,7 +202,7 @@
 				<font>WeatherTemp</font>
 				<aligny>center</aligny>
 			</control>
-		</control>
+		</control> -->
 		<control type="group">
 			<visible>Player.ShowInfo + !VideoPlayer.Content(LiveTV) + Window.IsActive(fullscreenvideo)</visible>
 			<animation effect="fade" time="400">VisibleChange</animation>

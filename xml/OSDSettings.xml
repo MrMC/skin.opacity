@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
   <defaultcontrol always="true">9000</defaultcontrol>
+  <include>Animation_DialogPopupOpenClose</include>
+  <onunload condition="VideoPlayer.Content(LiveTV)">Dialog.Close(VideoOSD)</onunload>
   <zorder>2</zorder>
   <controls>
 	<control type="group">
-	  <visible>![Window.IsActive(fullscreeninfo) | Window.IsActive(videoosdsettings.xml)]</visible>
+	  <visible>![Window.IsActive(fullscreeninfo) | Window.IsActive(videoosdsettings.xml) | Window.IsActive(1106)]</visible>
 	  <control type="image" description="Background">
 		<animation condition="!ControlGroup(9000).HasFocus(101)" effect="slide" start="0,0" end="0,-240" time="0" tween="cubic" easing="inout" reversible="true">Conditional</animation>
 		<top>0</top>
