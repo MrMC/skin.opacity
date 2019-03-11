@@ -477,6 +477,7 @@
 					<usecontrolcoords>true</usecontrolcoords>
 					<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+					<animation effect="slide" end="50,0" time="0" tween="sine" easing="inout" condition="System.HasNotch">conditional</animation>
 					<control type="label">
 						<label>$PARAM[breadcrumbs_label]</label>
 						<include>BreadcrumbsLabel</include>
@@ -533,6 +534,7 @@
 						<height>200</height>
 						<width>auto</width>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
+						<animation effect="slide" end="-20,0" time="0" tween="sine" easing="inout" condition="System.HasNotch">conditional</animation>
 						<label>$INFO[System.Time]</label>
 					</control>
 				</control>
@@ -653,6 +655,7 @@
 			<onclick>Action(Back)</onclick>
 			<animation effect="fade" start="0" end="100" time="400" condition="Window.Previous(home)">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(home)">WindowClose</animation>
+			<animation effect="slide" end="80,0" time="0" tween="sine" easing="inout" condition="System.HasNotch">conditional</animation>
 			<texturefocus colordiffuse="primary_color">osd/fullscreen/buttons/button-fo.png</texturefocus>
 			<texturenofocus />
 			<radioposx>5</radioposx>
@@ -741,6 +744,23 @@
 				<right>$PARAM[right]</right>
 				<top>$PARAM[top]</top>
 				<bottom>$PARAM[bottom]</bottom>
+			</control>
+		</definition>
+	</include>
+	<include name="SettingsList">
+		<param name="left">520</param>
+		<definition>
+			<control type="grouplist" id="5">
+				<description>control area</description>
+				<top>90</top>
+				<left>$PARAM[left]</left>
+				<pagecontrol>60</pagecontrol>
+				<right>50</right>
+				<bottom>90</bottom>
+				<onleft>3</onleft>
+				<onright>60</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
 			</control>
 		</definition>
 	</include>

@@ -78,6 +78,7 @@
 			<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
 <!-- 			<effect type="slide" start="0" end="-320" time="300" tween="cubic" easing="out" />
  -->		</animation>
+		 <animation effect="slide" end="70,0" time="0" tween="sine" easing="inout" condition="System.HasNotch">conditional</animation>
 	</include>
 	<include name="OpenClose_Right">
 		<animation type="WindowOpen">

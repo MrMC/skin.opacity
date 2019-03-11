@@ -8,18 +8,12 @@
 			<animation effect="fade" start="100" end="3" time="200" tween="sine" condition="System.HasModalDialog">Conditional</animation>
 			<control type="group">
 				<include>OpenClose_Right</include>
-				<control type="grouplist" id="5">
-					<description>control area</description>
-					<top>90</top>
-					<left>520</left>
-					<pagecontrol>60</pagecontrol>
-					<right>50</right>
-					<bottom>90</bottom>
-					<onleft>3</onleft>
-					<onright>60</onright>
-					<onup>5</onup>
-					<ondown>5</ondown>
-				</control>
+				<include condition="System.HasNotch"content="SettingsList">
+					<param name="left" value="560" />
+				</include>
+				<include condition="!System.HasNotch"content="SettingsList">
+					<param name="left" value="520" />
+				</include>
 			</control>
 			<control type="button" id="7">
 				<description>Default Button</description>

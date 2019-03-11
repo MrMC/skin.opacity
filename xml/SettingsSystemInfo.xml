@@ -6,7 +6,7 @@
 		<control type="group">
 			<animation effect="fade" start="100" end="3" time="200" tween="sine" condition="System.HasModalDialog">Conditional</animation>
 			<control type="group">
-				<left>60</left>
+				<left>90</left>
 				<top>70</top>
 				<include>OpenClose_Right</include>
 				<control type="grouplist">

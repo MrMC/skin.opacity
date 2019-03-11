@@ -593,7 +593,7 @@
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<top>0</top>
-				<left>50</left>
+				<left>80</left>
 				<aspectratio align="left">keep</aspectratio>
 				<width>400</width>
 				<height>80</height>
