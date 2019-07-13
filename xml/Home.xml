@@ -395,7 +395,7 @@
 						<aligny>top</aligny>
 						<textcolor>grey</textcolor>
 						<label>[B]$INFO[Container(8001).ListItem.Property(ItemType)] :[/B] $INFO[Container(8001).ListItem.TVShowTitle] - $INFO[Container(8001).ListItem.Label]</label>
-						<visible>Control.HasFocus(8001) + !Container(8001).ListItem.Property(MediaServicesItem) + Container(8001).ListItem.IsFolder</visible>
+						<visible>Control.HasFocus(8001) + !Container(8001).ListItem.Property(MediaServicesItem)</visible>
 					</control>
 					<control type="label">
 						<top>70</top>
