@@ -145,6 +145,23 @@
 			<label>CMS</label>
 			<onclick>ActivateWindow(osdcmssettings)</onclick>
 		  </control>
+		  <control type="button" id="1050">
+			<visible>System.Platform.TVOS</visible>
+			<width>300</width>
+			<height>100</height>
+			<align>center</align>
+			<texturenofocus></texturenofocus>
+			<label>$LOCALIZE[19295]</label>
+			<onclick>ShowAudioRouteSelector()</onclick>
+		  </control>
+		  <control type="button" id="1051">
+			<width>300</width>
+			<height>100</height>
+			<align>center</align>
+			<texturenofocus></texturenofocus>
+			<label>Codec Info</label>
+			<onclick>codecinfo</onclick>
+		  </control>
 		</control>
 	  </control>
 	  <control type="group">
