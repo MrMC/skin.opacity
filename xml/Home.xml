@@ -112,69 +112,71 @@
 							</content>
 						</control>
 					</control>
-					<control type="fixedlist" id="9000">
-						<top>85</top>
-						<left>0</left>
-						<bottom>250</bottom>
-						<width>540</width>
-						<movement>3</movement>
-						<focusposition>0</focusposition>
-						<ondown>6056</ondown>
-						<onup>6056</onup>
-						<onleft>9100</onleft>
-						<onright condition="Container(9000).HasFocus(1) | StringCompare(Container(9000).ListItem.Property(type),Movies)">2000</onright>
-						<!-- Movies -->
-						<onright condition="Container(9000).HasFocus(2) | StringCompare(Container(9000).ListItem.Property(type),tvshows)">2001</onright>
-						<!-- TvShows -->
-						<onright condition="Container(9000).HasFocus(3) | StringCompare(Container(9000).ListItem.Property(type),music)">2002</onright>
-						<!-- Music -->
-						<orientation>vertical</orientation>
-						<scrolltime tween="cubic" easing="out">500</scrolltime>
-						<itemlayout height="120">
-							<control type="label">
-								<left>90</left>
-								<right>40</right>
-								<height>110</height>
-								<font>font45</font>
-								<label>$INFO[ListItem.Label]</label>
-								<align>left</align>
-								<aligny>center</aligny>
-								<animation effect="fade" start="100" end="30" time="200" tween="sine" condition="ControlGroup(9100).HasFocus">Conditional</animation>
-							</control>
-						</itemlayout>
-						<focusedlayout height="120">
-							<control type="group">
-								<left>40</left>
-								<right>0</right>
-								<control type="image">
-									<left>0</left>
-									<right>25</right>
-									<top>-10</top>
-									<height>110%</height>
-									<visible>Control.HasFocus(9000)</visible>
-									<texture colordiffuse="primary_color" border="50">buttons/dialogbutton-fo.png</texture>
-								</control>
+					<control type="group">
+						<control type="fixedlist" id="9000">
+							<top>85</top>
+							<left>0</left>
+							<bottom>250</bottom>
+							<width>540</width>
+							<movement>3</movement>
+							<focusposition>0</focusposition>
+							<ondown>6056</ondown>
+							<onup>6056</onup>
+							<onleft>9100</onleft>
+							<onright condition="Container(9000).HasFocus(1) | StringCompare(Container(9000).ListItem.Property(type),Movies)">2000</onright>
+							<!-- Movies -->
+							<onright condition="Container(9000).HasFocus(2) | StringCompare(Container(9000).ListItem.Property(type),tvshows)">2001</onright>
+							<!-- TvShows -->
+							<onright condition="Container(9000).HasFocus(3) | StringCompare(Container(9000).ListItem.Property(type),music)">2002</onright>
+							<!-- Music -->
+							<orientation>vertical</orientation>
+							<scrolltime tween="cubic" easing="out">500</scrolltime>
+							<itemlayout height="120">
 								<control type="label">
-									<left>50</left>
+									<left>90</left>
 									<right>40</right>
 									<height>110</height>
 									<font>font45</font>
-									<aligny>center</aligny>
 									<label>$INFO[ListItem.Label]</label>
 									<align>left</align>
+									<aligny>center</aligny>
+									<animation effect="fade" start="100" end="30" time="200" tween="sine" condition="ControlGroup(9100).HasFocus">Conditional</animation>
 								</control>
-							</control>
-							<control type="image">
-								<left>10</left>
-								<top>45</top>
-								<width>28</width>
-								<height>28</height>
-								<texture flipx="true" colordiffuse="primary_color">overlays/arrowright.png</texture>
-								<animation effect="zoom" start="0,100" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
-								<animation effect="zoom" start="100,100" end="0,100" center="auto" time="200">WindowClose</animation>
-								<visible>Container(9000).ListItem.Property(submenu)</visible>
-							</control>
-						</focusedlayout>
+							</itemlayout>
+							<focusedlayout height="120">
+								<control type="group">
+									<left>40</left>
+									<right>0</right>
+									<control type="image">
+										<left>0</left>
+										<right>25</right>
+										<top>-10</top>
+										<height>110%</height>
+										<visible>Control.HasFocus(9000)</visible>
+										<texture colordiffuse="primary_color" border="50">buttons/dialogbutton-fo.png</texture>
+									</control>
+									<control type="label">
+										<left>50</left>
+										<right>40</right>
+										<height>110</height>
+										<font>font45</font>
+										<aligny>center</aligny>
+										<label>$INFO[ListItem.Label]</label>
+										<align>left</align>
+									</control>
+								</control>
+								<control type="image">
+									<left>10</left>
+									<top>45</top>
+									<width>28</width>
+									<height>28</height>
+									<texture flipx="true" colordiffuse="primary_color">overlays/arrowright.png</texture>
+									<animation effect="zoom" start="0,100" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
+									<animation effect="zoom" start="100,100" end="0,100" center="auto" time="200">WindowClose</animation>
+									<visible>Container(9000).ListItem.Property(submenu)</visible>
+								</control>
+							</focusedlayout>
+						</control>
 					</control>
 					<control type="group">
 						<control type="image">
