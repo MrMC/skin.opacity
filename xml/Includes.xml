@@ -805,17 +805,17 @@
 						<top>240</top>
 						<width>530</width>
 						<height>370</height>
-						<aspectratio aligny="center">scale</aspectratio>
+						<aspectratio aligny="bottom">keep</aspectratio>
 						<fadetime>300</fadetime>
-						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<texture diffuse="overlays/EpisodeThumbDifuse15.png" background="true">$INFO[ListItem.Thumb]</texture>
 					</control>
 					<control type="progress">
-						<left>30</left>
-						<top>610</top>
-						<width>530</width>
+						<left>45</left>
+						<top>585</top>
+						<width>500</width>
 						<height>6</height>
-						<texturebg>-</texturebg>
-						<midtexture colordiffuse="primary_color">colors\white.png</midtexture>
+						<texturebg colordiffuse="difuse15">colors/white10px.png</texturebg>
+						<midtexture colordiffuse="primary_color">colors/white10px.png</midtexture>
 						<info>ListItem.PercentPlayed</info>
 						<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 					</control>
@@ -829,15 +829,15 @@
 						<height>470</height>
 						<aspectratio aligny="bottom">keep</aspectratio>
 						<fadetime>300</fadetime>
-						<texture background="true">$VAR[IconWallThumbVar]</texture>
+						<texture diffuse="overlays/HomeThumbDifuse15.png" background="true">$VAR[IconWallThumbVar]</texture>
 					</control>
 					<control type="progress">
-						<left>138</left>
-						<top>610</top>
-						<width>310</width>
+						<left>152</left>
+						<top>590</top>
+						<width>280</width>
 						<height>6</height>
-						<texturebg>-</texturebg>
-						<midtexture colordiffuse="primary_color">colors\white.png</midtexture>
+						<texturebg colordiffuse="difuse15">colors/white10px.png</texturebg>
+						<midtexture colordiffuse="primary_color">colors/white10px.png</midtexture>
 						<info>ListItem.PercentPlayed</info>
 						<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 					</control>
@@ -926,25 +926,25 @@
 					<top>0</top>
 					<width>282</width>
 					<height>400</height>
-					<texture fallback="DefaultVideo.png" background="true">$PARAM[item_thumb]</texture>
-          <aspectratio>scale</aspectratio>
+					<texture diffuse="overlays/HomeThumbDifuse15.png" fallback="DefaultVideo.png" background="true">$PARAM[item_thumb]</texture>
+					<aspectratio>scale</aspectratio>
 					<bordersize>20</bordersize>
 				</control>
 				<control type="progress">
-					<left>20</left>
-					<top>365</top>
-					<width>242</width>
-					<height>10</height>
-					<texturebg>-</texturebg>
+					<left>40</left>
+					<top>363</top>
+					<width>202</width>
+					<height>5</height>
+					<texturebg colordiffuse="difuse15">colors/white10px.png</texturebg>
 					<midtexture colordiffuse="primary_color">colors/white10px.png</midtexture>
 					<info>ListItem.PercentPlayed</info>
 					<visible>IntegerGreaterThan(ListItem.PercentPlayed,0)</visible>
 				</control>
 				<control type="progress">
-					<left>20</left>
-					<top>370</top>
-					<width>242</width>
-					<height>10</height>
+					<left>40</left>
+					<top>367</top>
+					<width>202</width>
+					<height>6</height>
 					<texturebg colordiffuse="primary_color">colors/white10px.png</texturebg>
 					<midtexture colordiffuse="primary_color">colors/white10px.png</midtexture>
 					<info>100</info>

@@ -563,9 +563,8 @@
 									<top>0</top>
 									<width>306</width>
 									<height>306</height>
-									<texture fallback="DefaultAudio.png" background="true">$INFO[ListItem.Property(thumb)]</texture>
+									<texture diffuse="overlays/AlbumThumbDifuse15.png" fallback="DefaultAudio.png" background="true">$INFO[ListItem.Property(thumb)]</texture>
 									<aspectratio aligny="top">stretch</aspectratio>
-									<bordertexture border="20">overlays/shadow.png</bordertexture>
 									<bordersize>20</bordersize>
 								</control>
 							</control>
@@ -581,21 +580,21 @@
 								</animation>
 								<top>2</top>
 								<control type="image">
-									<left>0</left>
-									<top>0</top>
-									<width>306</width>
-									<height>306</height>
-									<texture fallback="DefaultAudio.png" background="true">$INFO[ListItem.Property(thumb)]</texture>
-									<aspectratio aligny="top">stretch</aspectratio>
-									<bordersize>20</bordersize>
+									<left>4</left>
+									<top>4</top>
+									<width>298</width>
+									<height>298</height>
+									<texture>overlays/frameAlbum.png</texture>
+									<visible>Control.HasFocus(8002)</visible>
 								</control>
 								<control type="image">
 									<left>0</left>
 									<top>0</top>
 									<width>306</width>
 									<height>306</height>
-									<texture>overlays/frameAlbum.png</texture>
-									<visible>Control.HasFocus(8002)</visible>
+									<texture diffuse="overlays/AlbumThumbDifuse15.png" fallback="DefaultAudio.png" background="true">$INFO[ListItem.Property(thumb)]</texture>
+									<aspectratio aligny="top">stretch</aspectratio>
+									<bordersize>20</bordersize>
 								</control>
 							</control>
 						</focusedlayout>

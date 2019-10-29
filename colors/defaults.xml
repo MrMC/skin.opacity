@@ -20,4 +20,5 @@
 	<color name="disabled">40FFFFFF</color>
 	<color name="invalid">FFFF0000</color>
 	<color name="systemfocus">FFDC143C</color>
+	<color name="difuse15">FFDFDFDF</color>
 </colors>
