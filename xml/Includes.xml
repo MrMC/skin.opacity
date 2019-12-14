@@ -970,7 +970,7 @@
 		<control type="label" description="Main label">
 		  <visible>![VideoPlayer.Content(MusicVideos)]</visible>
 		  <include>FullscreenInfoLabelMain</include>
-		  <label>[B]$INFO[VideoPlayer.Title][/B]</label>
+		  <label>[B]$INFO[VideoPlayer.Title] ($INFO[VideoPlayer.Year])[/B]</label>
 		</control>
 		<control type="label" description="Main label">
 		  <visible>VideoPlayer.Content(MusicVideos)</visible>
