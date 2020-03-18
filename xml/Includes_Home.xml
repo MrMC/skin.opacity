@@ -99,7 +99,13 @@
 			<label>653</label>
 			<property name="separator">true</property>
 			<onclick>UpdateLibrary(video)</onclick>
-			<visible>!Container(9000).ListItem.Property(service)</visible>
+			<visible>!Container(9000).ListItem.Property(service) + !library.isscanningvideo</visible>
+		</item>
+		<item id="90168">
+			<label>$LOCALIZE[13353]</label>
+			<property name="separator">true</property>
+			<onclick>UpdateLibrary(video)</onclick>
+			<visible>!Container(9000).ListItem.Property(service) + library.isscanningvideo</visible>
 		</item>
 	</include>
 	<include name="PosterLayout">
@@ -261,7 +267,13 @@
 			<label>653</label>
 			<property name="separator">true</property>
 			<onclick>UpdateLibrary(video)</onclick>
-			<visible>!Container(9000).ListItem.Property(service)</visible>
+			<visible>!Container(9000).ListItem.Property(service) + !library.isscanningvideo</visible>
+		</item>
+		<item id="90177">
+			<label>$LOCALIZE[13353]</label>
+			<property name="separator">true</property>
+			<onclick>UpdateLibrary(video)</onclick>
+			<visible>!Container(9000).ListItem.Property(service) + library.isscanningvideo</visible>
 		</item>
 	</include>
 	<include name="HomeSubMenuMusic">
@@ -305,7 +317,13 @@
 			<label>653</label>
 			<property name="separator">true</property>
 			<onclick>UpdateLibrary(music)</onclick>
-			<visible>!Container(9000).ListItem.Property(service)</visible>
+			<visible>!Container(9000).ListItem.Property(service) + !library.isscanningmusic</visible>
+		</item>
+		<item id="90118">
+			<label>$LOCALIZE[13353]</label>
+			<property name="separator">true</property>
+			<onclick>UpdateLibrary(music)</onclick>
+			<visible>!Container(9000).ListItem.Property(service) + library.isscanningmusic</visible>
 		</item>
 		<item id="90119">
 			<label>Player controls</label>
