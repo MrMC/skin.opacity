@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<onload>Dialog.Close(fullscreeninfo)</onload>
+	<onload condition="!VideoPlayer.Content(LiveTV)">ActivateWindow(OSDSettings)</onload>
+	<onload condition="VideoPlayer.Content(LiveTV)">ActivateWindow(1106)</onload>
 	<onload condition="VideoPlayer.Content(LiveTV) + !Player.PauseEnabled">SetFocus(603)</onload>
-	<onload>ActivateWindow(OSDSettings)</onload>
+	<onunload>Dialog.Close(1106)</onunload>
 	<depth>DepthOSD</depth>
 	<defaultcontrol always="true">602</defaultcontrol>
 	<controls>
@@ -19,7 +21,7 @@
 		<control type="group">
 			<bottom>0</bottom>
 			<height>180</height>
-			<visible>Window.IsTopMostModal(videoosd)</visible>
+			<visible>!Window.IsActive(1106)</visible>
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<include>Animation_BottomSlide</include>
 			<control type="group" id="200">
@@ -32,8 +34,8 @@
 					<align>center</align>
 					<scrolltime tween="sine">200</scrolltime>
 					<orientation>horizontal</orientation>
-					<onup>202</onup>
-					<ondown>202</ondown>
+					<onup>ActivateWindow(OSDSettings)</onup>
+					<ondown>ActivateWindow(OSDSettings)</ondown>
 					<onleft>201</onleft>
 					<onright>201</onright>
 					<control type="radiobutton" id="600">

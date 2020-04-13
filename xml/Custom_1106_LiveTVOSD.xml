@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1106">
+	<defaultcontrol always="true">5000</defaultcontrol>
+	<onload condition="VideoPlayer.Content(LiveTV) + !Player.PauseEnabled">SetFocus(603)</onload>
+	<onload condition="VideoPlayer.Content(LiveTV) + !Player.PauseEnabled">Dialog.SetAutoClose(1106,0)</onload>
+	<onload condition="VideoPlayer.Content(LiveTV) + !Player.PauseEnabled">Dialog.SetAutoClose(VideoOSD,0)</onload>
+	<onunload condition="VideoPlayer.Content(LiveTV) + !Player.PauseEnabled">Dialog.SetAutoClose(VideoOSD,5000)</onunload>
+	<include>Animation_DialogPopupOpenClose</include>
+	<controls>
+		<control type="image">
+			<bottom>0</bottom>
+			<left>-40</left>
+			<width>120%</width>
+			<height>290</height>
+			<texture colordiffuse="AAFFFFFF">colors/black.png</texture>
+		</control>
+		<control type="group">
+			<visible>VideoPlayer.Content(LiveTV) + Window.IsActive(fullscreenvideo)</visible>
+			<animation effect="fade" time="100">VisibleChange</animation>
+			<bottom>-130</bottom>
+			<height>420</height>
+			<control type="image">
+				<top>0</top>
+				<left>0</left>
+				<width>100%</width>
+				<height>280</height>
+				<texture>dialogs/dialog-bg-nobo.png</texture>
+			</control>
+			<control type="group">
+				<control type="image">
+					<left>30</left>
+					<top>80</top>
+					<width>180</width>
+					<height>180</height>
+					<aspectratio aligny="center">keep</aspectratio>
+					<texture background="true" fallback="DefaultTVShows.png">$INFO[ListItem.Art(thumb)]</texture>
+				</control>
+				<control type="image">
+					<description>separator image</description>
+					<top>80</top>
+					<left>230</left>
+					<height>180</height>
+					<width>4</width>
+					<texture border="3">dialogs/separator-grey-v.png</texture>
+				</control>
+				<control type="group">
+					<control type="label">
+						<left>260</left>
+						<top>110</top>
+						<height>25</height>
+						<width>300</width>
+						<label>[COLOR primary_color]$INFO[VideoPlayer.StartTime] : $INFO[VideoPlayer.EndTime][/COLOR]</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<visible>VideoPlayer.HasEpg</visible>
+					</control>
+					<control type="label">
+						<left>600</left>
+						<width>900</width>
+						<top>110</top>
+						<height>25</height>
+						<label>[COLOR primary_color]$INFO[VideoPlayer.Title][/COLOR]</label>
+						<font>font30_title</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<visible>VideoPlayer.HasEpg</visible>
+					</control>
+					<control type="label">
+						<right>350</right>
+						<top>110</top>
+						<height>25</height>
+						<label>[COLOR primary_color]+ $INFO[Player.TimeRemaining(m)] min[/COLOR]</label>
+						<font>font30_title</font>
+						<align>right</align>
+						<aligny>center</aligny>
+						<visible>VideoPlayer.HasEpg</visible>
+					</control>
+					<control type="label">
+						<left>260</left>
+						<top>220</top>
+						<height>25</height>
+						<width>300</width>
+						<label>$INFO[VideoPlayer.NextStartTime] : $INFO[VideoPlayer.NextEndTime]</label>
+						<font>font30_title</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<visible>VideoPlayer.HasEpg</visible>
+					</control>
+					<control type="label">
+						<left>600</left>
+						<width>900</width>
+						<top>220</top>
+						<height>25</height>
+						<label>$INFO[VideoPlayer.NextTitle]</label>
+						<font>font30_title</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<visible>VideoPlayer.HasEpg</visible>
+					</control>
+					<control type="label">
+						<right>350</right>
+						<top>220</top>
+						<height>25</height>
+						<label>$INFO[Player.NextDuration(m)] min</label>
+						<font>font30_title</font>
+						<align>right</align>
+						<aligny>center</aligny>
+						<visible>VideoPlayer.HasEpg</visible>
+					</control>
+				</control>
+				<control type="progress">
+					<left>260</left>
+					<top>175</top>
+					<right>100</right>
+					<height>10</height>
+					<width>1310</width>
+					<info>Player.ProgressCache</info>
+					<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+					<midtexture colordiffuse="33FFFFFF">colors/white.png</midtexture>
+				</control>
+				<control type="progress">
+					<left>260</left>
+					<top>175</top>
+					<right>100</right>
+					<height>10</height>
+					<info>Player.Progress</info>
+					<width>1310</width>
+					<texturebg border="3" colordiffuse="40FFFFFF">colors/white50.png</texturebg>
+					<midtexture colordiffuse="primary_color">colors/grey.png</midtexture>
+				</control>
+				<control type="label">
+					<left>65</left>
+					<top>25</top>
+					<height>25</height>
+					<width>120</width>
+					<label>$INFO[VideoPlayer.ChannelNumberLabel]</label>
+					<align>center</align>
+					<font>font45_title</font>
+					<aligny>center</aligny>
+				</control>
+				<control type="label">
+					<left>260</left>
+					<right>50</right>
+					<top>25</top>
+					<height>25</height>
+					<label>$INFO[VideoPlayer.ChannelName]</label>
+					<align>left</align>
+					<font>font45_title</font>
+					<aligny>center</aligny>
+				</control>
+				<control type="label">
+					<right>40</right>
+					<top>50</top>
+					<height>25</height>
+					<label>$INFO[System.Date(dd.mm.yyyy)]</label>
+					<align>right</align>
+					<font>font36_title</font>
+					<aligny>center</aligny>
+				</control>
+				<control type="label">
+					<right>40</right>
+					<top>100</top>
+					<height>25</height>
+					<label>$INFO[System.Time]</label>
+					<align>right</align>
+					<font>font36_title</font>
+					<aligny>center</aligny>
+				</control>
+				<control type="group">
+					<control type="group">
+						<control type="image">
+							<description>separator image</description>
+							<top>80</top>
+							<right>310</right>
+							<height>180</height>
+							<width>4</width>
+							<texture border="3">dialogs/separator-grey-v.png</texture>
+						</control>
+						<control type="label">
+							<right>170</right>
+							<top>100</top>
+							<height>25</height>
+							<width>110</width>
+							<label>$</label>
+							<align>left</align>
+							<font>font45_title</font>
+							<aligny>center</aligny>
+							<visible>Pvr.ActStreamIsEncrypted</visible>
+						</control>
+						<control type="grouplist">
+							<right>170</right>
+							<top>160</top>
+							<width>110</width>
+							<height>100</height>
+							<align>left</align>
+							<orientation>vertical</orientation>
+							<itemgap>10</itemgap>
+							<control type="button">
+								<visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
+								<height>36</height>
+								<width>102</width>
+								<posx>0</posx>
+								<posy>0</posy>
+								<font>Flags</font>
+								<align>center</align>
+								<aligny>bottom</aligny>
+								<textoffsetx>0</textoffsetx>
+								<textoffsety>-4</textoffsety>
+								<colordiffuse>white</colordiffuse>
+								<textcolor>white</textcolor>
+								<texturenofocus>badges/video/ResFrameTV.png</texturenofocus>
+								<texturefocus>badges/video/ResFrameTV.png</texturefocus>
+								<label>$VAR[NowPlayingResolutionFlagVar]</label>
+							</control>
+							<control type="image">
+								<visible>!IsEmpty(VideoPlayer.AudioChannels)</visible>
+								<height>36</height>
+								<width>102</width>
+								<colordiffuse>white</colordiffuse>
+								<texture>$INFO[VideoPlayer.AudioChannels,badges/channels,.png]</texture>
+							</control>
+						</control>	
+						<control type="grouplist">
+							<right>20</right>
+							<top>160</top>
+							<width>110</width>
+							<height>100</height>
+							<align>left</align>
+							<orientation>vertical</orientation>
+							<itemgap>10</itemgap>
+							<control type="image">
+								<visible>!IsEmpty(VideoPlayer.AudioCodec)</visible>
+								<height>36</height>
+								<width>102</width>
+								<colordiffuse>white</colordiffuse>
+								<texture>$INFO[VideoPlayer.AudioCodec,badges/audio/,.png]</texture>
+							</control>
+							<control type="button">
+								<visible>!IsEmpty(VideoPlayer.VideoAspect)</visible>
+								<height>36</height>
+								<width>102</width>
+								<posx>0</posx>
+								<posy>0</posy>
+								<font>Flags</font>
+								<align>center</align>
+								<aligny>bottom</aligny>
+								<textoffsetx>0</textoffsetx>
+								<textoffsety>-4</textoffsety>
+								<colordiffuse>white</colordiffuse>
+								<textcolor>white</textcolor>
+								<texturenofocus>badges/video/FlagFrame.png</texturenofocus>
+								<texturefocus>badges/video/FlagFrame.png</texturefocus>
+								<label>$INFO[VideoPlayer.VideoAspect]</label>
+							</control>
+						</control>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
