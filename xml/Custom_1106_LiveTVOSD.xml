@@ -4,7 +4,7 @@
 	<onload condition="VideoPlayer.Content(LiveTV) + !Player.PauseEnabled">SetFocus(603)</onload>
 	<onload condition="VideoPlayer.Content(LiveTV) + !Player.PauseEnabled">Dialog.SetAutoClose(1106,0)</onload>
 	<onload condition="VideoPlayer.Content(LiveTV) + !Player.PauseEnabled">Dialog.SetAutoClose(VideoOSD,0)</onload>
-	<onunload condition="VideoPlayer.Content(LiveTV) + !Player.PauseEnabled">Dialog.SetAutoClose(VideoOSD,5000)</onunload>
+	<onunload condition="VideoPlayer.Content(LiveTV) + !Player.PauseEnabled">Dialog.SetAutoClose(VideoOSD)</onunload>
 	<include>Animation_DialogPopupOpenClose</include>
 	<controls>
 		<control type="image">
