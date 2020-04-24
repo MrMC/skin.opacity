@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<visible>[[Player.Seeking | Player.DisplayAfterSeek | [Player.Paused + !Player.Caching] | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(fullscreeninfo) | Window.IsActive(videoosd) | Window.IsActive(osdsettings)] + Window.IsActive(fullscreenvideo)] | [Window.IsActive(visualisation) + [Player.Showinfo | Window.IsActive(musicosd)]] | !IsEmpty(Player.SeekNumeric) | Window.IsActive(playercontrols)</visible>
+	<visible>[[Player.Seeking | Player.DisplayAfterSeek | [Player.Paused + !Player.Caching] | Player.Forwarding | Player.Rewinding | [[!VideoPlayer.Content(LiveTV) + Player.ShowInfo] | [VideoPlayer.Content(LiveTV) + Player.ShowInfo + Window.IsActive(videoosd)]] | Window.IsActive(fullscreeninfo) | Window.IsActive(videoosd) | Window.IsActive(osdsettings)] + Window.IsActive(fullscreenvideo)] | [Window.IsActive(visualisation) + [Player.Showinfo | Window.IsActive(musicosd)]] | !IsEmpty(Player.SeekNumeric) | Window.IsActive(playercontrols)</visible>
 	<visible>!Window.IsActive(sliderdialog) + !Window.IsActive(subtitlesearch)</visible>
+	<onload condition="VideoPlayer.Content(LiveTV)">ActivateWindow(1106)</onload>
 	<include>Animation_BottomSlide</include>
 	<depth>DepthOSD</depth>
 	<zorder>0</zorder>
