@@ -2,8 +2,8 @@
 <window type="dialog" id="1106">
 	<defaultcontrol always="true">1000</defaultcontrol>
 	<onload>SetFocus(1000)</onload>
-	<onload>Dialog.SetAutoClose(1106,0)</onload>
-	<onload>Dialog.SetAutoClose(VideoOSD,0)</onload>
+	<onload>Dialog.SetAutoClose(1106)</onload>
+	<onload>Dialog.SetAutoClose(VideoOSD)</onload>
 	<onunload>ActivateWindow(VideoOSD)</onunload>
 	<zorder>1</zorder>
 	<include>Animation_DialogPopupOpenClose</include>
