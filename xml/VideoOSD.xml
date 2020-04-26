@@ -4,6 +4,7 @@
 	<onload condition="!VideoPlayer.Content(LiveTV)">ActivateWindow(OSDSettings)</onload>
 	<onload condition="VideoPlayer.Content(LiveTV)">ActivateWindow(1106)</onload>
 	<onload condition="VideoPlayer.Content(LiveTV) + !Player.PauseEnabled">SetFocus(603)</onload>
+	<onload>Dialog.SetAutoClose(VideoOSD)</onload>
 	<onunload>Dialog.Close(1106)</onunload>
 	<depth>DepthOSD</depth>
 	<defaultcontrol always="true">602</defaultcontrol>
