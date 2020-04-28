@@ -12,6 +12,8 @@
 			<include>HiddenObject</include>
 			<onup>Action(ChannelUp)</onup>
 			<ondown>Action(ChannelDown)</ondown>
+			<onleft>Action(StepBack, FullScreenVideo)</onleft>
+			<onright>Action(StepForward, FullScreenVideo)</onright>
 		</control>
 		<control type="group">
 			<visible>Window.IsTopMostModal(1106)</visible>
@@ -51,6 +53,7 @@
 						<texture border="3">dialogs/separator-grey-v.png</texture>
 					</control>
 					<control type="group">
+						<visible>VideoPlayer.HasEpg</visible>
 						<control type="label">
 							<left>260</left>
 							<top>110</top>
@@ -60,18 +63,16 @@
 							<font>font30_title</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<visible>VideoPlayer.HasEpg</visible>
 						</control>
 						<control type="label">
-							<left>600</left>
-							<width>850</width>
+							<left>570</left>
+							<width>880</width>
 							<top>110</top>
 							<height>25</height>
 							<label>[COLOR primary_color]$INFO[VideoPlayer.Title][/COLOR]</label>
 							<font>font30_title</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<visible>VideoPlayer.HasEpg</visible>
 						</control>
 						<control type="label">
 							<right>350</right>
@@ -81,7 +82,6 @@
 							<font>font30_title</font>
 							<align>right</align>
 							<aligny>center</aligny>
-							<visible>VideoPlayer.HasEpg</visible>
 						</control>
 						<control type="label">
 							<left>260</left>
@@ -92,18 +92,16 @@
 							<font>font30_title</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<visible>VideoPlayer.HasEpg</visible>
 						</control>
 						<control type="label">
-							<left>600</left>
-							<width>850</width>
+							<left>570</left>
+							<width>880</width>
 							<top>220</top>
 							<height>25</height>
 							<label>$INFO[VideoPlayer.NextTitle]</label>
 							<font>font30_title</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<visible>VideoPlayer.HasEpg</visible>
 						</control>
 						<control type="label">
 							<right>350</right>
@@ -113,7 +111,6 @@
 							<font>font30_title</font>
 							<align>right</align>
 							<aligny>center</aligny>
-							<visible>VideoPlayer.HasEpg</visible>
 						</control>
 					</control>
 					<control type="progress">
