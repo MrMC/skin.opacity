@@ -860,6 +860,7 @@
 					<label>$VAR[InfoLineVar,[B],[/B]]</label>
 				</control>
 				<control type="textbox" id="15500">
+					<visible>!ListItem.IsCollection</visible>
 					<left>30</left>
 					<top>700</top>
 					<width>525</width>
