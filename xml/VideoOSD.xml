@@ -23,7 +23,7 @@
 			<bottom>0</bottom>
 			<height>180</height>
 			<visible>!Window.IsActive(1106)</visible>
-			<animation effect="fade" time="200">VisibleChange</animation>
+			<animation effect="fade" time="300">VisibleChange</animation>
 			<include>Animation_BottomSlide</include>
 			<control type="group" id="200">
 				<control type="grouplist" id="201">

@@ -4,7 +4,7 @@
 	<onload>SetFocus(1000)</onload>
 	<onload>Dialog.SetAutoClose(1106)</onload>
 	<onload>Dialog.SetAutoClose(VideoOSD)</onload>
-	<onunload>ActivateWindow(VideoOSD)</onunload>
+	<!-- <onunload>ActivateWindow(VideoOSD)</onunload> -->
 	<zorder>1</zorder>
 	<include>Animation_DialogPopupOpenClose</include>
 	<controls>
@@ -14,6 +14,7 @@
 			<ondown>Action(ChannelDown)</ondown>
 			<onleft>Action(StepBack, FullScreenVideo)</onleft>
 			<onright>Action(StepForward, FullScreenVideo)</onright>
+			<onback>ActivateWindow(VideoOSD)</onback>
 		</control>
 		<control type="group">
 			<visible>Window.IsTopMostModal(1106)</visible>
