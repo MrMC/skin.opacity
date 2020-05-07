@@ -829,7 +829,7 @@
 						<height>470</height>
 						<aspectratio aligny="bottom">keep</aspectratio>
 						<fadetime>300</fadetime>
-						<texture diffuse="overlays/HomeThumbDifuse15.png" background="true">$VAR[IconWallThumbVar]</texture>
+						<texture diffuse="overlays/HomeThumbDifuse15.png" background="true">$VAR[InfoDialogPosterVar]</texture>
 					</control>
 					<control type="progress">
 						<left>152</left>
