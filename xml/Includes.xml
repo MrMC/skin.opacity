@@ -107,6 +107,14 @@
 					<texture colordiffuse="primary_color" border="5">buttons/focus.png</texture>
 					<visible>Control.HasFocus($PARAM[list_id])</visible>
 				</control>
+				<control type="image">
+					<right>5</right>
+					<bottom>18</bottom>
+					<width>28</width>
+					<height>28</height>
+					<texture flipx="true" colordiffuse="primary_color">overlays/arrowright.png</texture>
+					<visible>!IsEmpty(ListItem.Label2) + Control.HasFocus(15)</visible>
+				</control>
 				<control type="label">
 					<left>20</left>
 					<top>0</top>

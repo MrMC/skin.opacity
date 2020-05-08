@@ -146,6 +146,10 @@
 					<param name="onclick" value="Dialog.Close(selectdialog)" />
 					<param name="visible">System.Platform.IOS</param>
 				</include>
+				<include content="DefaultDialogButton">
+					<param name="id" value="15" />
+					<param name="label" value="$LOCALIZE[116]" />
+				</include>
 			</control>
 		</control>
 	</controls>
