@@ -12,8 +12,8 @@
 			<include>HiddenObject</include>
 			<onup>Action(ChannelUp)</onup>
 			<ondown>Action(ChannelDown)</ondown>
-			<onleft>Action(StepBack, FullScreenVideo)</onleft>
-			<onright>Action(StepForward, FullScreenVideo)</onright>
+			<onleft>Action(StepBack)</onleft>
+			<onright>Action(StepForward)</onright>
 			<onback>ActivateWindow(VideoOSD)</onback>
 		</control>
 		<control type="group">
@@ -60,7 +60,7 @@
 							<top>110</top>
 							<height>25</height>
 							<width>300</width>
-							<label>[COLOR primary_color]$INFO[VideoPlayer.StartTime] : $INFO[VideoPlayer.EndTime][/COLOR]</label>
+							<label>[COLOR primary_color]$INFO[VideoPlayer.StartTime] - $INFO[VideoPlayer.EndTime][/COLOR]</label>
 							<font>font30_title</font>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -89,7 +89,7 @@
 							<top>220</top>
 							<height>25</height>
 							<width>300</width>
-							<label>$INFO[VideoPlayer.NextStartTime] : $INFO[VideoPlayer.NextEndTime]</label>
+							<label>$INFO[VideoPlayer.NextStartTime] - $INFO[VideoPlayer.NextEndTime]</label>
 							<font>font30_title</font>
 							<align>left</align>
 							<aligny>center</aligny>
