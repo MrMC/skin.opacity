@@ -91,7 +91,7 @@
 				</control>
 			</control>
 			<include content="TopBar">
-				<param name="breadcrumbs_label" value="App Store" />
+				<param name="breadcrumbs_label" value="$LOCALIZE[33107]" />
 			</include>
 			<include>BottomBar</include>
 		</control>
