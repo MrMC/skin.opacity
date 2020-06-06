@@ -367,6 +367,12 @@
 			<label>137</label>
 			<onclick>ActivateWindow(TVSearch)</onclick>
 		</item>
+		<item id="90148">
+			<label>244</label>
+			<property name="separator">true</property>
+			<onclick>ActivateWindow(fullscreenvideo)</onclick>
+			<visible>Player.HasVideo</visible>
+		</item>
 	</include>
 	<include name="HomeSubMenuRadio">
 		<item id="90243">
