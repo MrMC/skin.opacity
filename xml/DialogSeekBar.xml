@@ -137,6 +137,32 @@
 				<textureslidernibfocus colordiffuse="primary_color">colors/white.png</textureslidernibfocus>
 				<visible>!VideoPlayer.Content(livetv)</visible>
 			</control>
+			<control type="group">
+				<visible>System.Platform.TVOS + !Player.Paused + !Window.IsActive(videoosdsettings.xml)</visible>
+				<control type="image" description="Siri Touch Direction">
+					<animation effect="fade" time="100">VisibleChange</animation>
+					<visible>!IsEmpty(Player.SiriTouch)</visible>
+					<visible>IntegerGreaterThan(Player.ChapterCount,0) | [!IntegerGreaterThan(Player.ChapterCount,0) + [StringCompare(Player.SiriTouch,right) | StringCompare(Player.SiriTouch,left)]]</visible>
+					<visible>!VideoPlayer.Content(livetv)</visible>
+					<centerleft>50%</centerleft>
+					<top>110</top>
+					<width>93</width>
+					<height>57</height>
+					<texture>siri/video/$INFO[Player.SiriTouch].png</texture>
+				</control>
+				<control type="image" description="Siri Touch Direction">
+					<animation effect="fade" time="100">VisibleChange</animation>	
+					<visible>!IsEmpty(Player.SiriTouch)</visible>
+					<visible>IntegerGreaterThan(Player.ChapterCount,0) | [!IntegerGreaterThan(Player.ChapterCount,0) + [StringCompare(Player.SiriTouch,right) | StringCompare(Player.SiriTouch,left)]]</visible>
+		          <!-- <visible>VideoPlayer.Content(livetv)</visible> -->
+					<visible>false</visible>
+					<centerleft>50%</centerleft>
+					<top>110</top>
+					<width>93</width>
+					<height>57</height>
+					<texture>siri/livetv/$INFO[Player.SiriTouch].png</texture>
+				</control>
+			</control>
 		</control>
 		<control type="group">
 			<visible>Player.ShowInfo + !VideoPlayer.Content(LiveTV) + Window.IsActive(fullscreenvideo)</visible>
