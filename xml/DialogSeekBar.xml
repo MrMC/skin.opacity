@@ -138,7 +138,7 @@
 				<visible>!VideoPlayer.Content(livetv)</visible>
 			</control>
 			<control type="group">
-				<visible>System.Platform.TVOS + !Player.Paused + !Window.IsActive(videoosdsettings.xml)</visible>
+				<visible>System.Platform.TVOS + !Player.Paused + !Window.IsActive(osdsettings)</visible>
 				<control type="image" description="Siri Touch Direction">
 					<animation effect="fade" time="100">VisibleChange</animation>
 					<visible>!IsEmpty(Player.SiriTouch)</visible>
