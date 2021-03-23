@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
+	<animation effect="fade" time="500">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
 	<defaultcontrol always="true">17</defaultcontrol>
 	<controls>
 		<control type="button" id="17">
@@ -13,7 +15,8 @@
 			<align>center</align>
 			<texturefocus border="40" colordiffuse="primary_color">buttons/dialogbutton-fo.png</texturefocus>
 			<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
-			<animation effect="fade" time="2000">VisibleChange</animation>
+			<animation effect="fade" time="700">VisibleChange</animation>
+			<visible>!IsEmpty(Window.Property(EnableSkip))</visible>
 		</control>
 		<control type="group" id="0">
 			<control type="image">
